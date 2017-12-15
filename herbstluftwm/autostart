@@ -25,6 +25,9 @@ hc keybind $Mod-Shift-r reload
 hc keybind $Mod-Shift-c close
 hc keybind $Mod-Return spawn ${TERMINAL:-xterm} # use your $TERMINAL with xterm as fallback
 hc keybind $Mod-d spawn rofi -show run
+hc keybind $Mod-z spawn slock
+
+hc keybind $Mod-Shift-Return spawn urxvt -e ranger
 
 hc keybind $Mod-b spawn xbacklight -dec 10
 hc keybind $Mod-n spawn xbacklight -inc 10
@@ -172,3 +175,4 @@ for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
     # start it on each monitor
     "$panel" $monitor &
 done
+
