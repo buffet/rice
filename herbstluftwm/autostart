@@ -176,3 +176,8 @@ for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
     "$panel" $monitor &
 done
 
+if herbstclient silent new_attr bool my_not_first_autostart ; then
+    hc spawn urxvt
+    hc spawn conky -p10
+fi
+
