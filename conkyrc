@@ -28,10 +28,9 @@ minimum_size 300 900
 maximum_width 350
 
 own_window yes
-own_window_class Conky
 own_window_type override
+own_window_class Conky
 own_window_transparent yes
-own_window_argb_visual yes
 own_window_argb_visual yes
 own_window_colour 1d1f21
 own_window_argb_value 0
@@ -65,7 +64,7 @@ color4 98a18f
 color5 88916f
 
 # Loading lua script for drawning rings
-lua_load ~/dotfiles/seamod_rings.lua
+# lua_load ~/dotfiles/seamod_rings.lua
 # lua_draw_hook_post main
 
 ## System information using conky capabilities
