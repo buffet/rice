@@ -1,6 +1,13 @@
 #!/usr/bin/env bash
 
-# this is a simple config for herbstluftwm
+#   ___________
+#  < autostart >
+#   -----------
+#          \   ^__^
+#           \  (oo)\_______
+#              (__)\       )\/\
+#                  ||----w |
+#                  ||     ||
 
 hc() {
     herbstclient "$@"
@@ -178,6 +185,6 @@ done
 
 if herbstclient silent new_attr bool my_not_first_autostart ; then
     hc spawn urxvt
-    hc spawn conky -p10
+    conky
 fi
 
