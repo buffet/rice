@@ -75,6 +75,7 @@ own_window_colour 1d1f21
 
 TEXT
 ${font Dejavu:size=10,weight:bold}${color4}SYSTEM ${hr 2}
+${offset 15}${font Dejavu:size=10,weight:normal}${time}
 ${offset 15}${font Dejavu:size=10,weight:normal}${color1}$sysname $kernel
 ${offset 15}${font Dejavu:size=10,weight:normal}${color1}$nodename
 ${offset 15}${font Dejavu:size=10,weight:normal}${color1}Uptime: $uptime
