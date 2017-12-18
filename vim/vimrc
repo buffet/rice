@@ -1,4 +1,15 @@
-execute pathogen#infect()
+call plug#begin()
+
+Plug 'eagletmt/ghcmod-vim'
+Plug 'eagletmt/neco-ghc'
+Plug 'ervandew/supertab'
+Plug 'ervandew/supertab'
+Plug 'vim-syntastic/syntastic'
+Plug 'godlygeek/tabular'
+Plug 'pangloss/vim-javascript'
+Plug 'Shougo/vimproc.vim'
+
+call plug#end()
 
 " auto reload after saving
 autocmd! bufwritepost ~/.vim/vimrc source %
