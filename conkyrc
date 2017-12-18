@@ -78,6 +78,8 @@ ${font Dejavu:size=10,weight:bold}${color4}SYSTEM ${hr 2}
 ${offset 15}${font Dejavu:size=10,weight:normal}${color1}$sysname $kernel
 ${offset 15}${font Dejavu:size=10,weight:normal}${color1}$nodename
 ${offset 15}${font Dejavu:size=10,weight:normal}${color1}Uptime: $uptime
+${offset 15}${font Dejavu:size=10,weight:normal}${color1}Battery: ${battery_percent}%
+${goto 765}${color1}batt ${battery_short} (${battery_time})
 
 # Showing CPU Graph
 ${voffset 20}
