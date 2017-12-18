@@ -184,6 +184,6 @@ for monitor in $(herbstclient list_monitors | cut -d: -f1) ; do
 done
 
 if herbstclient silent new_attr bool my_not_first_autostart ; then
-    conky
+    bash -c "sleep 20;conky" &
 fi
 
