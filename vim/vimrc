@@ -8,6 +8,12 @@ Plug 'vim-syntastic/syntastic'
 Plug 'godlygeek/tabular'
 Plug 'pangloss/vim-javascript'
 Plug 'Shougo/vimproc.vim'
+Plug 'pyarmak/vim-pandoc-live-preview'
+
+Plug 'munshkr/vim-tidal'
+Plug 'supercollider/scvim'
+
+Plug 'a-watson/vim-gdscript'
 
 call plug#end()
 
@@ -226,4 +232,13 @@ function RangerExplorer()
 endfun
 
 map <leader>x :call RangerExplorer()<cr>
+
+let g:livepreview_previewer = 'mupdf'
+
+" super collider
+let g:sclangTerm="urxvt -e '$SHELL -ic'"
+let g:scFlash=1
+
+let g:sclangPipeApp='~/.vim/plugged/scvim/bin/start_pipe'
+let g:sclangDispatcher='~/.vim/plugged/scvim/bin/sc_dispatcher'
 
