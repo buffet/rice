@@ -9,7 +9,7 @@ Feel free to do what you want with it.
 TODO
 
 ## Programs and stuff
-* Window manager: herbstluftwm
+* Window manager: ~~herbstluftwm~~ bspwm
 * Bar: None
 * Information stuff: conky
 * File manager: ranger
@@ -17,6 +17,6 @@ TODO
 * PDF rendering: mupdf
 * Running stuff: rofi
 * Shell: fish
-* Terminal: uxvrt
+* Terminal: xvrt-Unicode
 * Vim > Emacs (for now)
 
