@@ -136,46 +136,71 @@ nnoremap <space><space> /<++><cr>:nohl<cr>"_c4l
 
 " LaTeX
 function! s:latex_mappings()
-  inoremap ;sec \section{}<Enter><Enter><++><Esc>2kf}i
-  inoremap ;ssec \subsection{}<Enter><Enter><++><Esc>2kf}i
-  inoremap ;sssec \subsubsection{}<Enter><Enter><++><Esc>2kf}i
+    inoremap ;sec \section{}<Enter><Enter><++><Esc>2kf}i
+    inoremap ;ssec \subsection{}<Enter><Enter><++><Esc>2kf}i
+    inoremap ;sssec \subsubsection{}<Enter><Enter><++><Esc>2kf}i
 
-  inoremap ;up \usepackage{}<esc>i
+    inoremap ;up \usepackage{}<esc>i
 
-  inoremap ;m $$<++><esc>2T$i
-  inoremap ;M $$$$<cr><cr><++><esc>2k$hi
-  inoremap ;v $<esc>Bi$<esc>f$a
-  inoremap ^^ ^{}<++><esc>F}i
-  inoremap __ _{}<++><esc>F}i
+    inoremap ;m $$<++><esc>2T$i
+    inoremap ;M $$$$<cr><cr><++><esc>2k$hi
+    inoremap ;v $<esc>Bi$<esc>f$a
+    inoremap ^^ ^{}<++><esc>F}i
+    inoremap __ _{}<++><esc>F}i
 
-  inoremap ;be <esc>"ayiwi\begin{<esc>ea}<cr>\end{<esc>"apa}<cr><++><esc>2ko
+    inoremap ;be <esc>"ayiwi\begin{<esc>ea}<cr>\end{<esc>"apa}<cr><++><esc>2ko
 
-  inoremap ;8 \infty
+    inoremap ;8 \infty
 
-  inoremap ;it \textit{}<++><esc>F}i
-  inoremap ;bf \textbf{}<++><esc>F}i
-  inoremap ;ul \underline{}<++><esc>F}i
-  inoremap ;em \emph{}<++><esc>F}i
+    inoremap ;it \textit{}<++><esc>F}i
+    inoremap ;bf \textbf{}<++><esc>F}i
+    inoremap ;ul \underline{}<++><esc>F}i
+    inoremap ;em \emph{}<++><esc>F}i
 
-  inoremap ;tab \begin{tabular}{}<cr><++><cr>\end{tabular}<cr><++><esc>3k2f{a
-  inoremap ;frac \frac{}{<++>}<++><esc>2F{a
+    inoremap ;tab \begin{tabular}{}<cr><++><cr>\end{tabular}<cr><++><esc>3k2f{a
+    inoremap ;frac \frac{}{<++>}<++><esc>2F{a
 
-  " templates
-  inoremap ;art <esc>:0r~/.vim/skeletons/article.tex<cr>/<++><cr>:nohl<cr>"_c4l
+    " templates
+    inoremap ;art <esc>:0r~/.vim/skeletons/article.tex<cr>/<++><cr>:nohl<cr>"_c4l
 endfunction
 
 autocmd BufNewFile,BufRead *.tex call s:latex_mappings()
 
 function! s:insert_include_guards()
-  let guardname = substitute(toupper(expand("%:t")), "\\.", " ", "g")
-  execute "normal! i#ifndef " . guardname
-  execute "normal! o#define " . guardname
-  execute "normal! o"
-  execute "normal! Go#endif /* " . guardname . " */"
-  normal! kk
+    let guardname = substitute(toupper(expand("%:t")), "\\.", " ", "g")
+    execute "normal! i#ifndef " . guardname
+    execute "normal! o#define " . guardname
+    execute "normal! o"
+    execute "normal! Go#endif /* " . guardname . " */"
+    normal! kk
 endfunction
 
 autocmd BufNewFile *.{h,hpp} call <SID>insert_include_guards()
+
+" Markdown
+function! s:markdown_mappings()
+    inoremap ;m $$<++><esc>2T$i
+    inoremap ;M $$$$<cr><cr><++><esc>2k$hi
+    inoremap ;v $<esc>Bi$<esc>f$a
+    inoremap ^^ ^{}<++><esc>F}i
+    inoremap __ _{}<++><esc>F}i
+
+    inoremap ;8 \infty
+
+    inoremap ;frac \frac{}{<++>}<++><esc>2F{a
+
+    nnoremap <silent> ,c :!~/.vim/markdown_compile.sh <c-r>% <c-r>%<bs><bs>pdf &<cr><cr>
+endfunction
+
+autocmd BufNewFile,BufRead *.md call s:markdown_mappings()
+
+" germannnn
+inoremap ``a ä
+inoremap ``u ü
+inoremap ``o ö
+inoremap ``A Ä
+inoremap ``U Ü
+inoremap ``O Ö
 
 " syntastic
 
@@ -190,16 +215,15 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
 function! s:haskell_mapping()
+    " ghc-mod
+    map <silent> tw :GhcModTypeInsert<CR>
+    map <silent> ts :GhcModSplitFunCase<CR>
+    map <silent> tq :GhcModType<CR>
+    map <silent> te :GhcModTypeClear<CR>
 
-  " ghc-mod
-  map <silent> tw :GhcModTypeInsert<CR>
-  map <silent> ts :GhcModSplitFunCase<CR>
-  map <silent> tq :GhcModType<CR>
-  map <silent> te :GhcModTypeClear<CR>
-
-  " supertab
-  let g:haskellmode_completion_ghc=1
-  setlocal omnifunc=necoghc
+    " supertab
+    let g:haskellmode_completion_ghc=1
+    setlocal omnifunc=necoghc
 endfunction
 
 autocmd bufnewfile,bufread *.hs call s:haskell_mapping()

@@ -18,6 +18,10 @@ super + @space
 super + Escape
     pkill -USR1 -x sxhkd
 
+# web browser
+super + q
+    qutebrowser
+
 #
 # bspwm hotkeys
 #
