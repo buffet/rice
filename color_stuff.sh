@@ -1,9 +1,8 @@
 #! /bin/env bash
 
 apiaw=$(curl -sd '{"model":"default"}' http://colormind.io/api/ | # get json
-    sed -E 's/.*:\[(.*)\]\}$/\1/'                               | # extract array
-    sed -E 's/\],\[/;/g'                                        | # make seperated
-    sed -E 's/\[(.*)\]/\1/')                                      # remove enclosing []
+    sed -E 's/.*:\[\[(.*)\]\]\}$/\1/'                               | # extract array
+    sed -E 's/\],\[/;/g')                                         # make seperated
 
 # to array
 IFS=';' read -r -a colors <<< "$apiaw"
@@ -15,7 +14,7 @@ do
     for j in "${!rgb[@]}"
     do
         val="${rgb[$j]}"
-        rgb[$j]=$(echo "ibase=10;obase=16;$val" | bc)
+        rgb[$j]=$(printf "%02x" "$val")
     done
 
     colors["$i"]="#${rgb[0]}${rgb[1]}${rgb[2]}"
