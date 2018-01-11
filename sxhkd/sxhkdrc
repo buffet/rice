@@ -18,12 +18,12 @@ super + @space
 super + Escape
     pkill -USR1 -x sxhkd
 
-<<<<<<< HEAD
 # web browser
-=======
->>>>>>> b25de60b4f2e55debe0b998546becf95c91e40c9
 super + q
     qutebrowser
+
+super + y
+    ~/dotfiles/color_stuff.sh
 
 #
 # bspwm hotkeys
