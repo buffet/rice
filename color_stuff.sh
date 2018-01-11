@@ -29,13 +29,13 @@ echo "Normal window border: ${colors[3]}"
 bspc config normal_border_color "${colors[3]}"
 
 # focused window
-echo "Focused window border: ${colors[2]}"
-bspc config focused_border_color "${colors[2]}"
+echo "Focused window border: ${colors[1]}"
+bspc config focused_border_color "${colors[1]}"
 
 # presel color
-echo "Presel color: ${colors[1]}"
-bspc config presel_feedback_color "${colors[1]}"
+echo "Presel color: ${colors[0]}"
+bspc config presel_feedback_color "${colors[0]}"
 
 # unused
-echo "Unused: ${colors[0]}"
+echo "Unused: ${colors[2]}"
 
