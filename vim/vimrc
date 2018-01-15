@@ -189,7 +189,7 @@ function! s:markdown_mappings()
 
     inoremap ;frac \frac{}{<++>}<++><esc>2F{a
 
-    nnoremap <silent> ,c :!~/.vim/markdown_compile.sh <c-r>% <c-r>%<bs><bs>pdf &<cr><cr>
+    nnoremap <silent> ,c :w<cr>:!~/.vim/markdown_compile.sh <c-r>% <c-r>%<bs><bs>pdf &<cr><cr>
 endfunction
 
 autocmd BufNewFile,BufRead *.md call s:markdown_mappings()

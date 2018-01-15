@@ -4,11 +4,15 @@
 
 # terminal emulator
 super + Return
-    urxvt
+    urxvtc
+
+# terminal in same working dir
+super + shift + Return
+       urxvtc -cd `xdotool getactivewindow getwindowname | sed -e 's@~@'"$HOME"'@'`
 
 # ranger
-super + shift + Return
-    urxvt -e ranger
+super + ctrl + Return
+    urxvtc -e ranger
 
 # program launcher
 super + @space

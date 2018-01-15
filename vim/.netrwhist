@@ -1,7 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/mn/.conky'
 let g:netrw_dirhist_2='/home/mn/dotfiles/herbstluftwm'
 let g:netrw_dirhist_3='/usr/share/ncTelegram'
 let g:netrw_dirhist_4='/home/mn/.config/bspwm'
 let g:netrw_dirhist_5='/home/mn/dotfiles/sxhkd'
+let g:netrw_dirhist_6='/home/mn/.config'
