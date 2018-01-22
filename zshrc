@@ -107,5 +107,6 @@ alias tkill='tmux kill-session -t '
 ## please
 alias please='sudo $(fc -ln -1)'
 
+# title
 ZSH_THEME_TERM_TITLE_IDLE="%~"
 
