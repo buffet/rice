@@ -1,0 +1,5 @@
+hook global InsertChar j %{ try %{
+    exec -draft hH <a-k>kj<ret> d
+    exec <esc>
+}}
+
