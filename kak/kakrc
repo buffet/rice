@@ -1,5 +1,68 @@
+## Options
+# use tabs instead of spaces
+set-option global indentwidth 4
+set-option global tabstop     4
+
+## Maps
+# faster save (for compulsive saving)
+map global user w :w<ret>
+
+## Hooks
+# smash escape on kj
 hook global InsertChar j %{ try %{
     exec -draft hH <a-k>kj<ret> d
     exec <esc>
 }}
+
+# tab is indent not insert tab
+hook global InsertChar \t %{ exec -draft h@ }
+
+# highlighters
+hook global WinCreate .* %{
+    # relative line numbers
+    add-highlighter window number_lines -relative -hlcursor
+
+    # matching brackets
+    add-highlighter window show_matching
+
+    # trailing spaces
+    add-highlighter window regex '\h+$' 0:black,red
+}
+
+# umlauts
+hook global InsertChar a %{ try %{
+    exec -draft hHH <a-k>``a<ret> d
+    exec ä
+}}
+
+hook global InsertChar o %{ try %{
+    exec -draft hHH <a-k>``o<ret> d
+    exec ö
+}}
+
+hook global InsertChar u %{ try %{
+    exec -draft hHH <a-k>``u<ret> d
+    exec ü
+}}
+
+hook global InsertChar A %{ try %{
+    exec -draft hHH <a-k>``A<ret> d
+    exec Ä
+}}
+
+hook global InsertChar O %{ try %{
+    exec -draft hHH <a-k>``O<ret> d
+    exec Ö
+}}
+
+hook global InsertChar U %{ try %{
+    exec -draft hHH <a-k>``U<ret> d
+    exec Ü
+}}
+
+# markdown
+hook global BufCreate .*\.md %{
+    # compile
+    map buffer user c :w<ret>:%sh{echo ~/dotfiles/vim/markdown_compile.sh}<ret>
+}
 

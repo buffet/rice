@@ -2,8 +2,6 @@
 
 sxhkd &
 
-urxvtd &
-
 conky &
 
 xsetroot -solid "#1d1f21"

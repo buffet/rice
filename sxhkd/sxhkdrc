@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	urxvtc
+	termite
 
 # terminal in same working dir
 super + shift + Return
