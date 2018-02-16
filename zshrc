@@ -93,13 +93,26 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export EDITOR='vim'
+# Functions
+# ranger-cd
+function ranger-cd {
+    tempfile="$(mktemp -t tmp.XXXXXX)"
+    /usr/bin/ranger --choosedir="$tempfile" "${@:-$(pwd)}"
+    test -f "$tempfile" &&
+    if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
+        cd -- "$(cat "$tempfile")"
+    fi
+    rm -f -- "$tempfile"
+}
+
+export EDITOR='kak'
 
 # aliases
 alias v='vim'
 alias ra='ranger'
 alias la='ls -l'
 alias lsa='ls -al'
+alias rcd='ranger-cd'
 
 ## tmux
 alias tkill='tmux kill-session -t '
@@ -109,4 +122,5 @@ alias please='sudo $(fc -ln -1)'
 
 # title
 ZSH_THEME_TERM_TITLE_IDLE="%~"
+
 
