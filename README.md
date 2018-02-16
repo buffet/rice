@@ -9,7 +9,7 @@ Feel free to do what you want with it.
 TODO
 
 ## Programs and stuff
-* Window manager: ~~herbstluftwm~~ bspwm
+* Window manager: ~~herbstluftwm~~ ~~bspwm~~ herbstluftwm
 * Bar: None
 * Information stuff: conky
 * File manager: ranger
