@@ -100,6 +100,7 @@ function ranger-cd {
     /usr/bin/ranger --choosedir="$tempfile" "${@:-$(pwd)}"
     test -f "$tempfile" &&
     if [ "$(cat -- "$tempfile")" != "$(echo -n `pwd`)" ]; then
+        echo "$(cat "$tempfile")"
         cd -- "$(cat "$tempfile")"
     fi
     rm -f -- "$tempfile"
@@ -113,6 +114,7 @@ alias ra='ranger'
 alias la='ls -l'
 alias lsa='ls -al'
 alias rcd='ranger-cd'
+alias adc='abduco'
 
 ## tmux
 alias tkill='tmux kill-session -t '
@@ -122,5 +124,4 @@ alias please='sudo $(fc -ln -1)'
 
 # title
 ZSH_THEME_TERM_TITLE_IDLE="%~"
-
 

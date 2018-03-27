@@ -25,13 +25,15 @@ xsetroot -solid '#1d1f21'
 hc keyunbind --all
 
 # tags
-tag_names=( {1..9} )
+tag_names=( {1..9} 0 )
 tag_keys=( {1..9} 0 )
 
 hc rename default "${tag_names[0]}" || true
 for i in ${!tag_names[@]} ; do
     hc add "${tag_names[$i]}"
 done
+
+hc use_index 1
 
 # keybindings
 # i use sxhkd for them

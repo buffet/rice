@@ -6,6 +6,10 @@ set-option global tabstop     4
 ## Maps
 # faster save (for compulsive saving)
 map global user w :w<ret>
+# switch buffers
+map global user n :buffer-previous<ret>
+map global user m :buffer-next<ret>
+map global user b :buffer<space>
 
 ## Hooks
 # smash escape on kj

@@ -27,7 +27,7 @@ super + y
     ~/dotfiles/color_stuff.sh
 
 # scrot
-print
+super + e
     scrot -e 'mv $f ~/Pictures'
 
 super + {z,x}
