@@ -1,19 +1,18 @@
 call plug#begin()
 
-Plug 'eagletmt/ghcmod-vim'
-Plug 'eagletmt/neco-ghc'
-Plug 'ervandew/supertab'
+" Plug 'eagletmt/ghcmod-vim'
+" Plug 'eagletmt/neco-ghc'
 Plug 'ervandew/supertab'
 Plug 'vim-syntastic/syntastic'
 Plug 'godlygeek/tabular'
-Plug 'pangloss/vim-javascript'
+" Plug 'pangloss/vim-javascript'
 Plug 'Shougo/vimproc.vim'
-Plug 'pyarmak/vim-pandoc-live-preview'
+" Plug 'pyarmak/vim-pandoc-live-preview'
 
-Plug 'munshkr/vim-tidal'
-Plug 'supercollider/scvim'
+" Plug 'munshkr/vim-tidal'
+" Plug 'supercollider/scvim'
 
-Plug 'a-watson/vim-gdscript'
+" Plug 'a-watson/vim-gdscript'
 
 call plug#end()
 
@@ -28,15 +27,15 @@ set nocompatible
 set autoread
 
 " better leader key
-let mapleader = ","
-let g:mapleader = ","
+let mapleader = " "
+let g:mapleader = " "
 
 " quicker save
 nnoremap <leader>w :w<cr>
 
 " color stuff
 set t_Co=256
-colorscheme default
+colorscheme delek
 
 " show current position
 set ruler
@@ -108,7 +107,7 @@ set si
 set wrap
 
 " remove highlighting from search
-map <silent> <leader><space> :nohl<cr>
+map <silent> <leader>a :nohl<cr>
 
 " better clipboard
 set clipboard=unnamed
@@ -132,8 +131,7 @@ vmap <leader>t; :Tab /;<cr>
 map <F6> :setlocal spell! spelllang=en_us<cr>
 
 " jump to <++>
-inoremap <space><space> <esc>/<++><cr>:nohl<cr>"_c4l
-nnoremap <space><space> /<++><cr>:nohl<cr>"_c4l
+nnoremap <leader><space> /<++><cr>:nohl<cr>"_c4l
 
 " LaTeX
 function! s:latex_mappings()
