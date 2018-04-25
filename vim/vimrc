@@ -89,8 +89,8 @@ set nowb
 set noswapfile
 
 " spaces > tabs
-" set expandtab
-set noexpandtab
+set expandtab
+set expandtab
 set smarttab
 set shiftround
 

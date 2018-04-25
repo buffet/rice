@@ -93,6 +93,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+export EDITOR='vim'
+
 # Functions
 # ranger-cd
 function ranger-cd {
@@ -106,7 +108,15 @@ function ranger-cd {
     rm -f -- "$tempfile"
 }
 
-export EDITOR='kak'
+# Attach or create
+function irc {
+    irc=irc
+    if abduco | grep -q "$irc"; then
+        abduco -a "$irc"
+    else
+        abduco -c "$irc" irssi
+    fi
+}
 
 # aliases
 alias v='vim'
@@ -114,7 +124,8 @@ alias ra='ranger'
 alias la='ls -l'
 alias lsa='ls -al'
 alias rcd='ranger-cd'
-alias adc='abduco'
+alias aba='abduco -a'
+alias abc='abduco -c'
 
 ## tmux
 alias tkill='tmux kill-session -t '
@@ -123,5 +134,9 @@ alias tkill='tmux kill-session -t '
 alias please='sudo $(fc -ln -1)'
 
 # title
-ZSH_THEME_TERM_TITLE_IDLE="%~"
+# ZSH_THEME_TERM_TITLE_IDLE="%~"
+
+if [[ "$(tty)" = "/dev/tty1" ]]; then
+    pgrep herbstluftwm || exec startx
+fi
 
