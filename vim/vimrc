@@ -1,18 +1,9 @@
 call plug#begin()
 
-" Plug 'eagletmt/ghcmod-vim'
-" Plug 'eagletmt/neco-ghc'
 Plug 'ervandew/supertab'
 Plug 'vim-syntastic/syntastic'
 Plug 'godlygeek/tabular'
-" Plug 'pangloss/vim-javascript'
 Plug 'Shougo/vimproc.vim'
-" Plug 'pyarmak/vim-pandoc-live-preview'
-
-" Plug 'munshkr/vim-tidal'
-" Plug 'supercollider/scvim'
-
-" Plug 'a-watson/vim-gdscript'
 
 call plug#end()
 
@@ -166,7 +157,7 @@ endfunction
 autocmd BufNewFile,BufRead *.tex call s:latex_mappings()
 
 function! s:insert_include_guards()
-    let guardname = substitute(toupper(expand("%:t")), "\\.", " ", "g")
+    let guardname = substitute(toupper(expand("%:t")), "\\.", "_", "g")
     execute "normal! i#ifndef " . guardname
     execute "normal! o#define " . guardname
     execute "normal! o"
@@ -213,37 +204,9 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
-function! s:haskell_mapping()
-    " ghc-mod
-    map <silent> tw :GhcModTypeInsert<CR>
-    map <silent> ts :GhcModSplitFunCase<CR>
-    map <silent> tq :GhcModType<CR>
-    map <silent> te :GhcModTypeClear<CR>
-
-    " supertab
-    let g:haskellmode_completion_ghc=1
-    setlocal omnifunc=necoghc
-endfunction
-
-autocmd bufnewfile,bufread *.hs call s:haskell_mapping()
-
+" trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
-
-let g:javascript_conceal_function                  = "ƒ"
-let g:javascript_conceal_null                      = "ø"
-let g:javascript_conceal_this                      = "@"
-let g:javascript_conceal_return                    = "⇚"
-let g:javascript_conceal_undefined                 = "¿"
-let g:javascript_conceal_NaN                       = "ℕ"
-let g:javascript_conceal_prototype                 = "¶"
-let g:javascript_conceal_static                    = "•"
-let g:javascript_conceal_super                     = "Ω"
-let g:javascript_conceal_arrow_function            = "⇒"
-let g:javascript_conceal_noarg_arrow_function      = "🞅"
-let g:javascript_conceal_underscore_arrow_function = "🞅"
-
-set conceallevel=1
 
 function RangerExplorer()
     exec "silent !ranger --choosefile=/tmp/vim_ranger_current_file " . system('echo "' . expand("%:p:h") . '" | sed -E "s/\ /\\\ /g"')
@@ -255,13 +218,4 @@ function RangerExplorer()
 endfun
 
 map <leader>x :call RangerExplorer()<cr>
-
-let g:livepreview_previewer = 'mupdf'
-
-" super collider
-let g:sclangTerm="urxvt -e '$SHELL -ic'"
-let g:scFlash=1
-
-let g:sclangPipeApp='~/.vim/plugged/scvim/bin/start_pipe'
-let g:sclangDispatcher='~/.vim/plugged/scvim/bin/sc_dispatcher'
 
