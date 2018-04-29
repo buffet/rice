@@ -379,9 +379,8 @@ Reload =~/.emacs.d/config.org= at runtime.
   (defun kill-all-buffers ()
     (interactive)
     (mapc 'kill-buffer (buffer-list))
-    (delete-other-windows)
-    (switch-buffer "*scratch*"))
-  (global-set-key (kbd "C-c k") 'kill-all-buffers)
+    (delete-other-windows))
+  (global-set-key (kbd "C-c u") 'kill-all-buffers)
 #+END_SRC
 
 ** Beacon
@@ -689,6 +688,7 @@ Basically unclutter the holy modeline.
           (diminish 'irony-mode)
           (diminish 'page-break-lines-mode)
           (diminish 'auto-revert-mode)
+          (diminish 'helm-mode)
           (diminish 'rainbow-mode))
 #+END_SRC
 
@@ -797,3 +797,12 @@ Basically unclutter the holy modeline.
 
 * Instant messaging
 TODO: Configure
+
+* PDF
+** pdf-tools
+#+BEGIN_SRC emacs-lisp
+  (use-package pdf-tools
+    :ensure t
+    :config
+    (pdf-tools-install))
+#+END_SRC

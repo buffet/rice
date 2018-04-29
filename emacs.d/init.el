@@ -43,7 +43,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (company-irony company-c-headers beacon switch-window switch-buffer exwm diminish ox-twbs htmlize org-bullets sudo-edit magit magic slime-company slime company-jedi flycheck-clang-analyzer company flycheck yasnippet-snippets yasnippet popup-kill-ring expand-region rainbow-mode mark-multiple avy helm linum-relative swiper which-key ivy dmenu async pretty-mode use-package))))
+    (pdf-tools company-irony company-c-headers beacon switch-window switch-buffer exwm diminish ox-twbs htmlize org-bullets sudo-edit magit magic slime-company slime company-jedi flycheck-clang-analyzer company flycheck yasnippet-snippets yasnippet popup-kill-ring expand-region rainbow-mode mark-multiple avy helm linum-relative swiper which-key ivy dmenu async pretty-mode use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
