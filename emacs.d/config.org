@@ -383,6 +383,13 @@ Reload =~/.emacs.d/config.org= at runtime.
   (global-set-key (kbd "C-c u") 'kill-all-buffers)
 #+END_SRC
 
+** Keybind align
+I use =align= fairly often, so it deserves a bind.
+
+#+BEGIN_SRC emacs-lisp
+  (global-set-key  (kbd "C-c C-k") 'align)
+#+END_SRC
+
 ** Beacon
 Briefly hightlight the cursor after switching between buffers or workspaces.
 
@@ -535,6 +542,16 @@ Requires libclang to be installed.
     (add-hook 'c++-mode-hook 'irony-mode)
     (add-hook 'c-mode-hook 'irony-mode)
     (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options))
+#+END_SRC
+
+**** Indentation
+Emacs default indentation sucks. Here's my own.
+
+#+BEGIN_SRC emacs-lisp
+  (setq-default c-default-style "ellemtel")
+  (setq-default c-basic-offset 4)
+  (c-set-offset 'label '/)
+  (c-set-offset 'access-label '/)
 #+END_SRC
 
 *** Python
