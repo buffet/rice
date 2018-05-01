@@ -57,10 +57,18 @@ Only do this when programming though (also only in GUI).
 Replaces few keywords with symbols (like lambda).  Only in GUI though.
 
 #+BEGIN_SRC emacs-lisp
-(when window-system
-    (use-package pretty-mode
-        :ensure t
-        :config (global-pretty-mode t)))
+  (when window-system
+      (use-package pretty-mode
+          :ensure t
+          :config
+          ;(global-pretty-mode t)
+          ))
+#+END_SRC
+
+*** Brogrammer theme
+
+#+BEGIN_SRC emacs-lisp
+  (load "~/.emacs.d/brogrammer-theme.el")
 #+END_SRC
 
 ** Functionality
