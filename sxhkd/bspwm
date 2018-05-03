@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	termite
+	urxvtc
 
 # terminal in same working dir
 #super + shift + Return
@@ -45,6 +45,13 @@ super + alt + Escape
 # close and kill
 super + {_,shift + }w
 	bspc node -{c,k}
+
+# toggle polybar
+super + shift + u
+	polybar-msg cmd hide && bspc config top_padding 0
+
+super + u
+	polybar-msg cmd show
 
 # alternate between the tiled and monocle layout
 super + m
@@ -99,7 +106,7 @@ super + {o,i}
 	bspc wm -h off; \
 	bspc node {older,newer} -f; \
 	bspc wm -h on
-
+#
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc {desktop -f,node -d} '^{1-9,10}'

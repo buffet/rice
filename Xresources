@@ -1,7 +1,7 @@
 ! URxvt settings
 
 ! fonts
-URxvt*font: -misc-fixed-medium-r-normal--15-140-75-75-c-90-iso8859-1
+URxvt*font: xft:DejaVuSansMono:pixelsize=16
 
 ! colorscheme
 #include "dotfiles/barrage2"

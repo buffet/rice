@@ -27,8 +27,11 @@ super + y
     ~/dotfiles/color_stuff.sh
 
 # scrot
-print
+super + e
     scrot -e 'mv $f ~/Pictures'
+
+super + {z,x}
+    xbacklight -{dec,inc} 10
 
 #
 # herbstluftwm hotkeys
@@ -82,7 +85,4 @@ super + {_,shift + }{1-9,0}
 
 super + ctrl + {h,j,k,l}
     herbstclient resize {left,down,up,right} +0.05
-
-super + {z,x}
-    xbacklight -{dec,inc} 10
 
