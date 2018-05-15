@@ -93,7 +93,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export EDITOR='vim'
+export EDITOR='kak'
 export CC='clang'
 
 # Functions
@@ -138,6 +138,6 @@ alias please='sudo $(fc -ln -1)'
 # ZSH_THEME_TERM_TITLE_IDLE="%~"
 
 if [[ "$(tty)" = "/dev/tty1" ]]; then
-    pgrep herbstluftwm || exec startx
+    pgrep xinit || exec startx
 fi
 
