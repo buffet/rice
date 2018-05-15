@@ -106,6 +106,7 @@ qutebrowser for me.  nChange this accordingly.
   (defadvice ansi-term (before force-bash)
     (interactive (list my-term-shell)))
   (ad-activate 'ansi-term)
+  (global-set-key (kbd "<s-return>") 'ansi-term)
 #+END_SRC
 
 * projectile
