@@ -2,6 +2,7 @@
 # use tabs instead of spaces
 set-option global indentwidth 4
 set-option global tabstop     4
+set-option global ui_options  ncurses_set_title=false
 
 ## Maps
 # faster save (for compulsive saving)
@@ -31,6 +32,9 @@ hook global WinCreate .* %{
 
     # trailing spaces
     add-highlighter window regex '\h+$' 0:black,red
+
+    # softwraping
+    add-highlighter window wrap
 }
 
 # umlauts
