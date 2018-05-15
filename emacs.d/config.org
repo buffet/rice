@@ -4,7 +4,7 @@
 #+OPTIONS: num:nil
 #+ATTR_HTML: :style margin-left: auto; margin-right: auto;
 
-This is heavily inspired by daedreth's config.  All credits go to him.
+This is heavily inspired by =daedreth='s config.  All credits go to him.
 
 * Installation
 ** Quick installation
