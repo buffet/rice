@@ -331,11 +331,8 @@ Automatically removes trailing spaces in modified lines
   (use-package ws-butler
     :ensure t
     :config
-    (add-hook 'prog-mode-hook #'ws-butler-mode)
-    (setq ws-butler-trim-predicate
-          (lambda (beg end)
-            (not (eq 'font-lock-string-face
-                     (get-text-property end 'face))))))
+    (add-hook 'prog-mode-hook #'ws-butler-mode))
+
 #+END_SRC
 
 ** inner-word stuff
@@ -565,10 +562,10 @@ Requires libclang to be installed.
 Emacs default indentation sucks. Here's my own.
 
 #+BEGIN_SRC emacs-lisp
-  (setq-default c-default-style "ellemtel")
-  (setq-default c-basic-offset 4)
-  (c-set-offset 'label '/)
-  (c-set-offset 'access-label '/)
+  (setq c-default-style "bsd"
+        c-basic-offset 4)
+  (setq tab-width 4)
+  (setq indent-tabs-mode t)
 #+END_SRC
 
 *** Python
