@@ -324,6 +324,20 @@ Allows you to highlight the cest occurence of a region.  Such joy.  Wow
     :bind ("C-c q" . 'mark-next-like-this))
 #+END_SRC
 
+** ws-butler
+Automatically removes training spaces in modified lines
+
+#+BEGIN_SRC emacs-lisp
+  (use-package ws-butler
+    :ensure t
+    :config
+    (add-hook 'prog-mode-hook #'ws-butler-mode)
+    (setq ws-butler-trim-predicate
+          (lambda (beg end)
+            (not (eq 'font-lock-string-face
+                     (get-text-property end 'face))))))
+#+END_SRC
+
 ** inner-word stuff
 *** kill-inner-word
 Basically =diw= in vim.
@@ -499,8 +513,8 @@ Kicks in after .5 secs and 2 chars.
     (define-key company-active-map (kbd "M-n") nil)
     (define-key company-active-map (kbd "M-p") nil)
     (define-key company-active-map (kbd "C-n") #'company-select-next)
-    (define-key company-active-map (kbd "C-p") #'company-select-previous)
-    (define-key company-active-map (kbd "SPC") #'company-abort))
+    (define-key company-active-map (kbd "C-p") #'company-select-previous))
+  ;  (define-key company-active-map (kbd "SPC") #'company-abort))
 #+END_SRC
 
 ** Language specific
@@ -799,10 +813,6 @@ Basically unclutter the holy modeline.
     (interactive)
     (exwm-async-run "qutebrowser"))
 
-  (defun meyni/launch-terminal ()
-    (interactive)
-    (exwm-async-run "termite"))
-
   (defun meyni/lock-screen ()
     (interactive)
     (exwm-async-run "slock"))
@@ -811,7 +821,6 @@ Basically unclutter the holy modeline.
 ** Keybind start processes
 #+BEGIN_SRC emacs-lisp
   (global-set-key (kbd "s-q") 'meyni/launch-browser)
-  (global-set-key (kbd "<s-return>") 'meyni/launch-terminal)
   (global-set-key (kbd "s-l") 'meyni/lock-screen)
 #+END_SRC
 
