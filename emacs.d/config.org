@@ -325,7 +325,7 @@ Allows you to highlight the cest occurence of a region.  Such joy.  Wow
 #+END_SRC
 
 ** ws-butler
-Automatically removes training spaces in modified lines
+Automatically removes trailing spaces in modified lines
 
 #+BEGIN_SRC emacs-lisp
   (use-package ws-butler
