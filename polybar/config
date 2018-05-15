@@ -51,7 +51,7 @@ font-1 = unifont:size=8:antialias=false;0
 font-2 = siji;1
 
 modules-left = bspwm
-modules-center = xwindow
+modules-center = 
 modules-right = xkeyboard cpu memory wlan battery date
 
 tray-position = right
