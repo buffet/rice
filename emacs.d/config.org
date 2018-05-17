@@ -65,7 +65,6 @@ Replaces few keywords with symbols (like lambda).  Only in GUI though.
           ))
 #+END_SRC
 
-
 ** Functionality
 *** Stop emacs from creating additional files
 Pretty annoying to have all these files around.  Also you should really use git instead of the backup~ files.
@@ -567,6 +566,12 @@ Emacs default indentation sucks. Here's my own.
         c-basic-offset 4)
   (setq tab-width 4)
   (setq indent-tabs-mode t)
+#+END_SRC
+
+*** Rust
+*** rust-mode
+#+BEGIN_SRC emacs-lisp
+  (use-package rust-mode)
 #+END_SRC
 
 *** Python
