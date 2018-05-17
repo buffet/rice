@@ -14,7 +14,7 @@ Then get the =emacs.d= to =~/.emacs.d=
 
 * General emacs settings
 ** Interface settings
-*** Replace startup screen
+*** Remove startup screen
 #+BEGIN_SRC emacs-lisp
   (setq inhibit-startup-message t)
 #+END_SRC
@@ -23,27 +23,27 @@ Then get the =emacs.d= to =~/.emacs.d=
 I need that space, adjust accordingly.
 
 #+BEGIN_SRC emacs-lisp
-(menu-bar-mode -1)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
+  (menu-bar-mode -1)
+  (tool-bar-mode -1)
+  (scroll-bar-mode -1)
 #+END_SRC
 
 *** No system beep (it's annoying)
-Might just disable it in the x-server.
+Disabled it on the x server.
 
 #+BEGIN_SRC emacs-lisp
-(setq ring-bell-function 'ignore)
+  ; (setq ring-bell-function 'ignore)
 #+END_SRC
 
 *** UTF-8 everywhere
 I don't see why you wouldn't want this.
 
 #+BEGIN_SRC emacs-lisp
-(setq locale-coding-system 'utf-8)
-(set-terminal-coding-system 'utf-8)
-(set-keyboard-coding-system 'utf-8)
-(set-selection-coding-system 'utf-8)
-(prefer-coding-system 'utf-8)
+  (setq locale-coding-system 'utf-8)
+  (set-terminal-coding-system 'utf-8)
+  (set-keyboard-coding-system 'utf-8)
+  (set-selection-coding-system 'utf-8)
+  (prefer-coding-system 'utf-8)
 #+END_SRC
 
 *** Highlight current line
@@ -70,15 +70,15 @@ Replaces few keywords with symbols (like lambda).  Only in GUI though.
 Pretty annoying to have all these files around.  Also you should really use git instead of the backup~ files.
 
 #+BEGIN_SRC emacs-lisp
-(setq make-backup-files nil)
-(setq auto-save-default nil)
+  (setq make-backup-files nil)
+  (setq auto-save-default nil)
 #+END_SRC
 
 *** Shorter yes no prompt
 Nobody has time to type that shit.
 
 #+BEGIN_SRC emacs-lisp
-(defalias 'yes-or-no-p 'y-or-n-p)
+  (defalias 'yes-or-no-p 'y-or-n-p)
 #+END_SRC
 
 *** Async
@@ -91,7 +91,7 @@ Let's me do stuff asynchronously.
 #+END_SRC
 
 ** Default Browser
-qutebrowser for me.  nChange this accordingly.
+qutebrowser for me.  Change this accordingly.
 
 #+BEGIN_SRC emacs-lisp
 (setq browse-url-browser-function 'browse-url-generic
@@ -132,52 +132,52 @@ This is so important.  Never underestimate this.  Shows information at all time.
 Got used to this in spacemacs. It's so good.
 
 #+BEGIN_SRC emacs-lisp
-(use-package spaceline
+  (use-package spaceline
     :ensure t
     :config
-        (require 'spaceline-config)
-            (setq spaceline-buffer-encoding-abbrev-p nil)
-            (setq spaceline-line-column-p nil)
-            (setq spaceline-line-p nil)
-            (setq powerline-default-separator (quote arrow))
-            (spaceline-spacemacs-theme))
+      (require 'spaceline-config)
+        (setq spaceline-buffer-encoding-abbrev-p nil)
+        (setq spaceline-line-column-p nil)
+        (setq spaceline-line-p nil)
+        (setq powerline-default-separator (quote arrow))
+        (spaceline-spacemacs-theme))
 #+END_SRC
 
 ** No separator
 #+BEGIN_SRC emacs-lisp
-(setq powerline-default-separator nil)
+  (setq powerline-default-separator nil)
 #+END_SRC
 
 ** Cursor position
 #+BEGIN_SRC emacs-lisp
-(setq line-number-mode t)
-(setq column-number-mode t)
+  (setq line-number-mode t)
+  (setq column-number-mode t)
 #+END_SRC
 
 ** Clock
 *** Time format
 #+BEGIN_SRC emacs-lisp
-(setq display-time-24hr-format t)
-(setq display-time-format "%H:%M - %d %B %Y")
+  (setq display-time-24hr-format t)
+  (setq display-time-format "%H:%M - %d %B %Y")
 #+END_SRC
 
 *** Enabling the mode
 #+BEGIN_SRC emacs-lisp
-(display-time-mode 1)
+  (display-time-mode 1)
 #+END_SRC
 
 ** Battery indicator
 =fancy-battery= will be used in GUI emacs.  Otherwise =battery-mode= will be used.
 
 #+BEGIN_SRC emacs-lisp
-(use-package fancy-battery
+  (use-package fancy-battery
     :ensure t
     :config
-        (setq fancy-battery-show-percentage t)
-        (setq battery-update-interval 15)
-        (if window-system
-            (fancy-battery-mode)
-            (display-battery-mode)))
+    (setq fancy-battery-show-percentage t)
+    (setq battery-update-interval 15)
+    (if window-system
+        (fancy-battery-mode)
+      (display-battery-mode)))
 #+END_SRC
 
 * Moving around emacs
@@ -187,13 +187,13 @@ Most important stuff in this whole config.  Literally.
 Awesome.
 
 #+BEGIN_SRC emacs-lisp
-(use-package ivy
+  (use-package ivy
     :ensure t)
 #+END_SRC
 
 ** Better scrolling
 #+BEGIN_SRC emacs-lisp
-(setq scroll-conservatively 100)
+  (setq scroll-conservatively 100)
 #+END_SRC
 
 ** Switching between windows
