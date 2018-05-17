@@ -569,7 +569,7 @@ Emacs default indentation sucks. Here's my own.
 #+END_SRC
 
 *** Rust
-*** rust-mode
+**** rust-mode
 #+BEGIN_SRC emacs-lisp
   (use-package rust-mode)
 #+END_SRC
