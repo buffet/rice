@@ -54,6 +54,9 @@ fi
 #xterm -geometry 80x20+494-0 &
 #exec xterm -geometry 80x66+0+0 -name login
 
+export VISUAL='emacs'
+export EDITOR=$VISUAL
+
 #DEFAULT_SESSION='bspwm'
 #DEFAULT_SESSION='herbstluftwm --locked'
 DEFAULT_SESSION='emacs'
