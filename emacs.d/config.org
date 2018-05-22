@@ -1,5 +1,5 @@
-#+TITLE: meyni's emacs
-#+CREATOR: Niclas 'meyni' Meyer
+#+TITLE: countingsort's emacs
+#+CREATOR: Niclas 'countingsort' Meyer
 #+LANGUAGE: en
 #+OPTIONS: num:nil
 #+ATTR_HTML: :style margin-left: auto; margin-right: auto;
@@ -245,8 +245,8 @@ Default emacs search sucks.
 
 #+BEGIN_SRC emacs-lisp
   (use-package swiper
-      :ensure t
-      :bind ("C-s" . 'swiper))
+    :ensure t
+    :bind ("C-s" . 'swiper))
 #+END_SRC
 
 ** ibuffer instead pof switch-to-buffer
@@ -265,11 +265,11 @@ When you feel like you know ibuffer, enable this.
 Only enabled in programming related modes, since it messes some stuff up.
 
 #+BEGIN_SRC emacs-lisp
-(use-package linum-relative
+  (use-package linum-relative
     :ensure t
     :config
-        (setq linum-relative-current-symbol "")
-        (add-hook 'prog-mode-hook 'linum-relative-mode))
+      (setq linum-relative-current-symbol "")
+      (add-hook 'prog-mode-hook 'linum-relative-mode))
 #+END_SRC
 
 * helm
@@ -515,6 +515,39 @@ Kicks in after .5 secs and 2 chars.
 #+END_SRC
 
 ** Language specific
+*** Web
+**** impatient-mode
+#+BEGIN_SRC emacs-lisp
+  (use-package impatient-mode
+    :ensure t)
+#+END_SRC
+
+**** js2-mode
+#+BEGIN_SRC emacs-lisp
+  (use-package js2-mode
+    :ensure t
+    :config
+    (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode)))
+#+END_SRC
+
+**** web-mode
+#+BEGIN_SRC emacs-lisp
+  (use-package web-mode
+    :ensure t
+    :config
+    (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+    (add-to-list 'auto-mode-alist '("\\.php\\'"   . web-mode)))
+
+#+END_SRC
+
+**** emmet
+#+BEGIN_SRC emacs-lisp
+    (use-package emmet-mode
+      :ensure t
+      :config
+      (add-hook 'web-mode-hook 'emmet-mode))
+#+END_SRC
+
 *** C/C++
 **** yasnipet
 #+BEGIN_SRC emacs-lisp
@@ -560,7 +593,7 @@ Requires libclang to be installed.
 
 **** Indentation
 Emacs default indentation sucks. Here's my own.
-
+n
 #+BEGIN_SRC emacs-lisp
   (setq c-default-style "bsd"
         c-basic-offset 4)
@@ -716,17 +749,19 @@ Basically unclutter the holy modeline.
 
 #+BEGIN_SRC emacs-lisp
   (use-package diminish
-      :ensure t
-      :init
-          (diminish 'which-key-mode)
-          (diminish 'linum-relativ-mode)
-          (diminish 'visual-line-mode)
-          (diminish 'beacon-mode)
-          (diminish 'irony-mode)
-          (diminish 'page-break-lines-mode)
-          (diminish 'auto-revert-mode)
-          (diminish 'helm-mode)
-          (diminish 'rainbow-mode))
+    :ensure t
+    :init
+    (diminish 'projectile-mode)
+    (diminish 'which-key-mode)
+    (diminish 'linum-relativ-mode)
+    (diminish 'visual-line-mode)
+    (diminish 'beacon-mode)
+    (diminish 'irony-mode)
+    (diminish 'page-break-lines-mode)
+    (diminish 'auto-revert-mode)
+    (diminish 'helm-mode)
+    (diminish 'rainbow-mode))
+
 #+END_SRC
 
 * exwm
