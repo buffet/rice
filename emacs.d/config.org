@@ -8,7 +8,7 @@ This is heavily inspired by =daedreth='s config.  All credits go to him.
 
 * Installation
 ** Quick installation
-=git clone https://github.com/meyni/dotfiles=
+=git clone https://github.com/countingsort/dotfiles=
 
 Then get the =emacs.d= to =~/.emacs.d=
 
