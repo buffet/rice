@@ -93,7 +93,8 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export EDITOR='kak'
+export VISUAL='emacsclient'
+export EDITOR=$VISUAL
 export CC='clang'
 
 # Functions

@@ -781,6 +781,9 @@ Basically unclutter the holy modeline.
     ;; fix issues with ido-mode
     (exwm-config-ido)
 
+    ;; start emacs as server
+    (server-start)
+
     (setq exwm-workspace-number 1)
 
     ;; global / always working keybingings
@@ -800,6 +803,19 @@ Basically unclutter the holy modeline.
                         (lambda (command)
                           (interactive (list (read-shell-command "$ ")))
                           (start-process-shell-command command nil command)))
+
+    ;; set buffer title to window title except for gimp and java
+    (add-hook 'exwm-update-class-hook
+              (lambda ()
+                (unless (or (string-prefix-p "sun-awt-X11-" exwm-instance-name)
+                            (string= "gimp" exwm-instance-name))
+                  (exwm-workspace-rename-buffer exwm-class-name))))
+    (add-hook 'exwm-update-title-hook
+              (lambda ()
+                (when (or (not exwm-instance-name)
+                          (string-prefix-p "sun-awt-X11-" exwm-instance-name)
+                          (string= "gimp" exwm-instance-name))
+                  (exwm-workspace-rename-buffer exwm-title))))
 
     ;; easy way to make keybindings work *only* in line mode
     (push ?\C-q exwm-input-prefix-keys)
