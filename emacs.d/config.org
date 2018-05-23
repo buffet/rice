@@ -315,6 +315,11 @@ Also a spacemacs habit.
 #+END_SRC
 
 * Text manipulation
+** trailing whitespace
+#+BEGIN_SRC emacs-lisp
+  (setq-default show-trailing-whitespace t)
+#+END_SRC
+
 ** mark-multiple
 Allows you to highlight the cest occurence of a region.  Such joy.  Wow
 
