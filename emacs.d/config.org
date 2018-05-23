@@ -806,6 +806,19 @@ Basically unclutter the holy modeline.
                           (interactive (list (read-shell-command "$ ")))
                           (start-process-shell-command command nil command)))
 
+    ;; change buffer name according to window title except for gimp and java
+    (add-hook 'exwm-update-class-hook
+              (lambda ()
+                (unless (or (string-prefix-p "sun-awt-X11-" exwm-instance-name)
+                            (string= "gimp" exwm-instance-name))
+                  (exwm-workspace-rename-buffer exwm-class-name))))
+    (add-hook 'exwm-update-title-hook
+              (lambda ()
+                (when (or (not exwm-instance-name)
+                          (string-prefix-p "sun-awt-X11-" exwm-instance-name)
+                          (string= "gimp" exwm-instance-name))
+                  (exwm-workspace-rename-buffer exwm-title))))
+
     ;; easy way to make keybindings work *only* in line mode
     (push ?\C-q exwm-input-prefix-keys)
     (define-key exwm-mode-map [?\C-q] #'exwm-input-send-next-key)
