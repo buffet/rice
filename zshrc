@@ -7,7 +7,7 @@
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-nZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -116,6 +116,14 @@ function irc {
     fi
 }
 
+#function ra {
+#    if [ -z RANGER_LEVEL ]; then
+#        ranger
+#    else
+#        exit
+#    fi
+#}
+
 # aliases
 alias v='vim'
 alias ra='ranger'
@@ -130,9 +138,6 @@ alias tkill='tmux kill-session -t '
 
 ## please
 alias please='sudo $(fc -ln -1)'
-
-# title
-# ZSH_THEME_TERM_TITLE_IDLE="%~"
 
 if [[ "$(tty)" = "/dev/tty1" ]]; then
     pgrep xinit || exec startx
