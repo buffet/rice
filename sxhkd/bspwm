@@ -4,11 +4,11 @@
 
 # terminal emulator
 super + Return
-	urxvtc
+	termite
 
 # terminal in same working dir
 #super + shift + Return
-#	termite -cd `xdotool getactivewindow getwindowname | sed -e 's@~@'"$HOME"'@'`
+	termite -cd `xdotool getactivewindow getwindowname | sed -e 's@~@'"$HOME"'@'`
 
 # ranger
 super + ctrl + Return

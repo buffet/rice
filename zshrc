@@ -93,10 +93,6 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export VISUAL='emacsclient'
-export EDITOR=$VISUAL
-export CC='clang'
-
 # Functions
 # ranger-cd
 function ranger-cd {
@@ -120,6 +116,14 @@ function irc {
     fi
 }
 
+#function ra {
+#    if [ -z RANGER_LEVEL ]; then
+#        ranger
+#    else
+#        exit
+#    fi
+#}
+
 # aliases
 alias v='vim'
 alias ra='ranger'
@@ -134,9 +138,6 @@ alias tkill='tmux kill-session -t '
 
 ## please
 alias please='sudo $(fc -ln -1)'
-
-# title
-# ZSH_THEME_TERM_TITLE_IDLE="%~"
 
 if [[ "$(tty)" = "/dev/tty1" ]]; then
     pgrep xinit || exec startx

@@ -54,15 +54,18 @@ fi
 #xterm -geometry 80x20+494-0 &
 #exec xterm -geometry 80x66+0+0 -name login
 
-#DEFAULT_SESSION='bspwm'
+#export VISUAL='emacs'
+#export EDITOR=$VISUAL
+
+export EDITOR='kak'
+
+DEFAULT_SESSION='bspwm'
 #DEFAULT_SESSION='herbstluftwm --locked'
-DEFAULT_SESSION='emacs'
+#DEFAULT_SESSION='emacs'
 
 xset b off
 
-# urxvtd &
-# sxhkd &
+sxhkd &
 xbanish &
 
 exec $DEFAULT_SESSION
-
