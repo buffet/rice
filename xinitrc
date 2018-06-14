@@ -1,5 +1,7 @@
 #!/bin/sh
 
+export XDG_CONFIG_HOME=$HOME/.config
+
 nuserresources=$HOME/.Xresources
 usermodmap=$HOME/.Xmodmap
 sysresources=/etc/X11/xinit/.Xresources
@@ -57,7 +59,7 @@ fi
 #export VISUAL='emacs'
 #export EDITOR=$VISUAL
 
-export EDITOR='kak'
+export EDITOR='vim'
 
 DEFAULT_SESSION='bspwm'
 #DEFAULT_SESSION='herbstluftwm --locked'
