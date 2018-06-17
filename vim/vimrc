@@ -83,8 +83,8 @@ nnoremap <leader>w :w<cr>
 map <F6> :setlocal spell! spelllang=en_us<cr>
 
 " jump to <++>
-nnoremap <space><space> /<++><cr>:nohl<cr>"_c4l
-inoremap <space><space> <esc>/<++><cr>:nohl<cr>"_c4l
+nnoremap <leader><tab> /<++><cr>:nohl<cr>"_c4l
+inoremap <leader><tab> <esc>/<++><cr>:nohl<cr>"_c4l
 
 " tabularize
 nnoremap <leader>t= :Tab/=<cr>
