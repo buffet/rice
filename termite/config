@@ -41,7 +41,7 @@ browser = qutebrowser
 [colors]
 # If both of these are unset, cursor falls back to the foreground color,
 # and cursor_foreground falls back to the background color.
-cursor = #919294
+#cursor = #919294
 #cursor_foreground = #dcdccc
 
 foreground = #919294
