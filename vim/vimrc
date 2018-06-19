@@ -11,7 +11,7 @@ let g:mapleader = " "
 
 " color stuff
 set t_Co=256
-colorscheme delek
+colorscheme default
 syntax on
 
 " trailing whitespace
@@ -109,7 +109,7 @@ function! s:latex_mappings()
 	inoremap ^^ ^{}<++><esc>F}i
 	inoremap __ _{}<++><esc>F}i
 
-	inoremap ;be <esc>vB"ayi\begin{<esc>Ea}<cr>\end{<esc>"apa}<cr><++><esc>2ko
+	inoremap ;be <esc>"ayiWi\begin{<esc>Ea}<cr>\end{<esc>"apa}<cr><++><esc>2ko
 
 	inoremap ;8 \infty
 
