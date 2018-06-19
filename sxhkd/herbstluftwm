@@ -4,34 +4,26 @@
 
 # terminal emulator
 super + Return
-    termite
-
-# ranger
-super + ctrl + Return
-    termite -e ranger
+	termite
 
 # program launcher
 super + @space
-    rofi -show run
+	rofi -show drun
 
 # make sxhkd reload its configuration files:
 super + Escape
-    pkill -USR1 -x sxhkd
+	pkill -USR1 -x sxhkd
 
 # web browser
 super + q
-    qutebrowser
-
-# color stuff
-super + y
-    ~/dotfiles/color_stuff.sh
+	qutebrowser
 
 # scrot
 super + e
-    scrot -e 'mv $f ~/Pictures'
+	scrot -e 'mv $f ~/Pictures'
 
 super + {z,x}
-    xbacklight -{dec,inc} 10
+	xbacklight -{dec,inc} 10
 
 #
 # herbstluftwm hotkeys
@@ -39,14 +31,14 @@ super + {z,x}
 
 # quit herbstluft normally
 super + alt + Escape
-    herbstclient quit
+	herbstclient quit
 
 super + shift + r
-    herbstclient reload
+	herbstclient reload
 
 # close and kill
 super + w
-    herbstclient close
+	herbstclient close
 
 #
 # state/flags
@@ -54,7 +46,7 @@ super + w
 
 # set the window state
 super + {s,f,p}
-    herbstclient {floating,fullscreen,pseudotile} toggle
+	herbstclient {floating,fullscreen,pseudotile} toggle
 
 #
 # focus/swap
@@ -62,27 +54,27 @@ super + {s,f,p}
 
 # explode frame
 super + ctrl + space
-    herbstclient split explode
+	herbstclient split explode
 
 # splitting frames
 super + {u,o}
-    herbstclient split {bottom,right} 0.5
+	herbstclient split {bottom,right} 0.5
 
 super + r
-    herbstclient remove
+	herbstclient remove
 
 # focus the node in the given direction
 super + {_,shift + }{h,j,k,l}
-    herbstclient {focus,shift} {left,down,up,right}
+	herbstclient {focus,shift} {left,down,up,right}
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
-    herbstclient {use_index,move_index} {1-9,0}
+	herbstclient {use_index,move_index} {1-9,0}
 
 #
 # move/resize
 #
 
 super + ctrl + {h,j,k,l}
-    herbstclient resize {left,down,up,right} +0.05
+	herbstclient resize {left,down,up,right} +0.05
 

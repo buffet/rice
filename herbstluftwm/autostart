@@ -15,6 +15,7 @@ hc() {
 
 hc emit_hook reload
 
+polybar herbstluft &
 xsetroot -solid '#1d1f21'
 
 # remove all existing keybindings
