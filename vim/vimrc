@@ -14,6 +14,10 @@ set t_Co=256
 colorscheme delek
 syntax on
 
+" trailing whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+
 " current position
 set ruler
 set number
