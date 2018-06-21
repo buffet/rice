@@ -17,8 +17,11 @@ let g:mapleader = " "
 
 " color stuff
 set t_Co=256
-colorscheme default
+set cursorline
+colorscheme desert
 syntax on
+
+highlight CursorLine cterm=bold term=bold
 
 " trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -28,7 +31,6 @@ match ExtraWhitespace /\s\+$/
 set ruler
 set number
 set relativenumber
-set cursorline
 
 set cmdheight=2
 
