@@ -1,3 +1,9 @@
+call plug#begin()
+
+Plug 'jiangmiao/auto-pairs'
+
+call plug#end()
+
 " magic
 filetype plugin on
 set nocompatible
@@ -76,19 +82,15 @@ match ExtraWhitespace /\s\+$/
 " smash escape
 inoremap kj <esc>
 
-" Auto close parens
-inoremap ( ()<left>
-inoremap [ []<left>
-inoremap " ""<left>
-inoremap { {}<left>
-inoremap {<cr> {<cr>}<esc>O
-
 " move blocks
 vnoremap < <gv
 vnoremap > >gv
 
 " quick save
 nnoremap <leader>w :w<cr>
+
+" nohl
+nnoremap <leader>a :nohl<cr>
 
 " spell checking
 map <F6> :setlocal spell! spelllang=en_us<cr>
