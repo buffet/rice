@@ -76,6 +76,13 @@ match ExtraWhitespace /\s\+$/
 " smash escape
 inoremap kj <esc>
 
+" Auto close parens
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap " ""<left>
+inoremap { {}<left>
+inoremap {<cr> {<cr>}<esc>O
+
 " move blocks
 vnoremap < <gv
 vnoremap > >gv
