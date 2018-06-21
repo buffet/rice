@@ -28,6 +28,7 @@ match ExtraWhitespace /\s\+$/
 set ruler
 set number
 set relativenumber
+set cursorline
 
 set cmdheight=2
 
