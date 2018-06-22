@@ -115,9 +115,9 @@ function! s:latex_mappings()
 	inoremap ;sssec \subsubsection{}<cr><cr><++><esc>2kf}i
 
 	inoremap ;up \usepackage{}<esc>i
-	inoremap ;m \[ \]<++><esc>T[i<space>
-	inoremap ;M \{ \}<cr><cr><++><esc>kk$T{i<space>
-	inoremap ;v <space>\]<esc>BBi\[ <esc>f]a
+	inoremap ;m \( \)<++><esc>T(i<space>
+	inoremap ;M \[ \]<cr><cr><++><esc>kk$T[i<space>
+	inoremap ;v <space>\)<esc>BBi\( <esc>f)a
 	inoremap ^^ ^{}<++><esc>F}i
 	inoremap __ _{}<++><esc>F}i
 
@@ -131,6 +131,9 @@ function! s:latex_mappings()
 	inoremap ;em \emph{}<++><esc>F}i
 
 	inoremap ;frac \frac{}{<++>}<++><esc>2F{a
+
+	" build
+	nnoremap <F5> :! latexmk -pdf <c-r>%<cr>
 endfunction
 
 autocmd BufNewFile,BufRead *.tex call s:latex_mappings()
