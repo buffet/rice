@@ -1,6 +1,9 @@
 call plug#begin()
 
+Plug 'ervandew/supertab'
+Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
+Plug 'vim-syntastic/syntastic'
 
 call plug#end()
 
@@ -102,9 +105,17 @@ map <F6> :setlocal spell! spelllang=en_us<cr>
 nnoremap <leader><tab> /<++><cr>:nohl<cr>"_c4l
 inoremap <leader><tab> <esc>/<++><cr>:nohl<cr>"_c4l
 
+"" Plugins
+
 " tabularize
 nnoremap <leader>t= :Tab/=<cr>
 vnoremap <leader>t= :Tab/=<cr>
+
+" syntastic
+map <leader>s :SyntasticToggleMode<cr>
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatislineFlag()}
+set statusline+=%*
 
 "" Langs
 

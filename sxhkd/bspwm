@@ -6,14 +6,6 @@
 super + Return
 	termite
 
-# terminal in same working dir
-#super + shift + Return
-	termite -cd `xdotool getactivewindow getwindowname | sed -e 's@~@'"$HOME"'@'`
-
-# ranger
-super + ctrl + Return
-	termite -e ranger
-
 # program launcher
 super + @space
 	rofi -show drun

@@ -1,11 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/mn/.conky'
-let g:netrw_dirhist_2='/home/mn/dotfiles/herbstluftwm'
-let g:netrw_dirhist_3='/usr/share/ncTelegram'
-let g:netrw_dirhist_4='/home/mn/.config/bspwm'
-let g:netrw_dirhist_5='/home/mn/dotfiles/sxhkd'
-let g:netrw_dirhist_6='/home/mn/.config'
-let g:netrw_dirhist_7='/etc/NetworkManager/system-connections'
-let g:netrw_dirhist_8='/home/mn/Documents/uni/alp1/ue11/ueb11.md'
-let g:netrw_dirhist_9='/home/mn/.irssi'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/mn/Documents/games/piston-test/src'
