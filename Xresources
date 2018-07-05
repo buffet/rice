@@ -4,7 +4,7 @@
 URxvt*font: xft:DejaVuSansMono:pixelsize=16
 
 ! colorscheme
-#include "dotfiles/barrage2"
+#include "dotfiles/colors/barrage2"
 
 ! settings
 urxvt*urgentOnBell: true
