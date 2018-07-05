@@ -1,5 +1,2 @@
 emacs.d
-!emacs.d/config.org
 !emacs.d/init.el
-!emacs.d/base16-monokai-theme.el
-
