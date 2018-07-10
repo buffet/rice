@@ -199,6 +199,10 @@
 			    company-dabbrev-code
 			    company-irony))))
 
+;; cmake
+(use-package cmake-mode
+  :ensure t)
+
 ;; Rust
 (use-package rust-mode
   :ensure t)
@@ -213,7 +217,7 @@
     ("9d9fda57c476672acd8c6efeb9dc801abea906634575ad2c7688d055878e69d6" default)))
  '(package-selected-packages
    (quote
-    (rust-mode yasnippet-snippets ws-butler which-key use-package projectile org-bullets magit helm general flycheck-clang-analyzer evil-escape doom-themes company-irony company-c-headers))))
+    (cmake-mode rust-mode yasnippet-snippets ws-butler which-key use-package projectile org-bullets magit helm general flycheck-clang-analyzer evil-escape doom-themes company-irony company-c-headers))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
