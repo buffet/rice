@@ -117,6 +117,8 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatislineFlag()}
 set statusline+=%*
 
+let g:syntastic_cpp_include_dirs = ["/usr/include/wine/windows/"]
+
 "" Langs
 
 " LaTeX
@@ -161,4 +163,4 @@ function! s:insert_include_guards()
     normal! kk
 endfunction
 
-autocmd BufNewFile *.{h,hpp} call <SID>insert_include_guards()
+autocmd BufNewFile *.{h,hpp,hxx} call <SID>insert_include_guards()
