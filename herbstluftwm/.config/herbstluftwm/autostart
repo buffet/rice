@@ -39,8 +39,10 @@ done
 hc keybind $Mod-Shift-q quit
 hc keybind $Mod-Shift-r reload
 hc keybind $Mod-w close
+
 hc keybind $Mod-Return spawn termite
-hc keybind $Mod-q spawn qutebrowser
+hc keybind $Mod-q      spawn qutebrowser
+hc keybind $Mod-space  spawn rofi -show drun
 
 # movement
 hc keybind $Mod-Left  focus left
