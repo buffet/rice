@@ -18,20 +18,54 @@ primary = ${xrdb:color11:#ffb52a}
 secondary = ${xrdb:color5:#e60053}
 alert = ${xrdb:color13:#bd2c40}
 
-[bar/bspwm]
-;monitor = ${env:MONITOR:HDMI-2}
+[bar/hlwm]
 width = 100%
 height = 27
-;offset-x = 1%
-;offset-y = 1%
-;radius = 6.0
 radius = 0.0
 fixed-center = false
 
 enable-ipc = true
 
 background = ${colors.background}
-;background = #f00
+foreground = ${colors.foreground}
+
+line-size = 3
+line-color = #f00
+
+border-size = 4
+border-color = ${xrdb:background:#000}
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 2
+
+font-0 = fixed:pixelsize=10;1
+font-1 = unifont:size=8:antialias=false;0
+font-2 = siji;1
+
+modules-left = herbstluftwm
+modules-center = date
+modules-right = cpu memory battery
+
+tray-position = right
+tray-padding = 2
+
+wm-restack = bspwm
+
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+[bar/bspwm]
+width = 100%
+height = 27
+radius = 0.0
+fixed-center = false
+
+enable-ipc = true
+
+background = ${colors.background}
 foreground = ${colors.foreground}
 
 line-size = 3
@@ -51,79 +85,13 @@ font-1 = unifont:size=8:antialias=false;0
 font-2 = siji;1
 
 modules-left = bspwm
-modules-center = 
-modules-right = cpu memory wlan battery date
+modules-center = date
+modules-right = cpu memory battery
 
 tray-position = right
 tray-padding = 2
-;tray-transparent = true
-;tray-background = #0063ff
 
 wm-restack = bspwm
-;wm-restack = i3
-
-;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
-
-cursor-click = pointer
-cursor-scroll = ns-resize
-
-[bar/herbstluft]
-;monitor = ${env:MONITOR:HDMI-2}
-width = 100%
-height = 27
-;offset-x = 1%
-;offset-y = 1%
-;radius = 6.0
-radius = 0.0
-fixed-center = false
-
-enable-ipc = true
-
-background = ${colors.background}
-;background = #f00
-foreground = ${colors.foreground}
-
-line-size = 3
-line-color = #f00
-
-border-size = 4
-border-color = ${xrdb:background:#000}
-
-padding-left = 0
-padding-right = 2
-
-module-margin-left = 1
-module-margin-right = 2
-
-font-0 = fixed:pixelsize=10;1
-font-1 = unifont:size=8:antialias=false;0
-font-2 = siji;1
-
-modules-left = i3
-modules-center = 
-modules-right = xkeyboard cpu memory wlan battery date
-
-tray-position = right
-tray-padding = 2
-;tray-transparent = true
-;tray-background = #0063ff
-
-wm-restack = bspwm
-;wm-restack = i3
-
-;override-redirect = true
-
-;scroll-up = bspwm-desknext
-;scroll-down = bspwm-deskprev
-
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -208,6 +176,18 @@ mount-0 = /
 label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/herbstluftwm]
+type = custom/script
+exec = python3 ~/dotfiles/misc/scripts/hlwm-polybar.py
+
+scroll-down =  exec herbstclient use_index +1
+scroll-up =  exec herbstclient use_index -1
+
+interval = 0.01
+
+format-background = ${colors.background}
+format-underline = ${colors.primary}
 
 [module/bspwm]
 type = internal/bspwm
@@ -370,7 +350,7 @@ time-alt = %H:%M:%S
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format-underline = ${xrdb:color7:#0a6cf5}
+format-underline = ${xrdb:color12:#0a6cf5}
 
 label = %date% %time%
 
@@ -436,10 +416,10 @@ adapter = @ADAPTER@
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>
-format-charging-underline = ${xrdb:color11:#ffb52a}
+format-charging-underline = ${xrdb:color10:#ffb52a}
 
 format-discharging = <ramp-capacity> <label-discharging>
-format-discharging-underline = ${self.format-charging-underline}
+format-discharging-underline = ${xrdb:color11:#ffb52a}
 
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}

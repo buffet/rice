@@ -1,7 +1,9 @@
 #! /bin/sh
 
-#polybar bspwm &
-#bspc config top_padding           -7
+polybar bspwm &
+bspc config top_padding           -7
+
+nm-applet &
 
 xsetroot -solid "#1d1f21"
 
