@@ -61,13 +61,13 @@ fi
 
 export EDITOR='vim'
 
-DEFAULT_SESSION='bspwm'
-#DEFAULT_SESSION='herbstluftwm --locked'
+#DEFAULT_SESSION='bspwm'
+DEFAULT_SESSION='herbstluftwm --locked'
 #DEFAULT_SESSION='emacs'
 
 xset b off
 
-sxhkd &
+#sxhkd &
 xbanish &
 
 exec $DEFAULT_SESSION
