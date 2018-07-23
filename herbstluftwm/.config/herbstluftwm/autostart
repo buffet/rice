@@ -44,6 +44,10 @@ hc keybind $Mod-Return spawn termite
 hc keybind $Mod-q      spawn qutebrowser
 hc keybind $Mod-space  spawn rofi -show drun
 
+# backlight
+hc keybind $Mod-z spawn xbacklight -dec 5
+hc keybind $Mod-x spawn xbacklight -inc 5
+
 # movement
 hc keybind $Mod-Left  focus left
 hc keybind $Mod-Down  focus down
