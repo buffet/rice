@@ -142,4 +142,3 @@ alias please='sudo $(fc -ln -1)'
 if [[ "$(tty)" = "/dev/tty1" ]]; then
     pgrep xinit || exec startx
 fi
-
