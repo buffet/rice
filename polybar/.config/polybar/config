@@ -179,7 +179,8 @@ label-unmounted-foreground = ${colors.foreground-alt}
 
 [module/herbstluftwm]
 type = custom/script
-exec = python3 ~/dotfiles/misc/scripts/hlwm-polybar.py
+exec = echo " $(herbstclient tag_status | sed 's/.*#\(\S\+\).*/\1/') "
+#exec = python3 ~/dotfiles/misc/scripts/hlwm-polybar.py
 
 scroll-down =  exec herbstclient use_index +1
 scroll-up =  exec herbstclient use_index -1
