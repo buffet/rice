@@ -46,7 +46,7 @@ done
 modbind Shift-q quit
 modbind Shift-r reload
 modbind w       close
-modbind Shift-x spawn sloc
+modbind Shift-x spawn slock
 
 modbind Return spawn termite
 modbind q      spawn qutebrowser
