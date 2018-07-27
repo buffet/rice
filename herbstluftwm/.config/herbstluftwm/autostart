@@ -47,6 +47,7 @@ modbind Shift-q quit
 modbind Shift-r reload
 modbind w       close
 modbind Shift-x spawn slock
+modbind Shift-w spawn ~/dotfiles/misc/scripts/hl-swap.sh close
 
 modbind Return spawn termite
 modbind q      spawn qutebrowser
@@ -65,6 +66,8 @@ modbind h     focus left
 modbind j     focus down
 modbind k     focus up
 modbind l     focus right
+
+modbind semicolon spawn ~/dotfiles/misc/scripts/hl-swap.sh auto
 
 # moving clients
 modbind Shift-Left  shift left
