@@ -126,6 +126,7 @@ function irc {
 
 # aliases
 alias v='vim'
+alias g='git'
 alias ra='ranger'
 alias la='ls -l'
 alias lsa='ls -al'
