@@ -1,13 +1,13 @@
 #!/bin/bash
 
-xsetroot -solid \#353645
+xsetroot -solid \#424a64
 
 custardctl --configure debug_mode false
 
 custardctl --configure grid_rows 6
 custardctl --configure grid_columns 8
 
-custardctl --configure grid_gap 12
+custardctl --configure grid_gap 32
 custardctl --configure grid_margin_top 24
 custardctl --configure grid_margin_bottom 24
 custardctl --configure grid_margin_left 24
