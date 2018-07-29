@@ -22,6 +22,10 @@ super + q
 super + y
 	~/dotfiles/color_stuff.sh
 
+# backlight
+super + {z,x}
+	xbacklight -{dec,inc} 10
+
 # scrot
 print
 	scrot -e 'mv $f ~/Pictures'
@@ -138,10 +142,3 @@ super + alt + shift + {h,j,k,l}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
-
-super + z
-	xbacklight -dec 10
-
-super + x
-	xbacklight -inc 10
-
