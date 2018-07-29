@@ -1,4 +1,6 @@
 emacs/.emacs.d
 !emacs/.emacs.d/init.el
 
+vim/.vim/.autoload
+vim/.vim/.netrwhist
 vim/.vim/plugged
