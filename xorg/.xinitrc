@@ -70,4 +70,5 @@ xset b off
 #sxhkd &
 xbanish &
 
+#DEFAULT_SESSION='custard -c=/home/mn/.config/custard/rc.sh'
 exec $DEFAULT_SESSION

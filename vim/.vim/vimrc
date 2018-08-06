@@ -100,6 +100,7 @@ vnoremap > >gv
 
 " quick save
 nnoremap <leader>w :w<cr>
+nnoremap <leader>sw :w !sudo tee %<cr>
 
 " nohl
 nnoremap <leader>a :nohl<cr>
