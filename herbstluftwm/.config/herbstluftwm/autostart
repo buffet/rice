@@ -49,7 +49,7 @@ modbind w       close
 modbind Shift-x spawn slock
 modbind Shift-w spawn ~/dotfiles/misc/scripts/hl-swap.sh close
 
-modbind Return spawn termite
+modbind Return spawn st
 modbind q      spawn qutebrowser
 modbind space  spawn rofi -show drun
 

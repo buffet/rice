@@ -1,6 +1,8 @@
 # Quit if not running interactively
 [[ $- != *i*  ]] && return
 
+[[ -n $DVTM ]] || exec dvtm
+
 # Colors
 color_grey='\e[1;30m'
 color_red='\e[0;31m'
@@ -24,7 +26,7 @@ set -o vi           # vi mode
 shopt -s nocaseglob # case independent glob
 
 # Smash escape
-bind -m vi-insert '"kj":vi-movement-mode' 
+bind -m vi-insert '"kj":vi-movement-mode'
 
 # Prompt
 build_prompt () {
