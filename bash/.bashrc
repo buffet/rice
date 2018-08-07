@@ -46,9 +46,7 @@ build_prompt () {
 	if git rev-parse --git-dir > /dev/null 2>&1; then
 		# Branch name
 		local branch_name="$(command git rev-parse --abbrev-ref HEAD 2> /dev/null)"
-		prompt="${prompt}${color_BLUE}("
-		prompt="${prompt}${color_RED}${branch_name}"
-		prompt="${prompt}${color_BLUE}) "
+		prompt="${prompt}${color_BLUE}(${color_RED}${branch_name}${color_BLUE}) "
 
 		# Dirty
 		git_status="$(command git status --porcelain 2> /dev/null | tail -n1)"
