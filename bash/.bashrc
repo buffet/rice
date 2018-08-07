@@ -36,7 +36,11 @@ build_prompt () {
 	fi
 
 	# Current dir
-	prompt="${prompt}${color_CYAN}${PWD##*/} "
+	if [[ "$PWD" = "$HOME" ]]; then
+		prompt="${prompt}${color_CYAN}~ "
+	else
+		prompt="${prompt}${color_CYAN}${PWD##*/} "
+	fi
 
 	# git
 	if git rev-parse --git-dir > /dev/null 2>&1; then
