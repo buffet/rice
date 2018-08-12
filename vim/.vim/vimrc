@@ -102,6 +102,9 @@ vnoremap > >gv
 nnoremap <leader>w :w<cr>
 nnoremap <leader>sw :w !sudo tee %<cr>
 
+" display file
+nnoremap <leader>f :file<cr>
+
 " nohl
 nnoremap <leader>a :nohl<cr>
 
