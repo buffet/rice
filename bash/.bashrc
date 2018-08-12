@@ -1,7 +1,7 @@
 # Quit if not running interactively
 [[ $- != *i*  ]] && return
 
-[[ -n $DVTM ]] || exec dvtm
+#[[ -n $DVTM ]] || exec dvtm
 
 # Colors
 color_grey='\e[1;30m'
@@ -82,8 +82,3 @@ alias ls='ls --color=auto'
 alias lsa='ls -al'
 alias ra='ranger'
 alias v='vim'
-
-# Start X server
-if [[ "$(tty)" = "/dev/tty1" ]]; then
-	pgrep xinit || exec startx
-fi
