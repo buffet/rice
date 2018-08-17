@@ -29,8 +29,7 @@ get_wm() {
 }
 
 hostname=$(hostname)
-uptime=$(uptime -p | cut -d' ' -f 2-)
-packages=$(pacman -Q | wc -l)
+uptime=$(uptime | cut -d' ' -f 4-6 | sed 's/.$/ hours/')
 wm=$(get_wm)
 term=${TERMINAL:st}
 shell="${SHELL##*/}"
@@ -38,11 +37,10 @@ shell="${SHELL##*/}"
 cat <<EOF
 ${USER}@${hostname}
 --
-Uptime: ${uptime}
-Packages: ${packages}
-WM: ${wm}
-Terminal: ${term}
-Shell: ${shell}
+up: ${uptime}
+wm: ${wm}
+tm: ${term}
+sh: ${shell}
 EOF
 
 if uname -r | grep 'arch' > /dev/null; then

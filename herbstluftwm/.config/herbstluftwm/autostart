@@ -179,5 +179,5 @@ herbstclient set tree_style '╾│ ├└╼─┐'
 
 # no panel
 
-polybar hlwm &
+pgrep polybar || polybar hlwm &
 nm-applet &
