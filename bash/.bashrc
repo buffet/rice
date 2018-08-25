@@ -1,6 +1,9 @@
 # Quit if not running interactively
 [[ $- != *i*  ]] && return
 
+export EDITOR='vim'
+export TERMINAL='termite'
+
 #[[ -n $DVTM ]] || exec dvtm
 
 # Colors
@@ -82,3 +85,4 @@ alias ls='ls --color=auto'
 alias lsa='ls -al'
 alias ra='ranger'
 alias v='vim'
+alias nib='nix-build -E "with import <nixpkgs> {}; callPackage ./default.nix {}"'
