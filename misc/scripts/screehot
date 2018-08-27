@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+case "$1" in
+	full)
+		scrot='maim -u'
+		;;
+	sel)
+		scrot='maim -su'
+		;;
+	win)
+		scrot='maim -slu'
+		;;
+	help|*)
+		echo "$(basename $0) full|sel|win"
+		exit
+		;;
+esac
+
+$scrot | xclip -selection clipboard -t image/png
