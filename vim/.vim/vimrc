@@ -6,10 +6,8 @@ endif
 
 call plug#begin()
 
-Plug 'ervandew/supertab'
 Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
-Plug 'vim-syntastic/syntastic'
 
 call plug#end()
 
@@ -114,6 +112,9 @@ map <F6> :setlocal spell! spelllang=en_us<cr>
 " jump to <++>
 nnoremap <leader><tab> /<++><cr>:nohl<cr>"_c4l
 inoremap <leader><tab> <esc>/<++><cr>:nohl<cr>"_c4l
+
+" Add license note
+nnoremap <leader>lm maggO<esc>:r ~/dotfiles/misc/licenses/mpl20<cr>kdd`a
 
 "" Plugins
 
