@@ -25,7 +25,6 @@ color_CYAN='\e[1;36m'
 color_none='\e[0m'
 
 # Options
-set -o vi           # vi mode
 shopt -s nocaseglob # case independent glob
 
 # Smash escape
