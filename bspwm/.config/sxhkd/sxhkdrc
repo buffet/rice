@@ -24,7 +24,11 @@ super + y
 
 # backlight
 super + {z,x}
-	xbacklight -{dec,inc} 10
+	xbacklight -{dec,inc} 5
+
+# slock
+super + shift + x
+	slock
 
 # scrot
 print

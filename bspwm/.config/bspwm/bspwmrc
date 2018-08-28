@@ -1,7 +1,7 @@
 #! /bin/sh
 
 polybar bspwm &
-bspc config top_padding           -7
+#bspc config top_padding           -7
 
 nm-applet &
 

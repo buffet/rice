@@ -26,4 +26,6 @@ xset b off
 
 xbanish &
 
-exec dwmspawn.sh
+sxhkd &
+
+exec herbstluftwm --locked
