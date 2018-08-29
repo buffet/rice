@@ -56,9 +56,12 @@ modbind Shift-x spawn slock
 modbind y       spawn ~/dotfiles/misc/scripts/dunst-time.sh
 modbind Shift-y spawn ~/dotfiles/misc/scripts/dunst-battery.sh
 
-modbind e         spawn ~/dotfiles/misc/scripts/screehot full
-modbind Shift-e   spawn ~/dotfiles/misc/scripts/screehot sel
-modbind Control-e spawn ~/dotfiles/misc/scripts/screehot win
+modbind e             spawn ~/dotfiles/misc/scripts/screehot full
+modbind Shift-e       spawn ~/dotfiles/misc/scripts/screehot sel
+modbind Control-e     spawn ~/dotfiles/misc/scripts/screehot win
+modbind Alt-e         spawn ~/dotfiles/misc/scripts/screehot full upload
+modbind Alt-Shift-e   spawn ~/dotfiles/misc/scripts/screehot sel upload
+modbind Alt-Control-e spawn ~/dotfiles/misc/scripts/screehot win upload
 
 # backlight
 modbind z spawn xbacklight -dec 5
