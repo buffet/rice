@@ -29,7 +29,7 @@ get_wm() {
 }
 
 hostname=$(hostname)
-uptime=$(uptime | cut -d' ' -f 4-6 | sed 's/.$/ hours/')
+uptime=$(uptime | cut -d' ' -f 5- | sed 's/,.*$/ hours/')
 wm=$(get_wm)
 term=${TERMINAL:st}
 shell="${SHELL##*/}"
@@ -45,4 +45,6 @@ EOF
 
 if uname -r | grep 'arch' > /dev/null; then
 	echo -e '\nI use arch btw'
+elif uname -a | grep 'NixOS' > /dev/null; then
+	echo -e '\nI use a reproducable system btw'
 fi

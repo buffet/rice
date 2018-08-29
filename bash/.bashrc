@@ -2,7 +2,7 @@
 [[ $- != *i*  ]] && return
 
 export EDITOR='vim'
-export TERMINAL='termite'
+export TERMINAL='st'
 
 #[[ -n $DVTM ]] || exec dvtm
 
