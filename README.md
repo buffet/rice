@@ -5,18 +5,18 @@ This isn't really made for others to use -- it's actually just a backup/way of s
 
 Feel free to do what you want with it.
 
+Organized with stow (for now).
+
 ## Scrots
 TODO
 
 ## Programs and stuff
-* Window manager: ~~herbstluftwm~~ ~~bspwm~~ herbstluftwm
+* Window manager: herbstluftwm
 * Bar: None
-* Information stuff: conky
 * File manager: ranger
-* Browser: qutebrowser
+* Browser: chromium in app mode
 * PDF rendering: mupdf
 * Running stuff: rofi
-* Shell: fish
-* Terminal: xvrt-Unicode
+* Shell: bash
+* Terminal: st
 * Vim > Emacs (for now)
-
