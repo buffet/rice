@@ -16,4 +16,11 @@ case "$1" in
 		;;
 esac
 
-$scrot | xclip -selection clipboard -t image/png
+case "$2" in
+	upload)
+		$scrot 2> /dev/null | curl -F c=@- "https://ptpb.pw/?u=1" 2> /dev/null | head -c -1 | xclip -selection clipboard
+		;;
+	copy|*)
+		$scrot 2> /dev/null | xclip -selection clipboard -t image/png
+		;;
+esac
