@@ -1,13 +1,13 @@
 # /bin/env bash
 
-for j in {30..37}
-do
-	for i in 0 1
-	do
-		printf "\e[$i;${j}m$i;$j "
-	done
-
-	printf "\n"
+for  ((i=0; i<8; i++)); do
+	echo -en "\e[48;5;${i}m   \e[0m "
 done
 
-printf "\e[0m"
+printf "\n"
+
+for  ((i=8; i<16; i++)); do
+	echo -en "\e[48;5;${i}m   \e[0m "
+done
+
+printf "\n"
