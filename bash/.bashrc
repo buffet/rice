@@ -3,7 +3,7 @@
 
 export EDITOR='vim'
 export TERMINAL='st'
-export PAGER="/bin/sh -c \"unset PAGER;col -b -x |           \
+export MANPAGER="/bin/sh -c \"unset PAGER;col -b -x |           \
 	vim -R -c 'set ft=man nomod nolist' -c 'map q :q<CR>'       \
 	-c 'map <SPACE> <C-D>' -c 'map b <C-U>'                     \
 	-c 'nmap K :Man <C-R>=expand(\\\"<cword>\\\")<CR><CR>' -\""
@@ -90,4 +90,5 @@ alias ls='ls --color=auto'
 alias lsa='ls -al'
 alias ra='ranger'
 alias v='vim'
-alias nib='nix-build -E "with import <nixpkgs> {}; callPackage ./default.nix {}"'
+alias def-build='nix-build -E "with import <nixpkgs> {}; callPackage ./default.nix {}"'
+alias def-shell='nix-shell -E "with import <nixpkgs> {}; callPackage ./default.nix {}" --pure'
