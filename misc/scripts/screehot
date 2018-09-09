@@ -25,4 +25,4 @@ case "$2" in
 		;;
 esac
 
-$scrot | $output
+eval "$scrot | $output"
