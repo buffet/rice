@@ -8,6 +8,8 @@ call plug#begin()
 
 Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
+Plug 'LucHermitte/lh-vim-lib' " dependency to alternate-lite
+Plug 'LucHermitte/alternate-lite'
 
 call plug#end()
 
@@ -103,6 +105,9 @@ nnoremap <leader>sw :w !sudo tee %<cr>
 " display file
 nnoremap <leader>f :file<cr>
 
+" alternate between files
+nnoremap <leader>o :A<cr>
+
 " nohl
 nnoremap <leader>a :nohl<cr>
 
@@ -113,6 +118,12 @@ map <F6> :setlocal spell! spelllang=en_us<cr>
 nnoremap <leader><tab> /<++><cr>:nohl<cr>"_c4l
 inoremap <leader><tab> <esc>/<++><cr>:nohl<cr>"_c4l
 
+" easier split navigation
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+
 " Add license note
 nnoremap <leader>lm maggO<esc>:r ~/dotfiles/misc/licenses/mpl20<cr>kdd`a
 
@@ -121,14 +132,6 @@ nnoremap <leader>lm maggO<esc>:r ~/dotfiles/misc/licenses/mpl20<cr>kdd`a
 " tabularize
 nnoremap <leader>t= :Tab/=<cr>
 vnoremap <leader>t= :Tab/=<cr>
-
-" syntastic
-map <leader>s :SyntasticToggleMode<cr>
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatislineFlag()}
-set statusline+=%*
-
-let g:syntastic_cpp_include_dirs = ["/usr/include/wine/windows/"]
 
 "" Langs
 
