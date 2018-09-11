@@ -10,6 +10,7 @@ Plug 'godlygeek/tabular'
 Plug 'jiangmiao/auto-pairs'
 Plug 'LucHermitte/lh-vim-lib' " dependency to alternate-lite
 Plug 'LucHermitte/alternate-lite'
+Plug 'chriskempson/base16-vim'
 
 call plug#end()
 
@@ -25,12 +26,13 @@ let mapleader = " "
 let g:mapleader = " "
 
 " color stuff
-set t_Co=256
+let base16colorspace=256
+colorscheme base16-brushtrees
 set cursorline
-colorscheme desert
 syntax on
 
 highlight CursorLine cterm=bold term=bold
+highlight EndOfBuffer ctermfg=black ctermbg=black
 
 " trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red
@@ -38,8 +40,8 @@ match ExtraWhitespace /\s\+$/
 
 " current position
 set ruler
-set number
-set relativenumber
+"set number
+"set relativenumber
 
 set cmdheight=2
 
