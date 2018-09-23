@@ -34,9 +34,9 @@ syntax on
 highlight CursorLine cterm=bold term=bold
 highlight EndOfBuffer ctermfg=black ctermbg=black
 
-" trailing whitespace
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
+" show whitespace
+set list
+set listchars=tab:>·,trail:␣,extends:>,precedes:<
 
 " current position
 set ruler
