@@ -35,8 +35,9 @@ highlight CursorLine cterm=bold term=bold
 highlight EndOfBuffer ctermfg=black ctermbg=black
 
 " show whitespace
-set list
 set listchars=tab:>·,trail:␣,extends:>,precedes:<
+set list
+nnoremap <F7> :set list!<cr>
 
 " current position
 set ruler
