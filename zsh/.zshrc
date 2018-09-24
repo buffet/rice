@@ -1,3 +1,13 @@
+# Profile
+EDITOR=vim
+TERMINAL=urxvtc
+PATH="$HOME/dotfiles/misc/scripts:$PATH"
+
+export EDITOR TERMINAL PATH
+
+# Emacs mode
+bindkey -e
+
 # Modules
 autoload -Uz compinit add-zsh-hook
 
@@ -39,6 +49,9 @@ setopt CORRECT       # spellcheck
 setopt GLOB_COMPLETE # complete globs
 setopt NO_CASE_GLOB  # case insensitive
 setopt EXTENDED_GLOB # extended globbering
+setopt MENU_COMPLETE # case insensitive
+
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 
 HISTFILE=~/.zsh_history
 SAVEHIST=10000
@@ -53,19 +66,6 @@ setopt HIST_IGNORE_SPACE    # ignore lines starting with a space
 # Search history
 # TODO: Implement
 
-# Smash esc
-# TODO: Implement
-
-# Attach or create
-function irc {
-	irc=irc
-	if abduco | grep -q "$irc"; then
-		abduco -a "$irc"
-	else
-		abduco -c "$irc"
-	fi
-}
-
 # Aliases
 alias v='vim'
 alias g='git'
@@ -74,8 +74,5 @@ alias la='ls -l'
 alias lsa='ls -al'
 alias aba='abduco -a'
 alias abc='abduco -c'
-
-# Start X server
-if [[ "$(tty)" = "/dev/tty1" ]]; then
-	pgrep xinit || exec startx
-fi
+alias def-build='nix-build -E "with import <nixpkgs> {}; callPackage ./default.nix {}"'
+alias def-shell='nix-shell -E "with import <nixpkgs> {}; callPackage ./default.nix {}" --pure'
