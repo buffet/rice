@@ -1,6 +1,14 @@
 [user]
 	email = niclas@countingsort.com
-	name = countingsort
+	name = buffet
+
+user = buffet
+
+[credential "https://github.com"]
+	buffet = buffet
+
+[url "https://github.com/"]
+	insteadOf = "gh:"
 
 [alias]
 	a = add
