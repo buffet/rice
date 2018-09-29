@@ -2,6 +2,8 @@
 # use tabs instead of spaces
 set-option global indentwidth 4
 set-option global tabstop     4
+
+# don't change title all the time
 set-option global ui_options  ncurses_set_title=false
 
 ## Maps
@@ -13,64 +15,22 @@ map global user m :buffer-next<ret>
 map global user b :buffer<space>
 
 ## Hooks
-# smash escape on kj
-hook global InsertChar j %{ try %{
-    exec -draft hH <a-k>kj<ret> d
-    exec <esc>
-}}
-
-# tab is indent not insert tab
-hook global InsertChar \t %{ exec -draft h@ }
-
 # highlighters
 hook global WinCreate .* %{
-    # relative line numbers
-    add-highlighter window number_lines -relative -hlcursor
+	# relative line numbers
+	add-highlighter window number_lines -relative -hlcursor
 
-    # matching brackets
-    add-highlighter window show_matching
+	# matching brackets
+	add-highlighter window show_matching
 
-    # trailing spaces
-    add-highlighter window regex '\h+$' 0:black,red
+	# trailing spaces
+	add-highlighter window regex '\h+$' 0:black,red
 
-    # softwraping
-    add-highlighter window wrap
+	# softwraping
+	add-highlighter window wrap
 }
 
-# umlauts
-hook global InsertChar a %{ try %{
-    exec -draft hHH <a-k>``a<ret> d
-    exec ä
+hook global InsertChar j %{ try %{
+  exec -draft hH <a-k>kj<ret> d
+  exec <esc>
 }}
-
-hook global InsertChar o %{ try %{
-    exec -draft hHH <a-k>``o<ret> d
-    exec ö
-}}
-
-hook global InsertChar u %{ try %{
-    exec -draft hHH <a-k>``u<ret> d
-    exec ü
-}}
-
-hook global InsertChar A %{ try %{
-    exec -draft hHH <a-k>``A<ret> d
-    exec Ä
-}}
-
-hook global InsertChar O %{ try %{
-    exec -draft hHH <a-k>``O<ret> d
-    exec Ö
-}}
-
-hook global InsertChar U %{ try %{
-    exec -draft hHH <a-k>``U<ret> d
-    exec Ü
-}}
-
-# markdown
-hook global BufCreate .*\.md %{
-    # compile
-    map buffer user c :w<ret>:%sh{echo ~/dotfiles/vim/markdown_compile.sh}<ret>
-}
-
