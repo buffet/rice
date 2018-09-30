@@ -11,6 +11,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'LucHermitte/lh-vim-lib' " dependency to alternate-lite
 Plug 'LucHermitte/alternate-lite'
 Plug 'chriskempson/base16-vim'
+Plug 'zyedidia/literate.vim'
 
 call plug#end()
 
@@ -22,8 +23,8 @@ set nocompatible
 set autoread
 
 " change leader key
-let mapleader = " "
-let g:mapleader = " "
+let mapleader = ","
+let g:mapleader = ","
 
 " color stuff
 let base16colorspace=256
@@ -135,6 +136,8 @@ nnoremap <leader>lm maggO<esc>:r ~/dotfiles/misc/licenses/mpl20<cr>kdd`a
 " tabularize
 nnoremap <leader>t= :Tab/=<cr>
 vnoremap <leader>t= :Tab/=<cr>
+nnoremap <leader>t\ :Tab/\|<cr>
+vnoremap <leader>t\ :Tab/\|<cr>
 
 "" Langs
 
@@ -169,6 +172,12 @@ endfunction
 autocmd BufNewFile,BufRead *.tex call s:latex_mappings()
 
 " c/c++
+function! s:c_mappings()
+	inoremap ;; .h><esc>I#include <std<esc>A
+endfunction
+
+autocmd BufNewFile,BufRead *.{c,cpp,cxx,h,hpp,hxx} call s:c_mappings()
+
 function! s:insert_include_guards()
     let guardname = substitute(toupper(expand("%:t")), "\\.", "_", "g")
     execute "normal! i#ifndef " . guardname
