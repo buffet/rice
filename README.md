@@ -7,6 +7,10 @@ Feel free to do what you want with it.
 
 Organized with stow (for now).
 
+## IMPORTANT
+
+Even though this is called rice, be sure to clone it as dotfiles, as I think some of the stuff depends on it.
+
 ## Scrots
 TODO
 
