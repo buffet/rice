@@ -185,6 +185,6 @@ herbstclient set tree_style '╾│ ├└╼─┐'
 MYDIR="$(dirname "$(realpath "$0")")"
 
 pkill herbstevent
-"$MYDIR/herbstevent" & disown
+#"$MYDIR/herbstevent" & disown
 
 xbanish &

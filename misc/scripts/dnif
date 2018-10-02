@@ -1,0 +1,18 @@
+#!/bin/sh
+#
+# dnif - find, but backwards and different
+
+[[ -z "$1" ]] && exit 1
+
+while ! ls | grep "$1" > /dev/null
+do
+	if [[ "${PWD}" = "/" ]]
+	then
+		echo \'"$1"\' not found.
+		exit
+	fi
+
+	cd ..
+done
+
+eval $2

@@ -3,10 +3,10 @@
 
 export EDITOR='vim'
 export TERMINAL='st'
-export MANPAGER="/bin/sh -c \"unset PAGER;col -b -x |           \
-	vim -R -c 'set ft=man nomod nolist' -c 'map q :q<CR>'       \
-	-c 'map <SPACE> <C-D>' -c 'map b <C-U>'                     \
-	-c 'nmap K :Man <C-R>=expand(\\\"<cword>\\\")<CR><CR>' -\""
+#export MANPAGER="/bin/sh -c \"unset PAGER;col -b -x |           \
+#	vim -R -c 'set ft=man nomod nolist' -c 'map q :q<CR>'       \
+#	-c 'map <SPACE> <C-D>' -c 'map b <C-U>'                     \
+#	-c 'nmap K :Man <C-R>=expand(\\\"<cword>\\\")<CR><CR>' -\""
 
 PATH="$HOME/dotfiles/misc/scripts:$PATH"
 
@@ -71,7 +71,7 @@ build_prompt () {
 PS1='$(build_prompt)'
 
 # Functions
-irc () {
+irc() {
 	local irc='irc'
 
 	if abduco | grep -q "$irc"; then
@@ -81,10 +81,13 @@ irc () {
 	fi
 }
 
+spawn() {
+	$@ & disown
+}
+
 # Aliases
 alias aba='abduco -a'
 alias abc='abduco -c'
-alias g='git'
 alias la='ls -l'
 alias ls='ls --color=auto'
 alias lsa='ls -al'

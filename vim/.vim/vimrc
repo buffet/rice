@@ -12,7 +12,6 @@ Plug 'LucHermitte/lh-vim-lib' " dependency to alternate-lite
 Plug 'LucHermitte/alternate-lite'
 Plug 'chriskempson/base16-vim'
 Plug 'zyedidia/literate.vim'
-Plug 'vim-scripts/SpellCheck'
 
 call plug#end()
 
