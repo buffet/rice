@@ -12,6 +12,7 @@ Plug 'LucHermitte/lh-vim-lib' " dependency to alternate-lite
 Plug 'LucHermitte/alternate-lite'
 Plug 'chriskempson/base16-vim'
 Plug 'zyedidia/literate.vim'
+Plug 'vim-scripts/SpellCheck'
 
 call plug#end()
 
@@ -109,6 +110,9 @@ nnoremap <leader>sw :w !sudo tee %<cr>
 " display file
 nnoremap <leader>f :file<cr>
 
+" reload file
+nnoremap <leader>r :edit!<cr>
+
 " alternate between files
 nnoremap <leader>o :A<cr>
 
@@ -190,3 +194,5 @@ function! s:insert_include_guards()
 endfunction
 
 autocmd BufNewFile *.{h,hpp,hxx} call <SID>insert_include_guards()
+
+autocmd BufNewFile,BufRead *.lit set noexpandtab
