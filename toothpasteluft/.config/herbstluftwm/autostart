@@ -48,7 +48,7 @@ modbind Shift-r reload
 modbind w       close
 modbind Shift-w spawn ~/dotfiles/misc/scripts/hl-swap.sh close
 
-modbind Return  spawn urxvtc
+modbind Return  spawn urxvt
 modbind q       spawn qutebrowser
 modbind space   spawn urxvt -name papaya_run -e ~/Documents/papaya/papaya
 modbind Shift-x spawn slock
@@ -66,8 +66,8 @@ modbind Alt-Control-e spawn ~/dotfiles/misc/scripts/screehot win upload
 modbind n spawn ~/dotfiles/misc/scripts/ws.sh
 
 # backlight
-modbind z spawn xbacklight -dec 5
-modbind x spawn xbacklight -inc 5
+modbind z spawn brightnessctl set 5%-
+modbind x spawn brightnessctl set 5%+
 
 # movement
 modbind Left  focus left
