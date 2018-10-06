@@ -1,9 +1,4 @@
-# Profile
-EDITOR=vim
-TERMINAL=urxvtc
-PATH="$HOME/dotfiles/misc/scripts:$PATH"
-
-export EDITOR TERMINAL PATH
+[[ -f ~/.profile ]] && . ~/.profile
 
 # Emacs mode
 bindkey -e
