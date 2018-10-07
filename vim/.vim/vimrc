@@ -27,9 +27,8 @@ let mapleader = ","
 let g:mapleader = ","
 
 " color stuff
-let base16colorspace=256
 colorscheme base16-brushtrees
-set cursorline
+"set cursorline
 syntax on
 
 highlight CursorLine cterm=bold term=bold
