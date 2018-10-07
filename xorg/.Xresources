@@ -4,7 +4,7 @@
 URxvt*font: xft:DejaVuSansMono:pixelsize=16
 
 ! colorscheme
-#include "../misc/colors/toothpaste"
+#include "/home/buffet/dotfiles/misc/colors/toothpaste"
 
 ! settings
 URxvt*urgentOnBell: true
