@@ -1,6 +1,6 @@
 #!/bin/sh
 
-TERMINAL="${TERMINAL:-urxvtc}"
+TERMINAL="${TERMINAL:-urxvt}"
 
 hc() {
 	herbstclient "$@"
