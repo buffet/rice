@@ -1,4 +1,4 @@
-PATH+=":${HOME}/dotfiles/misc/scripts"
+PATH+=":${HOME}/bin"
 export EDITOR='vim'
 export BROWSER='qutebrowser'
 export TERMINAL='st'

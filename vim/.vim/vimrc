@@ -36,7 +36,7 @@ highlight EndOfBuffer ctermfg=black ctermbg=black
 
 " show whitespace
 set listchars=tab:>·,trail:␣,extends:>,precedes:<
-set list
+"set list
 nnoremap <F7> :set list!<cr>
 
 " current position
@@ -44,7 +44,7 @@ set ruler
 "set number
 "set relativenumber
 
-set cmdheight=2
+set cmdheight=1
 
 " normal backspace
 set backspace=eol,start,indent
@@ -175,7 +175,7 @@ autocmd BufNewFile,BufRead *.tex call s:latex_mappings()
 
 " c/c++
 function! s:c_mappings()
-	inoremap ;; .h><esc>I#include <std<esc>A
+	inoremap ;i .h><esc>I#include <std<esc>A
 endfunction
 
 autocmd BufNewFile,BufRead *.{c,cpp,cxx,h,hpp,hxx} call s:c_mappings()

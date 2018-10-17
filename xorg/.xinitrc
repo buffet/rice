@@ -22,3 +22,4 @@ xset b off
 xbanish &
 
 exec herbstluftwm --locked
+#exec sxhkd

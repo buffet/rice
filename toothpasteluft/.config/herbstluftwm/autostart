@@ -167,7 +167,7 @@ hc set smart_window_surroundings 0
 hc set smart_frame_surroundings 1
 hc set mouse_recenter_gap 0
 
-hc pad 0 16 16 16 16
+hc pad 0 0 0 0 0
 
 # rules
 hc unrule -F
@@ -184,7 +184,10 @@ herbstclient set tree_style '╾│ ├└╼─┐'
 
 MYDIR="$(dirname "$(realpath "$0")")"
 
-pkill herbstevent
+#pkill herbstevent
 #"$MYDIR/herbstevent" & disown
+
+#pkill polybar
+#polybar hlwm &
 
 xbanish &
