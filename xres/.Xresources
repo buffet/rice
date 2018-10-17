@@ -1,0 +1,21 @@
+! URxvt settings
+
+! fonts
+URxvt*font: xft:DejaVuSansMono:pixelsize=16
+
+! colorscheme
+#include "/home/buffet/dotfiles/misc/colors/toothpaste"
+
+! settings
+URxvt*urgentOnBell: true
+URxvt*scrollBar: false
+URxvt*cursorBlink: false
+URxvt*iso14755: false
+URxvt*url-launcher: chromium
+URxvt*termName: rxvt-unicode-256color
+URxvt.geometry: 72x22
+URxvt.internalBorder: 14
+
+! clickable URLs
+URxvt.matcher.button: 1
+URxvt.url-launcher: chromium
