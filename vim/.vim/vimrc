@@ -35,7 +35,7 @@ highlight CursorLine cterm=bold term=bold
 highlight EndOfBuffer ctermfg=black ctermbg=black
 
 " show whitespace
-set listchars=tab:>·,trail:␣,extends:>,precedes:<
+"set listchars=tab:>·,trail:␣,extends:>,precedes:<
 "set list
 nnoremap <F7> :set list!<cr>
 
@@ -132,6 +132,11 @@ nnoremap <c-l> <c-w>l
 
 " Add license note
 nnoremap <leader>lm maggO<esc>:r ~/dotfiles/misc/licenses/mpl20<cr>kdd`a
+
+" Autocenter
+nnoremap j jzz
+nnoremap k kzz
+nnoremap G Gzz
 
 "" Plugins
 
