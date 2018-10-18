@@ -133,11 +133,6 @@ nnoremap <c-l> <c-w>l
 " Add license note
 nnoremap <leader>lm maggO<esc>:r ~/dotfiles/misc/licenses/mpl20<cr>kdd`a
 
-" Autocenter
-nnoremap j jzz
-nnoremap k kzz
-nnoremap G Gzz
-
 "" Plugins
 
 " tabularize
