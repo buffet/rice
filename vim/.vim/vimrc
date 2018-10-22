@@ -27,7 +27,7 @@ let mapleader = ","
 let g:mapleader = ","
 
 " color stuff
-colorscheme base16-brushtrees
+colorscheme base16-atelier-dune-light
 "set cursorline
 syntax on
 
@@ -40,7 +40,7 @@ highlight EndOfBuffer ctermfg=black ctermbg=black
 nnoremap <F7> :set list!<cr>
 
 " current position
-set ruler
+"set ruler
 "set number
 "set relativenumber
 
