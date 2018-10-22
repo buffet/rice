@@ -40,7 +40,7 @@ highlight EndOfBuffer ctermfg=black ctermbg=black
 nnoremap <F7> :set list!<cr>
 
 " current position
-"set ruler
+set noruler
 "set number
 "set relativenumber
 
