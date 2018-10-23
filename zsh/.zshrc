@@ -10,34 +10,40 @@ autoload -Uz compinit add-zsh-hook
 compinit
 zstyle ':completion:*' menu select
 
-# Prompt (for now)
-GIT_PROMPT_PREFIX="%{%B%F{blue}%}(%{%F{red}%}"
-GIT_PROMPT_SUFFIX="%{%b%f%}"
-GIT_PROMPT_DIRTY="%{%F{blue}%}) %{%B%F{yellow}%}✗"
-GIT_PROMPT_CLEAN="%{%F{blue}%})"
-
-function _parse_git_dirty() {
-	local STATUS=$(command git status --porcelain 2> /dev/null | tail -n1)
-	if [[ -n $STATUS ]]; then
-		echo "$GIT_PROMPT_DIRTY"
+# Prompt
+build_prompt() {
+	# Error code
+	if [[ "$?" -eq 0 ]]; then
+		prompt="%{%B%F{green}%}➜ "
 	else
-		echo "$GIT_PROMPT_CLEAN"
+		prompt="%{%B%F{red}%}➜ "
 	fi
+
+	# Current dir
+	if [[ "$PWD" = "$HOME" ]]; then
+		prompt+="%{%B%F{cyan}%}~ "
+	else
+		prompt+="%{%B%F{cyan}%}${PWD##*/} "
+	fi
+
+	# git
+	if git rev-parse --git-dir > /dev/null 2>&1; then
+		# Branch name
+		local branch_name="$(command git rev-parse --abbrev-ref HEAD 2> /dev/null)"
+		prompt+="%{%B%F{blue}%}(%{%B%F{red}%}${branch_name}%{%B%F{blue}%}) "
+
+		# Dirty
+		git_status="$(command git status --porcelain 2> /dev/null | tail -n1)"
+		if [[ -n "$git_status" ]]; then
+			prompt+="%{%B%F{yellow}%}✗ "
+		fi
+	fi
+
+	printf "%s" "${prompt}%{%b%f%}"
 }
 
-function _git_prompt_info() {
-	git rev-parse --git-dir > /dev/null 2>&1 || return
-	local dirty="$(_parse_git_dirty)"
-	local branch_name="$(git rev-parse --abbrev-ref HEAD 2> /dev/null)"
-	echo "${GIT_PROMPT_PREFIX}${branch_name}${dirty}${GIT_PROMPT_SUFFIX} "
-}
-
-_prompt_countingsort_precmd () {
-	local ret_status="%(?:%B%F{green}➜ :%B%F{red}➜ )"
-	PS1="${ret_status} %{%F{cyan}%}%c%{%f%} $(_git_prompt_info)%b%f"
-}
-
-add-zsh-hook precmd _prompt_countingsort_precmd
+setopt PROMPT_SUBST
+PS1='$(build_prompt)'
 
 # Options
 setopt CORRECT       # spellcheck
