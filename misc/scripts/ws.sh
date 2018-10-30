@@ -19,7 +19,7 @@ herbstclient --idle | while read -r event; do
 
 	if [ "$c" -eq 3 ];then
 		hc chain               \
-			, split right 0.45 \
+			, split right 0.4  \
 			, split below      \
 			, shift down       \
 			, focus up         \
