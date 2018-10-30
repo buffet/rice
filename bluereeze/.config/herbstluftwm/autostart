@@ -110,8 +110,8 @@ hc set frame_transparent_width 32
 hc set frame_gap 14
 
 hc attr theme.active.color '#6e6b5e'
-hc attr theme.normal.color '#6e6b5e'
-hc attr theme.urgent.color '#6e6b5e'
+hc attr theme.normal.color '#9e9b8e'
+hc attr theme.urgent.color '#9e9b8e'
 hc attr theme.inner_width 0
 hc attr theme.inner_color black
 hc attr theme.border_width 4
