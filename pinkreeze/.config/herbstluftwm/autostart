@@ -1,0 +1,147 @@
+#!/usr/bin/env bash
+
+# this is a simple config for herbstluftwm
+
+hc() {
+    herbstclient "$@"
+}
+
+hc emit_hook reload
+
+xsetroot -solid '#4e4b3e'
+
+# remove all existing keybindings
+hc keyunbind --all
+hc mouseunbind --all
+
+Mod=Mod4    # Use alt as the main modifier
+
+modbind() {
+	key=$1
+	shift
+	hc keybind $Mod-$key $@
+}
+
+# tags
+tag_names=( {1..9} 0 )
+tag_keys=( {1..9} 0 )
+
+hc rename default "${tag_names[0]}" || true
+for i in ${!tag_names[@]} ; do
+    hc add "${tag_names[$i]}"
+    key="${tag_keys[$i]}"
+    if ! [ -z "$key" ] ; then
+        hc keybind "$Mod-$key" use_index "$i"
+        hc keybind "$Mod-Shift-$key" move_index "$i"
+    fi
+done
+
+# general
+modbind Shift-q quit
+modbind Shift-r reload
+modbind w       chain , close , remove
+
+# applications
+modbind Return  spawn ${TERMINAL:st}
+modbind q       spawn qutebrowser
+modbind Shift-x spawn slock
+
+modbind n       spawn ws.sh
+
+# screenshot
+modbind e       spawn screehot full
+
+# backlight
+modbind z spawn brightnessctl set 5%-
+modbind x spawn brightnessctl set 5%+
+
+# movement
+modbind Left  focus left
+modbind Down  focus down
+modbind Up    focus up
+modbind Right focus right
+modbind h     focus left
+modbind j     focus down
+modbind k     focus up
+modbind l     focus right
+
+# moving clients
+modbind Shift-Left  shift left
+modbind Shift-Down  shift down
+modbind Shift-Up    shift up
+modbind Shift-Right shift right
+modbind Shift-h     shift left
+modbind Shift-j     shift down
+modbind Shift-k     shift up
+modbind Shift-l     shift right
+
+# splitting
+modbind Control-h     chain , split left   , focus left
+modbind Control-j     chain , split bottom , focus down
+modbind Control-k     chain , split up     , focus up
+modbind Control-l     chain , split right  , focus right
+modbind Control-left  chain , split left   , focus left
+modbind Control-down  chain , split bottom , focus down
+modbind Control-up    chain , split up     , focus up
+modbind Control-right chain , split right  , focus right
+modbind r remove
+
+# resize
+resizestep=0.05
+modbind Alt-h     resize left  +$resizestep
+modbind Alt-j     resize down  +$resizestep
+modbind Alt-k     resize up    +$resizestep
+modbind Alt-l     resize right +$resizestep
+modbind Alt-Left  resize left  +$resizestep
+rodbind Alt-Down  resize down  +$resizestep
+modbind Alt-Up    resize up    +$resizestep
+modbind Alt-Right resize right +$resizestep
+
+# layout
+modbind s floating   toggle
+modbind f fullscreen toggle
+modbind p pseudotile toggle
+
+# theme
+hc attr theme.tiling.reset 1
+hc attr theme.floating.reset 1
+hc set frame_border_active_color '#fefbec'
+hc set frame_border_normal_color '#fefbec'
+hc set frame_bg_active_color '#fefbec'
+hc set frame_bg_normal_color '#fefbec'
+hc set frame_border_width 1
+hc set always_show_frame 0
+hc set frame_bg_transparent 0
+hc set frame_transparent_width 32
+hc set frame_gap 14
+
+hc attr theme.active.color '#6e6b5e'
+hc attr theme.normal.color '#9e9b8e'
+hc attr theme.urgent.color '#9e9b8e'
+hc attr theme.inner_width 0
+hc attr theme.inner_color black
+hc attr theme.border_width 4
+hc attr theme.floating.border_width 4
+hc attr theme.floating.outer_width 1
+hc attr theme.floating.outer_color black
+hc attr theme.active.inner_color '#3E4A00'
+hc attr theme.active.outer_color '#3E4A00'
+hc attr theme.background_color '#141414'
+
+hc set window_gap 32
+hc set frame_padding 0
+hc set smart_window_surroundings 0
+hc set smart_frame_surroundings 0
+hc set mouse_recenter_gap 0
+
+# rules
+hc unrule -F
+hc rule focus=on
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(DIALOG|UTILITY|SPLASH)' pseudotile=on
+hc rule windowtype='_NET_WM_WINDOW_TYPE_DIALOG' focus=on
+hc rule windowtype~'_NET_WM_WINDOW_TYPE_(NOTIFICATION|DOCK|DESKTOP)' manage=off
+
+hc set tree_style '╾│ ├└╼─┐'
+
+# unlock, just to be sure
+hc unlock
