@@ -1,0 +1,3 @@
+#!/bin/sh
+
+xsetroot -solid "#4e4b3e"
