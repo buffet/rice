@@ -75,16 +75,18 @@ modbind Shift-k     shift up
 modbind Shift-l     shift right
 
 # splitting
-modbind o split right
-modbind u split bottom
+modbind o       split right
+modbind u       split bottom
+modbind Shift-o split left
+modbind Shift-u split top
 
 modbind Control-h     chain , split left   , focus left
 modbind Control-j     chain , split bottom , focus down
-modbind Control-k     chain , split up     , focus up
+modbind Control-k     chain , split top    , focus up
 modbind Control-l     chain , split right  , focus right
 modbind Control-Left  chain , split left   , focus left
 modbind Control-Down  chain , split bottom , focus down
-modbind Control-Up    chain , split up     , focus up
+modbind Control-Up    chain , split top    , focus up
 modbind Control-Right chain , split right  , focus right
 modbind r remove
 
