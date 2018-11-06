@@ -82,10 +82,10 @@ modbind Control-h     chain , split left   , focus left
 modbind Control-j     chain , split bottom , focus down
 modbind Control-k     chain , split up     , focus up
 modbind Control-l     chain , split right  , focus right
-modbind Control-left  chain , split left   , focus left
-modbind Control-down  chain , split bottom , focus down
-modbind Control-up    chain , split up     , focus up
-modbind Control-right chain , split right  , focus right
+modbind Control-Left  chain , split left   , focus left
+modbind Control-Down  chain , split bottom , focus down
+modbind Control-Up    chain , split up     , focus up
+modbind Control-Right chain , split right  , focus right
 modbind r remove
 
 # resize
