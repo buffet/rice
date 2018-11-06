@@ -39,7 +39,8 @@ done
 # general
 modbind Shift-q quit
 modbind Shift-r reload
-modbind w       chain , close , remove
+modbind w       close
+modbind Shift-w chain , close , remove
 
 # applications
 modbind Return  spawn ${TERMINAL:st}
@@ -76,6 +77,9 @@ modbind Shift-k     shift up
 modbind Shift-l     shift right
 
 # splitting
+modbind o split right
+modbind u split bottom
+
 modbind Control-h     chain , split left   , focus left
 modbind Control-j     chain , split bottom , focus down
 modbind Control-k     chain , split up     , focus up
@@ -101,6 +105,11 @@ modbind Alt-Right resize right +$resizestep
 modbind s floating   toggle
 modbind f fullscreen toggle
 modbind p pseudotile toggle
+
+# mouse
+hc mousebind $Mod-Button1 move
+hc mousebind $Mod-Button2 zoom
+hc mousebind $Mod-Button3 resize
 
 # theme
 hc attr theme.tiling.reset 1
@@ -128,7 +137,7 @@ hc attr theme.active.inner_color '#3E4A00'
 hc attr theme.active.outer_color '#3E4A00'
 hc attr theme.background_color '#141414'
 
-hc set window_gap 32
+hc set window_gap 20
 hc set frame_padding 0
 hc set smart_window_surroundings 0
 hc set smart_frame_surroundings 0
