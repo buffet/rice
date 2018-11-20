@@ -56,13 +56,16 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     bindsym $mod+Return exec $term
 
     # kill focused window
-    bindsym $mod+Shift+q kill
+    bindsym $mod+w kill
 
     # start your launcher
     bindsym $mod+d exec $menu
 
     # start the browser
 	bindsym $mod+q exec $browser
+
+    # lock screen
+	bindsym $mod+Shift+x exec swaylock
 
     # brightness
 	bindsym $mod+z exec brightnessctl set 5%-
@@ -137,12 +140,12 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
     # You can "split" the current object of your focus with
     # $mod+b or $mod+v, for horizontal and vertical splits
     # respectively.
-    bindsym $mod+b splith
-    bindsym $mod+v splitv
+    bindsym $mod+o splith
+    bindsym $mod+u splitv
 
     # Switch the current container between different layout styles
     bindsym $mod+s layout stacking
-    bindsym $mod+w layout tabbed
+    bindsym $mod+t layout tabbed
     bindsym $mod+e layout toggle split
 
     # Make the current focus fullscreen
