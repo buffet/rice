@@ -21,6 +21,7 @@ set $menu dmenu_run
 set $browser qutebrowser
 
 default_border pixel
+focus_follows_mouse no
 
 ### Output configuration
 #
@@ -62,6 +63,10 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
     # start the browser
 	bindsym $mod+q exec $browser
+
+    # brightness
+	bindsym $mod+z exec brightnessctl set 5%-
+	bindsym $mod+x exec brightnessctl set 5%+
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
