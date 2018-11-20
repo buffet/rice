@@ -17,6 +17,10 @@ set $right l
 set $term st
 # Your preferred application launcher
 set $menu dmenu_run
+# Your preferred browser
+set $browser qutebrowser
+
+default_border pixel
 
 ### Output configuration
 #
@@ -55,6 +59,9 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 
     # start your launcher
     bindsym $mod+d exec $menu
+
+    # start the browser
+	bindsym $mod+q exec $browser
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -185,13 +192,13 @@ bindsym $mod+r mode "resize"
 # Status Bar:
 #
 # Read `man 5 sway-bar` for more information about this section.
-bar {
-    position top
-    colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
-    }
-}
+#bar {
+#    position top
+#    colors {
+#        statusline #ffffff
+#        background #323232
+#        inactive_workspace #32323200 #32323200 #5c5c5c
+#    }
+Vk
 
 include /etc/sway/config.d/*
