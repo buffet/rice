@@ -20,7 +20,7 @@ set $menu dmenu_run
 # Your preferred browser
 set $browser qutebrowser
 
-default_border pixel
+default_border pixel 6
 focus_follows_mouse no
 
 ### Output configuration
