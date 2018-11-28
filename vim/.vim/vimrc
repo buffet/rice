@@ -162,6 +162,7 @@ function! s:latex_mappings()
 
 	inoremap ;it \textit{}<++><esc>F}i
 	inoremap ;bf \textbf{}<++><esc>F}i
+	inoremap ;tt \texttt{}<++><esc>F}i
 	inoremap ;ul \underline{}<++><esc>F}i
 	inoremap ;em \emph{}<++><esc>F}i
 
@@ -192,5 +193,3 @@ function! s:insert_include_guards()
 endfunction
 
 autocmd BufNewFile *.{h,hpp,hxx} call <SID>insert_include_guards()
-
-autocmd BufNewFile,BufRead *.lit set noexpandtab
