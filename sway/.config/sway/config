@@ -22,6 +22,7 @@ set $browser qutebrowser
 
 default_border pixel 6
 focus_follows_mouse no
+gaps 10
 
 ### Output configuration
 #
