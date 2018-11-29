@@ -134,6 +134,9 @@ nnoremap <c-l> <c-w>l
 " Add license note
 nnoremap <leader>lm maggO<esc>:r ~/dotfiles/misc/licenses/mpl20<cr>kdd`a
 
+" Call clang-format
+nnoremap <leader>c :! clang-format -i <c-v>%<cr><cr>
+
 "" Plugins
 
 " tabularize
