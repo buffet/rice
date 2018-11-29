@@ -4,15 +4,14 @@
 
 [[ -z "$1" ]] && exit 1
 
-while ! ls | grep "$1" > /dev/null
-do
-	if [[ "${PWD}" = "/" ]]
-	then
-		echo \'"$1"\' not found.
-		exit
-	fi
+while ! [[ -e "$1" ]]; do
+    if [[ "${PWD}" = "/" ]]; then
+        echo \'"$1"\' not found
+        exit 1
+    fi
 
-	cd ..
+    cd ..
 done
 
-eval $2
+shift
+eval "$@"
