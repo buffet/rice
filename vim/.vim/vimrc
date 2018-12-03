@@ -10,6 +10,7 @@ Plug 'godlygeek/tabular'
 Plug 'chriskempson/base16-vim'
 Plug 'kien/ctrlp.vim'
 Plug 'ervandew/supertab'
+Plug 'christoomey/vim-tmux-navigator'
 
 call plug#end()
 
