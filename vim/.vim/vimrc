@@ -7,11 +7,9 @@ endif
 call plug#begin()
 
 Plug 'godlygeek/tabular'
-Plug 'jiangmiao/auto-pairs'
-Plug 'LucHermitte/lh-vim-lib' " dependency to alternate-lite
-Plug 'LucHermitte/alternate-lite'
 Plug 'chriskempson/base16-vim'
-Plug 'zyedidia/literate.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'ervandew/supertab'
 
 call plug#end()
 
@@ -114,6 +112,9 @@ nnoremap <leader>a :nohl<cr>
 
 " spell checking
 map <F6> :setlocal spell! spelllang=en_us<cr>
+
+" jump to tag
+nnoremap <leader>. :CtrlPTag<cr>
 
 " jump to <++>
 nnoremap <leader><tab> /<++><cr>:nohl<cr>"_c4l
