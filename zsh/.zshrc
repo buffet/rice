@@ -68,7 +68,7 @@ setopt HIST_IGNORE_SPACE    # ignore lines starting with a space
 # TODO: Implement
 
 # Aliases
-alias v='vim'
+alias v='nvim'
 alias g='git'
 alias ra='ranger'
 alias la='ls -l'
