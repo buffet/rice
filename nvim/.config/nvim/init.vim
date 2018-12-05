@@ -44,6 +44,8 @@ inoremap <Leader><Tab> <Esc>/<++><Cr>:nohl<Cr>"_c4l
 
 nnoremap <Leader>lm magg0<Esc>:r ~/dotfiles/misc/licenses/mpl20<Cr>kdd`a
 
+nnoremap <Leader>. :CtrlPTag<Cr>
+
 " Line numbers
 set number
 set relativenumber
