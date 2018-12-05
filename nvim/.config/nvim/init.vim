@@ -5,10 +5,13 @@ if dein#load_state('~/.cache/dein')
 
     call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 
-    call dein#add('godlygeek/tabular')
     call dein#add('chriskempson/base16-vim')
-    call dein#add('kien/ctrlp.vim')
+    call dein#add('christoomey/vim-tmux-navigator')
     call dein#add('ervandew/supertab')
+    call dein#add('godlygeek/tabular')
+    call dein#add('kien/ctrlp.vim')
+    call dein#add('roxma/vim-tmux-clipboard')
+    call dein#add('tmux-plugins/vim-tmux-focus-events')
 
     call dein#end()
     call dein#save_state()
