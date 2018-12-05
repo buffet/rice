@@ -1,5 +1,5 @@
 PATH+=":${HOME}/Documents/bigmac:${HOME}/.bin"
-EDITOR='vim'
+EDITOR='nvim'
 BROWSER='qutebrowser'
 TERMINAL='st'
 QT_WAYLAND_FORCE_DPI=180
