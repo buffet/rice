@@ -49,6 +49,8 @@ nnoremap <Leader>lm magg0<Esc>:r ~/dotfiles/misc/licenses/mpl20<Cr>kdd`a
 
 nnoremap <Leader>. :CtrlPTag<Cr>
 
+nnoremap <Leader>c :!compile <C-r>%<Cr>
+
 " Line numbers
 set number
 set relativenumber
@@ -70,7 +72,7 @@ set ignorecase
 set smartcase
 
 " Misc
-set cmdheight=2
+set foldmethod=syntax
 set cursorline
 set fileformats=unix,dos,mac
 set lazyredraw
