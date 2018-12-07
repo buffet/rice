@@ -58,7 +58,7 @@ HISTFILE=~/.zsh_history
 SAVEHIST=10000
 HISTSIZE=10000
 
-setopt APPEND_HISTORY       # don't overwrite
+setopt APPEND_HISTORY       # dont overwrite
 setopt SHARE_HISTORY        # share between sessions
 setopt HIST_IGNORE_DUPS     # only save last command
 setopt HIST_IGNORE_ALL_DUPS # even if commands in between
@@ -75,6 +75,8 @@ alias la='ls -l'
 alias lsa='ls -al'
 alias aba='abduco -a'
 alias abc='abduco -c'
+alias e='exa'
+alias el='exa -l'
 
 alias tm='tmux'
 alias tmls='tmux list-sessions'
