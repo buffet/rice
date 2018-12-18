@@ -224,7 +224,6 @@ in
   programs.zsh = {
     enable = true;
     dotDir = ".config/zsh";
-    enableAutosuggestions = true;
     shellAliases = {
       e = "exa";
       eal = "exa -al";
