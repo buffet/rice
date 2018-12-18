@@ -11,8 +11,13 @@ in
 
     packages = with pkgs; [
       exa
+      neofetch
       ripgrep
     ];
+
+    sessionVariables = {
+      EDITOR = "nvim";
+    };
   };
 
   programs.chromium = {
