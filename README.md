@@ -5,22 +5,17 @@ This isn't really made for others to use -- it's actually just a backup/way of s
 
 Feel free to do what you want with it.
 
-Organized with stow (for now).
-
 ## IMPORTANT
 
 Even though this is called rice, be sure to clone it as dotfiles, as I think some of the stuff depends on it.
 
-## Scrots
-TODO
+## NOTE
 
-## Programs and stuff
-* Window manager: herbstluftwm
-* Bar: None
-* File manager: ranger
-* Browser: chromium in app mode
-* PDF rendering: mupdf
-* Running stuff: rofi
-* Shell: bash
-* Terminal: st
-* Vim > Emacs (for now)
+This is made for NixOS, as I'm using that. This means that most stuff here is probably useless for your config (apart from the values). To use this symlink `nixos` to `/etc/nixos` and `home-manager/.config/nixpkgs/home.nix` to `~/.config/home-manager/nixpkgs/home.nix` and run
+
+```
+# nixos-rebuild switch
+$ home-manager switch
+```
+
+GLHF
