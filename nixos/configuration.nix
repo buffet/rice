@@ -1,0 +1,44 @@
+{ config, pkgs, ... }:
+
+{
+  imports =
+    [
+      ./hardware-configuration.nix
+      ./programs/sway.nix
+    ];
+
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
+
+  networking.hostName = "lola";
+  networking.networkmanager.enable = true;
+
+  time.timeZone = "Europe/Berlin";
+
+  environment.systemPackages = with pkgs; [
+    acpi
+    git
+    neovim
+  ];
+
+  fonts.fonts = with pkgs; [
+    dejavu_fonts
+  ];
+
+  sound.enable = true;
+  hardware.pulseaudio.enable = true;
+  hardware.opengl.enable = true;
+
+  users.extraUsers.buffet = {
+    isNormalUser = true;
+    extraGroups = ["networkmanager" "wheel" "sway"];
+    shell = pkgs.zsh;
+    uid = 1000;
+  };
+
+  # This value determines the NixOS release with which your system is to be
+  # compatible, in order to avoid breaking some software such as database
+  # servers. You should change this only after NixOS release notes say you
+  # should.
+  system.stateVersion = "18.09"; # Did you read the comment?
+}
