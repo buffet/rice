@@ -224,6 +224,10 @@ in
   programs.zsh = {
     enable = true;
     dotDir = ".config/zsh";
+    history.path = ".config/zsh/zsh_history";
+    initExtra = ''
+      PROMPT="[%F{green}%n%f@%F{green}%m %B%F{blue}%1~%b%f] "
+    '';
     shellAliases = {
       e = "exa";
       eal = "exa -al";
