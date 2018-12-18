@@ -218,7 +218,6 @@ in
 
   programs.termite = {
     enable = true;
-    browser = "${pkgs.chromium}/chromium";
     font = "DejaVuSansMono";
   };
 
