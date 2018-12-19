@@ -12,6 +12,7 @@ in
     packages = with pkgs; [
       exa
       neofetch
+      ranger
       ripgrep
     ];
 
