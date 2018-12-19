@@ -25,8 +25,10 @@ in
     enable = true;
     extensions = [
       "eimadpbcbfnmbkopoojfekhnkhdbieeh" # Dark Reader
-      "cjpalhdlnbpafiamejdnhcphjbkeiagm" # uBlock Origin
+      "kbmfpngjjgdllneeigpgjifpgocmfgmb" # Reddit Enhancement Suite
       "dbepggeogbaibhgnhhndojpepiihcmeb" # Vimium
+      "jhjpjhhkcbkmgdkahnckfboefnkgghpo" # toolbox
+      "cjpalhdlnbpafiamejdnhcphjbkeiagm" # uBlock Origin
     ];
   };
 
