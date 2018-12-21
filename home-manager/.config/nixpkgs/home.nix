@@ -14,6 +14,7 @@ in
       neofetch
       ranger
       ripgrep
+      rustup
     ];
 
     sessionVariables = {
