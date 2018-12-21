@@ -232,6 +232,8 @@ in
       PROMPT="[%F{green}%n%f@%F{green}%m %B%F{blue}%1~%b%f] "
     '';
     shellAliases = {
+      def-build = "nix-build -E \"with import <nixpkgs> {}; callPackage ./. {}\"";
+      def-shell = "nix-shell -E \"with import <nixpkgs> {}; callPackage ./. {}\" --pure";
       e = "exa";
       eal = "exa -al";
       el = "exa -l";
