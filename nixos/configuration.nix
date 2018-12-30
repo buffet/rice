@@ -9,8 +9,11 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "lola";
-  networking.networkmanager.enable = true;
+  networking = {
+    hostName = "lola";
+    networkmanager.enable = true;
+    nameservers = [ "1.1.1.1" ];
+  };
 
   time.timeZone = "Europe/Berlin";
 
