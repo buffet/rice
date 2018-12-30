@@ -5,6 +5,7 @@
     enable = true;
     extraPackages = with pkgs; [
       brightnessctl
+      i3status
       xwayland
     ];
   };
