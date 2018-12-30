@@ -20,6 +20,7 @@
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/F83A-F322";
       fsType = "vfat";
+      noCheck = true;
     };
 
   fileSystems."/home" =
