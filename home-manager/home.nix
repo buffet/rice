@@ -7,7 +7,7 @@ in
   programs.home-manager.enable = true;
 
   home = {
-    file.".config/sway/config".source = "${dotdir}/sway/.config/sway/config";
+    file.".config/sway/config".source = "${dotdir}/sway/config";
 
     packages = with pkgs; [
       exa
