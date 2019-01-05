@@ -35,13 +35,13 @@ in
   programs.git = {
     enable = true;
     aliases = {
+      b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'";
       c = "commit --verbose";
       cm = "commit --verbose -m";
-      m = "commit --ammend --verbose";
-      s = "status -s";
       co = "checkout";
       cob = "checkout -b";
-      b = "!git for-each-ref --sort='-authordate' --format='%(authordate)%09%(objectname:short)%09%(refname)' refs/heads | sed -e 's-refs/heads/--'";
+      m = "commit --ammend --verbose";
+      s = "status -s";
     };
     extraConfig = ''
       [url "https://github.com/"]
