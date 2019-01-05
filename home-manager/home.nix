@@ -98,6 +98,7 @@ in
 
         " Keybinds
         inoremap kj <Esc>
+        tnoremap <C-k><C-j> <C-\><C-n>
 
         nnoremap <Leader>w :w<Cr>
         nnoremap <Leader>sw :w !sudo tee %<Cr>
