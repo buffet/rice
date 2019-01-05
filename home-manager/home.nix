@@ -1,6 +1,6 @@
 { config, pkgs, ... }:
 
-let dotdir = "/home/buffet/dotfiles";
+let dotdir = toString ../.;
 in
 {
   # Let Home Manager install and manage itself.
