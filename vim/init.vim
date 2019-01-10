@@ -50,7 +50,6 @@ set ignorecase
 set smartcase
 
 " Misc
-set foldmethod=syntax
 set cursorline
 set fileformats=unix,dos,mac
 set lazyredraw
