@@ -116,6 +116,7 @@ in
     history.path = ".config/zsh/zsh_history";
     initExtra = ''
       PROMPT="[%F{green}%n%f@%F{green}%m %B%F{blue}%1~%b%f] "
+      bindkey -e
     '';
     shellAliases = {
       def-build = "nix-build -E \"with import <nixpkgs> {}; callPackage ./. {}\"";
