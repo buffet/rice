@@ -1,6 +1,6 @@
 ##
-## TuX
-## (c) pborys@p-soft.silesia.linux.org.pl 
+## tuwux
+## (c) buffet (also pborys)
 ##
 $the_cow = <<EOC;
    $thoughts
