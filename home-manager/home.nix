@@ -11,6 +11,7 @@ in
 
     packages = with pkgs; [
       exa
+      htop
       neofetch
       ranger
       ripgrep
