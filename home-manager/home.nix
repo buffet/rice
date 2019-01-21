@@ -45,6 +45,7 @@ in
       ta = "tmux attach-session -t";
       tkill = "tmux kill-session -t";
       tls = "tmux list-sessions";
+      tm = "tmux";
       tnew = "tmux new -s";
       v = "nvim";
     };
@@ -100,6 +101,9 @@ in
 
       # No status bar
       set -g status off
+
+      # fish as default shell
+      set-option -g default-shell ${pkgs.fish}/bin/fish
 
       # st fix
       set -as terminal-overrides ',st*:Ss@'
