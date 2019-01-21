@@ -8,7 +8,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term termite
+set $term termite -e fish
 # Your preferred application launcher
 set $menu dmenu_run
 # Your preferred browser

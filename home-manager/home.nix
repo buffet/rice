@@ -33,6 +33,23 @@ in
     ];
   };
 
+  programs.fish = {
+    enable = true;
+    shellAbbrs = {
+      def-build = "nix-build -E \"with import <nixpkgs> {}; callPackage ./. {}\"";
+      def-shell = "nix-shell -E \"with import <nixpkgs> {}; callPackage ./. {}\" --pure";
+      e = "exa";
+      eal = "exa -al";
+      el = "exa -l";
+      ra = "ranger";
+      ta = "tmux attach-session -t";
+      tkill = "tmux kill-session -t";
+      tls = "tmux list-sessions";
+      tnew = "tmux new -s";
+      v = "nvim";
+    };
+  };
+
   programs.git = {
     enable = true;
     aliases = {
