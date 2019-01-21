@@ -8,8 +8,10 @@ in
 
   home = {
     file.".config/sway/config".source = "${dotdir}/sway/config";
+    file.".emacs.d".source = "${dotdir}/emacs";
 
     packages = with pkgs; [
+      emacs
       exa
       htop
       neofetch

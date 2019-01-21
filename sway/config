@@ -48,6 +48,10 @@ gaps outer 0
 #
 # Basics:
 #
+
+    # start emacs
+    bindsym $mod+n exec emacs
+
     # start a terminal
     bindsym $mod+Return exec $term
 
