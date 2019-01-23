@@ -68,9 +68,6 @@ match ExtraWhitespace /\s\+$/
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
-"" Auto NERDTree
-autocmd vimenter * NERDTree
-
 "" Close vim if NERDTree is the last window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
