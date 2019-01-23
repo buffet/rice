@@ -21,6 +21,9 @@ in
 
     sessionVariables = {
       EDITOR = "nvim";
+      XKB_DEFAULT_LAYOUT = "us,dvorak";
+      XKB_DEFAULT_VARIANT = ",nodeadkeys";
+      XKB_DEFAULT_OPTIONS = "grp:alt_shift_toggle,compose:ralt";
     };
   };
 
@@ -120,9 +123,12 @@ in
         start = [
           base16-vim
           ctrlp-vim
+          lightline-vim
+          nerdtree
           supertab
           tabular
           vim-tmux-navigator
+          zoomwintab-vim
         ];
       };
     };
