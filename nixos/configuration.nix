@@ -36,11 +36,6 @@
   hardware.pulseaudio.enable = true;
   hardware.opengl.enable = true;
 
-  services.xserver = {
-    enable = true;
-    libinput.enable = true;
-  };
-
   users.extraUsers.buffet = {
     isNormalUser = true;
     extraGroups = ["networkmanager" "wheel" "sway"];
