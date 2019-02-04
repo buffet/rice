@@ -13,6 +13,7 @@ in
     packages = with pkgs; [
       emacs
       exa
+      fortune
       htop
       neofetch
       ranger
@@ -41,6 +42,12 @@ in
 
   programs.fish = {
     enable = true;
+    interactiveShellInit = ''
+      function fish_greeting
+          fortune -a
+      end
+      funcsave fish_greeting
+    '';
     shellAbbrs = {
       def-build = "nix-build -E \"with import <nixpkgs> {}; callPackage ./. {}\"";
       def-shell = "nix-shell -E \"with import <nixpkgs> {}; callPackage ./. {}\" --pure";
