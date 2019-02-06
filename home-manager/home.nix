@@ -29,7 +29,9 @@ in {
     packages = with pkgs; [
       emacs
       exa
+      fd
       fortune
+      fzf
       htop
       neofetch
       ranger
