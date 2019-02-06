@@ -56,9 +56,9 @@ in {
     initExtra = ''
       prompt() {
           if [[ $? -eq 0 ]]; then
-            color="\e[1;34m"
+            color="\e[0;34m"
           else
-            color="\e[1;31m"
+            color="\e[0;31m"
           fi
           PS1="[''${color}\W\e[0;37m] "
       }
