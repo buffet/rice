@@ -1,8 +1,23 @@
 { config, pkgs, ... }:
 
-let dotdir = toString ../.;
-in
-{
+let
+  dotdir = toString ../.;
+  aliases = {
+    def-build = "nix-build -E \"with import <nixpkgs> {}; callPackage ./. {}\"";
+    def-shell = "nix-shell -E \"with import <nixpkgs> {}; callPackage ./. {}\" --pure";
+    e = "exa";
+    eal = "exa -al";
+    el = "exa -l";
+    mkdir = "mkdir -p";
+    ra = "ranger";
+    ta = "tmux attach-session -t";
+    tkill = "tmux kill-session -t";
+    tls = "tmux list-sessions";
+    tm = "tmux";
+    tnew = "tmux new -s";
+    v = "nvim";
+  };
+in {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
@@ -48,20 +63,7 @@ in
       end
       funcsave fish_greeting
     '';
-    shellAbbrs = {
-      def-build = "nix-build -E \"with import <nixpkgs> {}; callPackage ./. {}\"";
-      def-shell = "nix-shell -E \"with import <nixpkgs> {}; callPackage ./. {}\" --pure";
-      e = "exa";
-      eal = "exa -al";
-      el = "exa -l";
-      ra = "ranger";
-      ta = "tmux attach-session -t";
-      tkill = "tmux kill-session -t";
-      tls = "tmux list-sessions";
-      tm = "tmux";
-      tnew = "tmux new -s";
-      v = "nvim";
-    };
+    shellAbbrs = aliases;
   };
 
   programs.git = {
@@ -206,18 +208,6 @@ in
       PROMPT="[%F{green}%n%f@%F{green}%m %B%F{blue}%1~%b%f] "
       bindkey -e
     '';
-    shellAliases = {
-      def-build = "nix-build -E \"with import <nixpkgs> {}; callPackage ./. {}\"";
-      def-shell = "nix-shell -E \"with import <nixpkgs> {}; callPackage ./. {}\" --pure";
-      e = "exa";
-      eal = "exa -al";
-      el = "exa -l";
-      ra = "ranger";
-      ta = "tmux attach-session -t";
-      tkill = "tmux kill-session -t";
-      tls = "tmux list-sessions";
-      tnew = "tmux new -s";
-      v = "nvim";
-    };
+    shellAliases = aliases;
   };
 }
