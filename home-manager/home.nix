@@ -54,7 +54,7 @@ in {
     historyControl = [ "erasedups" "ignorespace" ];
     historyFile = "\$HOME/.local/share/bash/history";
     initExtra = ''
-      PS1="[\e[0;32m\u\e[0;37m@\e[0;32m\h \e[1;34m\W\e[0;37m] ";
+      PS1="[\e[1;32m\u\e[0;37m@\e[1;32m\h\e[0;37m:\e[1;34m\W\e[0;37m]\$ ";
     '';
     shellAliases = aliases;
     shellOptions = [
