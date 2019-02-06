@@ -54,7 +54,15 @@ in {
     historyControl = [ "erasedups" "ignorespace" ];
     historyFile = "\$HOME/.local/share/bash/history";
     initExtra = ''
-      PS1="[\e[1;32m\u\e[0;37m@\e[1;32m\h\e[0;37m:\e[1;34m\W\e[0;37m]\$ ";
+      prompt() {
+          if [[ $? -eq 0 ]]; then
+            color="\e[1;34m"
+          else
+            color="\e[1;31m"
+          fi
+          PS1="[''${color}\W\e[0;37m] "
+      }
+      PROMPT_COMMAND=prompt
     '';
     shellAliases = aliases;
     shellOptions = [
