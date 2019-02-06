@@ -24,6 +24,7 @@ in {
   home = {
     file.".config/sway/config".source = "${dotdir}/sway/config";
     file.".emacs.d".source = "${dotdir}/emacs";
+    file.".inputrc".source = "${dotdir}/readline/inputrc";
 
     packages = with pkgs; [
       emacs
@@ -38,10 +39,30 @@ in {
     sessionVariables = {
       BROWSER = "chromium";
       EDITOR = "nvim";
+      LESSHISTFILE = "\$HOME/.local/share/less/history";
       XKB_DEFAULT_LAYOUT = "us,dvorak";
-      XKB_DEFAULT_VARIANT = ",nodeadkeys";
       XKB_DEFAULT_OPTIONS = "grp:alt_shift_toggle,compose:ralt";
+      XKB_DEFAULT_VARIANT = ",nodeadkeys";
     };
+  };
+
+  programs.bash = {
+    enable = true;
+    enableAutojump = true;
+    historyControl = [ "erasedups" "ignorespace" ];
+    historyFile = "\$HOME/.local/share/bash/history";
+    initExtra = ''
+      PS1="[\e[0;32m\u\e[0;37m@\e[0;32m\h \e[1;34m\W\e[0;37m] ";
+    '';
+    shellAliases = aliases;
+    shellOptions = [
+      "cdspell"
+      "checkjobs"
+      "extglob"
+      "globstar"
+      "histappend"
+      "nocaseglob"
+    ];
   };
 
   programs.chromium = {
@@ -53,17 +74,6 @@ in {
       "jhjpjhhkcbkmgdkahnckfboefnkgghpo" # toolbox
       "cjpalhdlnbpafiamejdnhcphjbkeiagm" # uBlock Origin
     ];
-  };
-
-  programs.fish = {
-    enable = true;
-    interactiveShellInit = ''
-      function fish_greeting
-          fortune -a
-      end
-      funcsave fish_greeting
-    '';
-    shellAbbrs = aliases;
   };
 
   programs.git = {
@@ -116,9 +126,6 @@ in {
 
       # No status bar
       set -g status off
-
-      # fish as default shell
-      set-option -g default-shell ${pkgs.fish}/bin/fish
 
       # st fix
       set -as terminal-overrides ',st*:Ss@'
@@ -198,16 +205,5 @@ in {
       color20 = #7d7a68
       color21 = #292824
     '';
-  };
-
-  programs.zsh = {
-    enable = true;
-    dotDir = ".config/zsh";
-    history.path = ".config/zsh/zsh_history";
-    initExtra = ''
-      PROMPT="[%F{green}%n%f@%F{green}%m %B%F{blue}%1~%b%f] "
-      bindkey -e
-    '';
-    shellAliases = aliases;
   };
 }

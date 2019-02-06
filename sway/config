@@ -8,7 +8,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term termite -e fish
+set $term termite
 # Your preferred application launcher
 set $menu dmenu_run
 # Your preferred browser
@@ -23,7 +23,7 @@ gaps outer 0
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg ~/dvorak.gif fill
+output * bg #4e4b3e solid_color
 #
 # Example configuration:
 #

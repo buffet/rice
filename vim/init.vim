@@ -57,7 +57,6 @@ set matchtime=2
 set showmatch
 set smartindent
 colorscheme base16-atelier-dune-light
-set shell=~/.nix-profile/bin/fish
 set termguicolors
 set fillchars+=vert:│
 highlight VertSplit ctermbg=bg guibg=bg

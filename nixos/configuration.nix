@@ -39,7 +39,6 @@
   users.extraUsers.buffet = {
     isNormalUser = true;
     extraGroups = ["networkmanager" "wheel" "sway"];
-    shell = pkgs.zsh;
     uid = 1000;
   };
 
