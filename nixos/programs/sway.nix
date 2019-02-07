@@ -6,6 +6,7 @@
     extraPackages = with pkgs; [
       brightnessctl
       i3status
+      swaylock
       xwayland
     ];
   };
