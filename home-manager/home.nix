@@ -60,7 +60,7 @@ in {
           else
             color="\e[0;31m"
           fi
-          PS1="[''${color}\W\e[0;37m] "
+          PS1="[''${color}\W\e[0m] "
       }
       PROMPT_COMMAND=prompt
     '';
