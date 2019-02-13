@@ -148,8 +148,10 @@ in {
       customRC = builtins.readFile ../vim/init.vim;
       packages.myVimPackage = with pkgs.vimPlugins; {
         start = [
+          auto-pairs
           base16-vim
           ctrlp-vim
+          emmet-vim
           lightline-vim
           nerdtree
           supertab
