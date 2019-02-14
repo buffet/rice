@@ -23,7 +23,7 @@ nnoremap <C-l> <C-w>l
 nnoremap <Leader><Tab> /<++><Cr>:nohl<Cr>"_c4l
 inoremap <Leader><Tab> <Esc>/<++><Cr>:nohl<Cr>"_c4l
 
-nnoremap <Leader>lm magg0<Esc>:r ~/dotfiles/misc/licenses/mpl20<Cr>kdd`a
+nnoremap <Leader>lm ma:0r ~/dotfiles/misc/licenses/mpl20<Cr>`a
 
 nnoremap <Leader>. :CtrlPTag<Cr>
 
