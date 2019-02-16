@@ -1,5 +1,9 @@
 # dotfiles
 
+## Warning
+
+This readme is probably outdated. That said I need to get rid of the hardcoded dotdir path.
+
 ## Disclaimer
 This isn't really made for others to use -- it's actually just a backup/way of synchronizing.
 
