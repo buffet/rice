@@ -23,11 +23,9 @@ in {
 
   home = {
     file.".config/sway/config".source = "${dotdir}/sway/config";
-    file.".emacs.d".source = "${dotdir}/emacs";
     file.".inputrc".source = "${dotdir}/readline/inputrc";
 
     packages = with pkgs; [
-      emacs
       exa
       fd
       fortune
