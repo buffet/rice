@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  dotdir = toString ../.;
+  dotdir = /home/buffet/dotfiles;
   aliases = {
     def-build = "nix-build -E \"with import <nixpkgs> {}; callPackage ./. {}\"";
     def-shell = "nix-shell -E \"with import <nixpkgs> {}; callPackage ./. {}\" --pure";
@@ -143,7 +143,7 @@ in {
   programs.neovim = {
     enable = true;
     configure = {
-      customRC = builtins.readFile ../vim/init.vim;
+      customRC = builtins.readFile "${dotdir}/vim/init.vim";
       packages.myVimPackage = with pkgs.vimPlugins; {
         start = [
           auto-pairs

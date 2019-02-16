@@ -4,6 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ./programs/sway.nix
+    "${builtins.fetchTarball https://github.com/rycee/home-manager/archive/master.tar.gz}/nixos"
   ];
 
   boot = {
@@ -41,6 +42,8 @@
     extraGroups = ["networkmanager" "wheel" "sway"];
     uid = 1000;
   };
+
+  home-manager.users.buffet = import ./home.nix;
 
   # This value determines the NixOS release with which your system is to be
   # compatible, in order to avoid breaking some software such as database
