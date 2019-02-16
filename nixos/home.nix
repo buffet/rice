@@ -22,10 +22,12 @@ in {
   programs.home-manager.enable = true;
 
   home = {
+    file.".config/alacritty/alacritty.yml".source = "${dotdir}/alacritty/alacritty.yml";
     file.".config/sway/config".source = "${dotdir}/sway/config";
     file.".inputrc".source = "${dotdir}/readline/inputrc";
 
     packages = with pkgs; [
+      alacritty
       exa
       fd
       fortune
@@ -160,60 +162,5 @@ in {
       };
     };
     vimAlias = true;
-  };
-
-  programs.termite = {
-    enable = true;
-    font = "DejaVuSansMono";
-    colorsExtra = ''
-      # Base16 Atelier Dune Light
-      # Author: Bram de Haan (http://atelierbramdehaan.nl)
-
-      foreground          = #6e6b5e
-      foreground_bold     = #292824
-      cursor              = #292824
-      cursor_foreground   = #fefbec
-      background          = rgba(254, 251, 236)
-
-      # 16 color space
-
-      # Black, Gray, Silver, White
-      color0  = #fefbec
-      color8  = #999580
-      color7  = #6e6b5e
-      color15 = #20201d
-
-      # Red
-      color1  = #d73737
-      color9  = #d73737
-
-      # Green
-      color2  = #60ac39
-      color10 = #60ac39
-
-      # Yellow
-      color3  = #ae9513
-      color11 = #ae9513
-
-      # Blue
-      color4  = #6684e1
-      color12 = #6684e1
-
-      # Purple
-      color5  = #b854d4
-      color13 = #b854d4
-
-      # Teal
-      color6  = #1fad83
-      color14 = #1fad83
-
-      # Extra colors
-      color16 = #b65611
-      color17 = #d43552
-      color18 = #e8e4cf
-      color19 = #a6a28c
-      color20 = #7d7a68
-      color21 = #292824
-    '';
   };
 }
