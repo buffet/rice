@@ -28,6 +28,7 @@ in {
 
     packages = with pkgs; [
       alacritty
+      clang-tools
       ctags
       exa
       fd
@@ -157,6 +158,7 @@ in {
           ctrlp-vim
           emmet-vim
           lightline-vim
+          neoformat
           nerdtree
           supertab
           tabular

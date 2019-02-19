@@ -71,8 +71,11 @@ match ExtraWhitespace /\s\+$/
 let g:easytags_file = '~/.local/share/vimtags'
 set tags='~/.local/share/vimtags'
 
+" neoformat
+noremap <C-m> :Neoformat<CR>
+
 " NERDTree
-map <C-n> :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
 
 "" Close vim if NERDTree is the last window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
