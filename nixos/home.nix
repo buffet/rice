@@ -28,6 +28,7 @@ in {
 
     packages = with pkgs; [
       alacritty
+      ctags
       exa
       fd
       fortune
@@ -159,6 +160,7 @@ in {
           nerdtree
           supertab
           tabular
+          vim-easytags
           vim-tmux-navigator
           zoomwintab-vim
         ];

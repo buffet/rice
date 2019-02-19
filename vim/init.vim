@@ -67,6 +67,9 @@ syntax enable
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
+" easytags
+let g:easytags_file = '~/.local/share/vimtags'
+
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
 
