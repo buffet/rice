@@ -132,8 +132,5 @@ endfunction
 
 autocmd BufNewFile *.{h,hpp,hxx} call <SID>insert_include_guards()
 
-" Nix
-autocmd FileType nix setlocal shiftwidth=2 tabstop=2
-
 " Shell
 autocmd FileType sh setlocal shiftwidth=2 tabstop=2
