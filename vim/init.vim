@@ -69,6 +69,7 @@ match ExtraWhitespace /\s\+$/
 
 " easytags
 let g:easytags_file = '~/.local/share/vimtags'
+set tags='~/.local/share/vimtags'
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
