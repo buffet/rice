@@ -1,5 +1,7 @@
 # dotfiles
 
+I **know** this readme is outdated, so I won't bother anymore. <o/
+
 ## Warning
 
 This readme is probably outdated. That said I need to get rid of the hardcoded dotdir path.
