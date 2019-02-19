@@ -32,10 +32,13 @@ in {
       fd
       fortune
       fzf
+      grim
       htop
       neofetch
       ranger
       ripgrep
+      slurp
+      wl-clipboard
     ];
 
     sessionVariables = {
