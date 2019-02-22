@@ -72,10 +72,13 @@ let g:easytags_file = '~/.local/share/vimtags'
 set tags='~/.local/share/vimtags'
 
 " neoformat
-noremap <C-m> :Neoformat<CR>
+nnoremap ,f :Goyo<Cr>
+
+" neoformat
+noremap <C-m> :Neoformat<Cr>
 
 " NERDTree
-nnoremap <C-n> :NERDTreeToggle<CR>
+nnoremap <C-n> :NERDTreeToggle<Cr>
 
 "" Close vim if NERDTree is the last window
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif

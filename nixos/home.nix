@@ -8,6 +8,7 @@ let
     e = "exa";
     eal = "exa -al";
     el = "exa -l";
+    f = "echo paid respects";
     mkdir = "mkdir -p";
     ra = "ranger";
     ta = "tmux attach-session -t";
@@ -157,6 +158,7 @@ in {
           base16-vim
           ctrlp-vim
           emmet-vim
+          goyo-vim
           lightline-vim
           neoformat
           nerdtree
