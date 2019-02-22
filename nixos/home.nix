@@ -160,6 +160,7 @@ in {
           emmet-vim
           goyo-vim
           lightline-vim
+          limelight-vim
           neoformat
           nerdtree
           supertab

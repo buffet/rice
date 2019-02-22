@@ -72,7 +72,7 @@ let g:easytags_file = '~/.local/share/vimtags'
 set tags='~/.local/share/vimtags'
 
 " neoformat
-nnoremap ,f :Goyo<Cr>
+nnoremap ,f :Goyo<Cr>:Limelight!!<Cr>
 
 " neoformat
 noremap <C-m> :Neoformat<Cr>
