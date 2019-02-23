@@ -29,6 +29,7 @@ in {
 
     packages = with pkgs; [
       alacritty
+      cherry
       clang-tools
       ctags
       exa
