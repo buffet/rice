@@ -23,6 +23,10 @@
 
   time.timeZone = "Europe/Berlin";
 
+  nixpkgs.overlays = [
+    (import (builtins.fetchTarball https://github.com/buffet/overlay/archive/master.tar.gz))
+  ];
+
   environment.systemPackages = with pkgs; [
     acpi
     git
