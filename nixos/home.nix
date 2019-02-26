@@ -67,7 +67,7 @@ in {
           else
             color="\e[0;31m"
           fi
-          PS1="[\[''${color}\]\W\[\e[0m\]] "
+          PS1="[\[''${color}\]\W\[\e[0m\]]''${IN_NIX_SHELL:0:1} "
       }
       PROMPT_COMMAND=prompt
     '';

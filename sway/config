@@ -19,11 +19,14 @@ focus_follows_mouse no
 gaps inner 10
 gaps outer 0
 
+client.focused #d0c8c6 #d0c8c6 #d0c8c6 #d0c8c6 #d0c8c6
+client.unfocused #b0a8a6 #b0a8a6 #b0a8a6 #b0a8a6 #b0a8a6
+
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg #4e4b3e solid_color
+output * bg #20160d solid_color
 #
 # Example configuration:
 #

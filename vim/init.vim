@@ -56,7 +56,7 @@ set lazyredraw
 set matchtime=2
 set showmatch
 set smartindent
-colorscheme base16-atelier-dune-light
+colorscheme base16-mocha
 set termguicolors
 set fillchars+=vert:│
 highlight VertSplit ctermbg=bg guibg=bg
