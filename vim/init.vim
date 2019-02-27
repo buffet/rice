@@ -134,6 +134,3 @@ function! s:insert_include_guards()
 endfunction
 
 autocmd BufNewFile *.{h,hpp,hxx} call <SID>insert_include_guards()
-
-" Shell
-autocmd FileType sh setlocal shiftwidth=2 tabstop=2
