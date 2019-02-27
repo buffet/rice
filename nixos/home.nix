@@ -8,7 +8,6 @@ let
     e = "exa";
     eal = "exa -al";
     el = "exa -l";
-    f = "echo paid respects";
     mkdir = "mkdir -p";
     ra = "ranger";
     ta = "tmux attach-session -t";
@@ -22,6 +21,10 @@ in {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 
+  nixpkgs.overlays = [
+    (import (builtins.fetchTarball https://github.com/buffet/overlay/archive/master.tar.gz))
+  ];
+
   home = {
     file.".config/alacritty/alacritty.yml".source = "${dotdir}/alacritty/alacritty.yml";
     file.".config/sway/config".source = "${dotdir}/sway/config";
@@ -34,6 +37,7 @@ in {
       ctags
       exa
       fd
+      filet
       fortune
       fzf
       grim
@@ -61,6 +65,10 @@ in {
     historyControl = [ "erasedups" "ignorespace" ];
     historyFile = "\$HOME/.local/share/bash/history";
     initExtra = ''
+      f() {
+          filet "$@"
+          cd "$(< /tmp/filet_dir)"
+      }
       prompt() {
           if [[ $? -eq 0 ]]; then
             color="\e[0;34m"
