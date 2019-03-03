@@ -2,21 +2,6 @@
 
 let
   dotdir = /home/buffet/dotfiles;
-  aliases = {
-    def-build = "nix-build -E \"with import <nixpkgs> {}; callPackage ./. {}\"";
-    def-shell = "nix-shell -E \"with import <nixpkgs> {}; callPackage ./. {}\" --pure";
-    e = "exa";
-    eal = "exa -al";
-    el = "exa -l";
-    mkdir = "mkdir -p";
-    ra = "ranger";
-    ta = "tmux attach-session -t";
-    tkill = "tmux kill-session -t";
-    tls = "tmux list-sessions";
-    tm = "tmux";
-    tnew = "tmux new -s";
-    v = "nvim";
-  };
 in {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -79,7 +64,21 @@ in {
       }
       PROMPT_COMMAND=prompt
     '';
-    shellAliases = aliases;
+    shellAliases = {
+      def-build = "nix-build -E \"with import <nixpkgs> {}; callPackage ./. {}\"";
+      def-shell = "nix-shell -E \"with import <nixpkgs> {}; callPackage ./. {}\"";
+      e = "exa";
+      eal = "exa -al";
+      el = "exa -l";
+      mkdir = "mkdir -p";
+      ra = "ranger";
+      ta = "tmux attach-session -t";
+      tkill = "tmux kill-session -t";
+      tls = "tmux list-sessions";
+      tm = "tmux";
+      tnew = "tmux new -s";
+      v = "nvim";
+    };
     shellOptions = [
       "cdspell"
       "checkjobs"
