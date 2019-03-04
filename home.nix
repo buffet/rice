@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  dotdir = /home/buffet/dotfiles;
+  extraConf = ./extraConf;
 in {
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -11,9 +11,9 @@ in {
   ];
 
   home = {
-    file.".config/alacritty/alacritty.yml".source = "${dotdir}/alacritty/alacritty.yml";
-    file.".config/sway/config".source = "${dotdir}/sway/config";
-    file.".inputrc".source = "${dotdir}/readline/inputrc";
+    file.".config/alacritty/alacritty.yml".source = "${extraConf}/alacritty/alacritty.yml";
+    file.".config/sway/config".source = "${extraConf}/sway/config";
+    file.".inputrc".source = "${extraConf}/readline/inputrc";
 
     packages = with pkgs; [
       alacritty
@@ -159,7 +159,7 @@ in {
   programs.neovim = {
     enable = true;
     configure = {
-      customRC = builtins.readFile "${dotdir}/vim/init.vim";
+      customRC = builtins.readFile "${extraConf}/vim/init.vim";
       packages.myVimPackage = with pkgs.vimPlugins; {
         start = [
           auto-pairs
