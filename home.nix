@@ -72,6 +72,7 @@ in {
       el = "exa -l";
       mkdir = "mkdir -p";
       ra = "ranger";
+      htop = "htop -t";
       ta = "tmux attach-session -t";
       tkill = "tmux kill-session -t";
       tls = "tmux list-sessions";
