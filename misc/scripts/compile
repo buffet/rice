@@ -1,8 +1,0 @@
-#!/bin/sh
-
-case "$1" in
-    *.tex)
-        pdflatex "$1"
-        ;;
-
-esac
