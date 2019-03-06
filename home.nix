@@ -36,8 +36,9 @@ in {
 
     sessionVariables = {
       BROWSER = "chromium";
+      CARGO_HOME = "\$HOME/.cache/cargo";
       EDITOR = "nvim";
-      LESSHISTFILE = "\$HOME/.local/share/less/history";
+      LESSHISTFILE = "\$HOME/.cache/less_history";
       XKB_DEFAULT_LAYOUT = "us,dvorak";
       XKB_DEFAULT_OPTIONS = "grp:alt_shift_toggle,compose:ralt";
       XKB_DEFAULT_VARIANT = ",nodeadkeys";
