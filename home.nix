@@ -48,7 +48,7 @@ in {
     enable = true;
     enableAutojump = true;
     historyControl = [ "erasedups" "ignorespace" ];
-    historyFile = "\$HOME/.local/share/bash/history";
+    historyFile = "\$HOME/.cache/bash_history";
     initExtra = ''
       f() {
           filet "$@"
