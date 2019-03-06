@@ -57,9 +57,13 @@ in {
       }
       prompt() {
           case $? in
-              0) PS1='% ';;
-              *) PS1='\[\e[31m\]% \[\e[0m';;
+              0) PS1='%' ;;
+              *) PS1='\[\e[31m\]%' ;;
           esac
+
+          [[ $IN_NIX_SHELL ]] && PS1+="'"
+
+          PS1+='\[\e[0m\] '
       }
       PROMPT_COMMAND=prompt
     '';
