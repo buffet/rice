@@ -56,12 +56,10 @@ in {
           cd "$(< /tmp/filet_dir)"
       }
       prompt() {
-          if [[ $? -eq 0 ]]; then
-            color="\e[0;34m"
-          else
-            color="\e[0;31m"
-          fi
-          PS1="[\[''${color}\]\W\[\e[0m\]]''${IN_NIX_SHELL:0:1} "
+          case $? in
+              0) PS1='% ';;
+              *) PS1='\[\e[31m\]% \[\e[0m';;
+          esac
       }
       PROMPT_COMMAND=prompt
     '';
