@@ -261,7 +261,7 @@ mouse:
     #   - (macOS) open
     #   - (Linux) xdg-open
     #   - (Windows) explorer
-    #launcher: xdg-open
+    launcher: chromium
 
     # URL modifiers
     #
