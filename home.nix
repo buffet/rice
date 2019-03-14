@@ -12,8 +12,9 @@ in {
 
   home = {
     file.".config/alacritty/alacritty.yml".source = "${extraConf}/alacritty/alacritty.yml";
+    file.".config/nixpkgs/overlays".source = "/nix/overlays";
+    file.".config/readline/inputrc".source = "${extraConf}/readline/inputrc";
     file.".config/sway/config".source = "${extraConf}/sway/config";
-    file.".inputrc".source = "${extraConf}/readline/inputrc";
 
     packages = with pkgs; [
       alacritty
@@ -38,9 +39,8 @@ in {
       BROWSER = "chromium";
       CARGO_HOME = "$HOME/.cache/cargo";
       EDITOR = "nvim";
+      INPUTRC = "$HOME/.config/readline/inputrc";
       LESSHISTFILE = "$HOME/.cache/less_history";
-      XDG_DOCUMENTS_DIR = "$HOME/docs";
-      XDG_DOWNLOADS_DIR = "/tmp/downloads";
       XKB_DEFAULT_LAYOUT = "us,dvorak";
       XKB_DEFAULT_OPTIONS = "grp:alt_shift_toggle,compose:ralt";
       XKB_DEFAULT_VARIANT = ",nodeadkeys";
@@ -53,6 +53,8 @@ in {
     historyControl = [ "erasedups" "ignorespace" ];
     historyFile = "\$HOME/.cache/bash_history";
     initExtra = ''
+      export TERM=xterm-256color
+
       f() {
           filet "$@"
           cd "$(< /tmp/filet_dir)"
