@@ -59,6 +59,15 @@ in {
           filet "$@"
           cd "$(< /tmp/filet_dir)"
       }
+
+      t() {
+          if [[ $1 ]]; then
+              mkdir -p "/tmp/$1"
+          fi
+
+          cd "/tmp/$1"
+      }
+
       prompt() {
           case $? in
               0) PS1='%' ;;
@@ -80,7 +89,6 @@ in {
       htop = "htop -t";
       mkdir = "mkdir -p";
       ra = "ranger";
-      t = "cd /tmp";
       v = "nvim";
     };
     shellOptions = [
