@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 
 {
-  config.programs.sway-beta = {
+  config.programs.sway = {
     enable = true;
     extraPackages = with pkgs; [
       brightnessctl
