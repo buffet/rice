@@ -104,6 +104,7 @@ in {
       enable = true;
       extensions = [
         "eimadpbcbfnmbkopoojfekhnkhdbieeh" # Dark Reader
+        "gcbommkclmclpchllfjekcdonpmejbdp" # HTTPS Everywhere
         "kbmfpngjjgdllneeigpgjifpgocmfgmb" # Reddit Enhancement Suite
         "dbepggeogbaibhgnhhndojpepiihcmeb" # Vimium
         "jhjpjhhkcbkmgdkahnckfboefnkgghpo" # toolbox
