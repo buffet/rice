@@ -12,12 +12,15 @@ in {
     file.".config/nixpkgs/overlays".source = "/nix/overlays";
     file.".config/readline/inputrc".source = "${extraConf}/readline/inputrc";
     file.".config/sway/config".source = "${extraConf}/sway/config";
+    file.".emacs.d/config.org".source = "${extraConf}/emacs/config.org";
+    file.".emacs.d/init.el".source = "${extraConf}/emacs/init.el";
 
     packages = with pkgs; [
       alacritty
       cherry
       clang-tools
       ctags
+      emacs
       exa
       fd
       filet
@@ -85,6 +88,7 @@ in {
         e = "exa";
         eal = "exa -al";
         el = "exa -l";
+        em = "emacs";
         htop = "htop -t";
         mkdir = "mkdir -p";
         ra = "ranger";
