@@ -178,6 +178,26 @@ Completes anything. Literally.
     'global-company-mode)
 #+END_SRC
 
+** C
+
+*** clang-format
+
+It'd be neat to have clang-format format my stuff
+
+#+BEGIN_SRC emacs-lisp
+  (use-package clang-format
+    :bind ("C-c u" . 'clang-format-buffer))
+#+END_SRC
+
+*** Style
+
+Very lose approximation.
+
+#+BEGIN_SRC emacs-lisp
+  (setq c-default-style "linux"
+	c-basic-offset 4)
+#+END_SRC
+
 ** Emacs-lisp
 
 Emacs kind of uses a lot of parenthesis. It's easy to lose track of them
