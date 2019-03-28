@@ -40,9 +40,13 @@
   ];
 
   sound.enable = true;
-  hardware.pulseaudio.enable = true;
-  hardware.opengl.enable = true;
   systemd.coredump.enable = true;
+
+  hardware = {
+    brightnessctl.enable = true;
+    opengl.enable = true;
+    pulseaudio.enable = true;
+  };
 
   users.extraUsers.buffet = {
     isNormalUser = true;
