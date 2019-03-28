@@ -81,6 +81,16 @@ Self documenting emacs is the best emacs
   (global-linum-mode 1)
 #+END_SRC
 
+** Color theme
+
+I'm using a base16 theme at the moment because im lazy. Might change though
+
+#+BEGIN_SRC emacs-lisp
+  (use-package base16-theme
+    :config
+    (load-theme 'base16-mocha t))
+#+END_SRC
+
 * Getting Around
 
 =C-x o= sucks when you have more than two windows.
