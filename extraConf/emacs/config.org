@@ -91,6 +91,24 @@ I'm using a base16 theme at the moment because im lazy. Might change though
     (load-theme 'base16-mocha t))
 #+END_SRC
 
+** Evaluate and replace
+
+This is a cool thing for on-the-spot meta programming
+
+#+BEGIN_SRC emacs-lisp
+  (defun eval-and-replace ()
+    "Replace the preceding sexp with its value."
+    (interactive)
+    (backward-kill-sexp)
+    (condition-case nil
+	(prin1 (eval (read (current-kill 0)))
+	       (current-buffer))
+      (error (message "Invalid expression")
+	     (insert (current-kill 0)))))
+
+  (global-set-key (kbd "C-c e") 'eval-and-replace)
+#+END_SRC
+
 * Getting Around
 
 =C-x o= sucks when you have more than two windows.
