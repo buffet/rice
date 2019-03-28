@@ -168,6 +168,16 @@ Literally the only usable, good git interface (apart from =git=)
 
 * Languages
 
+** company-mode
+
+Completes anything. Literally.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package company
+    :config
+    'global-company-mode)
+#+END_SRC
+
 ** Emacs-lisp
 
 Emacs kind of uses a lot of parenthesis. It's easy to lose track of them
