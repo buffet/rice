@@ -4,7 +4,6 @@
   config.programs.sway = {
     enable = true;
     extraPackages = with pkgs; [
-      brightnessctl
       i3status
       swaylock
       xwayland
