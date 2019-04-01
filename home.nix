@@ -41,7 +41,7 @@ in {
       EDITOR = "nvim";
       INPUTRC = "$HOME/.config/readline/inputrc";
       LESSHISTFILE = "$HOME/.cache/less_history";
-      XKB_DEFAULT_OPTIONS = "compose:ralt,caps:swapescape";
+      XKB_DEFAULT_OPTIONS = "compose:ralt,caps:escape";
     };
   };
 
@@ -71,15 +71,10 @@ in {
         }
 
         prompt() {
-            case $? in
-                0) PS1='%' ;;
-                *) PS1='\[\e[31m\]%' ;;
-            esac
-
-            [[ $IN_NIX_SHELL ]] && PS1+="'"
-
-            PS1+='\[\e[0m\] '
+            PS0="\[\e[m\]"
+            PS1="\[\e[1m\]"
         }
+
         PROMPT_COMMAND=prompt
       '';
       shellAliases = {
