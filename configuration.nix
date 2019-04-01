@@ -31,6 +31,7 @@
 
   environment.systemPackages = with pkgs; [
     acpi
+    brightnessctl
     git
     neovim
   ];
