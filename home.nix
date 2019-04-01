@@ -41,7 +41,7 @@ in {
       EDITOR = "nvim";
       INPUTRC = "$HOME/.config/readline/inputrc";
       LESSHISTFILE = "$HOME/.cache/less_history";
-      XKB_DEFAULT_OPTIONS = "compose:ralt";
+      XKB_DEFAULT_OPTIONS = "compose:ralt,caps:swapescape";
     };
   };
 
