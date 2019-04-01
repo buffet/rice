@@ -203,6 +203,10 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+input * {
+    tap enabled
+}
+
 #
 # Status Bar:
 #
