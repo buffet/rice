@@ -66,8 +66,8 @@ highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
 
 " easytags
-let g:easytags_file = '~/.local/share/vimtags'
-set tags='~/.local/share/vimtags'
+set tags=./tags
+let g:easytags_dynamic_files = 2
 
 " neoformat
 nnoremap ,f :Goyo<Cr>:Limelight!!<Cr>
