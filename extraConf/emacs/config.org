@@ -247,3 +247,12 @@ Emacs kind of uses a lot of parenthesis. It's easy to lose track of them
     :config
     (add-hook 'org-mode-hook (lambda () (org-bullets-mode))))
 #+END_SRC
+
+*** Twitter bootstrap export
+
+Booty-ful
+
+#+BEGIN_SRC emacs-lisp
+  (use-package ox-twbs
+    :ensure t)
+#+END_SRC
