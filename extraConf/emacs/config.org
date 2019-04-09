@@ -11,6 +11,12 @@ All those =:ensure t= get boring rather quickly. I'd rather not type that *all* 
   (setq use-package-always-ensure t)
 #+END_SRC
 
+** Font
+
+#+BEGIN_SRC emacs-lisp
+  (set-frame-font "cherry")
+#+END_SRC
+
 ** Don't clutter my stuff
 
 Don't clutter my files
