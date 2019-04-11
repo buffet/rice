@@ -261,6 +261,5 @@ Emacs kind of uses a lot of parenthesis. It's easy to lose track of them
 Booty-ful
 
 #+BEGIN_SRC emacs-lisp
-  (use-package ox-twbs
-    :ensure t)
+  (use-package ox-twbs)
 #+END_SRC
