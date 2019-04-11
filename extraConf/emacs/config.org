@@ -135,6 +135,16 @@ Sometimes I feel down...
     ("C-=" . 'er/expand-region))
 #+END_SRC
 
+** smartparens
+
+Automatically pair parenthesis
+
+#+BEGIN_SRC emacs-lisp
+  (use-package smartparens
+    :config
+    (smartparens-global-mode t))
+#+END_SRC
+
 * Getting Around
 
 =C-x o= sucks when you have more than two windows.
