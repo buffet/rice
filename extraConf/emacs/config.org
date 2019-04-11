@@ -2,6 +2,28 @@
 
 * General Settings
 
+** Rainbow stuff
+
+*** Nyan mode
+
+Nya-nya-nya-nya-nya...
+
+#+BEGIN_SRC emacs-lisp
+  (use-package nyan-mode
+    :config
+    (nyan-mode))
+#+END_SRC
+
+*** Rainbow mode
+
+Colorize colors
+
+#+BEGIN_SRC emacs-lisp
+  (use-package rainbow-mode
+    :config
+    (rainbow-mode t))
+#+END_SRC
+
 ** use-package
 
 All those =:ensure t= get boring rather quickly. I'd rather not type that *all* the time
