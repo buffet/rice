@@ -2,6 +2,16 @@
 
 * General Settings
 
+** Spaces over Tabs
+
+Yeah, I know...
+
+#+BEGIN_SRC emacs-lisp
+  (setq-default indent-tabs-mode nil)
+  (setq-default tab-width 4)
+  (setq indent-line-function 'insert-tab)
+#+END_SRC
+
 ** Rainbow stuff
 
 *** Nyan mode
