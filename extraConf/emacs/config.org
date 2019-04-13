@@ -2,6 +2,15 @@
 
 * General Settings
 
+** use-package
+
+All those =:ensure t= get boring rather quickly. I'd rather not type that *all* the time
+
+#+BEGIN_SRC emacs-lisp
+  (require 'use-package-ensure)
+  (setq use-package-always-ensure t)
+#+END_SRC
+
 ** Spaces over Tabs
 
 Yeah, I know...
@@ -32,15 +41,6 @@ Colorize colors
   (use-package rainbow-mode
     :config
     (rainbow-mode t))
-#+END_SRC
-
-** use-package
-
-All those =:ensure t= get boring rather quickly. I'd rather not type that *all* the time
-
-#+BEGIN_SRC emacs-lisp
-  (require 'use-package-ensure)
-  (setq use-package-always-ensure t)
 #+END_SRC
 
 ** Font
