@@ -290,12 +290,14 @@ Emacs kind of uses a lot of parenthesis. It's easy to lose track of them
   (use-package htmlize)
 #+END_SRC
 
-*** org-bullets
+*** Indent Headers
+
+The stars are super noisy, I'm not a fan of org-bullets
 
 #+BEGIN_SRC emacs-lisp
-  (use-package org-bullets
-    :config
-    (add-hook 'org-mode-hook (lambda () (org-bullets-mode))))
+  (add-hook 'org-mode-hook
+            (lambda ()
+              (org-indent-mode t)))
 #+END_SRC
 
 *** Twitter bootstrap export
