@@ -284,6 +284,16 @@ Emacs kind of uses a lot of parenthesis. It's easy to lose track of them
 	       '("el" "#+BEGIN_SRC emacs-lisp\n?\n#+END_SRC"))
 #+END_SRC
 
+*** Global binds
+
+These are recommended to be global, so let's make them global.
+
+#+BEGIN_SRC emacs-lisp
+  (global-set-key (kbd "C-c l") 'org-store-link)
+  (global-set-key (kbd "C-c a") 'org-agenda)
+  (global-set-key (kbd "C-c c") 'org-capture)
+#+END_SRC
+
 *** Syntax highlighting in HTML exports
 
 #+BEGIN_SRC emacs-lisp
