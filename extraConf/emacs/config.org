@@ -150,7 +150,7 @@ The only good interface for =git=.
 
 * Languages
 
-** org-mode
+** Org-mode
 
 Super tiresome to type all these =emacs-lisp= source blocks.
 
