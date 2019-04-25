@@ -21,6 +21,12 @@
     nameservers = [ "1.1.1.1" ];
   };
 
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 14d";
+  };
+
   time.timeZone = "Europe/Berlin";
 
   nixpkgs.overlays = [
