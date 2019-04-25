@@ -67,7 +67,43 @@ I prefer cherry font.
   (set-frame-font "cherry")
 #+END_SRC
 
+** Line numbers
+
+#+BEGIN_SRC emacs-lisp
+  (global-linum-mode 1)
+#+END_SRC
+
+** Color Theme
+
+I'm using a base16 theme at the moment, because I'm lazy. Might change in the future.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package base16-theme
+    :config
+    (load-theme 'base16-mocha t))
+#+END_SRC
+
 * Editing
+
+** =eval-and-replace=
+
+Cool thing for on the spot meta programming.
+
+#+BEGIN_SRC emacs-lisp
+  (defun eval-and-replace ()
+    "Replace the preceding sexp with its value."
+    (interactive)
+    (backward-kill-sexp)
+    (condition-case nil
+	(prin1 (eval (read (current-kill 0)))
+	       (current-buffer))
+      (error (message "Invalid expression")
+	     (insert (current-kill 0)))))
+
+  (global-set-key (kbd "C-c e") 'eval-and-replace)
+#+END_SRC
+
+** Trailing Whitespace
 
 I *hate* trailing whitespace with a passion, so I want to see it.
 
