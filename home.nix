@@ -41,8 +41,7 @@ in {
       EDITOR = "emacs";
       INPUTRC = "$HOME/.config/readline/inputrc";
       LESSHISTFILE = "$HOME/.cache/less_history";
-      XKB_DEFAULT_LAYOUT = "us,dvorak";
-      XKB_DEFAULT_OPTIONS = "grp:alt_shift_toggle,compose:ralt,caps:swapescape";
+      XKB_DEFAULT_OPTIONS = "compose:ralt,caps:swapescape";
     };
   };
 
