@@ -127,6 +127,15 @@ I also want it to be removed automatically, but only on lines I edited.
     ("C-=" . 'er/expand-region))
 #+END_SRC
 
+** Show parens pairs
+
+Lots of languages use a lot of parens (lisp...). Would be neat if they'd show up.
+
+#+BEGIN_SRC emacs-lisp
+  (setq show-paren-delay 0)
+  (show-paren-mode t)
+#+END_SRC
+
 * Project
 
 ** Magit
@@ -156,4 +165,24 @@ Org-mode works much better when you have a couple of global keybinds.
   (global-set-key (kbd "C-c l") 'org-store-link)
   (global-set-key (kbd "C-c a") 'org-agenda)
   (global-set-key (kbd "C-c c") 'org-capture)k
+#+END_SRC
+
+Syntax highlighting in HTML exports are nice.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package htmlize)
+#+END_SRC
+
+All the stars are super noisy. Org-mode has a =indent-mode= for this.
+
+#+BEGIN_SRC emacs-lisp
+  (add-hook 'org-mode-hook
+	    (lambda ()
+	      (org-indent-mode t)))
+#+END_SRC
+
+Twitter bootstrap export is amazing and good.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package ox-twbs)
 #+END_SRC
