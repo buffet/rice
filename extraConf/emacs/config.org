@@ -47,6 +47,14 @@ UTF-8 is good and should be the default for everything.
   (prefer-coding-system 'utf-8)
 #+END_SRC
 
+Which key makes Emacs self documenting.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package which-key
+    :config
+    (which-key-mode))
+#+END_SRC
+
 * Looks
 
 ** =nyan-mode=
