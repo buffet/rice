@@ -32,6 +32,7 @@ in {
       ranger
       ripgrep
       slurp
+      texlive.combined.scheme-full
       wl-clipboard
     ];
 
