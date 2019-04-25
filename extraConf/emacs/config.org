@@ -119,6 +119,26 @@ I also want it to be removed automatically, but only on lines I edited.
     (add-hook 'prog-mode-hook 'ws-butler-mode))
 #+END_SRC
 
+** =expand-region=
+
+#+BEGIN_SRC emacs-lisp
+  (use-package expand-region
+    :bind
+    ("C-=" . 'er/expand-region))
+#+END_SRC
+
+* Project
+
+** Magit
+
+The only good interface for =git=.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package magit
+    :bind
+    ("M-g" . magit-status))
+#+END_SRC
+
 * Languages
 
 ** org-mode
