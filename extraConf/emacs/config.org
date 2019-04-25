@@ -195,6 +195,15 @@ Twitter bootstrap export is amazing and good.
   (use-package ox-twbs)
 #+END_SRC
 
+** =AucTeX=
+
+Since =AucTeX= overrides =tex= for some reason this is a weird hack that supposedly works.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package tex
+    :ensure auctex)
+#+END_SRC
+
 ** =nix-mode=
 
 #+BEGIN_SRC emacs-lisp
