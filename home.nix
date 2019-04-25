@@ -28,6 +28,7 @@ in {
       fzf
       grim
       htop
+      mupdf
       neofetch
       ranger
       ripgrep
