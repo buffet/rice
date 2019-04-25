@@ -186,3 +186,9 @@ Twitter bootstrap export is amazing and good.
 #+BEGIN_SRC emacs-lisp
   (use-package ox-twbs)
 #+END_SRC
+
+** =nix-mode=
+
+#+BEGIN_SRC emacs-lisp
+  (use-package nix-mode)
+#+END_SRC
