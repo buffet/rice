@@ -70,7 +70,7 @@ I prefer cherry font.
 ** Line numbers
 
 #+BEGIN_SRC emacs-lisp
-  (global-linum-mode 1)
+  (global-linum-mode t)
 #+END_SRC
 
 ** Color Theme
