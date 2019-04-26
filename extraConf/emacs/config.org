@@ -144,6 +144,14 @@ Lots of languages use a lot of parens (lisp...). Would be neat if they'd show up
   (show-paren-mode t)
 #+END_SRC
 
+** Move between windows
+
+#+BEGIN_SRC emacs-lisp
+  (require 'windmove)
+  (windmove-default-keybindings)
+  (setq windmove-wrap-around t)
+#+END_SRC
+
 * Project
 
 ** Magit
