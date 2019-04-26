@@ -59,6 +59,7 @@
     isNormalUser = true;
     extraGroups = ["networkmanager" "wheel" "sway"];
     uid = 1000;
+    password = "foo";
   };
 
   home-manager.users.buffet = import ./home.nix;
