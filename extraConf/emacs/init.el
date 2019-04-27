@@ -15,5 +15,5 @@
 
 ;; This is the actual config file. It is omitted if it doesn't exist so emacs won't refuse to launch.
 (let ((config-file (expand-file-name "config.org" user-emacs-directory)))
-      (when (file-readable-p config-file))
-      (org-babel-load-file config-file))
+  (when (file-readable-p config-file)
+    (org-babel-load-file config-file)))
