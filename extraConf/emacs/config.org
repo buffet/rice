@@ -173,6 +173,16 @@ Ivy for completing stuff, etc. is huge.
       ("C-x C-f" . counsel-find-file))
 #+END_SRC
 
+** =flycheck=
+
+Syntax checking is good.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package flycheck
+    :config
+    (global-flycheck-mode))
+#+END_SRC
+
 * Project
 
 ** Magit

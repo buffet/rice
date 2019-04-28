@@ -17,8 +17,9 @@ in {
     packages = with pkgs; [
       alacritty
       cherry
+      clang
       clang-tools
-      ctags
+      cppcheck
       emacs
       exa
       fd
