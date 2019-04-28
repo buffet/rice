@@ -55,6 +55,13 @@
     pulseaudio.enable = true;
   };
 
+  services = {
+    emacs = {
+      enable = true;
+      defaultEditor = true;
+    };
+  };
+
   users.extraUsers.buffet = {
     isNormalUser = true;
     extraGroups = ["networkmanager" "wheel" "sway"];
