@@ -9,7 +9,6 @@ in {
 
   home = {
     file.".config/alacritty/alacritty.yml".source = "${extraConf}/alacritty/alacritty.yml";
-    file.".config/nixpkgs/overlays".source = "/nix/overlays";
     file.".config/readline/inputrc".source = "${extraConf}/readline/inputrc";
     file.".config/sway/config".source = "${extraConf}/sway/config";
     file.".emacs.d/config.org".source = "${extraConf}/emacs/config.org";
