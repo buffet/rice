@@ -39,7 +39,6 @@ in {
     sessionVariables = {
       BROWSER = "chromium";
       CARGO_HOME = "$HOME/.cache/cargo";
-      EDITOR = "emacs";
       INPUTRC = "$HOME/.config/readline/inputrc";
       LESSHISTFILE = "$HOME/.cache/less_history";
       XKB_DEFAULT_OPTIONS = "compose:ralt,caps:swapescape";
