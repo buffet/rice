@@ -132,8 +132,10 @@ I also want it to be removed automatically, but only on lines I edited.
 
 #+BEGIN_SRC emacs-lisp
   (use-package expand-region
+    :commands
+    er/expand-region
     :bind
-    ("C-=" . 'er/expand-region))
+    ("C-=" . er/expand-region))
 #+END_SRC
 
 ** Show parens pairs
@@ -158,13 +160,13 @@ Lots of languages use a lot of parens (lisp...). Would be neat if they'd show up
 Ivy for completing stuff, etc. is huge.
 
 #+BEGIN_SRC emacs-lisp
-    (use-package counsel
-      :config
-      (ivy-mode)
-      :bind
-      ("C-s" . swiper)
-      ("M-x". counsel-M-x)
-      ("C-x C-f" . counsel-find-file))
+  (use-package counsel
+    :config
+    (ivy-mode)
+    :bind
+    ("C-s" . swiper)
+    ("M-x". counsel-M-x)
+    ("C-x C-f" . counsel-find-file))
 #+END_SRC
 
 ** =flycheck=
@@ -185,6 +187,8 @@ The only good interface for =git=.
 
 #+BEGIN_SRC emacs-lisp
   (use-package magit
+    :commands
+    magit-statue
     :bind
     ("M-g" . magit-status))
 #+END_SRC
@@ -195,6 +199,8 @@ Neat project managing thing.
 
 #+BEGIN_SRC emacs-lisp
   (use-package projectile
+    :commands
+    projectile-command-map
     :bind
     ("M-p" . projectile-command-map)
     :config
