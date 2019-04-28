@@ -2,12 +2,6 @@
 
 * General Settings
 
-Ensure the Emacs server is running.
-
-#+BEGIN_SRC emacs-lisp
-  (server-start)
-#+END_SRC
-
 Typing =:ensure t= everywhere is very bothersome so I'd rather *not* do that.
 
 #+BEGIN_SRC emacs-lisp
