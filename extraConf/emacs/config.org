@@ -85,7 +85,7 @@ I prefer cherry font.
 ** Line numbers
 
 #+BEGIN_SRC emacs-lisp
-  (global-linum-mode t)
+  (global-linum-mode 1)
 #+END_SRC
 
 ** Color Theme
@@ -148,7 +148,7 @@ Lots of languages use a lot of parens (lisp...). Would be neat if they'd show up
 
 #+BEGIN_SRC emacs-lisp
   (setq show-paren-delay 0)
-  (show-paren-mode t)
+  (show-paren-mode 1)
 #+END_SRC
 
 ** Move between windows
@@ -215,7 +215,7 @@ All the stars are super noisy. Org-mode has a =indent-mode= for this.
 #+BEGIN_SRC emacs-lisp
   (add-hook 'org-mode-hook
 	    (lambda ()
-	      (org-indent-mode t)))
+	      (org-indent-mode 1)))
 #+END_SRC
 
 Twitter bootstrap export is amazing and good.
