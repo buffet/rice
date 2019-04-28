@@ -54,7 +54,7 @@ output * bg #20160d solid_color
 #
 
     # start emacs
-    bindsym $mod+n exec emacs
+    bindsym $mod+n exec emacsclient --create-frame
 
     # screenshot a region
     bindsym $mod+i exec grim -g "$(slurp)" - | wl-copy --type image/png
