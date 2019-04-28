@@ -78,7 +78,8 @@ Nya-nya-nya-nya-nya...
 I prefer cherry font.
 
 #+BEGIN_SRC emacs-lisp
-  (set-frame-font "cherry")
+  (add-to-list 'default-frame-alist
+               '(font . "cherry-13"))
 #+END_SRC
 
 ** Line numbers
