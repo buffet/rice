@@ -238,3 +238,19 @@ Since =AucTeX= overrides =tex= for some reason this is a weird hack that suppose
 #+BEGIN_SRC emacs-lisp
   (use-package nix-mode)
 #+END_SRC
+
+** =CC-mode=
+
+I don't want Emacs to insert Tabs everywhere.
+
+#+BEGIN_SRC emacs-lisp
+  (setq indent-tabs-mode nil)
+#+END_SRC
+
+The way indentation is handled by default is horrible.
+Let's fix that.
+
+#+BEGIN_SRC emacs-lisp
+  (setq c-default-style "user"
+        c-basic-offset 4)
+#+END_SRC
