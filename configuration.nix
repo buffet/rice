@@ -29,10 +29,6 @@
 
   time.timeZone = "Europe/Berlin";
 
-  nixpkgs.overlays = [
-    (import (builtins.fetchTarball https://github.com/buffet/overlay/archive/master.tar.gz))
-  ];
-
   environment.binsh = "${pkgs.dash}/bin/dash";
 
   environment.systemPackages = with pkgs; [

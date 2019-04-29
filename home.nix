@@ -3,10 +3,6 @@
 let
   extraConf = ./extraConf;
 in {
-  nixpkgs.overlays = [
-    (import (builtins.fetchTarball https://github.com/buffet/overlay/archive/master.tar.gz))
-  ];
-
   home = {
     file.".config/alacritty/alacritty.yml".source = "${extraConf}/alacritty/alacritty.yml";
     file.".config/readline/inputrc".source = "${extraConf}/readline/inputrc";
