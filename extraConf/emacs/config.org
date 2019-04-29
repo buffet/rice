@@ -294,3 +294,11 @@ Let's fix that.
   (setq c-default-style "user"
         c-basic-offset 4)
 #+END_SRC
+
+** Emacs Lisp
+
+Emacs has a built in mode for elisp documentation.
+
+#+BEGIN_SRC emacs-lisp
+  (eldoc-mode 1)
+#+END_SRC
