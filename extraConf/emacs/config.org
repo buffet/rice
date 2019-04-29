@@ -154,6 +154,17 @@ Lots of languages use a lot of parens (lisp...). Would be neat if they'd show up
   (show-paren-mode 1)
 #+END_SRC
 
+** Insert parens pairs
+
+#+BEGIN_SRC emacs-lisp
+  (define-global-minor-mode global-electric-pair-mode
+    electric-pair-mode
+    (lambda ()
+      (electric-pair-mode 1)))
+
+  (global-electric-pair-mode 1)
+#+END_SRC
+
 ** Move between windows
 
 #+BEGIN_SRC emacs-lisp
