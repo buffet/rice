@@ -192,6 +192,16 @@ Syntax checking is good.
     (global-flycheck-mode))
 #+END_SRC
 
+** =company-mode=
+
+Completes anything.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package company
+    :config
+    (global-company-mode 1))
+#+END_SRC
+
 * Project
 
 ** Magit
