@@ -55,6 +55,13 @@ Which key makes Emacs self documenting.
     (which-key-mode))
 #+END_SRC
 
+Tramp is awesome for editing remote files.
+By default it's slow as fuck though.
+
+#+BEGIN_SRC emacs-lisp
+  (setq tramp-default-method "ssh")
+#+END_SRC
+
 * Looks
 
 ** =nyan-mode=
