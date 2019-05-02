@@ -132,7 +132,7 @@ I also want it to be removed automatically, but only on lines I edited.
 #+BEGIN_SRC emacs-lisp
   (use-package ws-butler
     :config
-    (add-hook 'prog-mode-hook 'ws-butler-mode))
+    (ws-butler-global-mode))
 #+END_SRC
 
 ** =expand-region=
