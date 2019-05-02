@@ -307,3 +307,25 @@ Emacs has a built in mode for elisp documentation.
 #+BEGIN_SRC emacs-lisp
   (eldoc-mode 1)
 #+END_SRC
+
+** Web
+
+*** =impatient-mode=
+
+=impatient-mode= helps quick development
+
+#+BEGIN_SRC emacs-lisp
+  (use-package impatient-mode)
+#+END_SRC
+
+*** =emmet-mode=
+
+This makes it easy to write bad HTML fast.
+
+# TODO: Look into =zencoding-mode=
+
+#+BEGIN_SRC emacs-lisp
+  (use-package emmet-mode
+    :config
+    (emmet-mode))
+#+END_SRC
