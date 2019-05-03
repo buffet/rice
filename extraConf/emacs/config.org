@@ -62,6 +62,14 @@ By default it's slow as fuck though.
   (setq tramp-default-method "ssh")
 #+END_SRC
 
+=direnv= allows me to have my nix stuff in Emacs.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package direnv
+    :config
+    (direnv-mode))
+#+END_SRC
+
 * Looks
 
 ** =nyan-mode=

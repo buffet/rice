@@ -16,6 +16,7 @@ in {
       clang
       clang-tools
       cppcheck
+      direnv
       emacs
       exa
       fd
