@@ -338,3 +338,9 @@ This makes it easy to write bad HTML fast.
     :config
     (emmet-mode))
 #+END_SRC
+
+** Meson
+
+#+BEGIN_SRC emacs-lisp
+  (use-package meson-mode)
+#+END_SRC
