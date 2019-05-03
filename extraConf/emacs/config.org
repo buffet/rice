@@ -97,6 +97,13 @@ I prefer cherry font.
   (global-linum-mode 1)
 #+END_SRC
 
+Linum mode makes =doc-view-mode= almost unusable, so we better disable it there.
+
+#+BEGIN_SRC emacs-lisp
+  (add-hook 'doc-view-mode-hook (lambda ()
+                                  (linum-mode 0)))
+#+END_SRC
+
 ** Color Theme
 
 I'm using a base16 theme at the moment, because I'm lazy. Might change in the future.
