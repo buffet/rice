@@ -101,7 +101,7 @@ Linum mode makes =doc-view-mode= almost unusable, so we better disable it there.
 
 #+BEGIN_SRC emacs-lisp
   (add-hook 'doc-view-mode-hook (lambda ()
-                                  (linum-mode 0)))
+                                  (linum-mode -1)))
 #+END_SRC
 
 ** Color Theme
