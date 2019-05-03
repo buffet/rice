@@ -16,7 +16,7 @@ set $browser chromium
 
 default_border pixel 4
 focus_follows_mouse no
-gaps inner 10
+gaps inner 0
 gaps outer 0
 
 client.focused #d0c8c6 #d0c8c6 #d0c8c6 #d0c8c6 #d0c8c6
