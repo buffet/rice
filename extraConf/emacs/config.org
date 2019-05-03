@@ -210,6 +210,17 @@ Completes anything.
     (global-company-mode 1))
 #+END_SRC
 
+** Avy
+
+Allows to move between stuff in a quick fashion.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package avy
+    :bind
+    ("M-s" . avy-goto-char)
+    ("M-G" . avy-goto-line))
+#+END_SRC
+
 * Project
 
 ** Magit
