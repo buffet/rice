@@ -25,8 +25,10 @@ in {
       fzf
       grim
       htop
+      irony-server
       mupdf
       neofetch
+      llvmPackages.libclang
       ranger
       ripgrep
       slurp

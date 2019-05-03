@@ -392,3 +392,32 @@ This makes it easy to write bad HTML fast.
 #+BEGIN_SRC emacs-lisp
   (use-package meson-mode)
 #+END_SRC
+
+** C
+
+*** Irony-mode
+
+#+BEGIN_SRC emacs-lisp
+  (use-package irony
+    :config
+    (add-hook 'c++-mode-hook 'irony-mode)
+    (add-hook 'c-mode-hook 'irony-mode)
+    (add-hook 'objc-mode-hook 'irony-mode)
+    (add-hook 'irony-mode-hook 'irony-cdb-autosetup-compile-options))
+#+END_SRC
+
+Irony for autocompletion
+
+#+BEGIN_SRC emacs-lisp
+  (use-package company-irony
+    :config
+    (add-to-list 'company-backends 'company-irony))
+#+END_SRC
+
+Irony as a flycheck backend
+
+#+BEGIN_SRC emacs-lisp
+  (use-package flycheck-irony
+    :config
+    (add-hook 'flycheck-mode-hook 'flycheck-irony-setup))
+#+END_SRC
