@@ -234,6 +234,7 @@ Neat project managing thing.
     projectile-command-map
     :bind
     ("M-p" . projectile-command-map)
+    ("C-c C-m" . projectile-compile-project)
     :config
     (projectile-mode 1))
 #+END_SRC
