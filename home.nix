@@ -79,6 +79,8 @@ in {
             PS1+='\[\e[0m\] '
         }
         PROMPT_COMMAND=prompt
+
+        eval "$(direnv hook bash)"
       '';
       shellAliases = {
         def-build = "nix-build -E \"with import <nixpkgs> {}; callPackage ./. {}\"";
