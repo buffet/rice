@@ -107,6 +107,16 @@ I'm using a base16 theme at the moment, because I'm lazy. Might change in the fu
     (load-theme 'base16-mocha t))
 #+END_SRC
 
+** Beacon
+
+Highlights the cursor each time I switch windows.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package beacon
+    :config
+    (beacon-mode 1))
+#+END_SRC
+
 * Editing
 
 ** =eval-and-replace=
