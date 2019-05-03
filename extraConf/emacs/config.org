@@ -231,6 +231,26 @@ Allows to move between stuff in a quick fashion.
     ("M-G" . avy-goto-line))
 #+END_SRC
 
+** =popup-kill-ring=
+
+Allows me to see the whole kill-ring with a single =M-y=.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package popup-kill-ring
+    :bind
+    ("M-y" . popup-kill-ring))
+#+END_SRC
+
+** Sudo Edit
+
+Super helpful when you forget to open a file as root.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package sudo-edit
+    :bind
+    ("C-c g" . sudo-edit))
+#+END_SRC
+
 * Project
 
 ** Magit
