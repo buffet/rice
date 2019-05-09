@@ -12,6 +12,7 @@ in {
 
     packages = with pkgs; [
       alacritty
+      bear
       cherry
       clang
       clang-tools
