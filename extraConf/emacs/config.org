@@ -258,6 +258,18 @@ Super helpful when you forget to open a file as root.
     ("C-c g" . sudo-edit))
 #+END_SRC
 
+** Easy window manipulation
+
+Shorter hotkeys.
+Windows get manipulated all the time.
+
+#+BEGIN_SRC emacs-lisp
+  (global-set-key (kbd "C-1") 'delete-other-windows)
+  (global-set-key (kbd "C-0") 'delete-window)
+  (global-set-key (kbd "C-2") 'split-window-below)
+  (global-set-key (kbd "C-3") 'split-window-right)
+#+END_SRC
+
 * Project
 
 ** Magit
