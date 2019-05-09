@@ -326,6 +326,57 @@ Twitter bootstrap export is amazing and good.
   (use-package ox-twbs)
 #+END_SRC
 
+*** Agenda
+
+**** Style
+
+Custom agenda that shows priority stuff and catogerizes everything.[fn:https://blog.aaronbieber.com/2016/09/24/an-agenda-for-life-with-org-mode.html]
+
+Emacs doesn't offer skipping habits or priority =A= stuff, so let's write functions for that.
+
+#+BEGIN_SRC emacs-lisp
+  (defun bft-org-skip-subtree-if-priority (priority)
+    "Skip an agenda subtree if it has a priority of PRIORITY.
+
+  PRIORITY may be one of the characters ?A, ?B, or ?C."
+    (let ((subtree-end (save-excursion (org-end-of-subtree t)))
+          (pri-value (* 1000 (- org-lowest-priority priority)))
+          (pri-current (org-get-priority (thing-at-point 'line t))))
+      (if (= pri-value pri-current)
+          subtree-end
+        nil)))
+
+  (defun bft-org-skip-subtree-if-habit ()
+    "Skip an agenda entry if it has a STYLE property equal to \"habit\"."
+    (let ((subtree-end (save-excursion (org-end-of-subtree t))))
+      (if (string= (org-entry-get nil "STYLE") "habit")
+          subtree-end
+        nil)))
+#+END_SRC
+
+#+BEGIN_SRC emacs-lisp
+  (setq org-agenda-custom-commands
+        '(("d" "Daily agenda and all TODOs"
+           ((tags "PRIORITY=\"A\""
+                  ((org-agenda-skip-function '(org-agenda-skip-entry-if 'todo 'done))
+                   (org-agenda-overriding-header "High-priority unfinished tasks:")))
+            (agenda "" ((org-agenda-ndays 1)))
+            (alltodo ""
+                     ((org-agenda-skip-function '(or (bft-org-skip-subtree-if-habit)
+                                                     (bft-org-skip-subtree-if-priority ?A)
+                                                     (org-agenda-skip-if nil '(scheduled deadline))))
+                      (org-agenda-overriding-header "ALL normal priority tasks:"))))
+           ((org-agenda-compact-blocks t)))))
+#+END_SRC
+
+**** Files
+
+Add all my org files.
+
+#+BEGIN_SRC emacs-lisp
+  (setq org-agenda-files '("~/org/"))
+#+END_SRC
+
 ** =AucTeX=
 
 Since =AucTeX= overrides =tex= for some reason this is a weird hack that supposedly works.
