@@ -27,9 +27,9 @@ in {
       grim
       htop
       irony-server
+      llvmPackages.libclang
       mupdf
       neofetch
-      llvmPackages.libclang
       ranger
       ripgrep
       slurp
