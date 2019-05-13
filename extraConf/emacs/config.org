@@ -348,6 +348,12 @@ Super tiresome to type all these =emacs-lisp= source blocks.
 	       '("el" "#+BEGIN_SRC emacs-lisp\n?\n#+END_SRC"))
 #+END_SRC
 
+Error if I type in an invisible (=...=) section.
+
+#+BEGIN_SRC emacs-lisp
+  (setq org-catch-invisible-edits 'error)
+#+END_SRC
+
 Syntax highlighting in HTML exports are nice.
 
 #+BEGIN_SRC emacs-lisp
