@@ -147,12 +147,11 @@ Highlights the cursor each time I switch windows.
                                     replace))
     :config
     (general-create-definer bft-leader-def
-      :prefix "M-m")
+      :prefix "M-n")
     (general-create-definer bft-local-leader-def
-      :prefix "M-m m")
+      :prefix "M-n m")
 
     (bft-leader-def
-      :keymaps 'normal
       "a" 'org-agenda
       "l" 'org-store-link
       "c" 'org-capture
