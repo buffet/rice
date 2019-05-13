@@ -117,7 +117,7 @@ I'm using a base16 theme at the moment, because I'm lazy. Might change in the fu
 #+BEGIN_SRC emacs-lisp
   (use-package base16-theme
     :config
-    (load-theme 'base16-mocha t))
+    (load-theme 'base16-ia-light t))
 #+END_SRC
 
 ** Beacon
