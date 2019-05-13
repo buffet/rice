@@ -9,6 +9,12 @@ Typing =:ensure t= everywhere is very bothersome so I'd rather *not* do that.
   (setq use-package-always-ensure t)
 #+END_SRC
 
+Don't create all the custom things.
+
+#+BEGIN_SRC emacs-lisp
+  (defconst custom-file "/dev/null")
+#+END_SRC
+
 I don't want my Emacs to create loads of backup files, swap files, etc.
 
 #+BEGIN_SRC emacs-lisp
@@ -94,14 +100,14 @@ I prefer cherry font.
 ** Line numbers
 
 #+BEGIN_SRC emacs-lisp
-  (global-linum-mode 1)
+  (global-display-line-numbers-mode 1)
 #+END_SRC
 
 Linum mode makes =doc-view-mode= almost unusable, so we better disable it there.
 
 #+BEGIN_SRC emacs-lisp
   (add-hook 'doc-view-mode-hook (lambda ()
-                                  (linum-mode -1)))
+                                  (display-line-numbers-mode -1)))
 #+END_SRC
 
 ** Color Theme
@@ -126,44 +132,6 @@ Highlights the cursor each time I switch windows.
 
 * Editing
 
-** =evil-mode=
-
-Emacs lacks a good editor.
-
-#+BEGIN_SRC emacs-lisp
-  (use-package evil
-    :config
-    (evil-mode 1))
-#+END_SRC
-
-*** =evil-surround=
-
-Allows me to surround stuff in parens etc.
-
-#+BEGIN_SRC emacs-lisp
-  (use-package evil-surround
-    :config
-    (global-evil-surround-mode 1))
-#+END_SRC
-
-*** =org-evil=
-
-Makes Org-mode intuitive with evil.
-
-#+BEGIN_SRC emacs-lisp
-  (use-package org-evil)
-#+END_SRC
-
-*** =evil-collection=
-
-Sane defaults for most modes.
-
-#+BEGIN_SRC emacs-lisp
-  (use-package evil-collection
-    :config
-    (evil-collection-init))
-#+END_SRC
-
 ** general.el
 
 #+BEGIN_SRC emacs-lisp
@@ -179,9 +147,9 @@ Sane defaults for most modes.
                                     replace))
     :config
     (general-create-definer bft-leader-def
-      :prefix "SPC")
+      :prefix "M-m")
     (general-create-definer bft-local-leader-def
-      :prefix "SPC m")
+      :prefix "M-m m")
 
     (bft-leader-def
       :keymaps 'normal
@@ -194,17 +162,17 @@ Sane defaults for most modes.
       "d" 'delete-window
       "o" 'split-window-right
       "u" 'split-window-below
-      "h" 'evil-window-left
-      "j" 'evil-window-down
-      "k" 'evil-window-up
-      "l" 'evil-window-right
-      "b" 'counsel-switch-buffer)
+      "b" 'counsel-switch-buffer))
+#+END_SRC
 
-    (general-evil-setup)
-    (general-imap "k"
-      (general-key-dispatch 'self-insert-command
-        :timeout 0.25
-        "j" 'evil-normal-state)))
+** =ace-window=
+
+Jumping between windows can be a hassle.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package ace-window
+    :bind
+    ("M-p" . ace-window))
 #+END_SRC
 
 ** =eval-and-replace=
@@ -264,14 +232,6 @@ Lots of languages use a lot of parens (lisp...). Would be neat if they'd show up
 
 #+BEGIN_SRC emacs-lisp
   (electric-pair-mode 1)
-#+END_SRC
-
-** Move between windows
-
-#+BEGIN_SRC emacs-lisp
-  (require 'windmove)
-  (windmove-default-keybindings)
-  (setq windmove-wrap-around t)
 #+END_SRC
 
 ** Ivy
