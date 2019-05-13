@@ -295,7 +295,6 @@ Super helpful when you forget to open a file as root.
   (use-package sudo-edit
     :config
     (bft-leader-def
-      :keymaps 'normal
       "s s" 'sudo-edit))
 #+END_SRC
 
@@ -335,7 +334,6 @@ Neat project managing thing.
     :config
     (projectile-mode 1)
     (bft-leader-def
-      :keymaps 'normal
       "p" 'projectile-command-map))
 #+END_SRC
 
