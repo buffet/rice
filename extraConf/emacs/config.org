@@ -376,6 +376,12 @@ Twitter bootstrap export is amazing and good.
 
 *** Agenda
 
+**** Open it in current frame
+
+#+BEGIN_SRC emacs-lisp
+  (setq org-agenda-window-setup 'current-window)
+#+END_SRC
+
 **** Style
 
 Custom agenda that shows priority stuff and catogerizes everything.[fn:https://blog.aaronbieber.com/2016/09/24/an-agenda-for-life-with-org-mode.html]
