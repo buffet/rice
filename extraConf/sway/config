@@ -17,9 +17,9 @@ set $browser chromium
 default_border pixel 2
 focus_follows_mouse no
 gaps inner 12
-gaps outer 45
+gaps outer 32
 
-client.focused #f0e8e6 #d0c8c6 #402826 #f0e8e6 #f0e8e6
+client.focused #f0e8e6 #f0e8e6 #402826 #f0e8e6 #f0e8e6
 client.unfocused #d0c8c6 #d0c8c6 #402826 #d0c8c6 #d0c8c6
 client.focused_inactive #d0c8c6 #d0c8c6 #402826 #d0c8c6 #d0c8c6
 
