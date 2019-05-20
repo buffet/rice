@@ -437,7 +437,10 @@ Since =AucTeX= overrides =tex= for some reason this is a weird hack that suppose
 ** =nix-mode=
 
 #+BEGIN_SRC emacs-lisp
-  (use-package nix-mode)
+    (use-package nix-mode
+      :mode "\\.nix\\'"
+      :custom
+      (nix-indent-function #'nix-indent-line))
 #+END_SRC
 
 ** =CC-mode=
