@@ -54,7 +54,7 @@ output * bg #20160d solid_color
 #
 
     # start emacs
-    bindsym $mod+n exec emacsclient -c
+    bindsym $mod+n exec emacsclient -ce '(org-agenda nil "d")'
     bindsym $mod+Shift+n exec emacs
 
     # screenshot a region
