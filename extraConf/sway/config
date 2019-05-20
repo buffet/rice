@@ -14,19 +14,20 @@ set $menu dmenu_run
 # Your preferred browser
 set $browser chromium
 
-default_border pixel 4
+default_border pixel 2
 focus_follows_mouse no
-gaps inner 0
-gaps outer 0
+gaps inner 12
+gaps outer 45
 
-client.focused #d0c8c6 #d0c8c6 #d0c8c6 #d0c8c6 #d0c8c6
-client.unfocused #b0a8a6 #b0a8a6 #b0a8a6 #b0a8a6 #b0a8a6
+client.focused #f0e8e6 #d0c8c6 #402826 #f0e8e6 #f0e8e6
+client.unfocused #d0c8c6 #d0c8c6 #402826 #d0c8c6 #d0c8c6
+client.focused_inactive #d0c8c6 #d0c8c6 #402826 #d0c8c6 #d0c8c6
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg #20160d solid_color
+output * bg #444444 solid_color
 #
 # Example configuration:
 #
