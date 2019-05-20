@@ -431,6 +431,23 @@ Add all my org files.
   (setq org-agenda-files '("~/org/"))
 #+END_SRC
 
+*** Captures
+
+Create new TODOs on the fly.
+
+#+BEGIN_SRC emacs-lisp
+  (setq org-capture-templates
+        '(("t" "Todo" entry (file "~/org/unsorted.org")
+           "* TODO %?")))
+
+  (defun org-capture-todo ()
+    (interactive)
+    (org-capture nil "t"))
+
+  (bft-leader-def
+    "t" 'org-capture-todo)
+#+END_SRC
+
 ** =AucTeX=
 
 Since =AucTeX= overrides =tex= for some reason this is a weird hack that supposedly works.
