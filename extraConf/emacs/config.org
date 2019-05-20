@@ -110,6 +110,14 @@ Linum mode makes =doc-view-mode= almost unusable, so we better disable it there.
                                   (display-line-numbers-mode -1)))
 #+END_SRC
 
+** Fringe
+
+Disable the right fringe. Looks ugly.
+
+#+BEGIN_SRC emacs-lisp
+  (fringe-mode '(0 . 0))
+#+END_SRC
+
 ** Color Theme
 
 I'm using a base16 theme at the moment, because I'm lazy. Might change in the future.
