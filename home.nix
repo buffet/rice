@@ -42,7 +42,6 @@ in {
       CARGO_HOME = "$HOME/.cache/cargo";
       INPUTRC = "$HOME/.config/readline/inputrc";
       LESSHISTFILE = "$HOME/.cache/less_history";
-      XKB_DEFAULT_OPTIONS = "compose:prsc,caps:swapescape";
     };
   };
 

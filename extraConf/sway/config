@@ -17,7 +17,7 @@ set $browser chromium
 default_border pixel 2
 focus_follows_mouse no
 gaps inner 12
-gaps outer 32
+gaps outer 0
 
 client.focused #f0e8e6 #f0e8e6 #402826 #f0e8e6 #f0e8e6
 client.unfocused #d0c8c6 #d0c8c6 #402826 #d0c8c6 #d0c8c6
@@ -206,7 +206,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 input * {
-    tap enabled
+    xkb_layout "us"
+    xkb_variant "colemak"
+    xkb_options "compose:prsc,caps:swapescape"
 }
 
 #
