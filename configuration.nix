@@ -56,6 +56,8 @@
       enable = true;
       defaultEditor = true;
     };
+
+    upower.enable = true;
   };
 
   users.extraUsers.buffet = {
