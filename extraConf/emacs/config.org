@@ -465,6 +465,15 @@ Since =AucTeX= overrides =tex= for some reason this is a weird hack that suppose
     :ensure auctex)
 #+END_SRC
 
+*** mupdf for preview
+
+#+BEGIN_SRC emacs-lisp
+  (with-eval-after-load "tex"
+    (add-hook 'LaTeX-mode-hook 'TeX-source-correlate-mode
+              (add-to-list 'TeX-view-program-list '("mupdf" ("mupdf-gl %o" (mode-io-correlate " %(outpage)"))))
+              (setcdr (assq 'output-pdf TeX-view-program-selection) '("mupdf"))))
+#+END_SRC
+
 ** =nix-mode=
 
 #+BEGIN_SRC emacs-lisp
@@ -479,15 +488,14 @@ Since =AucTeX= overrides =tex= for some reason this is a weird hack that suppose
 I don't want Emacs to insert Tabs everywhere.
 
 #+BEGIN_SRC emacs-lisp
-  (setq indent-tabs-mode nil)
+  (setq-default indent-tabs-mode nil)
 #+END_SRC
 
 The way indentation is handled by default is horrible.
 Let's fix that.
 
 #+BEGIN_SRC emacs-lisp
-  (setq c-default-style "user"
-        c-basic-offset 4)
+  (setq-default c-basic-offset 4)
 #+END_SRC
 
 ** Emacs Lisp
