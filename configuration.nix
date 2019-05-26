@@ -57,6 +57,8 @@
       defaultEditor = true;
     };
 
+    interception-tools.enable = true;
+
     upower.enable = true;
   };
 
