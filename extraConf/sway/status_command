@@ -1,0 +1,15 @@
+#!/bin/sh
+
+while :; do
+    set -- /sys/class/power_supply/*/capacity
+    total=
+
+    for bat; do
+        read -r cap < "$bat"
+        total=$((total + cap))
+    done
+
+    printf '%s %s' "$((total / $#))%" "$(date +'%H:%M')"
+
+    sleep 10
+done

@@ -211,13 +211,12 @@ bindsym $mod+r mode "resize"
 # Read `man 5 sway-bar` for more information about this section.
 bar {
     position top
+    gaps 12
     colors {
         statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
+        background #333333
+        inactive_workspace #333333 #333333 #666666
+        focused_workspace #666666 #444444 #ffffff
     }
-    status_command i3status
-    mode hide
-    hidden_state hide
-    modifier $mod+shift
+    status_command /etc/nixos/extraConf/sway/status_command
 }
