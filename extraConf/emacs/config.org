@@ -346,6 +346,20 @@ Neat project managing thing.
       "p" 'projectile-command-map))
 #+END_SRC
 
+** Treemacs
+
+#+BEGIN_SRC emacs-lisp
+  (use-package treemacs
+    :config
+    (bft-leader-def
+      "g" 'treemacs)
+    (general-define-key
+     "M-0" 'treemacs-select-window)
+
+    (add-hook 'treemacs-mode-hook (lambda ()
+                                    (display-line-numbers-mode -1))))
+#+END_SRC
+
 * Languages
 
 ** Org-mode
