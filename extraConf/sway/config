@@ -205,12 +205,6 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
-input * {
-    xkb_layout "us"
-    xkb_variant "colemak"
-    xkb_options "compose:prsc,caps:swapescape"
-}
-
 #
 # Status Bar:
 #
