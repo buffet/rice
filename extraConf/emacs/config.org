@@ -154,10 +154,11 @@ Highlights the cursor each time I switch windows.
                                     operator
                                     replace))
     :config
+    (global-unset-key (kbd "M-j"))
     (general-create-definer bft-leader-def
-      :prefix "M-n")
+      :prefix "M-j")
     (general-create-definer bft-local-leader-def
-      :prefix "M-n m")
+      :prefix "M-j m")
 
     (bft-leader-def
       "a" 'org-agenda
