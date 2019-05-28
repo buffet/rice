@@ -72,8 +72,8 @@ in {
 
         prompt() {
             case $? in
-                0) PS1='%' ;;
-                *) PS1='\[\e[31m\]%' ;;
+                0) PS1='\[\e[36m\]\$' ;;
+                *) PS1='\[\e[31m\]\$' ;;
             esac
 
             [[ $IN_NIX_SHELL ]] && PS1+="'"
