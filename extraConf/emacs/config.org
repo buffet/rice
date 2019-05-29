@@ -221,16 +221,6 @@ Emacs is lacks a good editor.
       "0" 'delete-window))
 #+END_SRC
 
-** =ace-window=
-
-Jumping between windows can be a hassle.
-
-#+BEGIN_SRC emacs-lisp
-  (use-package ace-window
-    :bind
-    ("M-p" . ace-window))
-#+END_SRC
-
 ** =eval-and-replace=
 
 Cool thing for on the spot meta programming.
@@ -323,17 +313,6 @@ Completes anything.
     (global-company-mode 1))
 #+END_SRC
 
-** Avy
-
-Allows to move between stuff in a quick fashion.
-
-#+BEGIN_SRC emacs-lisp
-  (use-package avy
-    :bind
-    ("M-s" . avy-goto-char)
-    ("M-G" . avy-goto-line))
-#+END_SRC
-
 ** =popup-kill-ring=
 
 Allows me to see the whole kill-ring with a single =M-y=.
@@ -357,9 +336,8 @@ Super helpful when you forget to open a file as root.
 
 ** Easy window manipulation
 
-Shorter hotkeys.
-Windows get manipulated all the time.
 These are in place even though general.el is used, because some buffers don't just work like that.
+I keep this
 
 #+BEGIN_SRC emacs-lisp
   (global-set-key (kbd "C-1") 'delete-other-windows)
