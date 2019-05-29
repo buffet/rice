@@ -354,8 +354,6 @@ The only good interface for =git=.
 
 #+BEGIN_SRC emacs-lisp
   (use-package magit
-    :commands
-    magit-statue
     :bind
     ("M-g" . magit-status))
 #+END_SRC
