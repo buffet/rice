@@ -205,6 +205,10 @@ mode "resize" {
 }
 bindsym $mod+r mode "resize"
 
+input * {
+    xkb_options compose:prsc
+}
+
 #
 # Status Bar:
 #
