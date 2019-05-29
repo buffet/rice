@@ -140,37 +140,81 @@ Highlights the cursor each time I switch windows.
 
 * Editing
 
+** =evil-mode=
+
+Emacs is lacks a good editor.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package evil
+    :init
+    (setq evil-want-keybinding nil)
+    :config
+    (evil-mode 1))
+#+END_SRC
+
+*** evil-org-mode
+
+ #+BEGIN_SRC emacs-lisp
+   (use-package evil-org
+     :after org
+     :config
+     (add-hook 'org-mode-hook 'evil-org-mode)
+     (add-hook 'evil-org-mode-hook
+	       (lambda ()
+		 (evil-org-set-key-theme)))
+     (require 'evil-org-agenda)
+     (evil-org-agenda-set-keys))
+ #+END_SRC
+
+*** evil-collection
+
+ Keybinds for common modes.
+ Makes evil work everywhere.
+
+ #+BEGIN_SRC emacs-lisp
+   (use-package evil-collection
+     :after org
+     :config
+     (evil-collection-init))
+ #+END_SRC
+
 ** general.el
 
 #+BEGIN_SRC emacs-lisp
   (use-package general
-    :init
-    (setq general-override-states '(insert
-                                    emacs
-                                    hybrid
-                                    normal
-                                    visual
-                                    motion
-                                    operator
-                                    replace))
     :config
-    (global-unset-key (kbd "M-j"))
+    (general-evil-setup)
+    (general-def
+      :states '(normal motion)
+      "SPC" nil)
+
     (general-create-definer bft-leader-def
-      :prefix "M-j")
+      :prefix "SPC"
+      :states '(normal motion)
+      :keymaps 'override)
     (general-create-definer bft-local-leader-def
-      :prefix "M-j m")
+      :prefix "SPC m"
+      :states '(normal motion)
+      :keymaps 'local)
 
     (bft-leader-def
       "a" 'org-agenda
-      "l" 'org-store-link
+      "s" 'org-store-link
       "c" 'org-capture
+      "t" (lambda () (interactive) (org-capture nil "t"))
       "w" 'save-buffer
       "f" 'counsel-find-file
       "m" 'delete-other-windows
       "d" 'delete-window
       "o" 'split-window-right
       "u" 'split-window-below
-      "b" 'counsel-switch-buffer))
+      "b" 'counsel-switch-buffer
+      "h" 'evil-window-left
+      "j" 'evil-window-down
+      "k" 'evil-window-up
+      "l" 'evil-window-right
+      "1" 'delete-other-windows
+      "0" 'delete-window))
 #+END_SRC
 
 ** =ace-window=
