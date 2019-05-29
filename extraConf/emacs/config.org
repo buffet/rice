@@ -124,8 +124,12 @@ I'm using a base16 theme at the moment, because I'm lazy. Might change in the fu
 
 #+BEGIN_SRC emacs-lisp
   (use-package base16-theme
+    :ensure nil
+    :load-path "/etc/nixos/extraConf/emacs/base16-emacs"
+    :init
+    (add-to-list 'custom-theme-load-path "/etc/nixos/extraConf/emacs/base16-emacs/build")
     :config
-    (load-theme 'base16-ia-light t))
+    (load-theme 'base16-latte t))
 #+END_SRC
 
 ** Beacon
@@ -594,6 +598,16 @@ This makes it easy to write bad HTML fast.
 #+END_SRC
 
 ** C
+
+*** flycheck
+
+Broken atm (nix...).
+Disable.
+
+#+BEGIN_SRC emacs-lisp
+  (add-hook 'c-mode-hook (lambda ()
+                           (flycheck-mode -1)))
+#+END_SRC
 
 *** Irony-mode
 
