@@ -348,7 +348,7 @@ Super helpful when you forget to open a file as root.
   (use-package sudo-edit
     :config
     (bft-leader-def
-      "s s" 'sudo-edit))
+      "e" 'sudo-edit))
 #+END_SRC
 
 ** Easy window manipulation
