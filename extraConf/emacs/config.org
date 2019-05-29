@@ -358,6 +358,12 @@ The only good interface for =git=.
     ("M-g" . magit-status))
 #+END_SRC
 
+=evil-collection= doesn't really work with magit for some reason, so I'll use =evil-magit= instead.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package evil-magit)
+#+END_SRC
+
 ** Projectile
 
 Neat project managing thing.
