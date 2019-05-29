@@ -177,7 +177,7 @@ Emacs is lacks a good editor.
 
  #+BEGIN_SRC emacs-lisp
    (use-package evil-collection
-     :after org
+     :after evil
      :config
      (evil-collection-init))
  #+END_SRC
