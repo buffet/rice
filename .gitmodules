@@ -1,3 +1,0 @@
-[submodule "extraConf/emacs/base16-emacs"]
-	path = extraConf/emacs/base16-emacs
-	url = https://github.com/buffet/base16-emacs
