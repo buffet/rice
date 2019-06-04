@@ -1,0 +1,3 @@
+[submodule "extraConf/emacs/dip"]
+	path = extraConf/emacs/dip
+	url = https://github.com/buffet/dip
