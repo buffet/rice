@@ -94,7 +94,7 @@ I prefer cherry font.
 
 #+BEGIN_SRC emacs-lisp
   (add-to-list 'default-frame-alist
-               '(font . "cherry-13"))
+               '(font . "Source Code Pro"))
 #+END_SRC
 
 ** Line numbers
