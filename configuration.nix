@@ -40,6 +40,7 @@
 
   fonts.fonts = with pkgs; [
     dejavu_fonts
+    source-code-pro
   ];
 
   sound.enable = true;
@@ -59,7 +60,13 @@
 
     interception-tools.enable = true;
 
+    tlp.enable = true;
     upower.enable = true;
+  };
+
+  powerManagement = {
+    enable = true;
+    powertop.enable = true;
   };
 
   users.extraUsers.buffet = {
