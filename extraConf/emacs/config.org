@@ -100,14 +100,17 @@ I prefer cherry font.
 ** Line numbers
 
 #+BEGIN_SRC emacs-lisp
-  (global-display-line-numbers-mode 1)
+  (use-package linum-relative
+    :config
+    (setq linum-relative-backend 'display-line-numbers-mode)
+    (linum-relative-global-mode 1))
 #+END_SRC
 
 Linum mode makes =doc-view-mode= almost unusable, so we better disable it there.
 
 #+BEGIN_SRC emacs-lisp
   (add-hook 'doc-view-mode-hook (lambda ()
-                                  (display-line-numbers-mode -1)))
+                                  (global-linum-relative-mode -1)))
 #+END_SRC
 
 ** Color Theme
