@@ -121,9 +121,9 @@ Heavily WIP.
 #+BEGIN_SRC emacs-lisp
   (use-package dip-theme
     :ensure nil
-    :load-path "/etc/nixos/extraConf/emacs/dip"
+    :load-path "~/.emacs.d/dip"
     :init
-    (add-to-list 'custom-theme-load-path "/etc/nixos/extraConf/emacs/dip")
+    (add-to-list 'custom-theme-load-path "~/.emacs.d/dip")
     :config
     (load-theme 'dip t))
 #+END_SRC
