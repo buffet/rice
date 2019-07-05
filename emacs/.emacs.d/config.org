@@ -536,7 +536,20 @@ The way indentation is handled by default is horrible.
 Let's fix that.
 
 #+BEGIN_SRC emacs-lisp
-  (setq-default c-basic-offset 4)
+  (c-add-style "niclas"
+               '("bsd"
+                 (c-syntactic-indentation-in-macros . nil)
+                 (c-hanging-braces-alist
+                  (block-close . c-snug-do-while))
+                 (c-offsets-alist
+                  (arglist-cont-nonempty . *)
+                  (arglist-close . 0)
+                  (statement-cont . +))
+                 (indent-tabs-mode . nil)))
+
+  (setq c-default-style "niclas")
+
+  (setq-default c-basic-offset 2)
 #+END_SRC
 
 ** Emacs Lisp
