@@ -613,3 +613,36 @@ Irony as a flycheck backend
     :config
     (add-hook 'flycheck-mode-hook 'flycheck-irony-setup))
 #+END_SRC
+
+** Common Lisp
+
+SLIME is neat af.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package slime
+    :config
+    (setq inferior-lisp-program "/bin/sbcl"
+          slime-contribs '(slime-fancy)))
+#+END_SRC
+
+** Clojure
+
+Maybe this is the superior LISP?
+
+#+BEGIN_SRC emacs-lisp
+  (use-package clojure-mode)
+#+END_SRC
+
+CIDER is SLIME but Clojure.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package cider)
+#+END_SRC
+
+** R
+
+Emacs speaks statistics
+
+#+BEGIN_SRC emacs-lisp
+  (use-package ess)
+#+END_SRC
