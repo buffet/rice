@@ -342,6 +342,12 @@ I keep this
   (global-set-key (kbd "C-3") 'split-window-right)
 #+END_SRC
 
+** Winner-mode
+
+#+BEGIN_SRC emacs-lisp
+  (winner-mode 1)
+#+END_SRC
+
 * Project
 
 ** Magit
