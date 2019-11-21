@@ -26,10 +26,8 @@ alias v='nvim'
 
 prompt() {
     case $? in
-        0) PS1='\[\e[36m\]:-)' ;;
-        *) PS1='\[\e[31m\]:-(' ;;
+        0) PS1='\[\e[36m\]>> \[\e[0m\]' ;;
+        *) PS1='\[\e[31m\]>> \[\e[0m\]' ;;
     esac
-
-    PS1+='\[\e[0m\] '
 }
 PROMPT_COMMAND=prompt
