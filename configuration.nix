@@ -16,6 +16,11 @@
   };
 
   networking = {
+    useDHCP = false;
+    interfaces = {
+      enp0s25.useDHCP = true;
+      wlp3s0.useDHCP = true;
+    };
     hostName = "fanya";
     networkmanager.enable = true;
     nameservers = [ "1.1.1.1" ];
@@ -27,7 +32,7 @@
     options = "--delete-older-than 14d";
   };
 
-  time.timeZone = "Europe/Berlin";
+  time.timeZone = "UTC";
 
   environment.binsh = "${pkgs.dash}/bin/dash";
 
