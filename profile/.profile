@@ -1,8 +1,10 @@
-if [[ -n $SESSION_VARS_SOURCED ]]; then
+if [ -n $SESSION_VARS_SOURCED ]; then
     return
 fi
 
 SESSION_VARS_SOURCED=1
+
+. .bashrc
 
 export BROWSER=chromium
 export INPUTRC="$HOME/.config/readline/inputrc"
