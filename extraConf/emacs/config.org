@@ -78,6 +78,12 @@ By default it's slow as fuck though.
 
 * Looks
 
+** tab width
+
+#+BEGIN_SRC emacs-lisp
+  (setq-default tab-width 4)
+#+END_SRC
+
 ** =nyan-mode=
 
 Nya-nya-nya-nya-nya...
@@ -115,17 +121,12 @@ Linum mode makes =doc-view-mode= almost unusable, so we better disable it there.
 
 ** Color Theme
 
-Working on my own theme right now.
-Heavily WIP.
+Nord theme, because easy and accessible and looks chill.
 
 #+BEGIN_SRC emacs-lisp
-  (use-package dip-theme
-    :ensure nil
-    :load-path "/etc/nixos/extraConf/emacs/dip"
-    :init
-    (add-to-list 'custom-theme-load-path "/etc/nixos/extraConf/emacs/dip")
+  (use-package nord-theme
     :config
-    (load-theme 'dip t))
+    (load-theme 'nord t))
 #+END_SRC
 
 ** Beacon
@@ -136,6 +137,14 @@ Highlights the cursor each time I switch windows.
   (use-package beacon
     :config
     (beacon-mode 1))
+#+END_SRC
+
+** Fringe
+
+Ugly.
+
+#+BEGIN_SRC emacs-lisp
+  (fringe-mode '(0 . 0))
 #+END_SRC
 
 * Editing
@@ -306,7 +315,9 @@ Completes anything.
 #+BEGIN_SRC emacs-lisp
   (use-package company
     :config
-    (global-company-mode 1))
+    (global-company-mode 1)
+    (setq company-idle-delay 0)
+    (setq company-show-numbers t))
 #+END_SRC
 
 ** =popup-kill-ring=
@@ -340,6 +351,20 @@ I keep this
   (global-set-key (kbd "C-0") 'delete-window)
   (global-set-key (kbd "C-2") 'split-window-below)
   (global-set-key (kbd "C-3") 'split-window-right)
+#+END_SRC
+
+** Winner-mode
+
+#+BEGIN_SRC emacs-lisp
+  (winner-mode 1)
+#+END_SRC
+
+** company-tabnine
+
+#+BEGIN_SRC emacs-lisp
+  (use-package company-tabnine
+    :config
+    (add-to-list 'company-backends #'company-tabnine))
 #+END_SRC
 
 * Project
@@ -387,6 +412,12 @@ Neat project managing thing.
 #+END_SRC
 
 * Languages
+
+** PHP
+
+#+BEGIN_SRC emacs-lisp
+  (use-package php-mode)
+#+END_SRC
 
 ** Org-mode
 
@@ -529,14 +560,27 @@ Since =AucTeX= overrides =tex= for some reason this is a weird hack that suppose
 I don't want Emacs to insert Tabs everywhere.
 
 #+BEGIN_SRC emacs-lisp
-  (setq-default indent-tabs-mode nil)
+ (setq-default indent-tabs-mode nil)
 #+END_SRC
 
 The way indentation is handled by default is horrible.
 Let's fix that.
 
 #+BEGIN_SRC emacs-lisp
-  (setq-default c-basic-offset 4)
+    (c-add-style "niclas"
+                 '("bsd"
+                   (c-syntactic-indentation-in-macros . nil)
+                   (c-hanging-braces-alist
+                    (block-close . c-snug-do-while))
+                   (c-offsets-alist
+                    (arglist-cont-nonempty . *)
+                    (arglist-close . 0)
+                    (statement-cont . +))
+                   (indent-tab-mode . nil)))
+
+    (setq c-default-style "niclas")
+
+    (setq-default c-basic-offset 4)
 #+END_SRC
 
 ** Emacs Lisp
@@ -613,3 +657,56 @@ Irony as a flycheck backend
     :config
     (add-hook 'flycheck-mode-hook 'flycheck-irony-setup))
 #+END_SRC
+
+** Common Lisp
+
+SLIME is neat af.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package slime
+    :config
+    (setq inferior-lisp-program "/bin/sbcl"
+          slime-contribs '(slime-fancy)))
+#+END_SRC
+
+** Clojure
+
+Maybe this is the superior LISP?
+
+#+BEGIN_SRC emacs-lisp
+  (use-package clojure-mode)
+#+END_SRC
+
+CIDER is SLIME but Clojure.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package cider)
+#+END_SRC
+
+** R
+
+Emacs speaks statistics
+
+#+BEGIN_SRC emacs-lisp
+  (use-package ess)
+#+END_SRC
+
+** Markdown
+
+#+BEGIN_SRC emacs-lisp
+  (use-package markdown-mode)
+#+END_SRC
+
+** Godot-Script
+
+#+BEGIN_SRC emacs-lisp
+  (use-package gdscript-mode)
+#+END_SRC
+
+** Lua
+
+#+BEGIN_SRC emacs-lisp
+  (use-package lua-mode)
+#+END_SRC
+
+** Common Lisp
