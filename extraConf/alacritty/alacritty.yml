@@ -44,7 +44,7 @@ window:
   decorations: full
 
   # When true, alacritty starts maximized.
-  start_maximized: false
+  startup_mode: "Maximized"
 
 scrolling:
   # Maximum number of lines in the scrollback buffer.
@@ -86,7 +86,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux) monospace
     #   - (Windows) Consolas
-    family: cherry
+    family: SourceCodePro
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -114,7 +114,7 @@ font:
     style: Italic
 
   # Point size
-  size: 13.0
+  size: 9.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -146,48 +146,40 @@ font:
   use_thin_strokes: true
 
 # Display the time it takes to redraw each frame.
-render_timer: false
+debug.render_timer: false
 
 # Keep the log file after quitting Alacritty.
-persistent_logging: false
+debug.persistent_logging: false
 
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-# Base16 Mocha - alacritty color config
-# Chris Kempson (http://chriskempson.com)
+# Nord theme
 colors:
-  # Default colors
   primary:
-    background: '0x333333'
-    foreground: '0xcccccc'
-
-  # Colors the cursor will use if `custom_cursor_colors` is true
+    background: '0x2E3440'
+    foreground: '0xD8DEE9'
   cursor:
-    text: '0x3b3228'
-    cursor: '0xd0c8c6'
-
-  # Normal colors
+    text: '0x2E3440'
+    cursor: '0xD8DEE9'
   normal:
-    black:   '0x5b5248'
-    red:     '0xcb6077'
-    green:   '0xdec57b'
-    yellow:  '0xf4bc87'
-    blue:    '0x8ab3b5'
-    magenta: '0xa89bb9'
-    cyan:    '0x7bbda4'
-    white:   '0xd0c8c6'
-
-  # Bright colors
+    black: '0x3B4252'
+    red: '0xBF616A'
+    green: '0xA3BE8C'
+    yellow: '0xEBCB8B'
+    blue: '0x81A1C1'
+    magenta: '0xB48EAD'
+    cyan: '0x88C0D0'
+    white: '0xE5E9F0'
   bright:
-    black:   '0x7e705a'
-    red:     '0xd28b71'
-    green:   '0x534636'
-    yellow:  '0x645240'
-    blue:    '0xb8afad'
-    magenta: '0xe9e1dd'
-    cyan:    '0xbb9584'
-    white:   '0xf5eeeb'
+    black: '0x4C566A'
+    red: '0xBF616A'
+    green: '0xA3BE8C'
+    yellow: '0xEBCB8B'
+    blue: '0x81A1C1'
+    magenta: '0xB48EAD'
+    cyan: '0x8FBCBB'
+    white: '0xECEFF4'
 
 # Visual Bell
 #
@@ -261,7 +253,7 @@ mouse:
     #   - (macOS) open
     #   - (Linux) xdg-open
     #   - (Windows) explorer
-    launcher: chromium
+    launcher: firefox
 
     # URL modifiers
     #
