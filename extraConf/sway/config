@@ -9,25 +9,23 @@ set $up k
 set $right l
 # Your preferred terminal emulator
 set $term alacritty
-# Your preferred application launcher
-set $menu dmenu_run
 # Your preferred browser
 set $browser chromium
 
-default_border pixel 2
+default_border pixel 1
 focus_follows_mouse no
 gaps inner 12
 gaps outer 0
 
-client.focused #f0e8e6 #f0e8e6 #402826 #f0e8e6 #f0e8e6
-client.unfocused #d0c8c6 #d0c8c6 #402826 #d0c8c6 #d0c8c6
-client.focused_inactive #d0c8c6 #d0c8c6 #402826 #d0c8c6 #d0c8c6
+client.focused #d8dee9 #d8dee9 #402826 #d8dee9 #d8dee9
+client.unfocused #1a202c #1a202c #402826 #1a202c #1a202c
+client.focused_inactive #1e2430 #1e2430 #402826 #1e2430 #1e2430
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg #444444 solid_color
+output * bg #1a202c solid_color
 #
 # Example configuration:
 #
@@ -55,20 +53,17 @@ output * bg #444444 solid_color
 #
 
     # start emacs
-    bindsym $mod+n exec emacsclient -ce '(org-agenda nil "d")'
-    bindsym $mod+Shift+n exec emacs
+    bindsym $mod+i exec emacsclient -ce '(org-agenda nil "d")'
+    bindsym $mod+Shift+i exec emacs
 
     # screenshot a region
-    bindsym $mod+i exec grim -g "$(slurp)" - | wl-copy --type image/png
+    bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy --type image/png
 
     # start a terminal
     bindsym $mod+Return exec $term
 
     # kill focused window
     bindsym $mod+w kill
-
-    # start your launcher
-    bindsym $mod+d exec $menu
 
     # start the browser
 	bindsym $mod+q exec $browser
@@ -217,10 +212,10 @@ bar {
     position top
     gaps 12
     colors {
-        statusline #ffffff
-        background #333333
-        inactive_workspace #333333 #333333 #666666
-        focused_workspace #666666 #444444 #ffffff
+        statusline #d8dee9
+        background #2e3440
+        inactive_workspace #2e3440 #2e3440 #b8bec9
+        focused_workspace #5e6470 #3e4450 #d8dee9
     }
     status_command /etc/nixos/extraConf/sway/status_command
 }
