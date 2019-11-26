@@ -19,7 +19,7 @@ gaps outer 0
 
 client.focused #d8dee9 #d8dee9 #402826 #d8dee9 #d8dee9
 client.unfocused #1a202c #1a202c #402826 #1a202c #1a202c
-client.focused_inactive #1e2430 #1e2430 #402826 #1e2430 #1e2430
+client.focused_inactive #1a202c #1a202c #402826 #1a202c #1a202c
 
 ### Output configuration
 #
