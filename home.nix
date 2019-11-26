@@ -35,6 +35,7 @@ in {
       slurp
       texlive.combined.scheme-full
       wl-clipboard
+      zathura
     ];
 
     sessionVariables = {
