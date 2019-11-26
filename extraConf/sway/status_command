@@ -9,7 +9,7 @@ while :; do
         total=$((total + cap))
     done
 
-    printf '%s %s' "$((total / $#))%" "$(date +'%H:%M')"
+    printf '%s %s ' "$((total / $#))%" "$(date +'%H:%M')"
 
     sleep 10
 done
