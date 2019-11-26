@@ -63,8 +63,6 @@
       defaultEditor = true;
     };
 
-    interception-tools.enable = true;
-
     tlp.enable = true;
     upower.enable = true;
   };
