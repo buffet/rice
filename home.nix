@@ -129,39 +129,8 @@ in {
         m = "commit --ammend --verbose";
         s = "status -s";
       };
-      extraConfig = ''
-        [url "https://github.com/"]
-          insteadOf = "gh:"
-        [url "https://gitlab.com/"]
-          insteadOf = "gl:"
-      '';
       userEmail = "niclas@countingsort.com";
       userName = "buffet";
-    };
-
-    neovim = {
-      enable = true;
-      configure = {
-        customRC = builtins.readFile "${extraConf}/vim/init.vim";
-        packages.myVimPackage = with pkgs.vimPlugins; {
-          start = [
-            auto-pairs
-            base16-vim
-            ctrlp-vim
-            emmet-vim
-            goyo-vim
-            lightline-vim
-            limelight-vim
-            neoformat
-            nerdtree
-            supertab
-            tabular
-            vim-easytags
-            zoomwintab-vim
-          ];
-        };
-      };
-      vimAlias = true;
     };
   };
 }
