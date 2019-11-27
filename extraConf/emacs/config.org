@@ -31,10 +31,11 @@ Nor do I need all the (Windows 2000-esque) UI.
   (menu-bar-mode -1)
 #+END_SRC
 
-When I fire up Emacs I want to be greeted with the =*scratch*= buffer, not the weird GNU screen.
+When I fire up Emacs I want to be greeted with an empty =*scratch*= buffer, not the weird GNU screen.
 
 #+BEGIN_SRC emacs-lisp
-  (setq inhibit-splash-screen t)
+  (setq inhibit-splash-screen t
+        initial-scratch-message "")
 #+END_SRC
 
 The whole yes or no prompt takes too much time to type out. y and n is much better.
