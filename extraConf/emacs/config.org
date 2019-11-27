@@ -414,12 +414,6 @@ Neat project managing thing.
 
 * Languages
 
-** PHP
-
-#+BEGIN_SRC emacs-lisp
-  (use-package php-mode)
-#+END_SRC
-
 ** Org-mode
 
 Super tiresome to type all these =emacs-lisp= source blocks.
@@ -684,24 +678,10 @@ CIDER is SLIME but Clojure.
   (use-package cider)
 #+END_SRC
 
-** R
-
-Emacs speaks statistics
-
-#+BEGIN_SRC emacs-lisp
-  (use-package ess)
-#+END_SRC
-
 ** Markdown
 
 #+BEGIN_SRC emacs-lisp
   (use-package markdown-mode)
-#+END_SRC
-
-** Godot-Script
-
-#+BEGIN_SRC emacs-lisp
-  (use-package gdscript-mode)
 #+END_SRC
 
 ** Lua
@@ -710,4 +690,3 @@ Emacs speaks statistics
   (use-package lua-mode)
 #+END_SRC
 
-** Common Lisp
