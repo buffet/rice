@@ -97,7 +97,7 @@ Nya-nya-nya-nya-nya...
 
 ** Font
 
-I prefer cherry font.
+I prefer Source Code Pro for now.
 
 #+BEGIN_SRC emacs-lisp
   (add-to-list 'default-frame-alist
