@@ -17,9 +17,9 @@ focus_follows_mouse no
 gaps inner 12
 gaps outer 0
 
-client.focused #d8dee9 #d8dee9 #402826 #d8dee9 #d8dee9
-client.unfocused #1a202c #1a202c #402826 #1a202c #1a202c
-client.focused_inactive #1a202c #1a202c #402826 #1a202c #1a202c
+client.focused #d8dee9 #d8dee9 #1a202c #d8dee9 #d8dee9
+client.unfocused #1a202c #1a202c #5e6470 #1a202c #1a202c
+client.focused_inactive #1a202c #5e6470 #d8dee9 #1a202c #1a202c
 
 ### Output configuration
 #
