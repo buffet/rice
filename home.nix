@@ -7,6 +7,7 @@ in {
     file.".config/alacritty/alacritty.yml".source = "${extraConf}/alacritty/alacritty.yml";
     file.".config/readline/inputrc".source = "${extraConf}/readline/inputrc";
     file.".config/sway/config".source = "${extraConf}/sway/config";
+    file.".direnvrc".source = "${extraConf}/direnv/direnvrc";
     file.".emacs.d/config.org".source = "${extraConf}/emacs/config.org";
     file.".emacs.d/init.el".source = "${extraConf}/emacs/init.el";
 
