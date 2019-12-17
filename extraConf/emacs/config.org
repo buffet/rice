@@ -663,30 +663,3 @@ SLIME is neat af.
     (setq inferior-lisp-program "/bin/sbcl"
           slime-contribs '(slime-fancy)))
 #+END_SRC
-
-** Clojure
-
-Maybe this is the superior LISP?
-
-#+BEGIN_SRC emacs-lisp
-  (use-package clojure-mode)
-#+END_SRC
-
-CIDER is SLIME but Clojure.
-
-#+BEGIN_SRC emacs-lisp
-  (use-package cider)
-#+END_SRC
-
-** Markdown
-
-#+BEGIN_SRC emacs-lisp
-  (use-package markdown-mode)
-#+END_SRC
-
-** Lua
-
-#+BEGIN_SRC emacs-lisp
-  (use-package lua-mode)
-#+END_SRC
-
