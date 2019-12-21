@@ -97,11 +97,11 @@ Nya-nya-nya-nya-nya...
 
 ** Font
 
-I prefer Source Code Pro for now.
+Preferred font atm.
 
 #+BEGIN_SRC emacs-lisp
   (add-to-list 'default-frame-alist
-               '(font . "Source Code Pro"))
+               '(font . "GoMono"))
 #+END_SRC
 
 ** Line numbers

@@ -46,7 +46,7 @@
 
   fonts.fonts = with pkgs; [
     dejavu_fonts
-    source-code-pro
+    go-font
   ];
 
   sound.enable = true;

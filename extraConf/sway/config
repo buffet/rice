@@ -211,6 +211,7 @@ input * {
 bar {
     position top
     gaps 12
+    font "GoMono 10"
     colors {
         statusline #d8dee9
         background #2e3440
