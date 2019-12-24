@@ -18,10 +18,7 @@ in {
       cppcheck
       direnv
       emacs
-      exa
       fd
-      filet
-      fortune
       fzf
       gdb
       grim
@@ -30,7 +27,6 @@ in {
       llvmPackages.libclang
       mupdf
       neofetch
-      ranger
       ripgrep
       slurp
       texlive.combined.scheme-full
@@ -130,13 +126,9 @@ in {
       shellAliases = {
         def-build = "nix-build -E \"with import <nixpkgs> {}; callPackage ./. {}\"";
         def-shell = "nix-shell -E \"with import <nixpkgs> {}; callPackage ./. {}\"";
-        e = "exa";
-        eal = "exa -al";
-        el = "exa -l";
         em = "emacs";
         htop = "htop -t";
         mkdir = "mkdir -p";
-        ra = "ranger";
         v = "nvim";
       };
       shellOptions = [
