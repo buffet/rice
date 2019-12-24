@@ -23,6 +23,7 @@ in {
       filet
       fortune
       fzf
+      gdb
       grim
       htop
       irony-server
