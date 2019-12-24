@@ -4,7 +4,6 @@ let
   extraConf = ./extraConf;
 in {
   home = {
-    file.".config/alacritty/alacritty.yml".source = "${extraConf}/alacritty/alacritty.yml";
     file.".config/readline/inputrc".source = "${extraConf}/readline/inputrc";
     file.".config/sway/config".source = "${extraConf}/sway/config";
     file.".direnvrc".source = "${extraConf}/direnv/direnvrc";
@@ -49,6 +48,52 @@ in {
   programs = {
     # Let Home Manager install and manage itself.
     home-manager.enable = true;
+
+    alacritty = {
+      enable = true;
+      settings = {
+        window = {
+          padding.x = 8;
+          padding.y = 8;
+        };
+
+        font = {
+          family = "GoMono";
+          size = 11.5;
+        };
+
+        colors = {
+          primary = {
+            background = "0x2e3440";
+            foreground = "0xd8dee9";
+          };
+          cursor = {
+            text = "0x2e3440";
+            cursor = "0xd8dee9";
+          };
+          normal = {
+            black = "0x3b4252";
+            red = "0xbf616a";
+            green = "0xa3be8c";
+            yellow = "0xebcb8b";
+            blue = "0x81a1c1";
+            magenta = "0xb48ead";
+            cyan = "0x88c0d0";
+            white = "0xe5e9f0";
+          };
+          bright = {
+            black = "0x4c566a";
+            red = "0xbf616a";
+            green = "0xa3be8c";
+            yellow = "0xebcb8b";
+            blue = "0x81a1c1";
+            magenta = "0xb48ead";
+            cyan = "0x8fbcbb";
+            white = "0xeceff4";
+          };
+        };
+      };
+    };
 
     bash = {
       enable = true;
