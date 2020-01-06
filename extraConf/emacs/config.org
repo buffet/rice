@@ -423,6 +423,18 @@ Super tiresome to type all these =emacs-lisp= source blocks.
 	       '("el" "#+BEGIN_SRC emacs-lisp\n?\n#+END_SRC"))
 #+END_SRC
 
+Configure TODO keywords.
+
+#+BEGIN_SRC emacs-lisp
+  (setq org-todo-keywords
+        '((sequence "TODO" "|" "DONE" "CANCELED")))
+
+  (setq org-todo-keyword-faces
+        '(("TODO" . org-todo)
+          ("DONE" . org-done)
+          ("CANCELED" . "red")))
+#+END_SRC
+
 Error if I type in an invisible (=...=) section.
 
 #+BEGIN_SRC emacs-lisp
