@@ -368,6 +368,25 @@ I keep this
     (add-to-list 'company-backends #'company-tabnine))
 #+END_SRC
 
+** gdb
+
+Fancy gdb debugging.
+
+#+BEGIN_SRC emacs-lisp
+  (setq gdb-many-windows t)
+#+END_SRC
+
+
+** smooth scrolling
+
+This enables smooth scrolling. Finally.
+
+#+BEGIN_SRC emacs-lisp
+    (use-package smooth-scrolling
+      :config
+      (smooth-scrolling-mode 1))
+#+END_SRC
+
 * Project
 
 ** Magit
