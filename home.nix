@@ -11,7 +11,6 @@ in {
     file.".emacs.d/init.el".source = "${extraConf}/emacs/init.el";
 
     packages = with pkgs; [
-      alacritty
       bear
       clang
       clang-tools
