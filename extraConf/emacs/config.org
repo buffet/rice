@@ -85,16 +85,6 @@ By default it's slow as fuck though.
   (setq-default tab-width 4)
 #+END_SRC
 
-** =nyan-mode=
-
-Nya-nya-nya-nya-nya...
-
-#+BEGIN_SRC emacs-lisp
-  (use-package nyan-mode
-    :config
-    (nyan-mode))
-#+END_SRC
-
 ** Font
 
 Preferred font atm.
@@ -146,6 +136,17 @@ Ugly.
 
 #+BEGIN_SRC emacs-lisp
   (fringe-mode '(0 . 0))
+#+END_SRC
+
+
+** Mode line
+
+Mood line is comfy.
+
+#+BEGIN_SRC emacs-lisp
+  (use-package mood-line
+    :config
+    (mood-line-mode 1))
 #+END_SRC
 
 * Editing
