@@ -695,3 +695,9 @@ SLIME is neat af.
     (setq inferior-lisp-program "/bin/sbcl"
           slime-contribs '(slime-fancy)))
 #+END_SRC
+
+** Moonscript
+
+#+BEGIN_SRC emacs-lisp
+  (use-package moonscript)
+#+END_SRC
