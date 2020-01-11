@@ -377,7 +377,6 @@ Fancy gdb debugging.
   (setq gdb-many-windows t)
 #+END_SRC
 
-
 ** smooth scrolling
 
 This enables smooth scrolling. Finally.
