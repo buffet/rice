@@ -387,6 +387,26 @@ This enables smooth scrolling. Finally.
       (smooth-scrolling-mode 1))
 #+END_SRC
 
+** lsp-mode
+
+Finally fell for the meme.
+
+#+BEGIN_SRC emacs-lisp
+    (use-package lsp-mode
+      :hook
+      (c-mode . lsp)
+      :commands
+      lsp)
+
+    (use-package lsp-ui
+      :commands
+      lsp-ui-mode)
+
+    (use-package company-lsp
+      :commands
+      company-lsp)
+#+END_SRC
+
 * Project
 
 ** Magit
@@ -426,6 +446,8 @@ Neat project managing thing.
       "g" 'treemacs)
     (general-define-key
      "M-0" 'treemacs-select-window)
+
+    (setq treemacs-width 30)
 
     (add-hook 'treemacs-mode-hook (lambda ()
                                     (display-line-numbers-mode -1))))
