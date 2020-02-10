@@ -3,7 +3,15 @@
 let
   extraConf = ./extraConf;
 in {
+  nixpkgs.config.packageOverrides = pkgs: {
+    nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
+      inherit pkgs;
+    };
+  };
+
   home = {
+    file.".config/kak/kakrc".source = "${extraConf}/kakoune/kakrc";
+    file.".config/kak-lsp/kak-lsp.toml".source = "${extraConf}/kakoune/kak-lsp.toml";
     file.".config/readline/inputrc".source = "${extraConf}/readline/inputrc";
     file.".config/sway/config".source = "${extraConf}/sway/config";
     file.".direnvrc".source = "${extraConf}/direnv/direnvrc";
@@ -23,6 +31,8 @@ in {
       grim
       htop
       irony-server
+      kak-lsp
+      kakoune
       llvmPackages.libclang
       mupdf
       neofetch
@@ -34,10 +44,11 @@ in {
     ];
 
     sessionVariables = {
-      BROWSER = "chromium";
-      CARGO_HOME = "$HOME/.cache/cargo";
+      BROWSER = "firefox";
+      EDITOR = "kak";
       INPUTRC = "$HOME/.config/readline/inputrc";
       LESSHISTFILE = "$HOME/.cache/less_history";
+      XDG_CONFIG_DIR = "$HOME/.config";
     };
   };
 
@@ -99,17 +110,31 @@ in {
       initExtra = ''
         export TERM=xterm-256color
 
-        f() {
-            filet "$@"
-            cd "$(< /tmp/filet_dir)"
-        }
-
         t() {
             if [[ $1 ]]; then
                 mkdir -p "/tmp/$1"
             fi
 
             cd "/tmp/$1"
+        }
+
+        k() {
+            local session repo
+            repo="$(git rev-parse --show-toplevel 2>/dev/null)"
+
+            if [[ $? -eq 0 ]]; then
+                session="$repo"
+            else
+                session="$PWD"
+            fi
+
+            session="$(basename "$session")"
+
+            if ! kak -l | grep -q "$session"; then
+                kak -d -s "$session"
+            fi
+
+            kak -c "$session" "$@"
         }
 
         prompt() {
@@ -125,7 +150,6 @@ in {
       shellAliases = {
         def-build = "nix-build -E \"with import <nixpkgs> {}; callPackage ./. {}\"";
         def-shell = "nix-shell -E \"with import <nixpkgs> {}; callPackage ./. {}\"";
-        em = "emacs";
         htop = "htop -t";
         mkdir = "mkdir -p";
         v = "nvim";
@@ -140,15 +164,16 @@ in {
       ];
     };
 
-    chromium = {
+    firefox = {
       enable = true;
-      extensions = [
-        "eimadpbcbfnmbkopoojfekhnkhdbieeh" # Dark Reader
-        "gcbommkclmclpchllfjekcdonpmejbdp" # HTTPS Everywhere
-        "kbmfpngjjgdllneeigpgjifpgocmfgmb" # Reddit Enhancement Suite
-        "dbepggeogbaibhgnhhndojpepiihcmeb" # Vimium
-        "jhjpjhhkcbkmgdkahnckfboefnkgghpo" # toolbox
-        "cjpalhdlnbpafiamejdnhcphjbkeiagm" # uBlock Origin
+      package = pkgs.firefox-wayland;
+      extensions = with pkgs.nur.repos.rycee.firefox-addons; [
+        darkreader
+        https-everywhere
+        reddit-enhancement-suite
+        vimium
+        reddit-moderator-toolbox
+        ublock-origin
       ];
     };
 

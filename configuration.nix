@@ -33,6 +33,12 @@
     options = "--delete-older-than 14d";
   };
 
+  nixpkgs.config.packageOverrides = pkgs: {
+    nur = import (builtins.fetchTarball "https://github.com/nix-community/NUR/archive/master.tar.gz") {
+      inherit pkgs;
+    };
+  };
+
   time.timeZone = "UTC";
 
   environment.binsh = "${pkgs.dash}/bin/dash";
@@ -59,11 +65,7 @@
   };
 
   services = {
-    emacs = {
-      enable = true;
-      defaultEditor = true;
-    };
-
+    emacs.enable = true;
     tlp.enable = true;
     upower.enable = true;
   };
