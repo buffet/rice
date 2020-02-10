@@ -1,0 +1,49 @@
+# plug.kak
+source "%val{config}/plugins/plug.kak/rc/plug.kak"
+
+# fzf
+plug "andreyorst/fzf.kak"
+map global user f ': fzf-mode<ret>'
+
+# use tabs instead of spaces
+set-option global indentwidth 4
+set-option global tabstop 4
+
+# tab for indentation, instead of tab
+map global insert <tab> '<a-;><gt>'
+map global insert <s-tab> '<a-;><lt>'
+
+# user mappings
+map global user w :w<ret>
+map global user b ': buffer<space>'
+map global user m ': buffer-previous<ret>'
+map global user n ': buffer-next<ret>'
+
+# highlighters
+hook global WinCreate .* %{
+    add-highlighter window/ number-lines -relative -hlcursor
+    add-highlighter window/ show-matching
+    add-highlighter window/ wrap
+}
+
+# load project local config
+try %{ source .kakrc.local }
+
+# use tab for completion and indentation
+hook global InsertCompletionShow .* %{
+    try %{
+        execute-keys -draft 'h<a-K>\h<ret>'
+        map window insert <tab> <c-n>
+        map window insert <s-tab> <c-p>
+    }
+}
+hook global InsertCompletionHide .* %{
+    unmap window insert <tab> <c-n>
+    unmap window insert <s-tab> <c-p>
+}
+
+# lsp
+eval %sh{ kak-lsp --kakoune -s $kak_session }
+lsp-enable
+map global user , ': lsp-hover<ret>'
+
