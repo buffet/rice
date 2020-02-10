@@ -679,7 +679,7 @@ Disable.
                            (flycheck-mode -1)))
 #+END_SRC
 
-*** Irony-mode
+*** COMMENT Irony-mode
 
 #+BEGIN_SRC emacs-lisp
   (use-package irony
