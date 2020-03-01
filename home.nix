@@ -39,6 +39,7 @@ in {
       ripgrep
       slurp
       texlive.combined.scheme-full
+      tree
       wl-clipboard
       zathura
     ];
