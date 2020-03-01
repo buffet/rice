@@ -65,7 +65,6 @@
   };
 
   services = {
-    emacs.enable = true;
     tlp.enable = true;
     upower.enable = true;
   };
