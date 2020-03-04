@@ -47,7 +47,7 @@
     acpi
     brightnessctl
     git
-    neovim
+    kakoune
   ];
 
   fonts.fonts = with pkgs; [
@@ -59,7 +59,6 @@
   systemd.coredump.enable = true;
 
   hardware = {
-    brightnessctl.enable = true;
     opengl.enable = true;
     pulseaudio.enable = true;
   };

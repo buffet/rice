@@ -46,4 +46,3 @@ hook global InsertCompletionHide .* %{
 eval %sh{ kak-lsp --kakoune -s $kak_session }
 lsp-enable
 map global user -docstring 'lsp-hover' , ': lsp-hover<ret>'
-
