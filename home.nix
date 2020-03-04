@@ -14,6 +14,7 @@ in {
     file.".config/kak-lsp/kak-lsp.toml".source = "${extraConf}/kakoune/kak-lsp.toml";
     file.".config/readline/inputrc".source = "${extraConf}/readline/inputrc";
     file.".config/sway/config".source = "${extraConf}/sway/config";
+    file.".config/zathura/zathurarc".source = "${extraConf}/zathura/zathurarc";
     file.".direnvrc".source = "${extraConf}/direnv/direnvrc";
     file.".emacs.d/config.org".source = "${extraConf}/emacs/config.org";
     file.".emacs.d/init.el".source = "${extraConf}/emacs/init.el";
@@ -153,7 +154,6 @@ in {
         def-shell = "nix-shell -E \"with import <nixpkgs> {}; callPackage ./. {}\"";
         htop = "htop -t";
         mkdir = "mkdir -p";
-        v = "nvim";
       };
       shellOptions = [
         "cdspell"
