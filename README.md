@@ -1,8 +1,13 @@
 # dotfiles
 
-These are my dotfiles.
-I don't know if they'll be useful.
+Dotfiles, currently managed via GNU stow.
+I'll probably switch to ansible sometime in the future though.
 
-If you decide to use this, just symlink the repo to `/etc/nixos`.
+### Firefox Plugins
 
-GLHF
+- darkreader
+- https everywhere
+- reddit enhancement suite
+- reddit toolbox
+- ublock origin
+- vimium
