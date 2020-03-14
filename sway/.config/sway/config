@@ -219,5 +219,5 @@ bar {
         inactive_workspace #2e3440 #2e3440 #b8bec9
         focused_workspace #5e6470 #3e4450 #d8dee9
     }
-    status_command /etc/nixos/extraConf/sway/status_command
+    status_command ~/.config/sway/status_command
 }
