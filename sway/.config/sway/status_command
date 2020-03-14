@@ -1,0 +1,18 @@
+#!/bin/sh
+
+while :; do
+    energy_full=
+    energy_now=
+
+    for bat in /sys/class/power_supply/*/capacity; do
+        bat="${bat%/*}"
+        read -r full < $bat/energy_full
+        read -r now < $bat/energy_now
+        energy_full=$((energy_full + full))
+        energy_now=$((energy_now + now))
+    done
+
+    printf '%s %s ' "$((energy_now * 100 / energy_full))%" "$(date +'%H:%M')"
+
+    sleep 3
+done
