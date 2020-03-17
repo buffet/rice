@@ -7,5 +7,3 @@ export LESSHISTFILE="$HOME/.cache/less_history"
 export XDG_CONFIG_DIR="$HOME/.config"
 
 export MOZ_ENABLE_WAYLAND=1
-
-export PATH="$HOME/.cargo/bin:$PATH"
