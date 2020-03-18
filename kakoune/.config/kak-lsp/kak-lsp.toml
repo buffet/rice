@@ -142,4 +142,3 @@ elmTestPath = "elm-test"
 filetypes = ["latex"]
 roots = [".git"]
 command = "texlab"
-
