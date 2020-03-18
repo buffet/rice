@@ -19,6 +19,9 @@ map global user -docstring 'select buffer' b ': buffer<space>'
 map global user -docstring 'prev buffer' m ': buffer-previous<ret>'
 map global user -docstring 'next buffer' n ': buffer-next<ret>'
 
+# settings
+set global ui_options ncurses_assistant=cat
+
 # highlighters
 hook global WinCreate .* %{
     add-highlighter window/ number-lines -relative -hlcursor
