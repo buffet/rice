@@ -14,19 +14,23 @@ set $browser firefox
 
 default_border pixel 1
 focus_follows_mouse no
-gaps inner 12
+gaps inner 6
 gaps outer 0
 seat * hide_cursor 1000
 
-client.focused #d8dee9 #d8dee9 #1a202c #d8dee9 #d8dee9
-client.unfocused #1a202c #1a202c #5e6470 #1a202c #1a202c
-client.focused_inactive #1a202c #5e6470 #d8dee9 #1a202c #1a202c
+#xwayland disable
+
+font "GoMono 8"
+
+client.focused #d8dee9 #d8dee9 #23476a #d8dee9 #d8dee9
+client.unfocused #feffee #feffee #33577a #feffee #feffee
+client.focused_inactive #feffee #33577a #d8dee9 #feffee #feffee
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg #1a202c solid_color
+output * bg #feffee solid_color
 #
 # Example configuration:
 #
@@ -52,7 +56,6 @@ output * bg #1a202c solid_color
 #
 # Basics:
 #
-
     # start emacs
     bindsym $mod+i exec emacsclient -ce '(org-agenda nil "d")'
     bindsym $mod+Shift+i exec emacs
@@ -70,8 +73,7 @@ output * bg #1a202c solid_color
     bindsym $mod+q exec $browser
 
     # lock screen
-    bindsym $mod+Shift+x exec swaylock
-
+    bindsym $mod+Shift+x exec swaylock -ec '#feffee'
     # brightness
     bindsym $mod+z exec brightnessctl set 5%-
     bindsym $mod+x exec brightnessctl set 5%+
@@ -211,13 +213,13 @@ input * {
 # Read `man 5 sway-bar` for more information about this section.
 bar {
     position top
-    gaps 12
-    font "GoMono 9"
+    gaps 6
+    font "GoMono 8"
     colors {
-        statusline #d8dee9
-        background #2e3440
-        inactive_workspace #2e3440 #2e3440 #b8bec9
-        focused_workspace #5e6470 #3e4450 #d8dee9
+        statusline #23476a
+        background #feffee00
+        inactive_workspace #feffee00 #feffee00 #23476a
+        focused_workspace #d8dee9 #feffee00 #23476a
     }
-    status_command ~/.config/sway/status_command
+    status_command $XDG_CONFIG_HOME/sway/status_command
 }

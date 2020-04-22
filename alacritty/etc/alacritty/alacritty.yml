@@ -1,0 +1,37 @@
+window:
+  padding:
+    x: 8
+    y: 8
+
+font:
+  family: "GoMono"
+  size: 8
+
+colors:
+  primary:
+    background: "0xfeffee"
+    foreground: "0x23476a"
+
+  cursor:
+    text: "0xfeffee"
+    cursor: "0x23476a"
+
+  normal:
+    black: "0x000000"
+    red: "0xc21b6f"
+    green: "0x6fc21b"
+    yellow: "0xc26f1b"
+    blue: "0x1b6fc2"
+    magenta: "0x6f1bc2"
+    cyan: "0x1bc27f"
+    white: "0x808080"
+
+  bright:
+    black: "0x808080"
+    red: "0xee84b9"
+    green: "0xb9ee84"
+    yellow: "0xeeb984"
+    blue: "0x84b9ee"
+    magenta: "0xb984ee"
+    cyan: "0x84eeb9"
+    white: "0xe5e5e5"
