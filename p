@@ -17,8 +17,5 @@ slurp
 fzf
 htop
 zathura-plugin-pdf-poppler
-kvm_server
-kvm_tools
-glibc-32bit
 ripgrep
 pdfgrep
