@@ -1,6 +1,6 @@
 shopt -s cdspell checkjobs extglob globstar histappend nocaseglob
 HISTCONTROL=erasedups:ignorespace
-HISTFILE="$XDG_CACHE_DIR/bash_history"
+HISTFILE="$XDG_CACHE_HOME/bash_history"
 
 alias htop='htop -t'
 alias mkdir='mkdir -p'
