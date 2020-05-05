@@ -22,15 +22,15 @@ seat * hide_cursor 1000
 
 font "GoMono 8"
 
-client.focused #d8dee9 #d8dee9 #23476a #d8dee9 #d8dee9
-client.unfocused #feffee #feffee #33577a #feffee #feffee
-client.focused_inactive #feffee #33577a #d8dee9 #feffee #feffee
+client.focused #98aeb5 #fdf6e3 #586e75 #98aeb5 #98aeb5
+client.unfocused #ddd6c3 #fdf6e3 #788e95 #ddd6c3 #ddd6c3
+client.focused_inactive #ddd6c3 #fdf6e3 #788e95 #ddd6c3 #ddd6c3
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 #output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-output * bg #feffee solid_color
+output * bg #fdf6e3 solid_color
 #
 # Example configuration:
 #
@@ -73,7 +73,7 @@ output * bg #feffee solid_color
     bindsym $mod+q exec $browser
 
     # lock screen
-    bindsym $mod+Shift+x exec swaylock -ec '#feffee'
+    bindsym $mod+Shift+x exec swaylock -ec '#fdf6e3'
     # brightness
     bindsym $mod+z exec brightnessctl set 5%-
     bindsym $mod+x exec brightnessctl set 5%+
@@ -216,10 +216,10 @@ bar {
     gaps 6
     font "GoMono 8"
     colors {
-        statusline #23476a
+        statusline #586e75
         background #feffee00
-        inactive_workspace #feffee00 #feffee00 #23476a
-        focused_workspace #d8dee9 #feffee00 #23476a
+        inactive_workspace #feffee00 #feffee00 #889ea5
+        focused_workspace #ddd6c3 #feffee00 #586e75
     }
     status_command $XDG_CONFIG_HOME/sway/status_command
 }
