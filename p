@@ -19,3 +19,5 @@ htop
 zathura-plugin-pdf-poppler
 ripgrep
 pdfgrep
+kvm_server
+kvm_tools
