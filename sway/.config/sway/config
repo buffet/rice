@@ -22,7 +22,7 @@ seat * hide_cursor 1000
 
 font "GoMono 8"
 
-client.focused #98aeb5 #fdf6e3 #586e75 #98aeb5 #98aeb5
+client.focused #b8ced5 #fdf6e3 #586e75 #b8ced5 #b8ced5
 client.unfocused #ddd6c3 #fdf6e3 #788e95 #ddd6c3 #ddd6c3
 client.focused_inactive #ddd6c3 #fdf6e3 #788e95 #ddd6c3 #ddd6c3
 
