@@ -2,19 +2,23 @@
 source "%val{config}/plugins/plug.kak/rc/plug.kak"
 
 # fzf
-plug "andreyorst/fzf.kak"
-map global user -docstring 'fzf' f ': fzf-mode<ret>'
+plug "andreyorst/fzf.kak" config %{
+    map global user -docstring 'fzf' f ': fzf-mode<ret>'
+} defer fzf %{
+    set-option global fzf_grep_command rg
+    set-option global fzf_file_command rg
+}
 
 # use tabs instead of spaces
 set-option global indentwidth 4
 set-option global tabstop 4
 
 # tab for indentation, instead of tab
-map global insert <tab> '<a-;><gt>'
-map global insert <s-tab> '<a-;><lt>'
+map global insert <tab> '<a-;><a-gt>'
+map global insert <s-tab> '<a-;><a-lt>'
 
 # user mappings
-map global user -docstring 'save' w :w<ret>
+map global user -docstring 'save' w ': w<ret>'
 map global user -docstring 'select buffer' b ': buffer<space>'
 map global user -docstring 'prev buffer' m ': buffer-previous<ret>'
 map global user -docstring 'next buffer' n ': buffer-next<ret>'
