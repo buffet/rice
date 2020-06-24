@@ -4,6 +4,7 @@ HISTFILE="$XDG_CACHE_HOME/bash_history"
 
 alias htop='htop -t'
 alias mkdir='mkdir -p'
+alias rg='rg -S'
 
 t() {
     if [[ $1 ]]; then
