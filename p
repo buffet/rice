@@ -21,3 +21,7 @@ ripgrep
 pdfgrep
 kvm_server
 kvm_tools
+clang10
+osc
+direnv
+systemd-coredump
