@@ -13,3 +13,5 @@ export EDITOR=kak
 export MOZ_ENABLE_WAYLAND=1
 
 export PATH="~/bin:$PATH"
+
+if [ -e /home/buffet/.nix-profile/etc/profile.d/nix.sh ]; then . /home/buffet/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
