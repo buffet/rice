@@ -40,3 +40,5 @@ __prompt() {
     esac
 }
 PROMPT_COMMAND=__prompt
+
+eval "$(direnv hook bash)"
