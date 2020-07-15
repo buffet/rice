@@ -31,6 +31,7 @@ hook global WinCreate .* %{
     add-highlighter window/ number-lines -relative -hlcursor
     add-highlighter window/ show-matching
     add-highlighter window/ wrap
+    add-highlighter window/ regex '[ \t]+$' 0:red,red
 }
 
 # load project local config
