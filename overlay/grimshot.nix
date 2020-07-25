@@ -2,7 +2,6 @@
 , stdenv, grim, jq, libnotify, slurp, wl-clipboard }:
 stdenv.mkDerivation rec {
   name = "grimshot";
-  pname = name;
 
   src = sources.sway;
 
@@ -17,8 +16,15 @@ stdenv.mkDerivation rec {
   dontBuild = true;
 
   installPhase = ''
-    install -Dm 644 contrib/${pname}.1 $out/share/man/man1/${pname}.1
-    install -Dm 755 contrib/${pname} $out/bin/${pname}
+    install -Dm 644 contrib/grimshot.1 $out/share/man/man1/grimshot.1
+    install -Dm 755 contrib/grimshot $out/bin/grimshot
+
+    sed -i -e 's|grim|${grim}/bin/grim|g' \
+           -e 's|jq|${jq}/bin/jq|g' \
+           -e 's|notify-send|${libnotify}/bin/notify-send|g' \
+           -e 's|slurp|${slurp}/bin/slurp|g' \
+           -e 's|wl-copy|${wl-clipboard}/bin/wl-copy|g' \
+        $out/bin/grimshot
   '';
 
   meta = with stdenv.lib; {
