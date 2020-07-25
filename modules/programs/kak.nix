@@ -22,7 +22,6 @@ with lib; {
     })];
 
     buffet.home = {
-      # TODO: fix tab to indent
       programs.kakoune = {
         enable = true;
 
@@ -72,6 +71,12 @@ with lib; {
               mode = "user";
             }
             {
+              key = "f";
+              effect = ": fzf-mode<ret>";
+              docstring = "fzf";
+              mode = "user";
+            }
+            {
               key = ",";
               effect = ": lsp-hover<ret>";
               docstring = "lsp-hover";
@@ -88,7 +93,7 @@ with lib; {
           try %{ source .kakrc.local }
 
           # lsp
-          eval $sh { ${pkgs.kak-lsp}/bin/kak-lsp --kakoune -s $kak_session }
+          eval %sh{ ${pkgs.kak-lsp}/bin/kak-lsp --kakoune -s $kak_session }
           lsp-enable
         '';
       };
