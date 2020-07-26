@@ -69,6 +69,7 @@
         ripgrep
         texlive.combined.scheme-full
         tree
+        wget
       ];
     };
   };
