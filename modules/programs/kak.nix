@@ -12,6 +12,7 @@ with lib; {
   config = mkIf cfg.enable {
     nixpkgs.overlays = let
       plugins = with pkgs.kakounePlugins; [
+        kak-prelude # required by kak-auto-pairs
         kak-auto-pairs
         kak-fzf
       ];
