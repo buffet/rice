@@ -22,6 +22,8 @@ with lib; {
     })];
 
     buffet.home = {
+      home.sessionVariables = { EDITOR = "kak"; };
+
       programs.kakoune = {
         enable = true;
 
