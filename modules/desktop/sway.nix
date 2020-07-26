@@ -26,7 +26,7 @@ with lib; {
         makeWorkspaceBinds = (num:
           let ws = toString num; in {
           "${mod}+${ws}" = "workspace ${ws}";
-          "${mod}+Shift+${mod}" = "move container to workspace ${ws}";
+          "${mod}+Shift+${ws}" = "move container to workspace ${ws}";
         });
 
         joinAttrSets = (sets: builtins.foldl' (x: y: x // y) {} sets);
@@ -98,8 +98,8 @@ with lib; {
           "${mod}+Return"  = "exec ${terminal}";
           "${mod}+q"       = "exec ${browser}";
           "${mod}+Shift+x" = "exec ${pkgs.swaylock}/bin/swaylock -ec '${config.buffet.desktop.colors.primary.background}'";
-          "${mod}+z"       = "exec ${pkgs.brightnessctl}/bin/brightnessctl 5%-";
-          "${mod}+x"       = "exec ${pkgs.brightnessctl}/bin/brightnessctl 5%+";
+          "${mod}+z"       = "exec ${pkgs.brightnessctl}/bin/brightnessctl s 5%-";
+          "${mod}+x"       = "exec ${pkgs.brightnessctl}/bin/brightnessctl s 5%+";
 
           "${mod}+p" = "exec ${pkgs.grimshot}/bin/grimshot copy active";
           "${mod}+Shift+p" = "exec ${pkgs.grimshot}/bin/grimshot copy area";
