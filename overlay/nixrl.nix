@@ -1,16 +1,24 @@
-{ writeScriptBin }:
+{ perl, writeScriptBin }:
 writeScriptBin "nixrl" ''
-  #!/bin/sh
+  #!${perl}/bin/perl
 
-  config="''${NIXOS_CONFIG:-/etc/nixos}"
+  use strict;
+  use warnings;
 
-  action="''${1:-switch}"
-  machine="$config/machines/''${2:-$HOSTNAME}"
+  use Getopt::Std;
+  use Sys::Hostname;
 
-  if ! [ -d "$machine" ]; then
-      >&2 printf %s "$machine not found"
-      exit 1
-  fi
+  my %opts;
+  getopts('a:m:', \%opts);
 
-  nixos-rebuild -I machine="$machine" "$action"
+  my $config = $ENV{"NIXOS_CONFIG"} // "/etc/nixos";
+  my $action = $opts{"a"} // "switch";
+  my $machine = $opts{"m"} // hostname;
+
+  my $machinepath = "$config/machines/$machine";
+
+  -d $machinepath
+    or die "Couldn't find $machinepath";
+
+  exec "nixos-rebuild", "-I", "machine=$machinepath", $action;
 ''
