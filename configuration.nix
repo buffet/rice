@@ -11,6 +11,8 @@ in
 
   nix = {
     autoOptimiseStore = true;
+    trustedUsers = [ "root" "buffet" ];
+
     gc = {
       automatic = true;
       dates = "weekly";

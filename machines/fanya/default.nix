@@ -23,6 +23,21 @@
     nameservers = [ "1.1.1.1" ];
   };
 
+  nix = {
+    distributedBuilds = true;
+
+    buildMachines = [{
+      hostName = "buffet.sh";
+      system = "x86_64-linux";
+      sshUser = "buffet";
+      sshKey = "/home/buffet/.ssh/id_rsa";
+    }];
+
+    extraOptions = ''
+      builders-use-substitutes = true
+    '';
+  };
+
   powerManagement = {
     enable = true;
     powertop.enable = true;
