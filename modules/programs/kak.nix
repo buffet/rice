@@ -71,15 +71,15 @@ with lib; {
               mode = "insert";
             }
             {
-              key = "w";
-              effect = ": w<ret>";
-              docstring = "save";
-              mode = "user";
-            }
-            {
               key = "f";
               effect = ": fzf-mode<ret>";
               docstring = "fzf";
+              mode = "user";
+            }
+            {
+              key = "w";
+              effect = ": w<ret>";
+              docstring = "save";
               mode = "user";
             }
             {
