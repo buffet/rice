@@ -33,8 +33,11 @@ with lib; {
             id = 0;
 
             settings = {
+              "browser.ctrlTab.recentlyUsedOrder" = false;
               "browser.download.dir" = "/tmp/downloads";
               "browser.fullscreen.autohide" = false;
+              "browser.shell.checkDefaultBrowser" = false;
+              "browser.tabs.warnOnClose" = false;
             };
           };
         };
