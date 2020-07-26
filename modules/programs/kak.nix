@@ -24,6 +24,10 @@ with lib; {
     buffet.home = {
       home.sessionVariables = { EDITOR = "kak"; };
 
+      programs.bash.shellAliases = {
+        k = "${pkgs.kak-attach-session}/bin/kak-attach-session";
+      };
+
       programs.kakoune = {
         enable = true;
 
