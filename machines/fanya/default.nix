@@ -52,7 +52,8 @@
         gdb
         htop
         ripgrep
-        # texlive.combined.scheme-full
+        texlive.combined.scheme-full
+        tree
       ];
     };
   };
