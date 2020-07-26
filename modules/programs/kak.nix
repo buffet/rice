@@ -63,7 +63,7 @@ with lib; {
             }
             {
               key = "<s-tab>";
-              effect = "<a-;><a-gt>";
+              effect = "<a-;><a-lt>";
               mode = "insert";
             }
             {
