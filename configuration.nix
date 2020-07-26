@@ -18,6 +18,12 @@ in
       dates = "weekly";
       options = "--delete-older-than 14d";
     };
+
+    nixPath = [
+      "nixpkgs=${sources.nixpkgs}"
+      "nixos-config=/etc/nixos/configuration.nix"
+      "/nix/var/nix/profiles/per-user/root/channels"
+    ];
   };
 
   nixpkgs = {
