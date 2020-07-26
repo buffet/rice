@@ -1,4 +1,7 @@
 { pkgs, ... }:
+let
+  sources = import ./nix/sources.nix;
+in
 {
   imports = [
     ./machines/current
@@ -15,7 +18,10 @@
     };
   };
 
-  nixpkgs.overlays = [ (import ./overlay) ];
+  nixpkgs = {
+    overlays = [ (import ./overlay) ];
+    pkgs = import sources.nixpkgs { };
+  };
 
   environment.systemPackages = with pkgs; [
     git
