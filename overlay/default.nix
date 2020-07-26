@@ -8,4 +8,6 @@ self: super:
     kak-fzf = super.callPackage ./kak-fzf.nix { };
     kak-prelude = super.callPackage ./kak-prelude.nix { };
   };
+
+  nixrl = super.callPackage ./nixrl.nix { };
 }

@@ -4,7 +4,7 @@ let
 in
 {
   imports = [
-    ./machines/current
+    <machine>
     ./modules
     ./users.nix
   ];
@@ -35,6 +35,7 @@ in
     git
     kakoune
     niv
+    nixrl
   ];
 
   time.timeZone = "UTC";
