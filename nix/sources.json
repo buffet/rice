@@ -11,6 +11,12 @@
         "url": "https://github.com/rycee/home-manager/archive/318bc0754ed6370cfcae13183a7f13f7aa4bc73f.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "nixos-mailserver": {
+        "ref": "nixos-20.03",
+        "repo": "https://gitlab.com/simple-nixos-mailserver/nixos-mailserver.git",
+        "rev": "c415bbb58422c967cf979780a962e4048da018b0",
+        "type": "git"
+    },
     "nixpkgs": {
         "branch": "nixos-20.03",
         "description": "A read-only mirror of NixOS/nixpkgs tracking the released channels. Send issues and PRs to",
@@ -45,6 +51,18 @@
         "sha256": "0r3b7h778l9i20z3him9i2qsaynpn9y78hzfgv3cqi8fyry2c4f9",
         "type": "tarball",
         "url": "https://github.com/swaywm/sway/archive/108b8e97b77acba6206cdc69e419531d17380c7a.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "website": {
+        "branch": "master",
+        "description": "My personal website",
+        "homepage": "https://buffet.sh",
+        "owner": "buffet",
+        "repo": "website",
+        "rev": "6572e8383d2f5916b472b2687b3d167eb82a00db",
+        "sha256": "16nmy43c2ignknmmpamiz9w4l03g10m4213sxafxxk78wfi606aw",
+        "type": "tarball",
+        "url": "https://github.com/buffet/website/archive/6572e8383d2f5916b472b2687b3d167eb82a00db.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     }
 }

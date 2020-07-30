@@ -8,6 +8,7 @@ with lib; {
     ./direnv.nix
     ./git.nix
     ./kak.nix
+    ./tmux.nix
   ];
 
   options = {
