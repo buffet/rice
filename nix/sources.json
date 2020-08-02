@@ -1,4 +1,16 @@
 {
+    "blog": {
+        "branch": "master",
+        "description": "My personal blog",
+        "homepage": "https://blog.buffet.sh/",
+        "owner": "buffet",
+        "repo": "blog",
+        "rev": "960cd0971735d68d2c154de43ffadb635d8639f0",
+        "sha256": "1naq7szjr0hjyv50l78my1a2v69l23c15bzv0d5hrayarf9yn5k4",
+        "type": "tarball",
+        "url": "https://github.com/buffet/blog/archive/960cd0971735d68d2c154de43ffadb635d8639f0.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "home-manager": {
         "branch": "release-20.03",
         "description": "Manage a user environment using Nix",

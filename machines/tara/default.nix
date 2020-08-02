@@ -23,6 +23,7 @@
     };
 
     services = {
+      blog.enable = true;
       mailserver.enable = true;
       website.enable = true;
     };
