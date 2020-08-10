@@ -17,6 +17,7 @@ with lib; {
         userName = "buffet";
 
         aliases = {
+          b = "branch";
           c = "commit --verbose";
           co = "checkout";
           cob = "checkout -b";
