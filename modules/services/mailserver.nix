@@ -4,7 +4,9 @@ let
   sources = import ../../nix/sources.nix;
 in
 with lib; {
-  imports = [ (import sources.nixos-mailserver) ];
+  imports = [
+    (import sources.nixos-mailserver)
+  ];
 
   options = {
     buffet.services.mailserver = {
