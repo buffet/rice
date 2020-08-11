@@ -28,7 +28,7 @@ stdenv.mkDerivation rec {
   '';
 
   meta = with stdenv.lib; {
-    description = "A helper for screenshots within sway.";
+    description = "A helper for screenshots within sway";
     homepage = "https://gitlab.com/swaywm/sway";
     license = licenses.mit;
     platforms = platforms.all;
