@@ -10,7 +10,7 @@
     dhcpcd.enable = false;
     usePredictableInterfaceNames = lib.mkForce true;
     interfaces = {
-      ens3 = {
+      eth0 = {
         ipv4.addresses = [
           { address="51.75.65.33"; prefixLength=32; }
         ];
@@ -24,6 +24,7 @@
     };
   };
   services.udev.extraRules = ''
-    ATTR{address}=="fa:16:3e:03:34:cb", NAME="ens3"
+    ATTR{address}=="fa:16:3e:03:34:cb", NAME="eth0"
+    
   '';
 }
