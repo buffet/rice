@@ -65,6 +65,18 @@
         "url": "https://github.com/swaywm/sway/archive/108b8e97b77acba6206cdc69e419531d17380c7a.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "trup": {
+        "branch": "master",
+        "description": "Discord bot for the Unixporn community",
+        "homepage": "",
+        "owner": "unixporn",
+        "repo": "trup",
+        "rev": "256e88c8d5f8cebd8cd2bad101dfb3ccd9961263",
+        "sha256": "1d6y0mm73hjv4ji2casax7s4640yxxrwpvdgd0wmxgk2dknlaf0n",
+        "type": "tarball",
+        "url": "https://github.com/unixporn/trup/archive/256e88c8d5f8cebd8cd2bad101dfb3ccd9961263.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "website": {
         "branch": "master",
         "description": "My personal website",

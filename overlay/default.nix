@@ -10,4 +10,5 @@ self: super:
   };
 
   nixrl = super.callPackage ./nixrl.nix { };
+  trup = super.callPackage ./trup.nix { };
 }

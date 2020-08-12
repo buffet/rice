@@ -25,6 +25,7 @@
     services = {
       blog.enable = true;
       mailserver.enable = true;
+      trup.enable = true;
       website.enable = true;
     };
   };
