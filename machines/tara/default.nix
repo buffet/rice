@@ -23,6 +23,7 @@
     };
 
     services = {
+      bitwarden.enable = true;
       blog.enable = true;
       mailserver.enable = true;
       trup.enable = true;
