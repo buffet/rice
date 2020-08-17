@@ -1,9 +1,13 @@
 { sources ? import ../nix/sources.nix
-, stdenv, grim, jq, libnotify, slurp, wl-clipboard }:
+, stdenv, makeWrapper, grim, jq, libnotify, slurp, wl-clipboard }:
 stdenv.mkDerivation rec {
   name = "grimshot";
 
   src = sources.sway;
+
+  nativeBuildInputs = [
+    makeWrapper
+  ];
 
   buildInputs = [
     grim
@@ -18,13 +22,11 @@ stdenv.mkDerivation rec {
   installPhase = ''
     install -Dm 644 contrib/grimshot.1 $out/share/man/man1/grimshot.1
     install -Dm 755 contrib/grimshot $out/bin/grimshot
+  '';
 
-    sed -i -e 's|grim|${grim}/bin/grim|g' \
-           -e 's|jq|${jq}/bin/jq|g' \
-           -e 's|notify-send|${libnotify}/bin/notify-send|g' \
-           -e 's|slurp|${slurp}/bin/slurp|g' \
-           -e 's|wl-copy|${wl-clipboard}/bin/wl-copy|g' \
-        $out/bin/grimshot
+  postFixup = ''
+    wrapProgram $out/bin/grimshot \
+        --prefix PATH : ${stdenv.lib.makeBinPath [ grim jq libnotify slurp wl-clipboard ]}
   '';
 
   meta = with stdenv.lib; {
