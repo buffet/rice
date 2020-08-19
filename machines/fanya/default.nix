@@ -64,6 +64,7 @@
       kak.enable = true;
 
       extraPackages = with pkgs; [
+        cloc
         gdb
         htop
         ripgrep
