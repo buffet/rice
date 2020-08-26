@@ -13,8 +13,6 @@ with lib; {
     nixpkgs.overlays = [(self: super: {
       kakoune = super.wrapKakoune super.kakoune-unwrapped {
         configure.plugins = with pkgs.kakounePlugins; [
-          kak-prelude # required by kak-auto-pairs
-          kak-auto-pairs
           kak-fzf
         ];
       };
