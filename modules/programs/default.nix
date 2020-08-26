@@ -7,7 +7,7 @@ with lib; {
     ./bash.nix
     ./direnv.nix
     ./git.nix
-    ./kak.nix
+    ./kak
     ./tmux.nix
   ];
 

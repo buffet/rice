@@ -10,20 +10,20 @@ with lib; {
   };
 
   config = mkIf cfg.enable {
-    nixpkgs.overlays = let
-      plugins = with pkgs.kakounePlugins; [
-        kak-prelude # required by kak-auto-pairs
-        kak-auto-pairs
-        kak-fzf
-      ];
-    in [(self: super: {
+    nixpkgs.overlays = [(self: super: {
       kakoune = super.wrapKakoune super.kakoune-unwrapped {
-        configure = { inherit plugins; };
+        configure.plugins = with pkgs.kakounePlugins; [
+          kak-prelude # required by kak-auto-pairs
+          kak-auto-pairs
+          kak-fzf
+        ];
       };
     })];
 
     buffet.home = {
       home.sessionVariables = { EDITOR = "kak"; };
+
+      home.file.".config/kak-lsp/kak-lsp.toml".text = pkgs.callPackage ./kak-lsp.nix { };
 
       programs.bash.shellAliases = {
         k = "${pkgs.kak-attach-session}/bin/kak-attach-session";
