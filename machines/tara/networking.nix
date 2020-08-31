@@ -6,7 +6,7 @@
       "213.186.33.99"
     ];
     defaultGateway = "51.75.64.1";
-    defaultGateway6 = "";
+    defaultGateway6 = "2001:41d0:701:1100::1";
     dhcpcd.enable = false;
     usePredictableInterfaceNames = lib.mkForce true;
     interfaces = {
@@ -15,10 +15,10 @@
           { address="51.75.65.33"; prefixLength=32; }
         ];
         ipv6.addresses = [
-          { address="fe80::f816:3eff:fe03:34cb"; prefixLength=64; }
+          { address="2001:41d0:701:1100::2b72"; prefixLength=64; }
         ];
         ipv4.routes = [ { address = "51.75.64.1"; prefixLength = 32; } ];
-        ipv6.routes = [ { address = ""; prefixLength = 32; } ];
+        ipv6.routes = [ { address = "2001:41d0:701:1100::2b72"; prefixLength = 32; } ];
       };
       
     };
