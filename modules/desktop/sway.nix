@@ -12,8 +12,6 @@ with lib; {
   config = mkIf cfg.enable {
     programs.sway.enable = true;
 
-    # TODO: maybe redshft?
-
     buffet.home.wayland.windowManager.sway = {
       enable = true;
       wrapperFeatures.gtk = true;
