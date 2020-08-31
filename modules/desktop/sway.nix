@@ -58,6 +58,7 @@ with lib; {
           done
         '';
       in {
+        modifier = mod;
         window.border = 1;
         focus.followMouse = false;
         fonts = [ "GoMono 8" ];
