@@ -76,6 +76,12 @@ with lib; {
               mode = "user";
             }
             {
+              key = "l";
+              effect = ": enter-user-mode lsp<ret>";
+              docstring = "lsp";
+              mode = "user";
+            }
+            {
               key = "w";
               effect = ": w<ret>";
               docstring = "save";
