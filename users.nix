@@ -1,4 +1,4 @@
-{ lib, options, ... }:
+{ config, lib, options, ... }:
 let
   sources = import ./nix/sources.nix;
   home-manager = "${sources.home-manager}/nixos";
@@ -10,8 +10,8 @@ in
 
   users.users.buffet = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "sway" "networkmanager" ];
-    uid = 1000;
+    extraGroups = [ "wheel" "sway" "networkmanager" "rclone" ];
+    uid = config.buffet.ids.uids.buffet;
     openssh.authorizedKeys.keys = import ./keys.nix;
   };
 

@@ -5,6 +5,7 @@ in
 {
   imports = [
     <machine>
+    ./ids.nix
     ./modules
     ./users.nix
   ];

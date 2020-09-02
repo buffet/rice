@@ -16,14 +16,14 @@ with lib; {
     services.postgresql.enable = true;
 
     users.groups.trup = {
-      gid = 1001;
+      gid = config.buffet.ids.gids.trup;
     };
 
     users.users.trup = {
       description = "trup service user";
       group = "trup";
       shell = "/bin/sh";
-      uid = 1001;
+      uid = config.buffet.ids.uids.trup;
     };
 
     systemd.services.trup = {
