@@ -1,5 +1,6 @@
 { sources ? import ../nix/sources.nix
-, buildGoModule, lib }:
+, buildGoModule
+, lib}:
 buildGoModule {
   name = "trup";
 

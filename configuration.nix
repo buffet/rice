@@ -30,7 +30,7 @@ in
 
   nixpkgs = {
     overlays = [ (import ./overlay) ];
-    pkgs = import sources.nixpkgs { };
+    pkgs = import sources.nixpkgs {};
   };
 
   environment.systemPackages = with pkgs; [

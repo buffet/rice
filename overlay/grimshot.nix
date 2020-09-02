@@ -1,5 +1,12 @@
 { sources ? import ../nix/sources.nix
-, stdenv, makeWrapper, grim, jq, libnotify, slurp, wl-clipboard }:
+, stdenv
+, makeWrapper
+, grim
+, jq
+, libnotify
+, slurp
+, wl-clipboard}:
+
 stdenv.mkDerivation rec {
   name = "grimshot";
 

@@ -6,51 +6,51 @@ let
     set completion-ignore-case on
   '';
 in
-with lib; {
-  options = {
-    buffet.programs.bash = {
-      enable = mkEnableOption "bash";
-    };
-  };
-
-  config = mkIf cfg.enable {
-    buffet.home = {
-      home.sessionVariables = {
-        INPUTRC = inputrc;
+  with lib; {
+    options = {
+      buffet.programs.bash = {
+        enable = mkEnableOption "bash";
       };
+    };
 
-      programs.bash = {
-        enable = true;
-        enableAutojump = true;
-        historyControl = [ "erasedups" "ignorespace" ];
-        historyFile = "$HOME/.cache/bash_history";
-
-        shellAliases = {
-          htop = "htop -t";
-          mkdir = "mkdir -p";
-          rg = "rg -S";
-          t = "cd /tmp";
+    config = mkIf cfg.enable {
+      buffet.home = {
+        home.sessionVariables = {
+          INPUTRC = inputrc;
         };
 
-        shellOptions = [
-          "cdspell"
-          "checkjobs"
-          "extglob"
-          "globstar"
-          "histappend"
-          "nocaseglob"
-        ];
+        programs.bash = {
+          enable = true;
+          enableAutojump = true;
+          historyControl = [ "erasedups" "ignorespace" ];
+          historyFile = "$HOME/.cache/bash_history";
 
-        initExtra = ''
-          __prompt() {
-              case $? in
-                  0) PS1='\[\e[36m\]>> \[\e[0m\]' ;;
-                  *) PS1='\[\e[31m\]>> \[\e[0m\]' ;;
-              esac
-          }
-          PROMPT_COMMAND=__prompt
-        '';
+          shellAliases = {
+            htop = "htop -t";
+            mkdir = "mkdir -p";
+            rg = "rg -S";
+            t = "cd /tmp";
+          };
+
+          shellOptions = [
+            "cdspell"
+            "checkjobs"
+            "extglob"
+            "globstar"
+            "histappend"
+            "nocaseglob"
+          ];
+
+          initExtra = ''
+            __prompt() {
+                case $? in
+                    0) PS1='\[\e[36m\]>> \[\e[0m\]' ;;
+                    *) PS1='\[\e[31m\]>> \[\e[0m\]' ;;
+                esac
+            }
+            PROMPT_COMMAND=__prompt
+          '';
+        };
       };
     };
-  };
-}
+  }

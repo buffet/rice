@@ -3,45 +3,45 @@ let
   cfg = config.buffet.services.bitwarden;
   port = 12224;
 in
-with lib; {
-  options = {
-    buffet.services.bitwarden = {
-      enable = mkEnableOption "bitwarden";
-    };
-  };
-
-  config = mkIf cfg.enable {
-    security.acme.acceptTerms = true;
-    security.acme.certs."bitwarden.buffet.sh".email = "niclas@countingsort.com";
-
-    services = {
-      bitwarden_rs = {
-        enable = true;
-
-        config = {
-          domain = "https://bitwarden.buffet.sh/";
-          signupsAllowed = false;
-          rocketPort = port;
-        };
+  with lib; {
+    options = {
+      buffet.services.bitwarden = {
+        enable = mkEnableOption "bitwarden";
       };
+    };
 
-      nginx = {
-        enable = true;
+    config = mkIf cfg.enable {
+      security.acme.acceptTerms = true;
+      security.acme.certs."bitwarden.buffet.sh".email = "niclas@countingsort.com";
 
-        recommendedGzipSettings = true;
-        recommendedOptimisation = true;
-        recommendedProxySettings = true;
-        recommendedTlsSettings = true;
+      services = {
+        bitwarden_rs = {
+          enable = true;
 
-        virtualHosts."bitwarden.buffet.sh" = {
-          enableACME = true;
-          forceSSL = true;
+          config = {
+            domain = "https://bitwarden.buffet.sh/";
+            signupsAllowed = false;
+            rocketPort = port;
+          };
+        };
 
-          locations."/" = {
-            proxyPass = "http://localhost:${toString port}";
+        nginx = {
+          enable = true;
+
+          recommendedGzipSettings = true;
+          recommendedOptimisation = true;
+          recommendedProxySettings = true;
+          recommendedTlsSettings = true;
+
+          virtualHosts."bitwarden.buffet.sh" = {
+            enableACME = true;
+            forceSSL = true;
+
+            locations."/" = {
+              proxyPass = "http://localhost:${toString port}";
+            };
           };
         };
       };
     };
-  };
-}
+  }
