@@ -8,8 +8,6 @@ in
   {
     options = {
       buffet.services.rclone-mount = {
-        enable = mkEnableOption "rclone mount";
-
         mounts = mkOption {
           default = {};
 
@@ -69,7 +67,7 @@ in
       };
     };
 
-    config = mkIf cfg.enable {
+    config = mkIf (cfg.mounts != {}) {
       users.groups.rclone = {
         gid = config.buffet.ids.gids.rclone;
       };
@@ -113,6 +111,7 @@ in
 
               serviceConfig = {
                 ExecStart = "${pkgs.rclone}/bin/rclone --config ${configPath} mount remote:${path} \"${mountpoint}\" --allow-other";
+                ExecStopPost = "/run/wrappers/bin/fusermount -zu \"${mountpoint}\"";
                 User = "rclone";
                 Type = "simple";
                 Restart = "always";
