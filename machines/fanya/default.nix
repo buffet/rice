@@ -62,6 +62,8 @@
 
   systemd.coredump.enable = true;
 
+  systemd.timers.borgbackup-job-backup.timerConfig.Persistent = true;
+
   buffet = {
     desktop = {
       enable = true;
