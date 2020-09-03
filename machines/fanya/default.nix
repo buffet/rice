@@ -48,6 +48,16 @@
   services = {
     tlp.enable = true;
     upower.enable = true;
+
+    borgbackup = {
+      jobs.backup = {
+        paths = [ "/etc" "/home" "/root" "/var" ];
+        repo = "borg@buffet.sh:./fanya";
+        encryption.mode = "none"; # TODO: encrypt
+        startAt = "daily";
+        environment.BORG_RSH = "ssh -i /home/buffet/.ssh/id_rsa";
+      };
+    };
   };
 
   systemd.coredump.enable = true;
