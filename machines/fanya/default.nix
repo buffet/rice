@@ -56,6 +56,12 @@
         encryption.mode = "none"; # TODO: encrypt
         startAt = "daily";
         environment.BORG_RSH = "ssh -i /home/buffet/.ssh/id_rsa";
+        prune.keep = {
+          within = "1d";
+          daily = 7;
+          weekly = 4;
+          monthly = -1;
+        };
       };
     };
   };

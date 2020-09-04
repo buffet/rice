@@ -18,6 +18,12 @@ in
         repo = "${location}/tara";
         encryption.mode = "none"; # TODO: encrypt
         startAt = "daily";
+        prune.keep = {
+          within = "1d";
+          daily = 7;
+          weekly = 4;
+          monthly = -1;
+        };
       };
     };
   };
