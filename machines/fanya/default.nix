@@ -49,21 +49,26 @@
     tlp.enable = true;
     upower.enable = true;
 
-    borgbackup = {
-      jobs.backup = {
-        paths = [ "/etc" "/home" "/root" "/var" ];
-        repo = "borg@buffet.sh:./fanya";
-        encryption.mode = "none"; # TODO: encrypt
-        startAt = "daily";
-        environment.BORG_RSH = "ssh -i /home/buffet/.ssh/id_rsa";
-        prune.keep = {
-          within = "1d";
-          daily = 7;
-          weekly = 4;
-          monthly = -1;
+    borgbackup = let
+      repo = import ../../secrets/borg.nix;
+    in
+      {
+        jobs.backup = {
+          paths = [ "/etc" "/home" "/root" "/var" ];
+          repo = "${repo.host}:fanya";
+          encryption.mode = "repokey";
+          encryption.passphrase = repo.passphrase;
+          startAt = "daily";
+          environment.BORG_RSH = "ssh -i /home/buffet/.ssh/id_borg";
+          extraArgs = "--remote-path borg1";
+          prune.keep = {
+            within = "1d";
+            daily = 7;
+            weekly = 4;
+            monthly = -1;
+          };
         };
       };
-    };
   };
 
   systemd.coredump.enable = true;
