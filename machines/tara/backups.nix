@@ -93,7 +93,7 @@ in
     timers.rclone-sync-backups = {
       wantedBy = [ "timers.target" ];
       partOf = [ "rclone-sync-backups.service" ];
-      timerConfig.OnCalendar = "daily";
+      timerConfig.OnCalendar = "hourly";
     };
   };
 }
