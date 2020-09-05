@@ -75,6 +75,24 @@
 
   systemd.timers.borgbackup-job-backup.timerConfig.Persistent = true;
 
+  systemd.services = {
+    borgbackup-job-backup = {
+      after = [ "ensure-online.service" ];
+      requires = [ "ensure-online.service" ];
+    };
+
+    ensure-online = {
+      description = "waiting for Network";
+      after = [ "network-online.target" ];
+      requires = [ "network-online.target" ];
+
+      serviceConfig = {
+        ExecStart = "${pkgs.networkmanager}/bin/nm-online -q --timeout=30";
+        Type = "oneshot";
+      };
+    };
+  };
+
   buffet = {
     desktop = {
       enable = true;
