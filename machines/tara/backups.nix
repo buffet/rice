@@ -24,11 +24,6 @@
   };
 
   systemd.services = {
-    borgbackup-job-backup = {
-      after = [ "postgresql-dump.service" ];
-      wants = [ "postgresql-dump.service" ];
-    };
-
     postgresql-dump = let
       location = "/var/backup/postgresql";
       postgres = config.services.postgresql;
@@ -36,6 +31,8 @@
       {
         description = "postgresql backup";
         after = [ "postgresql.service" ];
+        before = [ "borgbackup-job-backup.service" ];
+        wantedBy = [ "borgbackup-job-backup.service" ];
         requires = [ "postgresql.service" ];
 
         preStart = ''
