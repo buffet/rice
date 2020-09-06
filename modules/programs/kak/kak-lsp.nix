@@ -2,8 +2,9 @@
 ''
   [language.c_cpp]
   filetypes = ["c", "cpp"]
-  roots = ["compile_commands.json", ".clangd", ".git"]
+  roots = ["compile_commands.json", ".ccls-root", ".git"]
   command = "${pkgs.ccls}/bin/ccls"
+  args = ["--init={\"completion\":{\"detailedLabel\":false}}"]
 
   [language.latex]
   filetypes = ["latex"]
