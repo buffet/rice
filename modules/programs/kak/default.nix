@@ -86,6 +86,12 @@ in
                 mode = "user";
               }
               {
+                key = "r";
+                effect = ": lsp-highlight-references<ret>";
+                docstring = "highlight refs";
+                mode = "user";
+              }
+              {
                 key = "w";
                 effect = ": w<ret>";
                 docstring = "save";
