@@ -21,6 +21,7 @@ in
           config = {
             domain = "https://bitwarden.buffet.sh/";
             signupsAllowed = false;
+            adminToken = import ../../secrets/bitwarden.nix;
             rocketPort = port;
           };
         };
