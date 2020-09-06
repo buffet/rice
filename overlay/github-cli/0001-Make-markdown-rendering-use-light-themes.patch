@@ -1,0 +1,25 @@
+From a306befff19e97709b7bff6889e887822d9afd8f Mon Sep 17 00:00:00 2001
+From: buffet <niclas@countingsort.com>
+Date: Sun, 6 Sep 2020 17:35:15 +0000
+Subject: [PATCH] Make markdown rendering use light themes
+
+---
+ utils/utils.go | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/utils/utils.go b/utils/utils.go
+index 885e5ea..f1ae35d 100644
+--- a/utils/utils.go
++++ b/utils/utils.go
+@@ -24,7 +24,7 @@ func OpenInBrowser(url string) error {
+ func RenderMarkdown(text string) (string, error) {
+ 	style := "notty"
+ 	if isColorEnabled() {
+-		style = "dark"
++		style = "light"
+ 	}
+ 	// Glamour rendering preserves carriage return characters in code blocks, but
+ 	// we need to ensure that no such characters are present in the output.
+-- 
+2.25.4
+

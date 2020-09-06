@@ -109,6 +109,7 @@
       extraPackages = with pkgs; [
         cloc
         gdb
+        github-cli
         htop
         ripgrep
         texlive.combined.scheme-full
