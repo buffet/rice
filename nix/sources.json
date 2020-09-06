@@ -5,10 +5,10 @@
         "homepage": "https://blog.buffet.sh/",
         "owner": "buffet",
         "repo": "blog",
-        "rev": "02dbcc115e3b75f7f1edbe7cf2c258afe04f417e",
-        "sha256": "1v5k45qnh6kfnjjg32a8fx6f3hlaccj4dhjgvw5sxn4i6628imd9",
+        "rev": "12fd2e08c34d76b238416a77e4f88856d0bf6747",
+        "sha256": "19n5k3jmggzns6snsakwsd9x26bw5avxcdjlfc9wv7b8wgi54f6k",
         "type": "tarball",
-        "url": "https://github.com/buffet/blog/archive/02dbcc115e3b75f7f1edbe7cf2c258afe04f417e.tar.gz",
+        "url": "https://github.com/buffet/blog/archive/12fd2e08c34d76b238416a77e4f88856d0bf6747.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "home-manager": {
