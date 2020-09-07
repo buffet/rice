@@ -15,7 +15,7 @@ in
       kak-attach-session = super.callPackage ./kak-attach-session.nix {};
 
       kakounePlugins = super.kakounePlugins // {
-        kak-fzf = super.callPackage ./kak-fzf.nix {};
+        kak-fzf = nixpkgs-unstable.kakounePlugins.kak-fzf;
       };
 
       nixrl = super.callPackage ./nixrl.nix {};
