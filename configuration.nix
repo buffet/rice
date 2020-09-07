@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, pkgs, ... }:
 let
   sources = import ./nix/sources.nix;
 in
@@ -29,7 +29,7 @@ in
   };
 
   nixpkgs = {
-    overlays = [ (import ./overlay) ];
+    overlays = [ (import ./overlay { inherit config; }) ];
     pkgs = import sources.nixpkgs {};
   };
 

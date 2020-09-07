@@ -1,4 +1,6 @@
 {
+  lighttheme = true;
+
   primary = {
     background = "#fdf6e3";
     foreground = "#586e75";

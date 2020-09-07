@@ -5,6 +5,8 @@ in
   with lib; {
     options = {
       buffet.desktop.colors = {
+        lighttheme = mkOption { type = types.bool; };
+
         primary = {
           background = mkOption { type = types.str; };
           foreground = mkOption { type = types.str; };
