@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 let
   cfg = config.buffet.desktop.firefox;
-  sources = import ../../nix/sources.nix;
+  sources = import ../../../nix/sources.nix;
   nur = import sources.nur { inherit pkgs; };
 in
   with lib; {
@@ -32,12 +32,17 @@ in
               isDefault = true;
               id = 0;
 
+              userChrome = import ./userChrome.css.nix {
+                colorscheme = config.buffet.desktop.colors;
+              };
+
               settings = {
                 "browser.ctrlTab.recentlyUsedOrder" = false;
                 "browser.download.dir" = "/tmp/downloads";
                 "browser.fullscreen.autohide" = false;
                 "browser.shell.checkDefaultBrowser" = false;
                 "browser.tabs.warnOnClose" = false;
+                "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
               };
             };
           };

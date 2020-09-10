@@ -6,7 +6,7 @@ in
     imports = [
       ./alacritty.nix
       ./colors
-      ./firefox.nix
+      ./firefox
       ./sway.nix
       ./zathura.nix
     ];
