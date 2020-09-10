@@ -19,7 +19,7 @@ with colorscheme;
     --mff-tab-font-weight: 400;
     --mff-tab-height: 20px;
     --mff-tab-pinned-bg: ${normal.white};
-    --mff-tab-selected-bg: ${normal.yellow};
+    --mff-tab-selected-bg: ${normal.green};
     --mff-tab-soundplaying-bg: ${normal.magenta};
     --mff-urlbar-color: ${primary.foreground};
     --mff-urlbar-focused-color: ${primary.foreground};
@@ -43,7 +43,7 @@ with colorscheme;
     --toolbar-bgcolor: var(--mff-bg) !important;
     --urlbar-separator-color: transparent !important;
 
-    --autocomplete-popup-highlight-color: ${bright.yellow} !important;
+    --autocomplete-popup-highlight-color: ${normal.yellow} !important;
     --autocomplete-popup-highlight-background: ${cursor.background} !important;
 
     --arrowpanel-background: var(--mff-bg) !important;
@@ -168,8 +168,8 @@ with colorscheme;
   /* Toolbar {{{ */
 
   ::selection {
-    background-color: ${normal.green} !important;
-    color: ${primary.background} !important;
+    background-color: ${cursor.background} !important;
+    color: ${cursor.foreground} !important;
   }
 
   .urlbar-icon > image {
