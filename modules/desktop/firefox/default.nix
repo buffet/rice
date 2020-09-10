@@ -20,6 +20,7 @@ in
           package = pkgs.firefox-wayland;
 
           extensions = with nur.repos.rycee.firefox-addons; [
+            bitwarden
             darkreader
             https-everywhere
             reddit-moderator-toolbox
