@@ -43,7 +43,7 @@ with colorscheme;
     --toolbar-bgcolor: var(--mff-bg) !important;
     --urlbar-separator-color: transparent !important;
 
-    --autocomplete-popup-highlight-color: ${normal.yellow} !important;
+    --autocomplete-popup-highlight-color: ${cursor.foreground} !important;
     --autocomplete-popup-highlight-background: ${cursor.background} !important;
 
     --arrowpanel-background: var(--mff-bg) !important;
@@ -190,10 +190,6 @@ with colorscheme;
   #back-button,
   #forward-button {
     filter: brightness(80%) sepia(100%);
-    transform: scale(0.9);
-  }
-  #reload-button {
-    transform: scale(0.9);
   }
 
   #tabs-newtab-button image {
