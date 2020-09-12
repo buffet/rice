@@ -51,6 +51,13 @@ in
 
             hooks = [
               {
+                name = "BufCreate";
+                option = ".*\.nix";
+                commands = ''
+                  set buffer indentwidth 2
+                '';
+              }
+              {
                 name = "ModuleLoaded";
                 option = "fzf";
                 once = true;
