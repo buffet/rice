@@ -11,6 +11,11 @@
   roots = [".git"]
   command = "${pkgs.texlab}/bin/texlab"
 
+  [language.rust]
+  filetypes = ["rust"]
+  roots = ["Cargo.toml"]
+  command = "${pkgs.rust-analyzer}/bin/rust-analyzer"
+
   [language.nix]
   filetypes = ["nix"]
   roots = [".git"]
