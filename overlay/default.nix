@@ -6,7 +6,6 @@ in
 (
   self: super:
     {
-
       github-cli = super.callPackage ./github-cli {
         inherit (super) github-cli;
         lighttheme = config.buffet.desktop.colors.lighttheme;
