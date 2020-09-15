@@ -6,8 +6,9 @@ in
 (
   self: super:
     {
+
       github-cli = super.callPackage ./github-cli {
-        github-cli = super.github-cli;
+        inherit (super) github-cli;
         lighttheme = config.buffet.desktop.colors.lighttheme;
       };
 
@@ -15,11 +16,12 @@ in
       kak-attach-session = super.callPackage ./kak-attach-session.nix {};
 
       kakounePlugins = super.kakounePlugins // {
-        kak-fzf = nixpkgs-unstable.kakounePlugins.kak-fzf;
+        inherit (nixpkgs-unstable.kakounePlugins) kak-fzf;
       };
 
       nixrl = super.callPackage ./nixrl.nix {};
-      rclone = super.callPackage ./rclone.nix { rclone = nixpkgs-unstable.rclone; };
+      rclone = super.callPackage ./rclone.nix { inherit (super) rclone; };
+      inherit (nixpkgs-unstable) rust-analyzer;
       trup = super.callPackage ./trup.nix {};
     }
 )
