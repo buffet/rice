@@ -7,6 +7,7 @@ in
       ./alacritty.nix
       ./colors
       ./firefox
+      ./mako.nix
       ./sway.nix
       ./zathura.nix
     ];
@@ -31,6 +32,7 @@ in
 
         alacritty.enable = true;
         firefox.enable = true;
+        mako.enable = true;
         zathura.enable = true;
       };
 
