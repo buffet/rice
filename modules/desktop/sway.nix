@@ -177,6 +177,7 @@ in
 
         extraConfig = ''
           seat * hide_cursor 1000
+          exec ${pkgs.autotiling}/bin/autotiling
         '';
       };
     };

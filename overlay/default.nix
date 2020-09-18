@@ -6,12 +6,14 @@ in
 (
   self: super:
     {
+      autotiling = super.callPackage ./autotiling.nix {};
       github-cli = super.callPackage ./github-cli {
         inherit (super) github-cli;
         lighttheme = config.buffet.desktop.colors.lighttheme;
       };
 
       grimshot = super.callPackage ./grimshot.nix {};
+      inherit (nixpkgs-unstable.python38Packages) i3ipc;
       kak-attach-session = super.callPackage ./kak-attach-session.nix {};
 
       kakounePlugins = super.kakounePlugins // {
