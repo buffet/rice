@@ -4,6 +4,8 @@ writeScriptBin "kak-attach-session" ''
 
   repo="$(git rev-parse --show-toplevel 2>/dev/null)"
 
+  kak -clear
+
   if [ $? -eq 0 ]; then
       session="$repo"
   else
