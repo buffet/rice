@@ -44,6 +44,7 @@ in
                 "browser.shell.checkDefaultBrowser" = false;
                 "browser.tabs.warnOnClose" = false;
                 "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+                "ui.key.menuAccessKey" = 0;
               };
             };
           };
