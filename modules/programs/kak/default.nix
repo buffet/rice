@@ -93,6 +93,18 @@ in
                 mode = "user";
               }
               {
+                key = "p";
+                effect = "<a-!>wl-paste<ret>";
+                docstring = "paste (after)";
+                mode = "user";
+              }
+              {
+                key = "P";
+                effect = "!wl-paste<ret>";
+                docstring = "paste (before)";
+                mode = "user";
+              }
+              {
                 key = "r";
                 effect = ": lsp-highlight-references<ret>";
                 docstring = "highlight refs";
@@ -102,6 +114,12 @@ in
                 key = "w";
                 effect = ": w<ret>";
                 docstring = "save";
+                mode = "user";
+              }
+              {
+                key = "y";
+                effect = "<a-|>wl-copy<ret>";
+                docstring = "yank to system clipboard";
                 mode = "user";
               }
               {
