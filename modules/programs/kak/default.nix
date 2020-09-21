@@ -16,6 +16,7 @@ in
             kakoune = super.wrapKakoune super.kakoune-unwrapped {
               configure.plugins = with pkgs.kakounePlugins; [
                 kak-fzf
+                kakoune-gdb
               ];
             };
           }
@@ -23,13 +24,20 @@ in
       ];
 
       buffet.home = {
-        home.sessionVariables = { EDITOR = "kak"; };
+        home = {
+          sessionVariables = { EDITOR = "kak"; };
+          file.".config/kak-lsp/kak-lsp.toml".text = pkgs.callPackage ./kak-lsp.nix {};
 
-        home.file.".config/kak-lsp/kak-lsp.toml".text = pkgs.callPackage ./kak-lsp.nix {};
+          packages = with pkgs; [
+            gdb # required by kakoune-gdb
+            socat # required by kakoune-gdb
+          ];
+        };
 
         programs.bash.shellAliases = {
           k = "${pkgs.kak-attach-session}/bin/kak-attach-session";
         };
+
 
         programs.kakoune = {
           enable = true;
@@ -81,9 +89,21 @@ in
                 mode = "insert";
               }
               {
+                key = "a";
+                effect = ": lsp-code-actions<ret>";
+                docstring = "Show lsp actions";
+                mode = "user";
+              }
+              {
                 key = "f";
                 effect = ": fzf-mode<ret>";
                 docstring = "fzf";
+                mode = "user";
+              }
+              {
+                key = "g";
+                effect = ": enter-user-mode gdb<ret>";
+                docstring = "gdb";
                 mode = "user";
               }
               {
@@ -137,6 +157,18 @@ in
 
             # load project local config
             try %{ source .kakrc.local }
+
+            # gdb user-mode
+            declare-user-mode gdb
+            map global gdb b -docstring "breakpoint" ": gdb-toggle-breakpoint<ret>"
+            map global gdb c -docstring "continue" ": gdb-continue-or-run<ret>"
+            map global gdb f -docstring "finish" ": gdb-finish<ret>"
+            map global gdb n -docstring "next" ": gdb-next<ret>"
+            map global gdb p -docstring "print" ": gdb-print<ret>"
+            map global gdb q -docstring "quit" ": gdb-session-stop<ret>"
+            map global gdb r -docstring "run" ": gdb-run<ret>"
+            map global gdb s -docstring "step" ": gdb-step<ret>"
+            map global gdb w -docstring "new session" ": gdb-session-new<ret>"
 
             # lsp
             eval %sh{ ${pkgs.kak-lsp}/bin/kak-lsp --kakoune -s $kak_session }

@@ -18,6 +18,7 @@ in
 
       kakounePlugins = super.kakounePlugins // {
         inherit (nixpkgs-unstable.kakounePlugins) kak-fzf;
+        kakoune-gdb = super.callPackage ./kakoune-gdb.nix {};
       };
 
       nixrl = super.callPackage ./nixrl.nix {};
