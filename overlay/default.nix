@@ -6,7 +6,6 @@ in
 (
   self: super:
     {
-      autotiling = super.callPackage ./autotiling.nix {};
       github-cli = super.callPackage ./github-cli {
         inherit (super) github-cli;
         lighttheme = config.buffet.desktop.colors.lighttheme;
