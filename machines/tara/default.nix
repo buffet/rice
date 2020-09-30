@@ -28,6 +28,7 @@
       bitwarden.enable = true;
       blog.enable = true;
       mailserver.enable = true;
+      thelounge.enable = true;
       trup.enable = true;
       website.enable = true;
     };
