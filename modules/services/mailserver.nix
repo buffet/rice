@@ -24,7 +24,7 @@ in
         domains = [ "buffet.sh" ];
 
         loginAccounts = {
-          "me@buffet.sh" = {
+          "mail@buffet.sh" = {
             hashedPassword = "$2y$05$jux3kZMyIEoZ8Hlaav2wmeFlC0K7ZS/FY7UI3Wi.ourVfEKa.yiCm";
             catchAll = [ "buffet.sh" ];
           };
