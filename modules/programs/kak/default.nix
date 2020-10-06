@@ -95,6 +95,12 @@ in
                 mode = "user";
               }
               {
+                key = "c";
+                effect = ": comment-line<ret>";
+                docstring = "Comment line";
+                mode = "user";
+              }
+              {
                 key = "f";
                 effect = ": fzf-mode<ret>";
                 docstring = "fzf";
