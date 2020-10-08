@@ -95,10 +95,10 @@
         "homepage": "",
         "owner": "unixporn",
         "repo": "trup",
-        "rev": "c84d7f6a074833fbd0497c569325c32a475beb2d",
-        "sha256": "1vykn6zn36lxibmjv3a6j9c6clx0p6jn79lsi1wzpg29a0bbslag",
+        "rev": "83741f7e5d1c0e28813191327bdc97a249dad160",
+        "sha256": "0g0pmss42iwb14rjs4v86arq7iqy599vssf0130xhjjg8vxfhp7j",
         "type": "tarball",
-        "url": "https://github.com/unixporn/trup/archive/c84d7f6a074833fbd0497c569325c32a475beb2d.tar.gz",
+        "url": "https://github.com/unixporn/trup/archive/83741f7e5d1c0e28813191327bdc97a249dad160.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "website": {
