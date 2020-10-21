@@ -99,7 +99,7 @@
     desktop = {
       enable = true;
       colors = import ../../modules/desktop/colors/solarized-light.nix;
-      session = "sway";
+      session = "xmonad";
     };
 
     programs = {

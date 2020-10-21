@@ -1,6 +1,7 @@
 { config, lib, pkgs, ... }:
 let
   cfg = config.buffet.programs.kak;
+  sessionType = config.buffet.desktop.sessionType;
 in
   with lib; {
     options = {
@@ -77,7 +78,16 @@ in
               }
             ];
 
-            keyMappings = [
+            keyMappings = let
+              sysCopy =
+                if sessionType == "wayland"
+                then "wl-copy"
+                else "xclip -i -sel c";
+              sysPaste =
+                if sessionType == "wayland"
+                then "wl-paste"
+                else "xclip -o -sel c";
+            in [
               {
                 key = "<tab>";
                 effect = "<a-;><a-gt>";
@@ -120,13 +130,13 @@ in
               }
               {
                 key = "p";
-                effect = "<a-!>wl-paste<ret>";
+                effect = "<a-!>${sysPaste}<ret>";
                 docstring = "paste (after)";
                 mode = "user";
               }
               {
                 key = "P";
-                effect = "!wl-paste<ret>";
+                effect = "!${sysPaste}<ret>";
                 docstring = "paste (before)";
                 mode = "user";
               }
@@ -144,7 +154,7 @@ in
               }
               {
                 key = "y";
-                effect = "<a-|>wl-copy<ret>";
+                effect = "<a-|>${sysCopy}<ret>";
                 docstring = "yank to system clipboard";
                 mode = "user";
               }

@@ -17,7 +17,10 @@ in
 
         programs.firefox = {
           enable = true;
-          package = pkgs.firefox-wayland;
+          package =
+            if (config.buffet.desktop.sessionType == "wayland")
+            then pkgs.firefox-wayland
+            else pkgs.firefox;
 
           extensions = with nur.repos.rycee.firefox-addons; [
             bitwarden
