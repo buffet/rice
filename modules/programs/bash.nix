@@ -28,6 +28,7 @@ in
           shellAliases = {
             htop = "htop -t";
             mkdir = "mkdir -p";
+            p = "$(history -p !!)";
             rg = "rg -S";
             t = "cd /tmp";
           };
