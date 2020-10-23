@@ -8,6 +8,7 @@ in
       ./colors
       ./firefox
       ./mako.nix
+      ./picom.nix
       ./sway.nix
       ./xmonad
       ./xorg.nix
@@ -48,6 +49,7 @@ in
         zathura.enable = true;
 
         mako.enable = cfg.sessionType == "wayland";
+        picom.enable = cfg.sessionType == "xorg";
         xorg.enable = cfg.sessionType == "xorg";
       };
 

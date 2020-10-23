@@ -5,11 +5,11 @@
     , bgColor      = "${colors.primary.background}"
     , fgColor      = "${colors.primary.foreground}"
     , position     = Static
-                       { xpos   = 8
-                       , ypos   = 6
-                       , width  = 1350
-                       , height = 20
-                       }
+                         { xpos   = 12
+                         , ypos   = 6
+                         , width  = 1342
+                         , height = 20
+                         }
     , lowerOnStart = True
     , border       = BottomB
     , borderColor  = "${colors.wm.unfocused.border}"
@@ -17,7 +17,7 @@
         [ Run Battery [ "-t", "<acstatus><left>%"
                       , "--"
                       , "-O", "+"
-                      , "-i", "+"
+                      , "-i", ""
                       , "-o", ""
                       ]
                       50

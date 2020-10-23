@@ -12,20 +12,13 @@ in
 
     config = mkIf cfg.enable {
       buffet.home = {
-        home.packages = with pkgs; [
-          hsetroot
-          i3lock
-          xbanish
-          xmobar
-        ];
-
         xsession.windowManager.xmonad = {
           enable = true;
           enableContribAndExtras = true;
           config = let
             xmobarrc = pkgs.writeText "xmobarrc" (import ./xmobarrc.nix { inherit colors; });
           in
-            pkgs.writeText "xmonad.hs" (import ./xmonadhs.nix { inherit colors xmobarrc; });
+            pkgs.writeText "xmonad.hs" (import ./xmonadhs.nix { inherit pkgs colors xmobarrc; });
         };
       };
     };

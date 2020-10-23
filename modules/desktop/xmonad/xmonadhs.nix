@@ -1,4 +1,4 @@
-{ colors, xmobarrc }:
+{ pkgs, colors, xmobarrc }:
 ''
   import XMonad
   import XMonad.Hooks.DynamicLog
@@ -9,26 +9,18 @@
   import XMonad.Util.EZConfig
   import XMonad.Util.SpawnOnce
 
-  -- TODO: screenshots
-  -- TODO: disable screensave
-  -- TODO: compositor
-  -- TODO: fix .profile
-  -- TODO: fix workspace 8
-
   main = xmonad =<< bar myConfig
 
   myConfig = flip additionalKeysP myKeys $ ewmh $ def
       { modMask  = mod4Mask
       , terminal = "alacritty"
+      , borderWidth = 0
 
       , layoutHook  = myLayoutHook
       , startupHook = myStartupHook
-
-      , focusedBorderColor = "${colors.wm.focused.border}"
-      , normalBorderColor  = "${colors.wm.unfocused.border}"
       }
 
-  bar = statusBar "xmobar ${xmobarrc}" xmobarPP toggleStrutsKey
+  bar = statusBar "${pkgs.xmobar}/bin/xmobar ${xmobarrc}" xmobarPP toggleStrutsKey
       where
           toggleStrutsKey XConfig{modMask = modm} = (modm, xK_b)
           xmobarPP = def
@@ -41,12 +33,14 @@
   myKeys = [ ("M-i",   spawn "firefox")
            , ("M-h",   sendMessage Expand)
            , ("M-l",   sendMessage Shrink)
-           , ("M-S-x", spawn "i3lock -ec '${colors.primary.background}'")
+           , ("M-S-x", spawn "${pkgs.i3lock}/bin/i3lock -ec '${colors.primary.background}'")
+           , ("M-p",   spawn "${pkgs.maim}/bin/maim -s | xclip -i -sel c -t image/png")
+           , ("M-S-p", spawn "${pkgs.maim}/bin/maim | xclip -i -sel c -t image/png")
            ]
 
   myLayoutHook = tall ||| Full
       where
-          tall = applySpacing 4 $ reflectHoriz $ Tall 1 (3/100) (8/13)
+          tall = applySpacing 6 $ reflectHoriz $ Tall 1 (3/100) (8/13)
 
   applySpacing size = spacingRaw False border True border True
       where
@@ -54,6 +48,6 @@
 
   myStartupHook = do
       setWMName "LG3D"
-      spawnOnce "hsetroot -solid '${colors.primary.background}'"
-      spawnOnce "xbanish"
+      spawnOnce "${pkgs.hsetroot}/bin/hsetroot -solid '${colors.primary.background}'"
+      spawnOnce "${pkgs.xbanish}/bin/xbanish"
 ''

@@ -10,6 +10,12 @@ in
     };
 
     config = mkIf cfg.enable {
+      buffet.home = {
+        home.file.".xprofile".text = ''
+          [ -f ~/.profile ] && . ~/.profile
+        '';
+      };
+
       services.xserver = {
         enable = true;
         libinput.enable = true;
