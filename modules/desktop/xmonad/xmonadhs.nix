@@ -1,6 +1,7 @@
 { pkgs, colors, xmobarrc }:
 ''
   import XMonad
+  import XMonad.Actions.DwmPromote
   import XMonad.Hooks.DynamicLog
   import XMonad.Hooks.EwmhDesktops
   import XMonad.Hooks.SetWMName
@@ -30,12 +31,13 @@
               , ppLayout  = const ""
               }
 
-  myKeys = [ ("M-i",   spawn "firefox")
-           , ("M-h",   sendMessage Expand)
-           , ("M-l",   sendMessage Shrink)
-           , ("M-S-x", spawn "${pkgs.i3lock}/bin/i3lock -ec '${colors.primary.background}'")
-           , ("M-p",   spawn "${pkgs.maim}/bin/maim -s | xclip -i -sel c -t image/png")
-           , ("M-S-p", spawn "${pkgs.maim}/bin/maim | xclip -i -sel c -t image/png")
+  myKeys = [ ("M-<Return>", dwmpromote)
+           , ("M-i",        spawn "firefox")
+           , ("M-h",        sendMessage Expand)
+           , ("M-l",        sendMessage Shrink)
+           , ("M-S-x",      spawn "${pkgs.i3lock}/bin/i3lock -ec '${colors.primary.background}'")
+           , ("M-p",        spawn "${pkgs.maim}/bin/maim -s | xclip -i -sel c -t image/png")
+           , ("M-S-p",      spawn "${pkgs.maim}/bin/maim | xclip -i -sel c -t image/png")
            ]
 
   myLayoutHook = tall ||| Full
