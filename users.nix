@@ -10,7 +10,7 @@ in
 
   users.users.buffet = {
     isNormalUser = true;
-    extraGroups = [ "wheel" "sway" "networkmanager" "rclone" ];
+    extraGroups = [ "wheel" "sway" "networkmanager" "rclone" "dialout" ];
     uid = config.buffet.ids.uids.buffet;
     openssh.authorizedKeys.keys = import ./keys.nix;
   };
