@@ -28,6 +28,7 @@ in
         };
 
         sessionType = mkOption {
+          default = "wayland";
           type = types.enum [ "wayland" "xorg" ];
           visible = false;
         };
