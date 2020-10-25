@@ -14,8 +14,9 @@ in
         programs.direnv = {
           enable = true;
           enableBashIntegration = true;
-          enableNixDirenvIntegration = true;
         };
+
+        xdg.configFile."direnv/direnvrc".source = ./direnvrc;
       };
     };
   }

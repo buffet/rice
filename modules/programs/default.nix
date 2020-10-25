@@ -5,7 +5,7 @@ in
   with lib; {
     imports = [
       ./bash.nix
-      ./direnv.nix
+      ./direnv
       ./git.nix
       ./kak
       ./tmux.nix
