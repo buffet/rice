@@ -1,15 +1,16 @@
 { pkgs, colors, xmobarrc }:
 ''
-  import XMonad
-  import XMonad.Actions.DwmPromote
-  import XMonad.Hooks.DynamicLog
-  import XMonad.Hooks.EwmhDesktops
-  import XMonad.Hooks.SetWMName
-  import XMonad.Layout.Reflect
-  import XMonad.Layout.Spacing
-  import XMonad.Util.EZConfig
-  import XMonad.Util.NamedScratchpad
-  import XMonad.Util.SpawnOnce
+  import           XMonad
+  import           XMonad.Actions.DwmPromote
+  import           XMonad.Hooks.DynamicLog
+  import           XMonad.Hooks.EwmhDesktops
+  import           XMonad.Hooks.SetWMName
+  import           XMonad.Layout.Reflect
+  import           XMonad.Layout.Spacing
+  import qualified XMonad.StackSet             as W
+  import           XMonad.Util.EZConfig
+  import           XMonad.Util.NamedScratchpad
+  import           XMonad.Util.SpawnOnce
 
   main = xmonad =<< bar myConfig
 
@@ -23,8 +24,10 @@
       , startupHook = myStartupHook
       }
 
-  scratchpads = [ NS "plover" "plover" (title =? "Plover") defaultFloating
+  scratchpads = [ NS "plover" "plover" (title =? "Plover") (floatCentered 0.4 0.6)
                 ]
+
+  floatCentered w h = customFloating $ W.RationalRect ((1 - w) / 2) ((1 - h) / 2) w h
 
   bar = statusBar "${pkgs.xmobar}/bin/xmobar ${xmobarrc}" (namedScratchpadFilterOutWorkspacePP xmobarPP) toggleStrutsKey
       where
