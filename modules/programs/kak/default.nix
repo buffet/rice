@@ -52,12 +52,6 @@ in
             ui.assistant = "cat";
             ui.enableMouse = true;
 
-            numberLines = {
-              enable = true;
-              relative = true;
-              highlightCursor = true;
-            };
-
             hooks = [
               {
                 name = "BufCreate";
