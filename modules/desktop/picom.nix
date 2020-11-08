@@ -14,7 +14,7 @@ in
         services.picom = {
           enable = true;
           fade = true;
-          fadeDelta = 1;
+          fadeDelta = 2;
           inactiveDim = "0.02";
           shadow = true;
           shadowOpacity = "0.2";
