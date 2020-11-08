@@ -5,7 +5,7 @@ let
 in
 (
   self: super:
-    {
+    rec {
       github-cli = super.callPackage ./github-cli {
         inherit (super) github-cli;
         lighttheme = config.buffet.desktop.colors.lighttheme;
@@ -21,6 +21,8 @@ in
       };
 
       nixrl = super.callPackage ./nixrl.nix {};
+      plover_with_plugins = super.callPackage  ./plover_with_plugins.nix { plover = super.plover.dev; };
+      plover_retro_stringop = super.python36Packages.callPackage ./plover_retro_stringop.nix { plover = super.plover.dev; };
       rclone = super.callPackage ./rclone.nix { inherit (super) rclone; };
       inherit (nixpkgs-unstable) rust-analyzer;
       trup = super.callPackage ./trup.nix {};
