@@ -11,6 +11,12 @@
   roots = [".git"]
   command = "${pkgs.texlab}/bin/texlab"
 
+  [language.python]
+  filetypes = ["python"]
+  roots = ["requirements.txt", "setup.py", ".git", ".hg"]
+  command = "${pkgs.python37Packages.python-language-server}/bin/pyls"
+  offset_encoding = "utf-8"
+
   [language.rust]
   filetypes = ["rust"]
   roots = ["Cargo.toml"]
