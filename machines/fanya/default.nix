@@ -113,7 +113,7 @@
         gdb
         github-cli
         htop
-        plover.dev
+        plover_with_plugins
         ripgrep
         texlive.combined.scheme-full
         tree
