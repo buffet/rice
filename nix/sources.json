@@ -47,10 +47,10 @@
         "homepage": "https://github.com/NixOS/nixpkgs",
         "owner": "NixOS",
         "repo": "nixpkgs-channels",
-        "rev": "504f993df9a5ca63317fe9c859df19daad30aa14",
-        "sha256": "19innk4v45xq62q6n5h0alhfbb3v7yxpdd1r7sglgjn8sr3ylwmn",
+        "rev": "18f8c1fe060bee2dcc6cf8e1b27f2acab689f457",
+        "sha256": "0kzazl1bi2sayi0fgia4ppwp2hx7xiq90zyjg6ydqvzh5yh2y293",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs-channels/archive/504f993df9a5ca63317fe9c859df19daad30aa14.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs-channels/archive/18f8c1fe060bee2dcc6cf8e1b27f2acab689f457.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs-unstable": {
@@ -71,10 +71,10 @@
         "homepage": "",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "a3d11b211025595f4209e52224e43c5c25f789a3",
-        "sha256": "17zrm7ihn6zz252h920z5bk8qsm1k68j0yfgmhlyndjzldcy7f7c",
+        "rev": "af41d71805ab44214431f7f09570d00a0e8ed95d",
+        "sha256": "12ixifjyb9f9ybd3gsnw4b55lqqkbaqw1z7w75rlr17p0z3x33mw",
         "type": "tarball",
-        "url": "https://github.com/nix-community/NUR/archive/a3d11b211025595f4209e52224e43c5c25f789a3.tar.gz",
+        "url": "https://github.com/nix-community/NUR/archive/af41d71805ab44214431f7f09570d00a0e8ed95d.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "sway": {
@@ -95,10 +95,10 @@
         "homepage": "",
         "owner": "unixporn",
         "repo": "trup",
-        "rev": "5c9c109c20aef9e0bd2928f6d463753e499ee9f8",
-        "sha256": "01chhmjwkwks13vwdjqyzm627n0gcmaximf5xh9kn3qna4jbkxd2",
+        "rev": "0535fa677bdd8fdd3ec688bc52a6feac484f9efc",
+        "sha256": "0njx67n4gz11n0b5hc8zcdjvkdnl7qyn50wwdnnbggmin0v8n0dj",
         "type": "tarball",
-        "url": "https://github.com/unixporn/trup/archive/5c9c109c20aef9e0bd2928f6d463753e499ee9f8.tar.gz",
+        "url": "https://github.com/unixporn/trup/archive/0535fa677bdd8fdd3ec688bc52a6feac484f9efc.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "website": {
