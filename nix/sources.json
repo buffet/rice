@@ -1,16 +1,4 @@
 {
-    "autotiling": {
-        "branch": "master",
-        "description": "Script for sway and i3 to automatically switch the horizontal / vertical window split orientation",
-        "homepage": "",
-        "owner": "nwg-piotr",
-        "repo": "autotiling",
-        "rev": "58de027b790d56515b202d4a26abe7fda9cd9dbc",
-        "sha256": "12flbnkyybgbwb7404rp2l9jj70igwzsxa5g1441ipa88i80jii1",
-        "type": "tarball",
-        "url": "https://github.com/nwg-piotr/autotiling/archive/58de027b790d56515b202d4a26abe7fda9cd9dbc.tar.gz",
-        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
-    },
     "blog": {
         "branch": "master",
         "description": "My personal blog",
