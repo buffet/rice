@@ -6,6 +6,7 @@ in
     imports = [
       ./bash.nix
       ./direnv
+      ./emacs
       ./git.nix
       ./kak
       ./tmux.nix

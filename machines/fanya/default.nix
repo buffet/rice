@@ -105,6 +105,7 @@
     programs = {
       bash.enable = true;
       direnv.enable = true;
+      emacs.enable = true;
       git.enable = true;
       kak.enable = true;
 

@@ -6,6 +6,7 @@ in
 (
   self: super:
     rec {
+      emacs = nixpkgs-unstable.emacs;
       github-cli = super.callPackage ./github-cli {
         inherit (super) github-cli;
         lighttheme = config.buffet.desktop.colors.lighttheme;

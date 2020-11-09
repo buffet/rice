@@ -23,6 +23,18 @@
         "url": "https://github.com/rycee/home-manager/archive/e6f96b6aa3e99495f9f6f3488ecf78dd316e5bec.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "nix-doom-emacs": {
+        "branch": "master",
+        "description": "doom-emacs packaged for Nix",
+        "homepage": "",
+        "owner": "vlaci",
+        "repo": "nix-doom-emacs",
+        "rev": "fcc395f3db3adb36d1055cea4da2f8c8e368e56e",
+        "sha256": "0b26qnsn3ycki1favkgd4isvh4qgvqqq7kkl0wkciyfgn95jgqd9",
+        "type": "tarball",
+        "url": "https://github.com/vlaci/nix-doom-emacs/archive/fcc395f3db3adb36d1055cea4da2f8c8e368e56e.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "nixos-mailserver": {
         "ref": "nixos-20.03",
         "repo": "https://gitlab.com/simple-nixos-mailserver/nixos-mailserver.git",
