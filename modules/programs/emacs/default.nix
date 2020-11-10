@@ -26,10 +26,15 @@ in
             VISUAL = config.environment.variables.EDITOR;
           };
 
+          # TODO: add this to Emacs' env
           packages = with pkgs; [
+            ccls # lang/cc
             fd
             ripgrep
-            shellcheck
+            rust-analyzer # lang/rust +lsp
+            shellcheck # lang/sh
+            texlab # lang/latex +lsp
+            texlive.combined.scheme-full # lang/latex
           ];
         };
       };
