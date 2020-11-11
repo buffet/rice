@@ -28,7 +28,7 @@ in
 
           # TODO: add this to Emacs' env
           packages = with pkgs; [
-            ccls # lang/cc
+            clang-tools # lang/cc
             fd
             ripgrep
             rust-analyzer # lang/rust +lsp
