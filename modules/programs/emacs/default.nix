@@ -30,6 +30,7 @@ in
           packages = with pkgs; [
             clang-tools # lang/cc
             fd
+            nixfmt # lang/nix
             ripgrep
             rust-analyzer # lang/rust +lsp
             shellcheck # lang/sh
