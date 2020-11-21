@@ -27,6 +27,7 @@
       }
 
   scratchpads = [ NS "plover" "plover" (title =? "Plover") (floatCentered 0.4 0.6)
+                , NS "barrier" "barrier" (className =? "Barrier") (floatCentered 0.4 0.6)
                 ]
 
   floatCentered w h = customFloating $ W.RationalRect ((1 - w) / 2) ((1 - h) / 2) w h
@@ -50,6 +51,7 @@
            , ("M-p",        spawn "${pkgs.maim}/bin/maim -s | xclip -i -sel c -t image/png")
            , ("M-S-p",      spawn "${pkgs.maim}/bin/maim | xclip -i -sel c -t image/png")
            , ("M-s M-p",    namedScratchpadAction scratchpads "plover")
+           , ("M-s M-b",    namedScratchpadAction scratchpads "barrier")
            ]
 
   maybeSpawn = maybe (pure ()) spawn

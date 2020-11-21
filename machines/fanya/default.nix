@@ -21,6 +21,10 @@
     hostName = "fanya";
     networkmanager.enable = true;
     nameservers = [ "1.1.1.1" ];
+
+    firewall.allowedTCPPorts = [
+      24800 # Barrier
+    ];
   };
 
   nix = {
@@ -110,6 +114,7 @@
       kak.enable = true;
 
       extraPackages = with pkgs; [
+        barrier
         cloc
         gdb
         github-cli
