@@ -117,6 +117,7 @@
         barrier
         cloc
         gdb
+        gitAndTools.gitflow # tools/magit
         github-cli
         htop
         plover_with_plugins
