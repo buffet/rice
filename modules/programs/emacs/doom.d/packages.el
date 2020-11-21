@@ -48,3 +48,7 @@
 ;(unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
+
+(package! flycheck-moonscript :disable t)
+(package! flycheck-moonscript
+  :recipe (:host github :repo "hlissner/emacs-flycheck-moonscript"))
