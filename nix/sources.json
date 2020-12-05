@@ -29,10 +29,10 @@
         "homepage": "",
         "owner": "antoinemadec",
         "repo": "coc-fzf",
-        "rev": "f3d792518982d58a7d7f846f31f01f0ef0c5434a",
-        "sha256": "10xl2gx1n9c34amca7zq4chczfc126dwz7733fi55ks29fdl708c",
+        "rev": "d994439ace0be8033c85db99f23c4f909d8ee41f",
+        "sha256": "07pl2ccj5rn873j5y0ls5dwry80iahlicjdcz059rf12fmgym702",
         "type": "tarball",
-        "url": "https://github.com/antoinemadec/coc-fzf/archive/f3d792518982d58a7d7f846f31f01f0ef0c5434a.tar.gz",
+        "url": "https://github.com/antoinemadec/coc-fzf/archive/d994439ace0be8033c85db99f23c4f909d8ee41f.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "coc-rust-analyzer": {
@@ -41,10 +41,10 @@
         "homepage": "",
         "owner": "fannheyward",
         "repo": "coc-rust-analyzer",
-        "rev": "3f7abdb4f4c414a3f6023a5436f30fb1cb44b90c",
-        "sha256": "1pw6qpzzh9czhbdg91r2qdsh6f0xwwpkg3r5xa4wkdgxdapb9rjj",
+        "rev": "6213e579a0c3a9965d35dd42d3ac8eb301b7d137",
+        "sha256": "0vh576hn907l0vi8vdlxrg8drws6cc7psyjs41plq9fnwkjgj5x0",
         "type": "tarball",
-        "url": "https://github.com/fannheyward/coc-rust-analyzer/archive/3f7abdb4f4c414a3f6023a5436f30fb1cb44b90c.tar.gz",
+        "url": "https://github.com/fannheyward/coc-rust-analyzer/archive/6213e579a0c3a9965d35dd42d3ac8eb301b7d137.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "detectindent": {
@@ -77,10 +77,10 @@
         "homepage": "",
         "owner": "vlaci",
         "repo": "nix-doom-emacs",
-        "rev": "fcc395f3db3adb36d1055cea4da2f8c8e368e56e",
-        "sha256": "0b26qnsn3ycki1favkgd4isvh4qgvqqq7kkl0wkciyfgn95jgqd9",
+        "rev": "4cd7e15082bad25ff6b097f9bb419e50d32f621b",
+        "sha256": "1b81sarqh7lrwf0dj980q6zsxcv69pwhs2426v4fpd1wy98la5kl",
         "type": "tarball",
-        "url": "https://github.com/vlaci/nix-doom-emacs/archive/fcc395f3db3adb36d1055cea4da2f8c8e368e56e.tar.gz",
+        "url": "https://github.com/vlaci/nix-doom-emacs/archive/4cd7e15082bad25ff6b097f9bb419e50d32f621b.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixos-mailserver": {
@@ -95,10 +95,10 @@
         "homepage": "https://github.com/NixOS/nixpkgs",
         "owner": "NixOS",
         "repo": "nixpkgs-channels",
-        "rev": "18f8c1fe060bee2dcc6cf8e1b27f2acab689f457",
-        "sha256": "0kzazl1bi2sayi0fgia4ppwp2hx7xiq90zyjg6ydqvzh5yh2y293",
+        "rev": "0f8a31b992b6892dd075bac8533955a9b92ac9df",
+        "sha256": "11013clgxalivmmh3m4cglg51sxms5kgbqh2bqdhcngra3cqnlsy",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs-channels/archive/18f8c1fe060bee2dcc6cf8e1b27f2acab689f457.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs-channels/archive/0f8a31b992b6892dd075bac8533955a9b92ac9df.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixpkgs-unstable": {
@@ -119,10 +119,10 @@
         "homepage": "",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "af41d71805ab44214431f7f09570d00a0e8ed95d",
-        "sha256": "12ixifjyb9f9ybd3gsnw4b55lqqkbaqw1z7w75rlr17p0z3x33mw",
+        "rev": "abebb6ddfe0bf3b54d0dfea18d3e71d445f529e2",
+        "sha256": "19x6mabr1ldfd24416mwmf3xc22qmlpigz6pcgw19822d3ybmnav",
         "type": "tarball",
-        "url": "https://github.com/nix-community/NUR/archive/af41d71805ab44214431f7f09570d00a0e8ed95d.tar.gz",
+        "url": "https://github.com/nix-community/NUR/archive/abebb6ddfe0bf3b54d0dfea18d3e71d445f529e2.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "sway": {
@@ -131,10 +131,10 @@
         "homepage": "https://swaywm.org/",
         "owner": "swaywm",
         "repo": "sway",
-        "rev": "108b8e97b77acba6206cdc69e419531d17380c7a",
-        "sha256": "0r3b7h778l9i20z3him9i2qsaynpn9y78hzfgv3cqi8fyry2c4f9",
+        "rev": "eca57594a04ed5e6f2294bb51ce29445849cc48b",
+        "sha256": "1xsa3h8zhf29p0mi90baxpr76jkd9pd1gr97ky8cnjbcs4isj9j0",
         "type": "tarball",
-        "url": "https://github.com/swaywm/sway/archive/108b8e97b77acba6206cdc69e419531d17380c7a.tar.gz",
+        "url": "https://github.com/swaywm/sway/archive/eca57594a04ed5e6f2294bb51ce29445849cc48b.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "trup": {
