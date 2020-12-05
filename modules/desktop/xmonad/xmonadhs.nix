@@ -1,9 +1,12 @@
 { pkgs, colors, xmobarrc }:
 ''
+  import           Control.Monad
+  import           Data.Function
   import           Data.Maybe
   import           System.Environment
   import           XMonad
   import           XMonad.Actions.DwmPromote
+  import           XMonad.Actions.SpawnOn
   import           XMonad.Hooks.DynamicLog
   import           XMonad.Hooks.EwmhDesktops
   import           XMonad.Hooks.SetWMName
@@ -72,4 +75,19 @@
       setWMName "LG3D"
       spawnOnce "${pkgs.hsetroot}/bin/hsetroot -solid '${colors.primary.background}'"
       spawnOnce "${pkgs.xbanish}/bin/xbanish"
+
+  -- TODO: FIX
+  -- | launch a program by starting an instance in a hidden workspace,
+  -- and just raising an already running instance. This allows for super quick "startup" time.
+  -- For this to work, the window needs to have the `_NET_WM_PID` set and unique!
+  launchWithBackgroundInstance :: (Query Bool) -> String -> X ()
+  launchWithBackgroundInstance windowQuery commandToRun = withWindowSet $ \winSet -> do
+      fittingHiddenWindows <- (W.allWindows winSet) & filter (\win -> Just "7" == W.findTag win winSet)
+                                                    & filterM (runQuery windowQuery)
+      case fittingHiddenWindows of
+        []        -> do spawnHere commandToRun
+                        spawnOn "7" commandToRun
+        [winId]   -> do windows $ W.shiftWin (W.currentTag winSet) winId
+                        spawnOn "7" commandToRun
+        (winId:_) -> windows $ W.shiftWin (W.currentTag winSet) winId
 ''
