@@ -15,6 +15,7 @@
   boot.cleanTmpDir = true;
   security.sudo.wheelNeedsPassword = false;
   services.openssh.enable = true;
+  services.postgresql.enable = true;
 
   buffet = {
     programs = {
@@ -29,7 +30,6 @@
       blog.enable = true;
       mailserver.enable = true;
       thelounge.enable = true;
-      trup.enable = true;
       website.enable = true;
     };
   };
