@@ -71,6 +71,18 @@
         "url": "https://github.com/rycee/home-manager/archive/e6f96b6aa3e99495f9f6f3488ecf78dd316e5bec.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "literate-vim": {
+        "branch": "master",
+        "description": "Vim plugin for the Literate programming tool",
+        "homepage": "https://github.com/zyedidia/Literate",
+        "owner": "zyedidia",
+        "repo": "literate.vim",
+        "rev": "4ffd45cb1657b67f4ed0eb639478a69209ec1f94",
+        "sha256": "004zcb1p6qma8vlx08sfhp0q7vhc2mphqa6mwahl41lb6z58k62z",
+        "type": "tarball",
+        "url": "https://github.com/zyedidia/literate.vim/archive/4ffd45cb1657b67f4ed0eb639478a69209ec1f94.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "nix-doom-emacs": {
         "branch": "master",
         "description": "doom-emacs packaged for Nix",

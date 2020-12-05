@@ -17,6 +17,11 @@ in
     src = sources.detectindent;
   };
 
+  literate-vim = buildVimPluginFrom2Nix {
+    name = "literate-vim";
+    src = sources.literate-vim;
+  };
+
   vim-yoink = buildVimPluginFrom2Nix {
     name = "vim-yoink";
     src = sources.vim-yoink;

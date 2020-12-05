@@ -36,6 +36,7 @@ in
             detectindent
             fzf-vim
             lightline-vim
+            literate-vim
             nerdcommenter
             quick-scope
             rainbow_parentheses
