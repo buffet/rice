@@ -1,4 +1,16 @@
 {
+    "any-jump": {
+        "branch": "master",
+        "description": "Jump to any definition and references 👁 IDE madness without overhead 🚀",
+        "homepage": "",
+        "owner": "pechorin",
+        "repo": "any-jump.vim",
+        "rev": "211de97502c0e52289c17241c57ecbf1628f07b1",
+        "sha256": "17c3kbnxg09xa62v6sf3sfbv0795ihh49zr6qjj6c4x496bs81k9",
+        "type": "tarball",
+        "url": "https://github.com/pechorin/any-jump.vim/archive/211de97502c0e52289c17241c57ecbf1628f07b1.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "blog": {
         "branch": "master",
         "description": "My personal blog",
@@ -9,6 +21,42 @@
         "sha256": "08xkkcmxmk3m75szv2d0vfnd63wkinm47s6h64v2ffbw5jls92pj",
         "type": "tarball",
         "url": "https://github.com/buffet/blog/archive/c7d20a8d5fee9117d924d0aff02318fa4b93180d.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "coc-fzf": {
+        "branch": "master",
+        "description": "fzf :heart: coc.nvim",
+        "homepage": "",
+        "owner": "antoinemadec",
+        "repo": "coc-fzf",
+        "rev": "f3d792518982d58a7d7f846f31f01f0ef0c5434a",
+        "sha256": "10xl2gx1n9c34amca7zq4chczfc126dwz7733fi55ks29fdl708c",
+        "type": "tarball",
+        "url": "https://github.com/antoinemadec/coc-fzf/archive/f3d792518982d58a7d7f846f31f01f0ef0c5434a.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "coc-rust-analyzer": {
+        "branch": "master",
+        "description": "rust-analyzer extension for coc.nvim",
+        "homepage": "",
+        "owner": "fannheyward",
+        "repo": "coc-rust-analyzer",
+        "rev": "3f7abdb4f4c414a3f6023a5436f30fb1cb44b90c",
+        "sha256": "1pw6qpzzh9czhbdg91r2qdsh6f0xwwpkg3r5xa4wkdgxdapb9rjj",
+        "type": "tarball",
+        "url": "https://github.com/fannheyward/coc-rust-analyzer/archive/3f7abdb4f4c414a3f6023a5436f30fb1cb44b90c.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "detectindent": {
+        "branch": "master",
+        "description": "Vim script for automatically detecting indent settings",
+        "homepage": "",
+        "owner": "ciaranm",
+        "repo": "detectindent",
+        "rev": "c09ab6effc29ef913c531816eb980460f8dc9ed2",
+        "sha256": "035mnx8i002v7al3k89cmv3f9p38l42ix1v3hhxirqnx445iv2p2",
+        "type": "tarball",
+        "url": "https://github.com/ciaranm/detectindent/archive/c09ab6effc29ef913c531816eb980460f8dc9ed2.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "home-manager": {
@@ -99,6 +147,42 @@
         "sha256": "0njx67n4gz11n0b5hc8zcdjvkdnl7qyn50wwdnnbggmin0v8n0dj",
         "type": "tarball",
         "url": "https://github.com/unixporn/trup/archive/0535fa677bdd8fdd3ec688bc52a6feac484f9efc.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "vim-smoothie": {
+        "branch": "master",
+        "description": "Smooth scrolling for Vim done right🥤",
+        "homepage": "",
+        "owner": "psliwka",
+        "repo": "vim-smoothie",
+        "rev": "f3120afee5ee7cca5f3ccc2bac0933125d0a1efc",
+        "sha256": "0ndvs48g68ygminnrjis847qcf7zi7mafhnjzvdz9x8kly2jp7pc",
+        "type": "tarball",
+        "url": "https://github.com/psliwka/vim-smoothie/archive/f3120afee5ee7cca5f3ccc2bac0933125d0a1efc.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "vim-which-key": {
+        "branch": "master",
+        "description": ":tulip: Vim plugin that shows keybindings in popup",
+        "homepage": "http://liuchengxu.org/vim-which-key",
+        "owner": "liuchengxu",
+        "repo": "vim-which-key",
+        "rev": "30c0810b012a7acdccc6b72f0e99c0388986844f",
+        "sha256": "18rflksd58mwkq0lc64frfimj1l1k8cc0l45jpv0z4w118v92jyv",
+        "type": "tarball",
+        "url": "https://github.com/liuchengxu/vim-which-key/archive/30c0810b012a7acdccc6b72f0e99c0388986844f.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
+    "vim-yoink": {
+        "branch": "master",
+        "description": "Vim plugin that maintains a yank history to cycle between when pasting",
+        "homepage": "",
+        "owner": "svermeulen",
+        "repo": "vim-yoink",
+        "rev": "b973fce71d45fe7c290119448651da7a1b9943a1",
+        "sha256": "1cjrv55x340i5c87pd8z3l27f2jl98p0v20hr77is8f9fi3ja40d",
+        "type": "tarball",
+        "url": "https://github.com/svermeulen/vim-yoink/archive/b973fce71d45fe7c290119448651da7a1b9943a1.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "website": {

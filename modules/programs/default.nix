@@ -10,6 +10,7 @@ in
       ./git.nix
       ./kak
       ./tmux.nix
+      ./vim
     ];
 
     options = {
