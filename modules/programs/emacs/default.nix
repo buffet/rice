@@ -28,6 +28,8 @@ in
 
         home.packages = with pkgs; [
             clang-tools # lang/cc +lsp
+            clojure # lang/clojure
+            clojure-lsp # lang/clojure +lsp
             fd
             gitAndTools.gitflow # tools/magit
             luajitPackages.moonscript # lang/lua +moonscript
@@ -35,6 +37,7 @@ in
             python37Packages.python-language-server # lang/python +lsp
             ripgrep
             rust-analyzer # lang/rust +lsp
+            sbcl # lang/common-lisp
             shellcheck # lang/sh
             texlab # lang/latex +lsp
             texlive.combined.scheme-full # lang/latex
