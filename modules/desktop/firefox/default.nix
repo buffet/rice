@@ -43,7 +43,6 @@ in
               settings = {
                 "browser.ctrlTab.recentlyUsedOrder" = false;
                 "browser.download.dir" = "/tmp/downloads";
-                "browser.fullscreen.autohide" = false;
                 "browser.shell.checkDefaultBrowser" = false;
                 "browser.tabs.warnOnClose" = false;
                 "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
