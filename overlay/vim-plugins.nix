@@ -22,6 +22,11 @@ in
     src = sources.literate-vim;
   };
 
+  prolog-vim = buildVimPluginFrom2Nix {
+    name = "prolog-vim";
+    src = sources.prolog-vim;
+  };
+
   vim-yoink = buildVimPluginFrom2Nix {
     name = "vim-yoink";
     src = sources.vim-yoink;

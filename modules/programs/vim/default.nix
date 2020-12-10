@@ -61,6 +61,7 @@ in
             coc-rust-analyzer
 
             # Languages
+            prolog-vim
             vim-nix
           ];
 

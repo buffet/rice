@@ -137,6 +137,18 @@
         "url": "https://github.com/nix-community/NUR/archive/abebb6ddfe0bf3b54d0dfea18d3e71d445f529e2.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "prolog-vim": {
+        "branch": "master",
+        "description": "Mirror of https://gitlab.inria.fr/soliman/prolog-vim",
+        "homepage": null,
+        "owner": "soli",
+        "repo": "prolog-vim",
+        "rev": "29d9276e3d94c478e3298f7eab7c9a15f8196b3c",
+        "sha256": "1y0q9qgli3lvfl3d43dspg33qvyf7fndnfq2lc3h9ib31znl840m",
+        "type": "tarball",
+        "url": "https://github.com/soli/prolog-vim/archive/29d9276e3d94c478e3298f7eab7c9a15f8196b3c.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "sway": {
         "branch": "v1.5",
         "description": "i3-compatible Wayland compositor",
