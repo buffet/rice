@@ -55,6 +55,8 @@
            , ("M-S-p",      spawn "${pkgs.maim}/bin/maim | xclip -i -sel c -t image/png")
            , ("M-s M-p",    namedScratchpadAction scratchpads "plover")
            , ("M-s M-b",    namedScratchpadAction scratchpads "barrier")
+
+           , ("C-q",        pure ())  -- stop me from accidentally closing all firefox tabs
            ]
 
   maybeSpawn = maybe (pure ()) spawn
