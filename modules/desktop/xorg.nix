@@ -14,12 +14,15 @@ in
         home.file.".xprofile".text = ''
           [ -f ~/.profile ] && . ~/.profile
         '';
+
+        services.flameshot.enable = true;
       };
 
       services.xserver = {
         enable = true;
         libinput.enable = true;
         windowManager.xmonad.enable = config.buffet.desktop.xmonad.enable;
+        xkbOptions = "xkb-options=['compose:print']";
       };
     };
   }

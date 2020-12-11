@@ -51,7 +51,7 @@
            , ("M-l",        sendMessage Shrink)
            , ("M-n",        maybeSpawn =<< (liftIO visualEditor))
            , ("M-S-x",      spawn "${pkgs.i3lock}/bin/i3lock -ec '${colors.primary.background}'")
-           , ("M-p",        spawn "${pkgs.maim}/bin/maim -s | xclip -i -sel c -t image/png")
+           , ("M-p",        spawn "${pkgs.flameshot}/bin/flameshot gui")
            , ("M-S-p",      spawn "${pkgs.maim}/bin/maim | xclip -i -sel c -t image/png")
            , ("M-s M-p",    namedScratchpadAction scratchpads "plover")
            , ("M-s M-b",    namedScratchpadAction scratchpads "barrier")
