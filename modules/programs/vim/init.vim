@@ -25,6 +25,7 @@ set splitbelow
 set splitright
 set matchtime=2
 set showmatch
+set nowrap
 set nowritebackup
 set noshowmode
 set updatetime=300
