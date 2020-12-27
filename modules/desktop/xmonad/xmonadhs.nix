@@ -77,6 +77,7 @@
       setWMName "LG3D"
       spawnOnce "${pkgs.hsetroot}/bin/hsetroot -solid '${colors.primary.background}'"
       spawnOnce "${pkgs.xbanish}/bin/xbanish"
+      spawnOnce "${pkgs.xcalib}/bin/xcalib ${../icc/ThinkPad_X250_FHD_LP125WF2_SPB2.icm}"
 
   -- TODO: FIX
   -- | launch a program by starting an instance in a hidden workspace,
