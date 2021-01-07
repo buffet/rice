@@ -71,6 +71,7 @@ vnoremap <silent> <leader> :<C-u>WhichKeyVisual '<Space>'<Cr>
 
 let g:which_key_map = {
     \ "\<Space>" : [':Files',                                'find-file'],
+    \ "r"        : [':Rg',                                   'ripgrep'],
     \ 'b'        : [':Buffers',                              'select-buffer'],
     \ 'w'        : [':w',                                    'save-file'],
     \ '['        : ['<plug>(YoinkPostPasteSwapBack)',        'yoink-back'],
