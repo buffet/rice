@@ -27,6 +27,11 @@ in
     src = sources.prolog-vim;
   };
 
+  vim-openscad = buildVimPluginFrom2Nix {
+    name = "vim-openscad";
+    src = sources.vim-openscad;
+  };
+
   vim-yoink = buildVimPluginFrom2Nix {
     name = "vim-yoink";
     src = sources.vim-yoink;

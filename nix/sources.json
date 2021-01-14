@@ -173,6 +173,18 @@
         "url": "https://github.com/unixporn/trup/archive/5a021a1fa574f4640706c9b0f3c961b614c84fa9.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "vim-openscad": {
+        "branch": "master",
+        "description": "Vim syntax highlighting for the OpenSCAD language",
+        "homepage": null,
+        "owner": "sirtaj",
+        "repo": "vim-openscad",
+        "rev": "81db508b1888fdbea994d43ccef1acd86c8af3f7",
+        "sha256": "1wcdfayjpb9h0lzwdi5nda4c0ch263fdr0379l9k1gf47bgq9cx2",
+        "type": "tarball",
+        "url": "https://github.com/sirtaj/vim-openscad/archive/81db508b1888fdbea994d43ccef1acd86c8af3f7.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "vim-smoothie": {
         "branch": "master",
         "description": "Smooth scrolling for Vim done right🥤",

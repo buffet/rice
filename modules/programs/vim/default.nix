@@ -63,6 +63,7 @@ in
             # Languages
             prolog-vim
             vim-nix
+            vim-openscad
           ];
 
           extraConfig = builtins.readFile ./init.vim;
