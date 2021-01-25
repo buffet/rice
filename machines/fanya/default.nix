@@ -54,6 +54,14 @@
     tlp.enable = true;
     upower.enable = true;
 
+    printing = {
+      enable = true;
+      drivers = with pkgs; [
+        gutenberg
+        hplip
+      ];
+    };
+
     borgbackup = let
       repo = import ../../secrets/borg.nix;
     in
