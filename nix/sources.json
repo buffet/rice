@@ -131,10 +131,10 @@
         "homepage": "",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "227fccb6fabec5de112f4ffadc71193c66120672",
-        "sha256": "0n8fwdgf4b3ywn0rxpj4zfdgq0g8jh7d3l5zpjpr7w030rg2f86d",
+        "rev": "7eb9c3d54500c4fed8c52364239bd58fe1cb4359",
+        "sha256": "0iwz12ypzbl2kjl4qrlcr0lr4wdagrfphsjw8mayx57h5p9baayw",
         "type": "tarball",
-        "url": "https://github.com/nix-community/NUR/archive/227fccb6fabec5de112f4ffadc71193c66120672.tar.gz",
+        "url": "https://github.com/nix-community/NUR/archive/7eb9c3d54500c4fed8c52364239bd58fe1cb4359.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "prolog-vim": {
