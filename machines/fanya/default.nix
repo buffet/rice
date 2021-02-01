@@ -100,7 +100,7 @@
       requires = [ "network-online.target" ];
 
       serviceConfig = {
-        ExecStart = "${pkgs.networkmanager}/bin/nm-online -q --timeout=120";
+        ExecStart = "${pkgs.networkmanager}/bin/nm-online -q --timeout=300";
         Type = "oneshot";
       };
     };
