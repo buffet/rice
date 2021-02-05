@@ -5,10 +5,10 @@
         "homepage": "",
         "owner": "pechorin",
         "repo": "any-jump.vim",
-        "rev": "e8473d4fecb9be2d3af0c1baff9e24d55ea22e76",
-        "sha256": "1sva40jmxi5jhx6kv09q32r7lqkh7fbr9m470jiya9fgssk5aml4",
+        "rev": "c5c319fdf588c9ed53e6a32eb2608bd1eb2f9c92",
+        "sha256": "1lzpr5x7zvpc252j6ipp2rfjfd25a0mrkikq8vdsbxbamp8cyqpb",
         "type": "tarball",
-        "url": "https://github.com/pechorin/any-jump.vim/archive/e8473d4fecb9be2d3af0c1baff9e24d55ea22e76.tar.gz",
+        "url": "https://github.com/pechorin/any-jump.vim/archive/c5c319fdf588c9ed53e6a32eb2608bd1eb2f9c92.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "blog": {
@@ -29,10 +29,10 @@
         "homepage": "",
         "owner": "antoinemadec",
         "repo": "coc-fzf",
-        "rev": "8e99233c853869430d0b4b0d81d9dd64ba7d1ce1",
-        "sha256": "1chzbp85lg56i51aanspk5d127immb2yxxjrpk3qf61xxxgsgfmp",
+        "rev": "a8b32b8b8a37d7fb87687c0187b7ad36987e2122",
+        "sha256": "1x6xfizcix1hlcl2dhxbaxxl2q7lpgnfyvdg81c88rcn68qykfn0",
         "type": "tarball",
-        "url": "https://github.com/antoinemadec/coc-fzf/archive/8e99233c853869430d0b4b0d81d9dd64ba7d1ce1.tar.gz",
+        "url": "https://github.com/antoinemadec/coc-fzf/archive/a8b32b8b8a37d7fb87687c0187b7ad36987e2122.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "coc-rust-analyzer": {
@@ -41,10 +41,10 @@
         "homepage": "",
         "owner": "fannheyward",
         "repo": "coc-rust-analyzer",
-        "rev": "d4c07a56e1fe3da5c2d3a972a1626d0e4efe2bb5",
-        "sha256": "0m3dv6ghsq5j5y6f7sw3qj1wvx41gsfvrw98lqqz8ly308k0zsrx",
+        "rev": "d7ee61f49c62a88e52b617b0dd054ba8815f5ad5",
+        "sha256": "13x1p018w5k4ck87jfdjw67q7mimnx29is1mfpqkc3fdp7ia33l6",
         "type": "tarball",
-        "url": "https://github.com/fannheyward/coc-rust-analyzer/archive/d4c07a56e1fe3da5c2d3a972a1626d0e4efe2bb5.tar.gz",
+        "url": "https://github.com/fannheyward/coc-rust-analyzer/archive/d7ee61f49c62a88e52b617b0dd054ba8815f5ad5.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "detectindent": {
@@ -89,10 +89,10 @@
         "homepage": "",
         "owner": "vlaci",
         "repo": "nix-doom-emacs",
-        "rev": "19da6badaac68e4b4247e07a92e749a7a473286d",
-        "sha256": "03gd5njjdap1jkvs9ij0c6mih2f55f1i4ksz9zn9zmgjzkl3hggb",
+        "rev": "b182af7d10aa8394f12ecc2c53fd942fa30de060",
+        "sha256": "1mn01cvax8dmgxv68f9hv4l5i1p2xms0dlzmp30jmf7g31jfbrdy",
         "type": "tarball",
-        "url": "https://github.com/vlaci/nix-doom-emacs/archive/19da6badaac68e4b4247e07a92e749a7a473286d.tar.gz",
+        "url": "https://github.com/vlaci/nix-doom-emacs/archive/b182af7d10aa8394f12ecc2c53fd942fa30de060.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nixos-mailserver": {
@@ -119,10 +119,10 @@
         "homepage": "",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "f217c0ea7c148ddc0103347051555c7c252dcafb",
-        "sha256": "0cyksxg2lnzxd0pss09rmmk2c2axz0lf9wvgvfng59nwf8dpq2kf",
+        "rev": "7cbec40a09533dd9c525d6ab94dddfe77768101a",
+        "sha256": "006fns0kxs9n32cg6f4p0zyaxxsyidwsa152flpsbaky1c6drn96",
         "type": "tarball",
-        "url": "https://github.com/NixOS/nixpkgs/archive/f217c0ea7c148ddc0103347051555c7c252dcafb.tar.gz",
+        "url": "https://github.com/NixOS/nixpkgs/archive/7cbec40a09533dd9c525d6ab94dddfe77768101a.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "nur": {
@@ -131,10 +131,10 @@
         "homepage": "",
         "owner": "nix-community",
         "repo": "NUR",
-        "rev": "7eb9c3d54500c4fed8c52364239bd58fe1cb4359",
-        "sha256": "0iwz12ypzbl2kjl4qrlcr0lr4wdagrfphsjw8mayx57h5p9baayw",
+        "rev": "366a270b4b386b482db463530da8f8b132abacf3",
+        "sha256": "0n8q3s9slddhi76idmwxcmwfy566n4qm1ral1mvc7d44hfg73hxd",
         "type": "tarball",
-        "url": "https://github.com/nix-community/NUR/archive/7eb9c3d54500c4fed8c52364239bd58fe1cb4359.tar.gz",
+        "url": "https://github.com/nix-community/NUR/archive/366a270b4b386b482db463530da8f8b132abacf3.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "prolog-vim": {
@@ -167,10 +167,10 @@
         "homepage": "",
         "owner": "unixporn",
         "repo": "trup",
-        "rev": "5a021a1fa574f4640706c9b0f3c961b614c84fa9",
-        "sha256": "0z91k0n64lxnc51cipy0dcll6a7hbc6skd4qkbrppzf7l34v8nnl",
+        "rev": "6f80b5b4aec6f360f5c000c1d766aab49f854d8e",
+        "sha256": "1biy64aknn8dlivla7k5snv2gvsv7vrmsbnnch0gv6a49k9ldxmz",
         "type": "tarball",
-        "url": "https://github.com/unixporn/trup/archive/5a021a1fa574f4640706c9b0f3c961b614c84fa9.tar.gz",
+        "url": "https://github.com/unixporn/trup/archive/6f80b5b4aec6f360f5c000c1d766aab49f854d8e.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "vim-openscad": {
@@ -191,10 +191,10 @@
         "homepage": "",
         "owner": "psliwka",
         "repo": "vim-smoothie",
-        "rev": "1f5ee84b789384a273b3e27b6a5a7e2f54dbc30e",
-        "sha256": "0977qb31hgss38g01m7ikx3qdqial3c7zw9cv72k7rnmcgy761wz",
+        "rev": "f83a157552a3bf393a7c034df1d21e3555123a4c",
+        "sha256": "090rl4mfww5rmv04v25f58jfv3yx23bwi0pijkwxr442yhbg3rg2",
         "type": "tarball",
-        "url": "https://github.com/psliwka/vim-smoothie/archive/1f5ee84b789384a273b3e27b6a5a7e2f54dbc30e.tar.gz",
+        "url": "https://github.com/psliwka/vim-smoothie/archive/f83a157552a3bf393a7c034df1d21e3555123a4c.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
     "vim-which-key": {
