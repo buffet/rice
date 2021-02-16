@@ -2,6 +2,7 @@
 ''
   import           Control.Monad
   import           Data.Function
+  import           Data.List                   (find)
   import           Data.Maybe
   import           System.Environment
   import           XMonad
@@ -23,11 +24,14 @@
       { modMask     = mod4Mask
       , terminal    = "alacritty"
       , borderWidth = 0
+      , workspaces  = myWorkspaces
 
       , layoutHook  = myLayoutHook
       , manageHook  = myManageHook
       , startupHook = myStartupHook
       }
+
+  myWorkspaces = map show [1..9]
 
   scratchpads = [ NS "plover" "plover" (title =? "Plover") (floatCentered 0.4 0.6)
                 , NS "barrier" "barrier" (className =? "Barrier") (floatCentered 0.4 0.6)
@@ -58,6 +62,9 @@
 
            , ("C-q",        pure ())  -- stop me from accidentally closing all firefox tabs
            ]
+           ++
+           [("M-C-" ++ ws, windows $ swapCurrentWspContentsWith ws) | ws <- myWorkspaces]
+
 
   maybeSpawn = maybe (pure ()) spawn
 
@@ -78,6 +85,18 @@
       spawnOnce "${pkgs.hsetroot}/bin/hsetroot -solid '${colors.primary.background}'"
       spawnOnce "${pkgs.xbanish}/bin/xbanish"
       spawnOnce "${pkgs.xcalib}/bin/xcalib ${../icc/ThinkPad_X250_FHD_LP125WF2_SPB2.icm}"
+
+  swapCurrentWspContentsWith :: Eq i => i -> W.StackSet i l a sid sd -> W.StackSet i l a sid sd
+  swapCurrentWspContentsWith other ws =
+      case find ((other ==) . W.tag) $ W.workspaces ws of
+          Just otherWsp -> W.mapWorkspace (swapWith otherWsp) ws
+          Nothing -> ws
+      where
+          currentWsp = W.workspace $ W.current ws
+          swapWith otherWsp w
+              | W.tag w == other            = currentWsp { W.tag = W.tag otherWsp }
+              | W.tag w == W.tag currentWsp = otherWsp   { W.tag = W.tag currentWsp }
+              | otherwise                   = w
 
   -- TODO: FIX
   -- | launch a program by starting an instance in a hidden workspace,
