@@ -5,6 +5,7 @@ in
   with lib; {
     imports = [
       ./alacritty.nix
+      ./awesome
       ./colors
       ./firefox
       ./mako.nix
@@ -21,7 +22,7 @@ in
 
         session = mkOption {
           default = "sway";
-          type = types.enum [ "sway" "xmonad" ];
+          type = types.enum [ "awesome" "sway" "xmonad" ];
           description = ''
             The graphical session used on this system.
           '';
@@ -37,6 +38,7 @@ in
 
     config = mkIf cfg.enable {
       buffet.desktop = {
+        awesome.enable = cfg.session == "awesome";
         sway.enable = cfg.session == "sway";
         xmonad.enable = cfg.session == "xmonad";
 

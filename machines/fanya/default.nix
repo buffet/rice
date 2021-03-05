@@ -4,6 +4,8 @@
     ./hardware-configuration.nix
   ];
 
+  virtualisation.libvirtd.enable = true;
+
   boot = {
     loader = {
       systemd-boot.enable = true;
@@ -27,7 +29,7 @@
   };
 
   nix = {
-    distributedBuilds = true;
+    # distributedBuilds = true;
 
     buildMachines = [
       {
@@ -110,7 +112,7 @@
     desktop = {
       enable = true;
       colors = import ../../modules/desktop/colors/solarized-light.nix;
-      session = "xmonad";
+      session = "awesome";
     };
 
     programs = {
