@@ -28,6 +28,7 @@ in
       rclone = super.callPackage ./rclone.nix { inherit (super) rclone; };
       inherit (nixpkgs-unstable) rust-analyzer;
       trup = super.callPackage ./trup.nix {};
+      ultralist = super.callPackage ./ultralist.nix {};
       vimPlugins = nixpkgs-unstable.vimPlugins // super.callPackage ./vim-plugins.nix { inherit (super) vimPlugins; };
     }
 )

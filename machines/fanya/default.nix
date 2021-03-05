@@ -132,6 +132,7 @@
         ripgrep
         texlive.combined.scheme-full
         tree
+        ultralist
         wget
       ];
     };
