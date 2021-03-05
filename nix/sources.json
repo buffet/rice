@@ -59,6 +59,18 @@
         "url": "https://github.com/ciaranm/detectindent/archive/c09ab6effc29ef913c531816eb980460f8dc9ed2.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "fennel-vim": {
+        "branch": "master",
+        "description": "Syntax highlighting for Fennel",
+        "homepage": "https://fennel-lang.org",
+        "owner": "bakpakin",
+        "repo": "fennel.vim",
+        "rev": "30b9beabad2c4f09b9b284caf5cd5666b6b4dc89",
+        "sha256": "1fvcn4q87d594nzxlj1597bmrixzlfqnl7k8f547skvvywx09kii",
+        "type": "tarball",
+        "url": "https://github.com/bakpakin/fennel.vim/archive/30b9beabad2c4f09b9b284caf5cd5666b6b4dc89.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "home-manager": {
         "branch": "release-20.03",
         "description": "Manage a user environment using Nix",

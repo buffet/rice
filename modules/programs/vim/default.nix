@@ -61,6 +61,7 @@ in
             coc-rust-analyzer
 
             # Languages
+            fennel-vim
             prolog-vim
             vim-nix
             vim-openscad

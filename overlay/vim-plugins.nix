@@ -17,6 +17,11 @@ in
     src = sources.detectindent;
   };
 
+  fennel-vim = buildVimPluginFrom2Nix {
+    name = "fennel-vim";
+    src = sources.fennel-vim;
+  };
+
   literate-vim = buildVimPluginFrom2Nix {
     name = "literate-vim";
     src = sources.literate-vim;
