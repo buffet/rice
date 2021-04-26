@@ -1,0 +1,16 @@
+[user]
+	email = niclas@countingsort.com
+	name = buffet
+
+[alias]
+	a = add
+	c = commit --verbose
+	m = commit --amend --verbose
+
+	d = diff
+	ds = diff --stat
+	dc = diff --cached
+
+	s = status -s
+	co = checkout
+	cob = checkout -b
