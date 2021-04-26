@@ -1,3 +1,6 @@
+# exit if not run interactively
+[[ $- != *i* ]] && return
+
 shopt -s cdspell checkjobs extglob globstar histappend nocaseglob
 HISTCONTROL=erasedups:ignorespace
 HISTFILE="$XDG_CACHE_HOME/bash_history"
