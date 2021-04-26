@@ -64,7 +64,8 @@ def setup_dotfiles(i):
             mkdir -p ~/docs/rice
             cd ~/docs/rice
             git clone https://github.com/buffet/rice.git .
-            git remote set-url git@github.com:buffet/rice.git
+            git remote set-url origin git@github.com:buffet/rice.git
+            rm ~/.bashrc
             stow -t ~ {" ".join(DOTS)}
         "
         '''
@@ -121,10 +122,15 @@ try:
                 i.enable_service(s)
 
             i.arch_chroot(r"sed -i 's/#\(MAKEFLAGS=\).*/\1\"-j$(($(nproc)-2))\"/' /etc/makepkg.conf")
+
+            archinstall.log('Building AUR packages...')
+
             i.arch_chroot(r"sed -i 's/# \(%wheel ALL=(ALL) NOPASSWD: ALL\)/\1/' /etc/sudoers")
             i.arch_chroot(f"su {user} -c 'cd $(mktemp -d) && git clone https://aur.archlinux.org/yay-bin.git . && makepkg -sim --noconfirm'")
             i.arch_chroot(f'su {user} -c "yay -Syu --needed --noconfirm {" ".join(dependencies_aur)}"')
             i.arch_chroot(r"sed -i 's/\(%wheel ALL=(ALL) NOPASSWD: ALL\)/# \1/' /etc/sudoers")
+
+            archinstall.log('Setting up dotfiles...')
 
             setup_dotfiles(i)
 
