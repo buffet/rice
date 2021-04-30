@@ -16,7 +16,7 @@ TIMEZONE = 'Etc/UTC'
 DOWNLOAD_REGION = 'Germany'
 DEFAULT_USER = 'buffet'
 DEFAULT_GROUPS = ['audio', 'input', 'kvm', 'video']
-DOTS = ['alacritty', 'bash', 'direnv', 'git', 'nvim', 'profile']
+DOTS = ['alacritty', 'bash', 'direnv', 'git', 'nvim', 'profile', 'xinit']
 
 dependencies = [
     'acpi',
@@ -39,7 +39,7 @@ dependencies_aur = [
     'all-repository-fonts',
     'awesome-git',
     'direnv',
-    'neovim-nightly-bin',
+    'neovim-git',
     'plover-git',
     'ttf-go-mono-git',
 ]
@@ -58,7 +58,6 @@ def get_password(name='Password', default=None):
 
 
 def setup_dotfiles(i):
-    # XXX: dotfiles already existing?
     i.arch_chroot(
         f'''
         su {user} -c "
