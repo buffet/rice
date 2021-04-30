@@ -27,6 +27,7 @@ dependencies = [
     'intel-ucode',
     'man-db',
     'networkmanager',
+    'openssl',
     'pulseaudio-alsa',
     'stow',
     'xf86-video-intel',
