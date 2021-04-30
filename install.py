@@ -38,6 +38,7 @@ dependencies = [
 dependencies_aur = [
     'all-repository-fonts',
     'awesome-git',
+    'direnv',
     'neovim-git',
     'plover-git',
     'ttf-go-mono-git',
@@ -65,7 +66,9 @@ def setup_dotfiles(i):
             cd ~/docs/rice
             git clone https://github.com/buffet/rice.git .
             git remote set-url origin git@github.com:buffet/rice.git
+
             rm ~/.bashrc
+
             stow -t ~ {" ".join(DOTS)}
         "
         '''
