@@ -39,7 +39,7 @@ dependencies_aur = [
     'all-repository-fonts',
     'awesome-git',
     'direnv',
-    'neovim-git',
+    'neovim-nightly-bin',
     'plover-git',
     'ttf-go-mono-git',
 ]
