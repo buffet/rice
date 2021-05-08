@@ -131,6 +131,7 @@ try:
             i.arch_chroot(r"sed -i 's/# \(%wheel ALL=(ALL) NOPASSWD: ALL\)/\1/' /etc/sudoers")
             i.arch_chroot(f"su {user} -c 'cd $(mktemp -d) && git clone https://aur.archlinux.org/yay-bin.git . && makepkg -sim --noconfirm'")
             i.arch_chroot(f'su {user} -c "yay -Syu --needed --noconfirm {" ".join(dependencies_aur)}"')
+            i.arch_chroot(f'su {user} -c "curl -L https://nixos.org/nix/install | sh"')
             i.arch_chroot(r"sed -i 's/\(%wheel ALL=(ALL) NOPASSWD: ALL\)/# \1/' /etc/sudoers")
 
             archinstall.log('Setting up dotfiles...')

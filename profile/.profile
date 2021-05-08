@@ -13,3 +13,6 @@ export LESSHISTFILE="$XDG_CACHE_HOME/less_history"
 
 export BROWSER=firefox
 export EDITOR=nvim
+
+# load nix stuff
+[ -f ~/.nix-profile/etc/profile.d/nix.sh ] && . ~/.nix-profile/etc/profile.d/nix.sh
