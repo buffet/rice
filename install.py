@@ -3,6 +3,9 @@
 # Original script by phisch (https://github.com/phisch)
 # thank youwu ;3
 
+# TODO: vim: :PackerSync
+# TODO: package list in external file
+
 import getpass
 import os
 
@@ -24,12 +27,15 @@ dependencies = [
     'curl',
     'firefox',
     'git',
+    'htop',
     'intel-ucode',
     'man-db',
     'networkmanager',
-    'openssl',
+    'openssh',
     'pulseaudio-alsa',
+    'ripgrep',
     'stow',
+    'tree',
     'xf86-video-intel',
     'xorg-server',
     'xorg-xinit',
