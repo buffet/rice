@@ -1,4 +1,8 @@
-test -z "$PROFILEREAD" && . /etc/profile || true
+[ "$READPROFILE" ] && return
+
+. /etc/profile || true
+
+export READPROFILE=1
 
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_CACHE_HOME="$HOME/.cache"
