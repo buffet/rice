@@ -36,6 +36,7 @@ dependencies = [
     'ripgrep',
     'stow',
     'tree',
+    'xclip',
     'xf86-video-intel',
     'xorg-server',
     'xorg-xinit',
