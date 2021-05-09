@@ -4,4 +4,5 @@
 
 (telescope.setup
   {:defaults
-   {:i {"<Esc>" actions.close}}})
+   {:mappings
+    {:i {"<Esc>" actions.close}}}})

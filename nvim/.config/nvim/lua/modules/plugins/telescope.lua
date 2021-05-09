@@ -36,4 +36,4 @@ local telescope = _local_0_[2]
 local _2amodule_2a = _0_0
 local _2amodule_name_2a = "modules.plugins.telescope"
 do local _ = ({nil, _0_0, nil, {{}, nil, nil, nil}})[2] end
-return telescope.setup({defaults = {i = {["<Esc>"] = actions.close}}})
+return telescope.setup({defaults = {mappings = {i = {["<Esc>"] = actions.close}}}})
