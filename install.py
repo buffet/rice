@@ -5,6 +5,8 @@
 
 # TODO: vim: :PackerSync
 # TODO: package list in external file
+# TODO: automate plover config
+# TODO: rustup default stable
 
 import getpass
 import os
@@ -27,13 +29,17 @@ dependencies = [
     'curl',
     'firefox',
     'git',
+    'github-cli',
     'htop',
     'intel-ucode',
     'man-db',
+    'mgba-sdl',
     'networkmanager',
     'openssh',
+    'pacman-contrib',
     'pulseaudio-alsa',
     'ripgrep',
+    'rustup',
     'stow',
     'tree',
     'xclip',
@@ -45,6 +51,7 @@ dependencies = [
 # implicit: yay
 dependencies_aur = [
     'all-repository-fonts',
+    'ats2-postiats',
     'awesome-git',
     'direnv',
     'neovim-git',
