@@ -33,3 +33,4 @@
 (set nvim.o.expandtab true)
 
 (set nvim.wo.cursorline true)
+(set nvim.wo.signcolumn "yes")
