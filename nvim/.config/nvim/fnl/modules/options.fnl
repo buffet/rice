@@ -12,7 +12,7 @@
 (set nvim.o.inccommand "nosplit")
 (set nvim.o.ignorecase true)
 (set nvim.o.smartcase true)
-(set nvim.o.completeopt "longest,menuone,preview")
+(set nvim.o.completeopt "menuone,noselect")
 (set nvim.o.laststatus 2)
 (set nvim.o.lazyredraw true)
 (set nvim.o.splitbelow true)
