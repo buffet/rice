@@ -36,7 +36,11 @@
         :g   (cmd "Goyo"                  "goyo")
         :l   (cmd "Limelight!!"           "limelight")}
 
-   ;; TODO: lsp binds
-   :l {:name "+lsp"}}
+   :l {:name "+lsp"
+       :a    (cmd "Lspsaga code_action"   "code actions")
+       :d    (cmd "Lspsaga hover_doc"     "show docs")
+       :f    (cmd "Lspsaga lsp_finder"    "finder")
+       :r    (cmd "Lspsaga rename"        "rename")
+       :g    [vim.lsp.buf.definition      "go to definition"]}}
 
   {:prefix "<Leader>"})

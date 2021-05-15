@@ -26,6 +26,7 @@ DOTS = ['alacritty', 'bash', 'direnv', 'git', 'nvim', 'profile', 'xinit']
 dependencies = [
     'acpi',
     'alacritty',
+    'clang',
     'curl',
     'firefox',
     'git',
