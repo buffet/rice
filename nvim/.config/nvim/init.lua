@@ -19,6 +19,7 @@ require('packer').startup(function ()
     -- TODO: setup treesitter
     -- TODO: look into diffview
     -- TODO: look into iamcco/markdown-preview.nvim
+    -- TODO: look into vsnip (enable for compe)
     use 'ap/vim-css-color'
     use 'bhurlow/vim-parinfer'
     use 'folke/lsp-trouble.nvim'
