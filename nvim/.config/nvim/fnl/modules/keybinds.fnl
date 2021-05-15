@@ -8,7 +8,6 @@
 
 (nvim.command "let g:mapleader = \"\\<Space>\"")
 
-;; TODO: look into compe
 (utils.keymap :i "<C-Space>" "compe#complete()" {:expr true})
 (utils.keymap :i "<Esc>" "compe#close('<Esc>')" {:expr true})
 
