@@ -20,7 +20,6 @@
 
 ;; Rust extra caps
 (let [caps (vim.lsp.protocol.make_client_capabilities)]
-  ;; TODO: fix
   (set caps.textDocument.completion.completionItem.snippetSupport true)
   (set caps.textDocument.completion.completionItem.resolveSupport
        {:properties ["documentation" "detail" "additionalTextEdits"]})
