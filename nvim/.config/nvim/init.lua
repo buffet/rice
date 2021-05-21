@@ -21,7 +21,6 @@ require('packer').startup(function ()
     -- TODO: look into iamcco/markdown-preview.nvim
     -- TODO: look into vsnip (enable for compe)
     use 'ap/vim-css-color'
-    use 'bhurlow/vim-parinfer'
     use 'folke/lsp-trouble.nvim'
     use 'folke/which-key.nvim'
     use 'glepnir/lspsaga.nvim'
@@ -57,6 +56,11 @@ require('packer').startup(function ()
         },
 
         config = "vim.g['conjure#client#fennel#aniseed#aniseed_module_prefix'] = 'aniseed.'",
+    }
+
+    use {
+        'eraserhd/parinfer-rust',
+        run = 'cargo build --release'
     }
 
     use {
