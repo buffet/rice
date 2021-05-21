@@ -7,7 +7,6 @@
 # TODO: package list in external file
 # TODO: automate plover config
 # TODO: rustup default stable
-# TODO: xbanish
 
 import getpass
 import os
@@ -64,6 +63,7 @@ dependencies_aur = [
     'neovim-git',
     'plover-git',
     'ttf-go-mono-git',
+    'xbanish',
 ]
 
 services = [
