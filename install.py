@@ -7,6 +7,7 @@
 # TODO: package list in external file
 # TODO: automate plover config
 # TODO: rustup default stable
+# TODO: xbanish
 
 import getpass
 import os
@@ -29,6 +30,7 @@ dependencies = [
     'clang',
     'curl',
     'firefox',
+    'flameshot',
     'git',
     'github-cli',
     'htop',
@@ -53,6 +55,8 @@ dependencies = [
 # implicit: yay
 dependencies_aur = [
     'all-repository-fonts',
+    'ats-acc-git',
+    'ats2-contrib',
     'ats2-postiats',
     'awesome-git',
     'bash-language-server',
