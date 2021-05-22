@@ -4,7 +4,6 @@
 # thank youwu ;3
 
 # TODO: vim: :PackerSync
-# TODO: package list in external file
 # TODO: automate plover config
 # TODO: rustup default stable
 
