@@ -17,6 +17,9 @@ apps = {
   -- Your default screenshot tool
   screenshot      = "flameshot gui",
 
+  -- brightness
+  brightness_up   = "brightnessctl s 5%+",
+  brightness_down = "brightnessctl s 5%-",
 }
 
 apps.editor_cmd   = apps.terminal .. " -e " .. apps.editor

@@ -125,7 +125,7 @@ globalKeys = gears.table.join(
   awful.key({ modkey },            "r",     function () awful.screen.focused().mypromptbox:run() end,
     {description = "run prompt", group = "launcher"}),
 
-  awful.key({ modkey }, "x",
+  awful.key({ modkey, "Control" }, "x",
     function ()
       awful.prompt.run {
         prompt       = "Run Lua code: ",
@@ -140,7 +140,13 @@ globalKeys = gears.table.join(
   awful.key({ modkey }, "p", function () awful.spawn(apps.screenshot) end,
     {description = "take screenshot", group = "apps"}),
   awful.key({ modkey }, "i", function () awful.spawn(apps.browser) end,
-    {description = "open browser", group = "apps"})
+    {description = "open browser", group = "apps"}),
+
+  -- Brightness
+  awful.key({ modkey }, "x", function () awful.spawn(apps.brightness_up) end,
+    {description = "brightness up", group = "apps"}),
+  awful.key({ modkey }, "z", function () awful.spawn(apps.brightness_down) end,
+    {description = "brightness down", group = "apps"})
 )
 
 -- Bind all key numbers to tags.
