@@ -19,7 +19,7 @@ ENCODING = 'UTF-8'
 TIMEZONE = 'Etc/UTC'
 DOWNLOAD_REGION = 'Germany'
 DEFAULT_USER = 'buffet'
-DEFAULT_GROUPS = ['audio', 'input', 'kvm', 'video']
+DEFAULT_GROUPS = ['audio', 'input', 'kvm', 'video', 'cups']
 DOTS = ['alacritty', 'bash', 'direnv', 'git', 'nvim', 'profile', 'xinit']
 
 dependencies = [
@@ -27,11 +27,13 @@ dependencies = [
     'alacritty',
     'brightnessctl',
     'clang',
+    'cups',
     'curl',
     'firefox',
     'flameshot',
     'git',
     'github-cli',
+    'hplip',
     'htop',
     'intel-ucode',
     'man-db',
@@ -68,6 +70,7 @@ dependencies_aur = [
 
 services = [
     'NetworkManager',
+    'cups.socket',
 ]
 
 
