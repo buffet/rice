@@ -15,7 +15,7 @@ require('packer').startup(function ()
     use 'Olical/aniseed'
     use 'norcalli/nvim.lua'
 
-    -- TODO: look into galaxyline
+    -- TODO: fix auto "noet sw=2"
     -- TODO: setup treesitter
     -- TODO: look into diffview
     -- TODO: look into iamcco/markdown-preview.nvim
