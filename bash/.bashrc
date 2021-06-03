@@ -20,15 +20,23 @@ t() {
     cd "/tmp/$1"
 }
 
-__prompt() {
-    case $? in
-        0) PS1='\[\e[36m\]>> \[\e[0m\]' ;;
-        *) PS1='\[\e[31m\]>> \[\e[0m\]' ;;
-    esac
-}
-PROMPT_COMMAND=__prompt
-
 eval "$(fasd --init auto)"
 _fasd_bash_hook_cmd_complete v
 
 eval "$(direnv hook bash)"
+
+__prompt() {
+    case $? in
+        0) PS1='\[\e[34m\]' ;;
+        *) PS1='\[\e[31m\]' ;;
+    esac
+
+    if [[ "$PWD" = "$HOME" ]]; then
+        PS1+='~'
+    else
+        PS1+="${PWD##*/}"
+    fi
+
+    PS1+='\[\e[0m\] '
+}
+PROMPT_COMMAND="__prompt;$PROMPT_COMMAND"
