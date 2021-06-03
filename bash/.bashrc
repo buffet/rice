@@ -10,6 +10,7 @@ alias cd..='cd ..'
 alias htop='htop -t'
 alias mkdir='mkdir -p'
 alias rg='rg -S'
+alias v='f -e nvim'
 
 t() {
     if [[ $1 ]]; then
@@ -26,5 +27,8 @@ __prompt() {
     esac
 }
 PROMPT_COMMAND=__prompt
+
+eval "$(fasd --init auto)"
+_fasd_bash_hook_cmd_complete v
 
 eval "$(direnv hook bash)"

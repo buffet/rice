@@ -29,6 +29,7 @@ dependencies = [
     'clang',
     'cups',
     'curl',
+    'fasd',
     'firefox',
     'flameshot',
     'git',
