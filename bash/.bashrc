@@ -10,15 +10,9 @@ alias cd..='cd ..'
 alias htop='htop -t'
 alias mkdir='mkdir -p'
 alias rg='rg -S'
+alias t='nvim ~/todo'
 alias v='f -e nvim'
 
-t() {
-    if [[ $1 ]]; then
-        mkdir -p "/tmp/$1"
-    fi
-
-    cd "/tmp/$1"
-}
 
 eval "$(fasd --init auto)"
 _fasd_bash_hook_cmd_complete v
