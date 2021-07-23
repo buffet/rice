@@ -33,4 +33,5 @@
 
 (init-lsp :bashls)
 (init-lsp :clangd)
+(init-lsp :gopls)
 (init-lsp :vimls)
