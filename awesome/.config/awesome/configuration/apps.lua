@@ -17,6 +17,9 @@ apps = {
   -- Your default screenshot tool
   screenshot      = "flameshot gui",
 
+  -- Screenlocker
+  screenlocker    = "i3lock -ec '#fdf6e3'",
+
   -- brightness
   brightness_up   = "brightnessctl s 5%+",
   brightness_down = "brightnessctl s 5%-",
