@@ -10,7 +10,7 @@ alias cd..='cd ..'
 alias htop='htop -t'
 alias mkdir='mkdir -p'
 alias rg='rg -S'
-alias t='nvim ~/todo'
+alias t='nvim ~/todo/todo'
 alias v='f -e nvim'
 
 
