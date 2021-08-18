@@ -21,6 +21,7 @@ require('packer').startup(function ()
     -- TODO: look into iamcco/markdown-preview.nvim
     -- TODO: look into vsnip (enable for compe)
     use 'ap/vim-css-color'
+    use 'editorconfig/editorconfig-vim'
     use 'folke/lsp-trouble.nvim'
     use 'folke/which-key.nvim'
     use 'glepnir/lspsaga.nvim'
