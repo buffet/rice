@@ -10,9 +10,15 @@ alias cd..='cd ..'
 alias htop='htop -t'
 alias mkdir='mkdir -p'
 alias rg='rg -S'
-alias t='nvim ~/todo/todo'
 alias v='f -e nvim'
 
+t() {
+    case $1 in
+        u*) git -C ~/todo commit -am 'docs: update' && git -C ~/todo push ;;
+        p*) git -C ~/todo pull ;;
+        *) nvim ~/todo/todo ;;
+    esac
+}
 
 eval "$(fasd --init auto)"
 _fasd_bash_hook_cmd_complete v
