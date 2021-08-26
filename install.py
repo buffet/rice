@@ -20,27 +20,32 @@ ENCODING = 'UTF-8'
 TIMEZONE = 'Etc/UTC'
 DOWNLOAD_REGION = 'Germany'
 DEFAULT_USER = 'buffet'
-DEFAULT_GROUPS = ['audio', 'input', 'kvm', 'video', 'cups']
+DEFAULT_GROUPS = ['audio', 'input', 'kvm', 'video', 'cups', 'docker']
 DOTS = ['alacritty', 'bash', 'direnv', 'git', 'nvim', 'profile', 'xinit']
 
 dependencies = [
     'acpi',
     'alacritty',
     'bat',
+    'borg',
     'brightnessctl',
     'cargo-watch',
     'clang',
     'cloc',
     'cups',
     'curl',
+    'docker',
     'fasd',
     'firefox',
     'flameshot',
     'gdb',
     'git',
     'github-cli',
+    'go',
+    'gopls',
     'hplip',
     'htop',
+    'i3lock',
     'intel-ucode',
     'man-db',
     'meson',
@@ -54,16 +59,16 @@ dependencies = [
     'rust-analyzer',
     'rustup',
     'stow',
-    'sway',
     'tree',
     'valgrind',
+    'wlroots',
     'xclip',
     'xf86-video-intel',
     'xorg-server',
     'xorg-xinit',
 ]
 
-# implicit: yay
+# implicit: yay-bin
 dependencies_aur = [
     'all-repository-fonts',
     'ats-acc-git',
@@ -79,8 +84,9 @@ dependencies_aur = [
 ]
 
 services = [
-    'NetworkManager',
+    'NetworkManager.service',
     'cups.socket',
+    'systemd-timesyncd.service',
 ]
 
 
