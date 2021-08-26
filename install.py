@@ -4,8 +4,9 @@
 # thank youwu ;3
 
 # TODO: vim: :PackerSync
-# TODO: automate plover config
+# TODO: automate plover config (alternatively look into tdeo's thing)
 # TODO: rustup default stable
+# TODO: cache eval things in bashrc
 
 import getpass
 import os
