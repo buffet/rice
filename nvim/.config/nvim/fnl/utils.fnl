@@ -16,7 +16,7 @@
 (defn keymap [mode from to ?opts]
   "Set a mapping in the given mode, and some optional parameters, defaulting to {:noremap true :silent true}.
   If :buffer is set, uses buf_set_keymap rather than set_keymap"
-  (local full-opts 
+  (local full-opts
     (->> (or ?opts {})
       (a.merge {:noremap true :silent true})
       (without-keys [:buffer])))
