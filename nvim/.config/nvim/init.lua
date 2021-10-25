@@ -41,7 +41,6 @@ require('packer').startup(function ()
     use 'ray-x/lsp_signature.nvim'
     use 'roryokane/detectindent'
     use 'rust-lang/rust.vim'
-    use 'sheerun/vim-polyglot'
     use 'simrat39/rust-tools.nvim'
     use 'tommcdo/vim-exchange'
     use 'tpope/vim-fugitive'
