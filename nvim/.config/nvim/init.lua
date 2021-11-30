@@ -24,6 +24,7 @@ require('packer').startup(function ()
     use 'editorconfig/editorconfig-vim'
     use 'folke/lsp-trouble.nvim'
     use 'folke/which-key.nvim'
+    use 'github/copilot.vim'
     use 'glepnir/lspsaga.nvim'
     use 'godlygeek/tabular'
     use 'hrsh7th/nvim-compe'
