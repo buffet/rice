@@ -34,3 +34,5 @@
 
 (set nvim.wo.cursorline true)
 (set nvim.wo.signcolumn "yes")
+
+(nvim.command "autocmd FileType * setlocal formatoptions-=cro")
