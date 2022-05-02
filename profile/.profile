@@ -10,9 +10,9 @@ export XDG_DATA_DIR="$HOME/.local/share"
 
 export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
 export LESSHISTFILE="$XDG_CACHE_HOME/less_history"
+export HISTFILE="$XDG_CACHE_HOME/bash_history"
 
 export BROWSER=firefox
 export EDITOR=nvim
 
-# load nix stuff
-[ -f ~/.nix-profile/etc/profile.d/nix.sh ] && . ~/.nix-profile/etc/profile.d/nix.sh
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"

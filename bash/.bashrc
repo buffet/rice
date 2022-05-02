@@ -2,8 +2,8 @@
 [[ $- != *i* ]] && return
 
 shopt -s cdspell checkjobs extglob globstar histappend nocaseglob
+HISTSIZE=50000
 HISTCONTROL=erasedups:ignorespace
-HISTFILE="$XDG_CACHE_HOME/bash_history"
 
 alias ..='cd ..'
 alias cd..='cd ..'
@@ -16,14 +16,9 @@ t() {
     case $1 in
         u*) git -C ~/todo commit -am 'docs: update' && git -C ~/todo push ;;
         p*) git -C ~/todo pull ;;
-        *) nvim ~/todo/todo ;;
+        *) "$EDITOR" ~/todo/todo ;;
     esac
 }
-
-eval "$(fasd --init auto)"
-_fasd_bash_hook_cmd_complete v
-
-eval "$(direnv hook bash)"
 
 __prompt() {
     case $? in
@@ -42,3 +37,6 @@ __prompt() {
     PS1+='\[\e[0m\] '
 }
 PROMPT_COMMAND="__prompt;$PROMPT_COMMAND"
+. "$HOME/.cargo/env"
+
+eval "$(direnv hook bash)"
