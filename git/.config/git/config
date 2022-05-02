@@ -1,20 +1,37 @@
 [user]
-	email = niclas@countingsort.com
-	name = buffet
+    email = niclas@countingsort.com
+    name = buffet
 
 [init]
-	defaultBranch = master
+    defaultBranch = master
+
+[core]
+    pager = delta
 
 [alias]
-	a = add
-	b = branch
-	c = commit --verbose
-	m = commit --amend --verbose
+    a = add
+    b = branch
+    c = commit --verbose
+    m = commit --amend --verbose
 
-	d = diff
-	ds = diff --stat
-	dc = diff --cached
+    d = diff
+    ds = diff --stat
+    dc = diff --cached
 
-	s = status -s
-	co = checkout
-	cob = checkout -b
+    s = status -s
+    co = checkout
+    cob = checkout -b
+
+[interactive]
+    diffFilter = delta --color-only
+
+[merge]
+    conflictstyle = diff3
+
+[diff]
+    colorMoved = default
+
+[delta]
+    navigate = true
+    hyperlinks = true
+    syntax-theme = Solarized (light)
