@@ -4,7 +4,19 @@ window:
     y: 8
 
 font:
-  family: "GoMono"
+  normal:
+    family: 'Go Mono'
+    style: 'Regular'
+  bold:
+    family: 'Go Mono'
+    style: 'Bold'
+  italic:
+    family: 'Go Mono'
+    style: 'Italic'
+  bold_italic:
+    family: 'Go Mono'
+    style: 'Bold Italic'
+
   size: 7
 
 colors:
