@@ -158,7 +158,7 @@ globalKeys = gears.table.join(
     {description = "take screenshot", group = "apps"}),
   awful.key({ modkey }, "i", function () awful.spawn(apps.browser) end,
     {description = "open browser", group = "apps"}),
-  awful.key({ modkey, "Control" }, "x", function () awful.spawn(apps.screenlocker) end,
+  awful.key({ modkey, "Shift" }, "y", function () awful.spawn(apps.screenlocker) end,
     {description = "lock screen", group = "apps"}),
 
   -- Brightness
