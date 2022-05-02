@@ -1,0 +1,31 @@
+declare -gA SNAPPER_PRE_SNAP_NUMS
+
+snapper_pre_snap() {
+    local desc="$1 ${CATEGORY}/${PF}"
+    local n="$(snapper -c root create -t pre -p -d "${desc}")"
+    SNAPPER_PRE_SNAP_NUMS["${desc}"]="${n}"
+}
+
+snapper_post_snap() {
+    local desc="$1 ${CATEGORY}/${PF}"
+    local n="${SNAPPER_PRE_SNAP_NUMS["${desc}"]}"
+    snapper -c root create -t post --pre-number "${n}" -d "${desc}"
+}
+
+pre_pkg_preinst() {
+    snapper_pre_snap install
+}
+
+post_pkg_postinst() {
+    updatedb
+    snapper_post_snap install
+}
+
+pre_pkg_prerm() {
+    snapper_pre_snap rm
+}
+
+post_pkg_postrm() {
+    updatedb
+    snapper_post_snap rm
+}
