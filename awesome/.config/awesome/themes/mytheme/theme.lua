@@ -17,9 +17,9 @@ local theme = {}
 theme.font          = "sans 8"
 theme.master_width_factor = 8/13
 
-theme.bg_normal     = "#fdf6e3"
-theme.bg_focus      = "#fdf6e3"
-theme.bg_urgent     = "#fdf6e3"
+theme.bg_normal     = "#f5efdc"
+theme.bg_focus      = "#f5efdc"
+theme.bg_urgent     = "#f5efdc"
 theme.bg_minimize   = "#444444"
 theme.bg_systray    = theme.bg_normal
 
@@ -29,7 +29,7 @@ theme.fg_urgent     = "#dc322f"
 theme.fg_minimize   = "#ffffff"
 
 theme.useless_gap   = dpi(5)
-theme.border_width  = dpi(1)
+theme.border_width  = dpi(0)
 theme.border_normal = "#788e95"
 theme.border_focus = "#586e75"
 theme.border_marked = "#586e75"
@@ -103,7 +103,7 @@ theme.titlebar_maximized_button_focus_inactive  = themes_path.."default/titlebar
 theme.titlebar_maximized_button_normal_active = themes_path.."default/titlebar/maximized_normal_active.png"
 theme.titlebar_maximized_button_focus_active  = themes_path.."default/titlebar/maximized_focus_active.png"
 
-gears.wallpaper.set("#fdf6e3")
+gears.wallpaper.set("#f5efdc")
 
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path.."default/layouts/fairhw.png"

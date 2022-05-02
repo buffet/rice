@@ -158,14 +158,18 @@ globalKeys = gears.table.join(
     {description = "take screenshot", group = "apps"}),
   awful.key({ modkey }, "i", function () awful.spawn(apps.browser) end,
     {description = "open browser", group = "apps"}),
-  awful.key({ modkey, "Shift" }, "x", function () awful.spawn(apps.screenlocker) end,
+  awful.key({ modkey, "Control" }, "x", function () awful.spawn(apps.screenlocker) end,
     {description = "lock screen", group = "apps"}),
 
   -- Brightness
   awful.key({ modkey }, "x", function () awful.spawn(apps.brightness_up) end,
     {description = "brightness up", group = "apps"}),
+  awful.key({ modkey, "Shift" }, "x", function () awful.spawn(apps.brightness_up_more) end,
+    {description = "brightness up more", group = "apps"}),
   awful.key({ modkey }, "z", function () awful.spawn(apps.brightness_down) end,
-    {description = "brightness down", group = "apps"})
+    {description = "brightness down", group = "apps"}),
+  awful.key({ modkey, "Shift" }, "z", function () awful.spawn(apps.brightness_down_more) end,
+    {description = "brightness downm more", group = "apps"})
 )
 
 -- Bind all key numbers to tags.

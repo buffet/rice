@@ -12,17 +12,19 @@ apps = {
   -- editor_cmd = terminal .. " -e " .. editor,
 
   -- Your default browser
-  browser         = "firefox",
+  browser         = "firefox-bin",
 
   -- Your default screenshot tool
   screenshot      = "flameshot gui",
 
   -- Screenlocker
-  screenlocker    = "i3lock -ec '#fdf6e3'",
+  screenlocker    = "i3lock -ec '#f5efdc'",
 
   -- brightness
-  brightness_up   = "brightnessctl s 5%+",
-  brightness_down = "brightnessctl s 5%-",
+  brightness_up        = "xbacklight -inc 1",
+  brightness_up_more   = "xbacklight -inc 5",
+  brightness_down      = "xbacklight -dec 1",
+  brightness_down_more = "xbacklight -dec 5",
 }
 
 apps.editor_cmd   = apps.terminal .. " -e " .. apps.editor
