@@ -20,10 +20,13 @@ require('packer').startup(function ()
     -- TODO: look into diffview
     -- TODO: look into iamcco/markdown-preview.nvim
     -- TODO: look into vsnip (enable for compe)
+    use 'alisdair/vim-armasm'
     use 'ap/vim-css-color'
+    use 'arrufat/vala.vim'
     use 'editorconfig/editorconfig-vim'
     use 'folke/lsp-trouble.nvim'
     use 'folke/which-key.nvim'
+    use 'gentoo/gentoo-syntax'
     use 'github/copilot.vim'
     use 'glepnir/lspsaga.nvim'
     use 'godlygeek/tabular'
@@ -44,6 +47,7 @@ require('packer').startup(function ()
     use 'rust-lang/rust.vim'
     use 'simrat39/rust-tools.nvim'
     use 'tommcdo/vim-exchange'
+    use 'tpope/vim-abolish'
     use 'tpope/vim-fugitive'
     use 'tpope/vim-repeat'
     use 'tpope/vim-surround'
@@ -77,6 +81,11 @@ require('packer').startup(function ()
             'nvim-lua/plenary.nvim',
             'nvim-lua/popup.nvim',
         },
+    }
+
+    use {
+        'vimwiki/vimwiki',
+        branch = 'dev',
     }
 end)
 

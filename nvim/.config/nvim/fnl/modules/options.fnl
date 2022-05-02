@@ -32,7 +32,14 @@
 (set nvim.o.smartindent true)
 (set nvim.o.expandtab true)
 
+(set nvim.wo.colorcolumn "+1")
 (set nvim.wo.cursorline true)
 (set nvim.wo.signcolumn "yes")
 
-(nvim.command "autocmd FileType * setlocal formatoptions-=cro")
+(defn make-wiki [name]
+  {:path (.. "~/docs/wiki/" name "/")})
+
+(tset vim.g "vimwiki_list" [(make-wiki "private")
+                            (make-wiki "veil")])
+
+;(nvim.command "autocmd FileType * setlocal formatoptions-=cro")

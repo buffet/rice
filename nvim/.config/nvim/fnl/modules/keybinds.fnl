@@ -26,7 +26,7 @@
   {"<Space>" (cmd "Telescope find_files"  "find file")
    :r        (cmd "Telescope live_grep"   "ripgrep")
    :b        (cmd "Telescope buffers"     "select buffer")
-   :w        (cmd "w"                     "save file")
+   :s        (cmd "w"                     "save file")
    ":"       (cmd "Telescope commands"    "search commands")
 
    :t {:name "+toggle"

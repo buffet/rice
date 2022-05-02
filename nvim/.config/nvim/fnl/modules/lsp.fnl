@@ -31,7 +31,5 @@
                   ;(rust-tools.setup
                   ;  {:tools {:inlay_hints {:show_parameter_hints false}}}))}))
 
-(init-lsp :bashls)
 (init-lsp :clangd)
-(init-lsp :gopls)
 (init-lsp :vimls)
