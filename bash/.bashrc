@@ -20,6 +20,18 @@ t() {
     esac
 }
 
+fmt() {
+    [ -f .clang-format ] && {
+        find src -type f -name '*.[ch]' -print | xargs -d '\n' clang-format -i
+        return
+    }
+
+    [ -f Cargo.toml ] && {
+        cargo fmt
+    return
+    }
+}
+
 __prompt() {
     case $? in
         0) PS1='\[\e[34m\]' ;;
@@ -40,3 +52,8 @@ PROMPT_COMMAND="__prompt;$PROMPT_COMMAND"
 . "$HOME/.cargo/env"
 
 eval "$(direnv hook bash)"
+
+pgrep -u "$USER" -x ssh-agent >/dev/null || ssh-agent -t 5m >"$XDG_RUNTIME_DIR/ssh-agent.env"
+[[ "$SSH_AUTH_SOCK" ]] || . "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
+
+head -n 10 ~/todo/todo
