@@ -12,7 +12,7 @@ apps = {
   -- editor_cmd = terminal .. " -e " .. editor,
 
   -- Your default browser
-  browser         = "firefox-bin",
+  browser         = "chromium",
 
   -- Your default screenshot tool
   screenshot      = "flameshot gui",

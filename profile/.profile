@@ -12,7 +12,7 @@ export INPUTRC="$XDG_CONFIG_HOME/readline/inputrc"
 export LESSHISTFILE="$XDG_CACHE_HOME/less_history"
 export HISTFILE="$XDG_CACHE_HOME/bash_history"
 
-export BROWSER=firefox
+export BROWSER=chromium
 export EDITOR=nvim
 
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
