@@ -16,3 +16,5 @@ export BROWSER=chromium
 export EDITOR=nvim
 
 [ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
+
+if [ -e /home/buffet/.nix-profile/etc/profile.d/nix.sh ]; then . /home/buffet/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
