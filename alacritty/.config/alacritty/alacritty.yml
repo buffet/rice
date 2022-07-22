@@ -17,7 +17,7 @@ font:
     family: 'Go Mono'
     style: 'Bold Italic'
 
-  size: 7
+  size: 6
 
 colors:
   primary:
