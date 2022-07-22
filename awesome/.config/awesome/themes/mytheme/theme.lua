@@ -14,7 +14,7 @@ local themes_path = gfs.get_themes_dir()
 
 local theme = {}
 
-theme.font          = "sans 8"
+theme.font          = "sans 7"
 theme.master_width_factor = 8/13
 
 theme.bg_normal     = "#f5efdc"

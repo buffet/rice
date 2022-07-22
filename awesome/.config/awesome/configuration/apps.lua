@@ -18,7 +18,8 @@ apps = {
   screenshot      = "flameshot gui",
 
   -- Screenlocker
-  screenlocker    = "i3lock -ec '#f5efdc'",
+  -- screenlocker    = "i3lock -ec '#f5efdc'",
+  screenlocker    = "slock",
 
   -- brightness
   brightness_up        = "xbacklight -inc 1",
