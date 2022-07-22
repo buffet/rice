@@ -22,38 +22,27 @@ t() {
 
 fmt() {
     [ -f .clang-format ] && {
-        find src -type f -name '*.[ch]' -print | xargs -d '\n' clang-format -i
+        find src -type f -name '*.[ch]' -print | xargs -d '\n' clang-format -i "$@"
         return
     }
 
     [ -f Cargo.toml ] && {
-        cargo fmt
-    return
+        cargo fmt "$@"
+        return
     }
 }
 
 __prompt() {
     case $? in
-        0) PS1='\[\e[34m\]' ;;
-        *) PS1='\[\e[31m\]' ;;
+        0) PS1='; ' ;;
+        *) PS1='\[\e[31m\]; \[\e[0m\]' ;;
     esac
-
-    if [[ "$PWD" == "$HOME" ]]; then
-        PS1+='~'
-    elif [[ "$PWD" == / ]]; then
-        PS1+=/
-    else
-        PS1+="${PWD##*/}"
-    fi
-
-    PS1+='\[\e[0m\] '
 }
 PROMPT_COMMAND="__prompt;$PROMPT_COMMAND"
+
 . "$HOME/.cargo/env"
 
 eval "$(direnv hook bash)"
 
 pgrep -u "$USER" -x ssh-agent >/dev/null || ssh-agent -t 5m >"$XDG_RUNTIME_DIR/ssh-agent.env"
 [[ "$SSH_AUTH_SOCK" ]] || . "$XDG_RUNTIME_DIR/ssh-agent.env" >/dev/null
-
-head -n 10 ~/todo/todo
