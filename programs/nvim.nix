@@ -23,7 +23,7 @@
 
         {
           plugin = gitsigns-nvim;
-          config = "lua gitsigns.setup()";
+          config = "lua require('gitsigns').setup()";
         }
 
         {
