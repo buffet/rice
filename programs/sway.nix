@@ -15,7 +15,7 @@
         browser = "firefox";
         mod = "Mod4";
         terminal = "alacritty";
-        colors = import ../theme.nix;
+        theme = import ../theme.nix;
 
         makeWorkspaceBinds = num: let
           ws = toString num;
@@ -56,9 +56,9 @@
         window.border = 1;
         focus.followMouse = true;
         fonts = {
-          names = [colors.font.family];
+          names = [theme.font.family];
           style = "Regular";
-          size = colors.font.size * 1.0;
+          size = theme.font.size * 1.0;
         };
 
         gaps = {
@@ -67,9 +67,9 @@
         };
 
         input."*" = {xkb_options = "compose:ralt";};
-        output."*" = {bg = "${colors.primary.background} solid_color";};
+        output."*" = {bg = "${theme.primary.background} solid_color";};
 
-        colors = with colors; rec {
+        colors = with theme; rec {
           focused = rec {
             inherit (wm.focused) border text;
             inherit (primary) background;
@@ -95,7 +95,7 @@
 
             "${mod}+Shift+Return" = "exec ${terminal}";
             "${mod}+i" = "exec ${browser}";
-            "${mod}+Shift+y" = "exec ${pkgs.swaylock}/bin/swaylock -ec '${colors.primary.background}'";
+            "${mod}+Shift+y" = "exec ${pkgs.swaylock}/bin/swaylock -ec '${theme.primary.background}'";
             "${mod}+z" = "exec ${pkgs.brightnessctl}/bin/brightnessctl s 1%-";
             "${mod}+x" = "exec ${pkgs.brightnessctl}/bin/brightnessctl s 1%+";
             "${mod}+Shift+z" = "exec ${pkgs.brightnessctl}/bin/brightnessctl s 5%-";
@@ -146,13 +146,13 @@
           {
             position = "top";
             fonts = {
-              names = [colors.font.family];
+              names = [theme.font.family];
               style = "Regular";
-              size = colors.font.size * 1.0;
+              size = theme.font.size * 1.0;
             };
             statusCommand = "${statusCommand}";
 
-            colors = with colors; {
+            colors = with theme; {
               statusline = primary.foreground;
               inherit (primary) background;
 
