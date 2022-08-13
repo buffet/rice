@@ -8,6 +8,9 @@
     "${impermanence}/nixos.nix"
   ];
 
+  # TODO: chromium persistent
+  # TODO: brightness persistent
+
   environment.persistence."/persist/system" = {
     directories = [
       "/etc/NetworkManager/system-connections"

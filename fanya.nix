@@ -2,7 +2,9 @@
   pkgs,
   home-manager,
   ...
-}: {
+}: let
+  password = "$6$FHwMlUwmRdAsPqS4$4XND0L0EEVf2Mhc/tvo6y3ZLIrMTOlsIZrG3w69EeXvtVZhdeNyoDOkPNIe.GBB8.PrchuUKDacqbvcvyuPkt0";
+in {
   imports = [
     home-manager.nixosModule
     ./impermanence.nix
@@ -61,8 +63,10 @@
       "sway"
       "wheel"
     ];
-    initialPassword = "foo";
+    hashedPassword = password;
   };
+
+  users.users.root.hashedPassword = password;
 
   # TODO: borgbackup
   hardware.bluetooth.enable = true;
