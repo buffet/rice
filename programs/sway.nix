@@ -142,6 +142,8 @@
           }
           // (joinAttrSets (map makeWorkspaceBinds (lib.range 1 9)));
 
+        seat = {"*" = {hide_cursor = "when-typing enable";};};
+
         bars = [
           {
             position = "top";
