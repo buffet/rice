@@ -27,9 +27,10 @@
 
         {
           plugin = gitsigns-nvim;
-          config = "lua require('gitsigns').setup()";
+          config = "lua require 'gitsigns'.setup()";
         }
 
+        # TODO: replace with own bar
         {
           plugin = lightline-vim;
           config = "let g:lightline = { 'colorscheme': 'solarized' }";
