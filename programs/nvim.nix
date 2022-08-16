@@ -46,7 +46,7 @@
 
           {
             plugin = lspsaga-nvim;
-            # TODO: lspsaga config
+            config = "lua require 'lspsaga'.init_lsp_saga()";
           }
 
           {
@@ -59,7 +59,14 @@
 
           {
             plugin = nvim-lspconfig;
-            # TODO: lspconfig config
+            config = let
+              configure = srv: "lua require 'lspconfig'.${srv}.setup {}";
+              servers = [
+                "clangd"
+                "rust_analyzer"
+              ];
+            in
+              lib.strings.concatStringsSep "\n" (builtins.map configure servers);
           }
 
           {
