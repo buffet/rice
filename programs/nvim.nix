@@ -95,14 +95,14 @@
                 tree-sitter-rust
                 tree-sitter-toml
               ]);
-            config = lib.concatStrings (lib.splitString "\n" ''
+            config = builtins.replaceStrings ["\n"] [""] ''
               lua require 'nvim-treesitter.configs'.setup {
               highlight = {
                 enable = true,
                 additional_vim_regex_highlighting = false,
                 },
               }
-            '');
+            '';
           }
         ];
     };
