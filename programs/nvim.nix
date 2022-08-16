@@ -32,7 +32,6 @@
           {plugin = tabular;}
           {plugin = vim-nix;}
           {plugin = vim-repeat;}
-          {plugin = vimwiki;}
 
           {
             plugin = gitsigns-nvim;
@@ -103,6 +102,11 @@
                 },
               }
             '';
+          }
+
+          {
+            plugin = vimwiki;
+            # TODO: vimwiki config
           }
         ];
     };
