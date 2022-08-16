@@ -11,7 +11,9 @@
     # TODO: keybinds
     # TODO: looks
     # TODO: options
-    programs.neovim = {
+    programs.neovim = let
+      leader = ",";
+    in {
       enable = true;
       plugins = let
         buildPlugin = name:
@@ -71,7 +73,12 @@
 
           {
             plugin = telescope-nvim;
-            # TODO: telescope-nvim config
+            config = ''
+              nnoremap ${leader}f :Telescope find_files<cr>
+              nnoremap ${leader}r :Telescope live_grep<cr>
+              nnoremap ${leader}b :Telescope buffers<cr>
+              nnoremap ${leader}: :Telescope commands<cr>
+            '';
           }
 
           {
@@ -116,6 +123,11 @@
             # TODO: vimwiki config
           }
         ];
+
+      extraConfig = ''
+        let mapleader = "${leader}"
+        let g:mapleader = "${leader}"
+      '';
     };
   };
 }
