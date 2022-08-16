@@ -1,11 +1,17 @@
 {
   inputs = {
+    impermanence.url = "github:nix-community/impermanence";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.05";
+
     home-manager = {
       url = "github:nix-community/home-manager/release-22.05";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    impermanence.url = "github:nix-community/impermanence";
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.05";
+
+    lsp-trouble = {
+      url = "github:simrat39/lsp-trouble.nvim";
+      flake = false;
+    };
   };
 
   outputs = {nixpkgs, ...} @ args: {
