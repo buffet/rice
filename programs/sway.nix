@@ -101,11 +101,8 @@
             "${mod}+Shift+z" = "exec ${pkgs.brightnessctl}/bin/brightnessctl s 5%-";
             "${mod}+Shift+x" = "exec ${pkgs.brightnessctl}/bin/brightnessctl s 5%+";
 
-            # TODO: saner screenshot keybinds
-            "${mod}+p" = "exec ${pkgs.sway-contrib.grimshot}/bin/grimshot copy active";
-            "${mod}+Shift+p" = "exec ${pkgs.sway-contrib.grimshot}/bin/grimshot copy area";
-            "${mod}+Alt+p" = "exec ${pkgs.sway-contrib.grimshot}/bin/grimshot copy output";
-            "${mod}+Ctrl+p" = "exec ${pkgs.sway-contrib.grimshot}/bin/grimshot copy window";
+            "${mod}+p" = "exec ${pkgs.sway-contrib.grimshot}/bin/grimshot copy window";
+            "${mod}+Shift+p" = "exec ${pkgs.sway-contrib.grimshot}/bin/grimshot copy active";
 
             "${mod}+o" = "splith";
             "${mod}+u" = "splitv";
