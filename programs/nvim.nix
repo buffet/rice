@@ -35,13 +35,19 @@
 
           {
             plugin = gitsigns-nvim;
-            config = "lua require 'gitsigns'.setup()";
+            config = ''
+              lua require 'gitsigns'.setup()
+              set signcolumn=yes
+            '';
           }
 
           # TODO: replace with own bar
           {
             plugin = lightline-vim;
-            config = "let g:lightline = { 'colorscheme': 'solarized' }";
+            config = ''
+              let g:lightline = { 'colorscheme': 'solarized' }
+              set noshowmode
+            '';
           }
 
           {
@@ -125,7 +131,10 @@
           }
         ];
 
-      extraConfig = ''
+      extraConfig = let
+        theme = import ../theme.nix;
+      in ''
+        " keybinds
         let mapleader = "${leader}"
         let g:mapleader = "${leader}"
 
@@ -140,6 +149,38 @@
         nnoremap <c-l> <c-w>l
 
         nnoremap <leader>s :w<cr>
+
+        " misc
+        set termguicolors
+        set mouse=a
+        set undofile
+        set hidden
+        set encoding=utf-8
+        set hlsearch
+        set incsearch
+        set ignorecase
+        set smartcase
+        set lazyredraw
+        set splitbelow
+        set splitright
+        set matchtime=2
+        set showmatch
+        set nowrap
+        set nowritebackup
+        set updatetime=250
+        set colorcolumn=+1
+        set cursorline
+
+        set shiftwidth=4
+        set tabstop=4
+        set expandtab
+
+        set shiftround
+        set autoindent
+        set smartindent
+
+        highlight! ExtraWhitespace guibg=${theme.normal.red}
+        match ExtraWhitespace /\s\+$/
       '';
     };
   };
