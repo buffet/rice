@@ -27,7 +27,6 @@
           {plugin = editorconfig-nvim;}
           {plugin = fugitive;}
           {plugin = lsp-trouble;}
-          {plugin = nvim-autopairs;}
           {plugin = rust-vim;}
           {plugin = tabular;}
           {plugin = vim-nix;}
@@ -68,6 +67,11 @@
               set background=light
               colorscheme NeoSolarized
             '';
+          }
+
+          {
+            plugin = nvim-autopairs;
+            config = "lua require 'nvim-autopairs'.setup {}";
           }
 
           {
@@ -119,13 +123,15 @@
                 tree-sitter-rust
                 tree-sitter-toml
               ]);
-            config = builtins.replaceStrings ["\n"] [""] ''
-              lua require 'nvim-treesitter.configs'.setup {
-              highlight = {
-                enable = true,
-                additional_vim_regex_highlighting = false,
-                },
-              }
+            config = ''
+              lua <<EOF
+                require 'nvim-treesitter.configs'.setup {
+                highlight = {
+                  enable = true,
+                  additional_vim_regex_highlighting = false,
+                  },
+                }
+              EOF
             '';
           }
 
