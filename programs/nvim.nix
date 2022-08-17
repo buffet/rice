@@ -55,10 +55,10 @@
             config = ''
               lua require 'lspsaga'.init_lsp_saga()
 
-              nnoremap ${leader}a :Lspsaga code_action<cr>
-              nnoremap ${leader}r :Lspsaga rename<cr>
-              nnoremap gd :lua vim.lsp.buf.definition()<cr>
-              nnoremap gD :lua vim.lsp.buf.declaration()<cr>
+              nnoremap <silent> ${leader}a :Lspsaga code_action<cr>
+              nnoremap <silent> ${leader}r :Lspsaga rename<cr>
+              nnoremap <silent> gd :lua vim.lsp.buf.definition()<cr>
+              nnoremap <silent> gD :lua vim.lsp.buf.declaration()<cr>
             '';
           }
 
@@ -85,10 +85,10 @@
           {
             plugin = telescope-nvim;
             config = ''
-              nnoremap ${leader}f :Telescope find_files<cr>
-              nnoremap ${leader}g :Telescope live_grep<cr>
-              nnoremap ${leader}b :Telescope buffers<cr>
-              nnoremap ${leader}: :Telescope commands<cr>
+              nnoremap <silent> ${leader}f :Telescope find_files<cr>
+              nnoremap <silent> ${leader}g :Telescope live_grep<cr>
+              nnoremap <silent> ${leader}b :Telescope buffers<cr>
+              nnoremap <silent> ${leader}: :Telescope commands<cr>
             '';
           }
 
