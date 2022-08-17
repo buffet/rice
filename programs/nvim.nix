@@ -8,9 +8,6 @@
       EDITOR = "nvim";
     };
 
-    # TODO: keybinds
-    # TODO: looks
-    # TODO: options
     # TODO: completion
     programs.neovim = let
       leader = ",";
@@ -49,7 +46,10 @@
 
           {
             plugin = lspsaga-nvim;
-            config = "lua require 'lspsaga'.init_lsp_saga()";
+            # TODO: lspsaga keybinds
+            config = ''
+              lua require 'lspsaga'.init_lsp_saga()
+            '';
           }
 
           {
@@ -128,6 +128,18 @@
       extraConfig = ''
         let mapleader = "${leader}"
         let g:mapleader = "${leader}"
+
+        inoremap kj <esc>
+
+        vnoremap < <gv
+        vnoremap > >gv
+
+        nnoremap <c-h> <c-w>h
+        nnoremap <c-j> <c-w>j
+        nnoremap <c-k> <c-w>k
+        nnoremap <c-l> <c-w>l
+
+        nnoremap <leader>s :w<cr>
       '';
     };
   };
