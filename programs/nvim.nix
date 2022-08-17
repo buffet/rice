@@ -11,6 +11,7 @@
     # TODO: keybinds
     # TODO: looks
     # TODO: options
+    # TODO: completion
     programs.neovim = let
       leader = ",";
     in {
