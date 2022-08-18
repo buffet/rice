@@ -46,7 +46,7 @@
 
     unfocused = {
       text = "#788e95";
-      border = "#ddd6c3";
+      border = "#fdf6e3";
     };
   };
 }
