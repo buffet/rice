@@ -28,6 +28,7 @@ in {
   home-manager.users.buffet = {
     home.packages = with pkgs; [
       du-dust
+      fd
       gdb
       github-cli
       htop
