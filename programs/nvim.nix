@@ -175,7 +175,8 @@
         set splitright
         set matchtime=2
         set showmatch
-        set nowrap
+        set wrap
+        set breakindent
         set nowritebackup
         set updatetime=250
         set colorcolumn=+1
