@@ -158,7 +158,7 @@
               focusedWorkspace = {
                 inherit (primary) background;
                 inherit (wm.focused) text;
-                inherit (wm.unfocused) border;
+                inherit (wm.focused) border;
               };
 
               inactiveWorkspace = {
