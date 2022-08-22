@@ -12,8 +12,6 @@ in {
     ./system.nix
   ];
 
-  # TODO: setup phinger-cursors
-
   environment.systemPackages = with pkgs; [
     git
     neovim
@@ -26,28 +24,36 @@ in {
   ];
 
   home-manager.users.buffet = {
-    home.packages = with pkgs; [
-      du-dust
-      fd
-      gdb
-      github-cli
-      htop
-      kcachegrind
-      linuxPackages.perf
-      okular
-      radare2
-      ripgrep
-      scc
-      strace
-      trash-cli
-      tree
-      valgrind
-      wget
-      wl-clipboard
-    ];
+    home = {
+      packages = with pkgs; [
+        du-dust
+        fd
+        gdb
+        github-cli
+        htop
+        kcachegrind
+        linuxPackages.perf
+        okular
+        radare2
+        ripgrep
+        scc
+        strace
+        trash-cli
+        tree
+        valgrind
+        wget
+        wl-clipboard
+      ];
 
-    home.sessionVariables = {
-      BROWSER = "chromium";
+      sessionVariables = {
+        BROWSER = "chromium";
+      };
+
+      pointerCursor = {
+        package = pkgs.phinger-cursors;
+        name = "phinger-cursors-light";
+        gtk.enable = true;
+      };
     };
 
     programs.direnv = {
