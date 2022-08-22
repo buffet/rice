@@ -1,11 +1,13 @@
 {
   pkgs,
+  agenix,
   home-manager,
   ...
 }: let
   password = "$6$FHwMlUwmRdAsPqS4$4XND0L0EEVf2Mhc/tvo6y3ZLIrMTOlsIZrG3w69EeXvtVZhdeNyoDOkPNIe.GBB8.PrchuUKDacqbvcvyuPkt0";
 in {
   imports = [
+    agenix.nixosModule
     home-manager.nixosModule
     ./impermanence.nix
     ./programs
@@ -76,7 +78,6 @@ in {
 
   users.users.root.hashedPassword = password;
 
-  # TODO: borgbackup
   hardware.bluetooth.enable = true;
   virtualisation.libvirtd.enable = true;
   systemd.coredump.enable = true;

@@ -68,4 +68,7 @@
       umount /mnt
     '';
   };
+
+  # workaround for agenix running before /etc impermanence gets set up
+  age.identityPaths = ["/persist/buffet/ssh/.ssh/id_rsa"];
 }
