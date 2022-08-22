@@ -42,6 +42,7 @@
         "data/reminders"
         "data/rice"
         "data/uni"
+        "gpg/.gnupg"
         "ssh/.ssh"
         "trash/.local/share/Trash"
       ];
