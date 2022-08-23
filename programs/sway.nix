@@ -12,7 +12,7 @@
       xwayland = false;
 
       config = let
-        browser = "firefox";
+        browser = "chromium";
         mod = "Mod4";
         terminal = "alacritty";
         theme = import ../theme.nix;
