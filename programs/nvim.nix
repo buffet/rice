@@ -20,6 +20,7 @@
           };
         buildPlugins = names: lib.attrsets.genAttrs names buildPlugin;
         plugins = buildPlugins [
+          "cmp-conventionalcommits"
           "cmp-git"
           "lsp-trouble"
         ];
@@ -28,6 +29,7 @@
         with plugins; [
           {plugin = cmp-buffer;}
           {plugin = cmp-calc;}
+          {plugin = cmp-conventionalcommits;}
           {plugin = cmp-latex-symbols;}
           {plugin = cmp-nvim-lsp;}
           {plugin = cmp-path;}
@@ -144,6 +146,7 @@
                   sources = cmp.config.sources {
                     { name = 'buffer' },
                     { name = 'calc' },
+                    { name = 'conventionalcommits' },
                     { name = 'crates' },
                     { name = 'git' },
                     { name = 'latex_symbols' },

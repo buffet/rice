@@ -20,6 +20,22 @@
         "type": "github"
       }
     },
+    "cmp-conventionalcommits": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1635383929,
+        "narHash": "sha256-ZuVXmn4YkeMFiLjSVTd+6DBdtn0D+PI44J3kLDX6Wwo=",
+        "owner": "davidsierradz",
+        "repo": "cmp-conventionalcommits",
+        "rev": "5518362bc4f5dfbc9d242d9379fdec48b6278c5e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "davidsierradz",
+        "repo": "cmp-conventionalcommits",
+        "type": "github"
+      }
+    },
     "cmp-git": {
       "flake": false,
       "locked": {
@@ -107,6 +123,7 @@
     "root": {
       "inputs": {
         "agenix": "agenix",
+        "cmp-conventionalcommits": "cmp-conventionalcommits",
         "cmp-git": "cmp-git",
         "home-manager": "home-manager",
         "impermanence": "impermanence",

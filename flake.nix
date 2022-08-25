@@ -8,6 +8,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    cmp-conventionalcommits = {
+      url = "github:davidsierradz/cmp-conventionalcommits";
+      flake = false;
+    };
+
     cmp-git = {
       url = "github:petertriho/cmp-git";
       flake = false;
