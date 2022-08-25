@@ -20,6 +20,22 @@
         "type": "github"
       }
     },
+    "cmp-git": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1659918460,
+        "narHash": "sha256-/fHoZxtJFG9v1sw/rQU2fa0ybO7bIovvRvY6M/mU5sc=",
+        "owner": "petertriho",
+        "repo": "cmp-git",
+        "rev": "fae6cdb407ad6c63a0b1928670bad1a67a55b887",
+        "type": "github"
+      },
+      "original": {
+        "owner": "petertriho",
+        "repo": "cmp-git",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -91,6 +107,7 @@
     "root": {
       "inputs": {
         "agenix": "agenix",
+        "cmp-git": "cmp-git",
         "home-manager": "home-manager",
         "impermanence": "impermanence",
         "lsp-trouble": "lsp-trouble",
