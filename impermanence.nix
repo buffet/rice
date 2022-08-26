@@ -8,7 +8,6 @@
     "${impermanence}/nixos.nix"
   ];
 
-  # TODO: chromium persistent
   # TODO: brightness persistent
 
   environment.persistence."/persist/system" = {
@@ -35,6 +34,7 @@
       allowOther = true;
 
       directories = [
+        "chromium/.config/chromium"
         "data/books"
         "data/docs"
         "data/git"
