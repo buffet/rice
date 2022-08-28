@@ -1,6 +1,9 @@
 _: {
   home-manager.users.buffet = {
-    home.sessionVariables.NIXOS_OZONE_WL = "1";
+    home.sessionVariables = {
+      BROWSER = "chromium";
+      NIXOS_OZONE_WL = "1";
+    };
 
     programs.chromium = {
       enable = true;

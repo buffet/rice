@@ -47,10 +47,6 @@ in {
         wl-clipboard
       ];
 
-      sessionVariables = {
-        BROWSER = "chromium";
-      };
-
       pointerCursor = {
         package = pkgs.phinger-cursors;
         name = "phinger-cursors-light";
