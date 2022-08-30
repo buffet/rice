@@ -39,6 +39,7 @@
           {plugin = friendly-snippets;}
           {plugin = fugitive;}
           {plugin = lsp-trouble;}
+          {plugin = playground;}
           {plugin = rust-vim;}
           {plugin = tabular;}
           {plugin = vim-nix;}
