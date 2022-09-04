@@ -12,6 +12,7 @@ in {
         passCommand = "cat ${config.age.secrets.borgpassword.path}";
       };
       startAt = "daily";
+      persistentTimer = true;
       environment.BORG_RSH = "ssh -i /home/buffet/.ssh/id_borg";
       extraArgs = "--remote-path borg1";
       prune.keep = {
