@@ -35,6 +35,8 @@ in {
         htop
         kcachegrind
         linuxPackages.perf
+        man-pages
+        man-pages-posix
         okular
         radare2
         ripgrep
