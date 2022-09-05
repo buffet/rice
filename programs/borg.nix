@@ -23,4 +23,22 @@ in {
       };
     };
   };
+
+  systemd.services = {
+    borgbackup-backup-job = {
+      after = ["ensure-online.service"];
+      requires = ["ensure-online.service"];
+    };
+
+    ensure-online = {
+      description = "waiting for Network";
+      after = ["network-online.target"];
+      requires = ["network-online.target"];
+
+      serviceConfig = {
+        ExecStart = "${pkgs.networkmanager}/bin/nm-online -q --timeout=300";
+        Type = "oneshot";
+      };
+    };
+  };
 }
