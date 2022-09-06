@@ -27,6 +27,11 @@ _: {
         cob = "checkout -b";
       };
 
+      signing = {
+        key = "EBAC355935FD7382";
+        signByDefault = true;
+      };
+
       extraConfig = {
         init = {
           defaultBranch = "master";
