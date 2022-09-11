@@ -25,7 +25,7 @@ in {
   };
 
   systemd.services = {
-    borgbackup-backup-job = {
+    borgbackup-job-backup = {
       after = ["ensure-online.service"];
       requires = ["ensure-online.service"];
     };
