@@ -44,6 +44,7 @@
         "data/uni"
         "direnv/.local/share/direnv"
         "gpg/.gnupg"
+        "newsboat/.local/share/newsboat"
         "ssh/.ssh"
         "trash/.local/share/Trash"
       ];
