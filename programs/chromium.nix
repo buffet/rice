@@ -10,6 +10,7 @@ _: {
       extensions = [
         {id = "nngceckbapebfimnlniiiahkandclblb";} # Bitwarden
         {id = "gcbommkclmclpchllfjekcdonpmejbdp";} # HTTPS Everywhere
+        {id = "fihnjjcciajhdojfnbdddfaoknhalnja";} # I don't care about cookies
         {id = "hlepfoohegkhhmjieoechaddaejaokhf";} # Refined GitHub
         {id = "cjpalhdlnbpafiamejdnhcphjbkeiagm";} # uBlock Origin
       ];
