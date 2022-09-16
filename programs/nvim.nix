@@ -171,6 +171,7 @@
               '';
               servers = [
                 "clangd"
+                "gopls"
                 "rust_analyzer"
               ];
               serverConfigs = lib.strings.concatStringsSep "\n" (builtins.map configure servers);
