@@ -20,7 +20,9 @@
       urls = lib.mapAttrsToList (title: url: {inherit title url;}) {
         drew = "https://drewdevault.com/blog/index.xml";
         emersion = "https://emersion.fr/blog/atom.xml";
+        fasterthanlime = "https://fasterthanli.me/index.xml";
         matklad = "https://matklad.github.io/feed.xml";
+        neeasade = "https://notes.neeasade.net/rss_full.xml";
         sammyette = "https://sammy.is-a.dev/blog/index.xml";
         xkcd = "https://xkcd.com/rss.xml";
       };
