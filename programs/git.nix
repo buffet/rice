@@ -22,6 +22,7 @@ _: {
         ds = "diff --stat";
         dc = "diff --cached";
 
+        l = "log";
         s = "status -s";
         co = "checkout";
         cob = "checkout -b";
