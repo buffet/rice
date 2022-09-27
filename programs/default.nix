@@ -1,4 +1,4 @@
-{...}: {
+_: {
   imports = [
     ./alacritty.nix
     ./bash.nix
