@@ -47,6 +47,7 @@
         "newsboat/.local/share/newsboat"
         "ssh/.ssh"
         "trash/.local/share/Trash"
+        "weechat/.config/weechat"
       ];
 
       files = [
