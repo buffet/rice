@@ -45,7 +45,6 @@ in {
         trash-cli
         tree
         valgrind
-        weechat
         wget
         wl-clipboard
       ];
