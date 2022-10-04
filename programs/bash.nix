@@ -14,6 +14,7 @@ in {
 
       shellAliases = {
         "cd.." = "cd ..";
+        ch = "ssh -t irc.buffet.sh -- screen -r weechat";
         htop = "htop -t";
         mkdir = "mkdir -p";
         rg = "rg -S";
