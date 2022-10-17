@@ -190,6 +190,7 @@
             plugin = telescope-nvim;
             config = ''
               nnoremap <silent> ${leader}f :Telescope find_files<cr>
+              nnoremap <silent> ${leader}F :Telescope find_files hidden=true no_ignore=true<cr>
               nnoremap <silent> ${leader}g :Telescope live_grep<cr>
               nnoremap <silent> ${leader}b :Telescope buffers<cr>
               nnoremap <silent> ${leader}: :Telescope commands<cr>
