@@ -3,6 +3,7 @@ _: {
     ./alacritty.nix
     ./bash.nix
     ./borg.nix
+    ./cargo.nix
     ./chromium.nix
     ./git.nix
     ./gpg.nix
