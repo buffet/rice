@@ -34,7 +34,6 @@
       allowOther = true;
 
       directories = [
-        "chromium/.config/chromium"
         "data/books"
         "data/docs"
         "data/git"

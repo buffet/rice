@@ -4,7 +4,7 @@ _: {
     ./bash.nix
     ./borg.nix
     ./cargo.nix
-    ./chromium.nix
+    ./firefox.nix
     ./git.nix
     ./gpg.nix
     ./mako.nix

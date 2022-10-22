@@ -2,6 +2,7 @@
   inputs = {
     impermanence.url = "github:nix-community/impermanence";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.05";
+    nur.url = "github:nix-community/NUR";
 
     agenix = {
       url = "github:ryantm/agenix";
