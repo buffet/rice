@@ -42,8 +42,8 @@ in {
         okular
         radare2
         ripgrep
-        scc
         strace
+        tokei
         trash-cli
         tree
         valgrind
