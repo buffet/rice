@@ -2,7 +2,7 @@
   light = true;
 
   font = {
-    family = "GoMono";
+    family = "GoMono Nerd Font";
     size = 8;
   };
 

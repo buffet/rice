@@ -22,8 +22,8 @@ in {
   ];
 
   fonts.fonts = with pkgs; [
+    (nerdfonts.override {fonts = ["Go-Mono"];})
     dejavu_fonts
-    go-font
     noto-fonts
   ];
 

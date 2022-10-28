@@ -7,6 +7,7 @@ _: {
     ./firefox.nix
     ./git.nix
     ./gpg.nix
+    ./lsd.nix
     ./mako.nix
     ./newsboat.nix
     ./nvim.nix
