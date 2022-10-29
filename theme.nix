@@ -1,5 +1,5 @@
 {
-  light = true;
+  light = false;
 
   font = {
     family = "GoMono Nerd Font";
@@ -7,46 +7,46 @@
   };
 
   primary = {
-    background = "#fdf6e3";
-    foreground = "#586e75";
+    background = "#1f1f28";
+    foreground = "#dcd7ba";
   };
 
   cursor = {
-    background = "#586e75";
-    foreground = "#fdf6e3";
+    background = "#2d4f67";
+    foreground = "#c8c093";
   };
 
   normal = {
-    black = "#073642";
-    red = "#dc322f";
-    green = "#859900";
-    yellow = "#b58900";
-    blue = "#268bd2";
-    magenta = "#d33682";
-    cyan = "#2aa198";
-    white = "#eee8d5";
+    black = "#090618";
+    red = "#c34043";
+    green = "#76946a";
+    yellow = "#c0a36e";
+    blue = "#7e9cd8";
+    magenta = "#957fb8";
+    cyan = "#6a9589";
+    white = "#c8c093";
   };
 
   bright = {
-    black = "#002b36";
-    red = "#cb4b16";
-    green = "#586e75";
-    yellow = "#657b83";
-    blue = "#839496";
-    magenta = "#6c71c4";
-    cyan = "#93a1a1";
-    white = "#fdf6e3";
+    black = "#727169";
+    red = "#e82424";
+    green = "#98bb6c";
+    yellow = "#e6c384";
+    blue = "#7fb4ca";
+    magenta = "#938aa9";
+    cyan = "#7aa89f";
+    white = "#dcd7ba";
   };
 
   wm = {
     focused = {
-      text = "#586e75";
-      border = "#b8ced5";
+      text = "#dcd7ba";
+      border = "#54546d";
     };
 
     unfocused = {
-      text = "#788e95";
-      border = "#fdf6e3";
+      text = "#c8c093";
+      border = "#363646";
     };
   };
 }
