@@ -17,7 +17,7 @@ in {
   ];
 
   environment.systemPackages = with pkgs; [
-    git
+    gitFull
     neovim
   ];
 
