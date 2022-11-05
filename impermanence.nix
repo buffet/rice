@@ -42,6 +42,8 @@
         "data/rice"
         "data/uni"
         "direnv/.local/share/direnv"
+        "firefox/.cache/mozilla"
+        "firefox/.mozilla"
         "gpg/.gnupg"
         "newsboat/.local/share/newsboat"
         "ssh/.ssh"
