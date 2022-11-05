@@ -13,8 +13,7 @@
         https-everywhere
         i-dont-care-about-cookies
         refined-github
-        tree-style-tab
-        tst-tab-search
+        sidebery
         ublock-origin
       ];
 
