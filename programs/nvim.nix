@@ -23,7 +23,6 @@
         plugins = buildPlugins [
           "cmp-conventionalcommits"
           "cmp-git"
-          "lsp-trouble"
         ];
       in
         with pkgs.vimPlugins;
@@ -39,11 +38,11 @@
           {plugin = editorconfig-nvim;}
           {plugin = friendly-snippets;}
           {plugin = fugitive;}
-          {plugin = lsp-trouble;}
           {plugin = lualine-lsp-progress;}
           {plugin = playground;}
           {plugin = rust-vim;}
           {plugin = tabular;}
+          {plugin = trouble-nvim;}
           {plugin = vim-nix;}
           {plugin = vim-repeat;}
 

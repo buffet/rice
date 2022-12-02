@@ -23,11 +23,6 @@
       url = "github:nix-community/home-manager/release-22.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    lsp-trouble = {
-      url = "github:simrat39/lsp-trouble.nvim";
-      flake = false;
-    };
   };
 
   outputs = {nixpkgs, ...} @ args: {

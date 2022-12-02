@@ -89,22 +89,6 @@
         "type": "github"
       }
     },
-    "lsp-trouble": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1620090273,
-        "narHash": "sha256-Vrv9xWGANqruKwtWlb5jr/4i5bsM8mZiyG6FPENhi9w=",
-        "owner": "simrat39",
-        "repo": "lsp-trouble.nvim",
-        "rev": "315bda04bc48a6d28fc4417b69ec60458d354e7a",
-        "type": "github"
-      },
-      "original": {
-        "owner": "simrat39",
-        "repo": "lsp-trouble.nvim",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1669834992,
@@ -143,7 +127,6 @@
         "cmp-git": "cmp-git",
         "home-manager": "home-manager",
         "impermanence": "impermanence",
-        "lsp-trouble": "lsp-trouble",
         "nixpkgs": "nixpkgs",
         "nur": "nur"
       }
