@@ -1,10 +1,10 @@
 _: {
   imports = [
-    ./alacritty.nix
     ./bash.nix
     ./borg.nix
     ./cargo.nix
     ./firefox.nix
+    ./foot.nix
     ./git.nix
     ./gpg.nix
     ./lsd.nix

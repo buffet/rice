@@ -14,7 +14,7 @@
       config = let
         browser = "firefox";
         mod = "Mod4";
-        terminal = "alacritty";
+        terminal = "foot";
         theme = import ../theme.nix;
 
         makeWorkspaceBinds = num: let
