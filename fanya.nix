@@ -35,6 +35,7 @@ in {
         gdb
         github-cli
         htop
+        hyperfine
         kcachegrind
         linuxPackages.perf
         man-pages
