@@ -13,10 +13,11 @@
     in {
       enable = true;
       plugins = let
-        buildPlugin = name:
-          pkgs.vimUtils.buildNeovimPluginFrom2Nix {
-            inherit name;
-            src = inputs."${name}";
+        buildPlugin = pname:
+          pkgs.vimUtils.buildVimPluginFrom2Nix {
+            inherit pname;
+            version = "unknown";
+            src = inputs."${pname}";
           };
         buildPlugins = names: lib.attrsets.genAttrs names buildPlugin;
         plugins = buildPlugins [
@@ -225,7 +226,7 @@
             in ''
               lua <<EOF
                 local lspconfig = require 'lspconfig'
-                local caps = require 'cmp_nvim_lsp'.update_capabilities(
+                local caps = require 'cmp_nvim_lsp'.default_capabilities(
                   vim.lsp.protocol.make_client_capabilities()
                 )
                 ${serverConfigs}

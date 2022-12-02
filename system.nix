@@ -34,9 +34,11 @@
   };
 
   nix = {
-    autoOptimiseStore = true;
-    trustedUsers = ["root" "buffet"];
     registry.nixpkgs.flake = nixpkgs;
+    settings = {
+      auto-optimise-store = true;
+      trusted-users = ["root" "buffet"];
+    };
 
     gc = {
       automatic = true;
