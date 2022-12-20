@@ -87,27 +87,26 @@
           focusedInactive = unfocused;
         };
 
-        keybindings =
-          let
-            swaylockConf = pkgs.writeText "swaylock.conf" ''
-              ignore-empty-password
-              color=${theme.primary.background}
-              bs-hl-color=${theme.normal.red}
-              caps-lock-bs-hl-color=${theme.normal.red}
-              caps-lock-key-hl-color=${theme.bright.green}
-              inside-color=${theme.primary.background}
-              inside-clear-color=${theme.normal.yellow}
-              inside-caps-lock-color=${theme.primary.background}
-              inside-ver-color=${theme.normal.blue}
-              inside-wrong-color=${theme.normal.red}
-              key-hl-color=${theme.bright.green}
-              ring-color=${theme.normal.green}
-              ring-clear-color=${theme.normal.yellow}
-              ring-caps-lock-color=${theme.bright.yellow}
-              ring-ver-color=${theme.bright.blue}
-              ring-wrong-color=${theme.bright.red}
-            '';
-          in
+        keybindings = let
+          swaylockConf = pkgs.writeText "swaylock.conf" ''
+            ignore-empty-password
+            color=${theme.primary.background}
+            bs-hl-color=${theme.normal.red}
+            caps-lock-bs-hl-color=${theme.normal.red}
+            caps-lock-key-hl-color=${theme.bright.green}
+            inside-color=${theme.primary.background}
+            inside-clear-color=${theme.normal.yellow}
+            inside-caps-lock-color=${theme.primary.background}
+            inside-ver-color=${theme.normal.blue}
+            inside-wrong-color=${theme.normal.red}
+            key-hl-color=${theme.bright.green}
+            ring-color=${theme.normal.green}
+            ring-clear-color=${theme.normal.yellow}
+            ring-caps-lock-color=${theme.bright.yellow}
+            ring-ver-color=${theme.bright.blue}
+            ring-wrong-color=${theme.bright.red}
+          '';
+        in
           {
             "${mod}+Shift+c" = "kill";
             "${mod}+Control+r" = "reload";
