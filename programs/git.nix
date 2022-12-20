@@ -37,6 +37,10 @@ _: {
         init = {
           defaultBranch = "master";
         };
+
+        push = {
+          autoSetupRemote = true;
+        };
       };
     };
   };
