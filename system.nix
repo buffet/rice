@@ -7,7 +7,7 @@
   system.stateVersion = "22.05";
   home-manager.users.buffet.home.stateVersion = "22.05";
 
-  time.timeZone = "UTC";
+  time.timeZone = "Europe/Berlin";
   i18n.defaultLocale = "en_US.UTF-8";
 
   boot.tmpOnTmpfs = true;
