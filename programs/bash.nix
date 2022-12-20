@@ -32,7 +32,7 @@ in {
       initExtra = ''
         __prompt() {
             case $? in
-                0) PS1='; ' ;;
+                0) PS1='\[\e[34m\]; \[\e[0m\]' ;;
                 *) PS1='\[\e[31m\]; \[\e[0m\]' ;;
             esac
         }
