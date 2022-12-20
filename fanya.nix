@@ -36,6 +36,7 @@ in {
         github-cli
         htop
         hyperfine
+        jq
         kcachegrind
         linuxPackages.perf
         man-pages
