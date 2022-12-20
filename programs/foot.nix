@@ -4,15 +4,16 @@
       enable = true;
       server.enable = true;
 
-      settings =
-      let
+      settings = let
         theme = import ../theme.nix;
-        dehash = lib.attrsets.mapAttrs (_: v: lib.strings.removePrefix "#" v);
+        dehash = lib.attrsets.mapAttrs (_: lib.strings.removePrefix "#");
         normal = dehash theme.normal;
         bright = dehash theme.bright;
       in {
         main = {
           font = "${theme.font.family}:size=${toString (theme.font.size - 2)}";
+          font-italic = "${theme.font.family}:size=${toString (theme.font.size - 2)}";
+          font-bold-italic = "${theme.font.family}:style=Bold:size=${toString (theme.font.size - 2)}";
           pad = "${toString theme.font.size}x${toString theme.font.size}";
         };
 
