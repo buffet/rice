@@ -37,6 +37,9 @@ in {
             esac
         }
         PROMPT_COMMAND="__prompt"
+
+        bind '"\C-o": "fg\n"'
+        bind '"\e\C-m": "\C-e | nvim\C-m"'
       '';
     };
   };
