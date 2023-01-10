@@ -10,7 +10,6 @@
 
       extensions = with config.nur.repos.rycee.firefox-addons; [
         bitwarden
-        https-everywhere
         i-dont-care-about-cookies
         refined-github
         sidebery
