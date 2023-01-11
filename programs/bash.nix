@@ -38,7 +38,7 @@ in {
         }
         PROMPT_COMMAND="__prompt"
 
-        bind '"\C-o": "fg\n"'
+        bind '"\C-o": "\C-a\C-k fg\n"'
         bind '"\e\C-m": "\C-e | nvim\C-m"'
       '';
     };
