@@ -48,6 +48,8 @@ in {
         okular
         radare2
         ripgrep
+        rr
+        sioyek
         strace
         tokei
         trash-cli
