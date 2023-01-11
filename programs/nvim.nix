@@ -79,14 +79,6 @@
           }
 
           {
-            plugin = gitsigns-nvim;
-            config = ''
-              lua require 'gitsigns'.setup()
-              set signcolumn=yes
-            '';
-          }
-
-          {
             plugin = lualine-nvim;
             config = ''
               lua <<EOF
@@ -340,6 +332,7 @@
         set updatetime=250
         set colorcolumn=+1
         set cursorline
+        set signcolumn=yes
 
         set shiftwidth=4
         set tabstop=4
