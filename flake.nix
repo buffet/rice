@@ -23,6 +23,12 @@
       url = "github:nix-community/home-manager/release-22.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # work around for nixpkgs version being too old
+    rust-tools-nvim = {
+      url = "github:simrat39/rust-tools.nvim";
+      flake = false;
+    };
   };
 
   outputs = {nixpkgs, ...} @ args: {

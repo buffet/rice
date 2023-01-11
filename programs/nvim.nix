@@ -23,6 +23,7 @@
         plugins = buildPlugins [
           "cmp-conventionalcommits"
           "cmp-git"
+          "rust-tools-nvim"
         ];
       in
         with pkgs.vimPlugins;
