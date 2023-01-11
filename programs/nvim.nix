@@ -254,31 +254,102 @@
           }
 
           {
+            plugin = nvim-dap;
+            config = ''
+              nnoremap <silent> <f5> <cmd>lua require 'dap'.continue()<cr>
+              nnoremap <silent> <f10> <cmd>lua require 'dap'.step_over()<cr>
+              nnoremap <silent> <f11> <cmd>lua require 'dap'.step_into()<cr>
+              nnoremap <silent> <f12> <cmd>lua require 'dap'.step_out()<cr>
+              nnoremap <silent> ${leader}db <cmd>lua require'dap'.toggle_breakpoint()<cr>
+              nnoremap <silent> ${leader}dB <cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<cr>
+              nnoremap <silent> ${leader}dr <cmd>lua require'dap'.repl.open()<cr>
+              nnoremap <silent> ${leader}dl <cmd>lua require'dap'.run_last()<cr>
+
+              lua <<EOF
+                local dap = require 'dap'
+
+                dap.adapters.lldb = {
+                  type = 'executable',
+                  command = '${pkgs.lldb}/bin/lldb-vscode',
+                  name = 'lldb',
+                }
+
+                local lldb = {
+                  name = 'Launch lldb',
+                  type = 'lldb',
+                  request = 'launch',
+                  program = function()
+                    return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
+                  end,
+                  cwd = "''${workspaceFolder}",
+                  stopOnEntry = false,
+                  runInTerminal = true,
+                  args = {},
+                }
+
+                dap.configurations.rust = { lldb }
+              EOF
+            '';
+          }
+
+          {
+            plugin = nvim-dap-ui;
+            config = ''
+              lua require 'dapui'.setup()
+            '';
+          }
+
+          {
+            plugin = nvim-dap-virtual-text;
+            config = ''
+              lua <<EOF
+                require 'nvim-dap-virtual-text'.setup {
+                  commented = true,
+                }
+              EOF
+            '';
+          }
+
+          {
             plugin = nvim-treesitter.withPlugins (plugins:
               with plugins; [
                 tree-sitter-bash
                 tree-sitter-bibtex
                 tree-sitter-c
+                tree-sitter-c-sharp
+                tree-sitter-clojure
                 tree-sitter-cmake
                 tree-sitter-comment
                 tree-sitter-cpp
                 tree-sitter-css
                 tree-sitter-devicetree
                 tree-sitter-dockerfile
+                tree-sitter-dot
                 tree-sitter-fennel
+                tree-sitter-glsl
                 tree-sitter-go
+                tree-sitter-java
                 tree-sitter-javascript
                 tree-sitter-json
                 tree-sitter-latex
+                tree-sitter-llvm
                 tree-sitter-lua
                 tree-sitter-make
                 tree-sitter-markdown
+                tree-sitter-markdown-inline
                 tree-sitter-nix
                 tree-sitter-perl
                 tree-sitter-python
                 tree-sitter-regex
+                tree-sitter-rst
                 tree-sitter-rust
+                tree-sitter-sql
+                tree-sitter-svelte
                 tree-sitter-toml
+                tree-sitter-typescript
+                tree-sitter-vim
+                tree-sitter-yaml
+                tree-sitter-zig
               ]);
             config = ''
               lua <<EOF
