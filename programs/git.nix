@@ -41,6 +41,10 @@ _: {
         push = {
           autoSetupRemote = true;
         };
+
+        pull = {
+          ff = "only";
+        };
       };
     };
   };
