@@ -236,6 +236,13 @@
           }
 
           {
+            plugin = rust-tools-nvim;
+            config = ''
+              lua require 'rust-tools'.setup {}
+            '';
+          }
+
+          {
             plugin = telescope-nvim;
             config = ''
               nnoremap <silent> ${leader}f :Telescope find_files<cr>
