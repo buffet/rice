@@ -149,6 +149,15 @@
           {
             plugin = kanagawa-nvim;
             config = ''
+              lua <<EOF
+                local colors = require 'kanagawa.colors'.setup();
+
+                require 'kanagawa'.setup {
+                  overrides = {
+                    EndOfBuffer = { fg = colors.waveBlue2 },
+                  },
+                }
+              EOF
               colorscheme kanagawa
             '';
           }
