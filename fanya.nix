@@ -30,6 +30,10 @@ in {
   home-manager.users.buffet = {
     home = {
       packages = with pkgs; [
+        cargo
+        cargo-crev
+        cargo-limit
+        cargo-nextest
         du-dust
         fd
         gdb

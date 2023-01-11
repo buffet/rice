@@ -34,6 +34,7 @@
       allowOther = true;
 
       directories = [
+        "crev/.local/share/crev"
         "data/books"
         "data/docs"
         "data/git"
