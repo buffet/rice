@@ -40,7 +40,6 @@
           {plugin = editorconfig-nvim;}
           {plugin = friendly-snippets;}
           {plugin = fugitive;}
-          {plugin = litee-nvim;} # required by gh-nvim
           {plugin = lualine-lsp-progress;}
           {plugin = playground;}
           {plugin = rust-vim;}
@@ -128,6 +127,34 @@
                   },
                 }
               EOF
+            '';
+          }
+
+          {
+            plugin = litee-nvim;
+            config = ''
+              lua require 'litee.lib'.setup {}
+
+              nnoremap <silent> ${leader}lt :LTPanel<cr>
+            '';
+          }
+
+          {
+            plugin = litee-calltree-nvim;
+            config = ''
+              lua require 'litee.calltree'.setup {}
+
+              nnoremap <silent> ${leader}lci :lua vim.lsp.buf.incoming_calls()<cr>
+              nnoremap <silent> ${leader}lco :lua vim.lsp.buf.outgoing_calls()<cr>
+            '';
+          }
+
+          {
+            plugin = litee-symboltree-nvim;
+            config = ''
+              lua require 'litee.symboltree'.setup {}
+
+              nnoremap <silent> ${leader}ls :lua vim.lsp.buf.document_symbol()<cr>
             '';
           }
 
