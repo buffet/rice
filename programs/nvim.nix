@@ -45,7 +45,6 @@
           {plugin = playground;}
           {plugin = rust-vim;}
           {plugin = tabular;}
-          {plugin = trouble-nvim;}
           {plugin = vim-nix;}
           {plugin = vim-repeat;}
 
@@ -290,6 +289,13 @@
               nnoremap <silent> ${leader}g :Telescope live_grep<cr>
               nnoremap <silent> ${leader}b :Telescope buffers<cr>
               nnoremap <silent> ${leader}: :Telescope commands<cr>
+            '';
+          }
+
+          {
+            plugin = trouble-nvim;
+            config = ''
+              nnoremap <silent> ${leader}t :TroubleToggle<cr>
             '';
           }
 
