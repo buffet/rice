@@ -188,18 +188,6 @@
           }
 
           {
-            plugin = lspsaga-nvim;
-            config = ''
-              lua require 'lspsaga'.init_lsp_saga()
-
-              nnoremap <silent> ${leader}a :Lspsaga code_action<cr>
-              nnoremap <silent> ${leader}r :Lspsaga rename<cr>
-              nnoremap <silent> gd :lua vim.lsp.buf.definition()<cr>
-              nnoremap <silent> gD :lua vim.lsp.buf.declaration()<cr>
-            '';
-          }
-
-          {
             plugin = kanagawa-nvim;
             config = ''
               lua <<EOF
@@ -212,6 +200,18 @@
                 }
               EOF
               colorscheme kanagawa
+            '';
+          }
+
+          {
+            plugin = lspsaga-nvim;
+            config = ''
+              lua require 'lspsaga'.init_lsp_saga()
+
+              nnoremap <silent> ${leader}a :Lspsaga code_action<cr>
+              nnoremap <silent> ${leader}r :Lspsaga rename<cr>
+              nnoremap <silent> gd :lua vim.lsp.buf.definition()<cr>
+              nnoremap <silent> gD :lua vim.lsp.buf.declaration()<cr>
             '';
           }
 
@@ -260,77 +260,6 @@
                   },
                 }
               EOF
-            '';
-          }
-
-          {
-            plugin = nvim-hlslens;
-            config = ''
-              lua require 'hlslens'.setup {}
-            '';
-          }
-
-          {
-            plugin = nvim-lspconfig;
-            config = let
-              configure = srv: ''
-                lspconfig.${srv}.setup {
-                  capabilities = caps,
-                }
-              '';
-              servers = [
-                "clangd"
-                "gopls"
-                "rust_analyzer"
-              ];
-              serverConfigs = lib.strings.concatStringsSep "\n" (builtins.map configure servers);
-            in ''
-              lua <<EOF
-                local lspconfig = require 'lspconfig'
-                local caps = require 'cmp_nvim_lsp'.default_capabilities(
-                  vim.lsp.protocol.make_client_capabilities()
-                )
-                ${serverConfigs}
-              EOF
-            '';
-          }
-
-          {
-            plugin = nvim-scrollbar;
-            config = ''
-              lua <<EOF
-                require 'scrollbar'.setup {
-                  show_in_active_only = true,
-                  handlers = {
-                    search = true,
-                  },
-                }
-              EOF
-            '';
-          }
-
-          {
-            plugin = rust-tools-nvim;
-            config = ''
-              lua require 'rust-tools'.setup {}
-            '';
-          }
-
-          {
-            plugin = telescope-nvim;
-            config = ''
-              nnoremap <silent> ${leader}f :Telescope find_files<cr>
-              nnoremap <silent> ${leader}F :Telescope find_files hidden=true no_ignore=true<cr>
-              nnoremap <silent> ${leader}g :Telescope live_grep<cr>
-              nnoremap <silent> ${leader}b :Telescope buffers<cr>
-              nnoremap <silent> ${leader}: :Telescope commands<cr>
-            '';
-          }
-
-          {
-            plugin = trouble-nvim;
-            config = ''
-              nnoremap <silent> ${leader}t :TroubleToggle<cr>
             '';
           }
 
@@ -392,6 +321,52 @@
           }
 
           {
+            plugin = nvim-hlslens;
+            config = ''
+              lua require 'hlslens'.setup {}
+            '';
+          }
+
+          {
+            plugin = nvim-lspconfig;
+            config = let
+              configure = srv: ''
+                lspconfig.${srv}.setup {
+                  capabilities = caps,
+                }
+              '';
+              servers = [
+                "clangd"
+                "gopls"
+                "rust_analyzer"
+              ];
+              serverConfigs = lib.strings.concatStringsSep "\n" (builtins.map configure servers);
+            in ''
+              lua <<EOF
+                local lspconfig = require 'lspconfig'
+                local caps = require 'cmp_nvim_lsp'.default_capabilities(
+                  vim.lsp.protocol.make_client_capabilities()
+                )
+                ${serverConfigs}
+              EOF
+            '';
+          }
+
+          {
+            plugin = nvim-scrollbar;
+            config = ''
+              lua <<EOF
+                require 'scrollbar'.setup {
+                  show_in_active_only = true,
+                  handlers = {
+                    search = true,
+                  },
+                }
+              EOF
+            '';
+          }
+
+          {
             plugin = nvim-treesitter.withPlugins (plugins:
               with plugins; [
                 tree-sitter-bash
@@ -441,6 +416,31 @@
                   },
                 }
               EOF
+            '';
+          }
+
+          {
+            plugin = rust-tools-nvim;
+            config = ''
+              lua require 'rust-tools'.setup {}
+            '';
+          }
+
+          {
+            plugin = telescope-nvim;
+            config = ''
+              nnoremap <silent> ${leader}f :Telescope find_files<cr>
+              nnoremap <silent> ${leader}F :Telescope find_files hidden=true no_ignore=true<cr>
+              nnoremap <silent> ${leader}g :Telescope live_grep<cr>
+              nnoremap <silent> ${leader}b :Telescope buffers<cr>
+              nnoremap <silent> ${leader}: :Telescope commands<cr>
+            '';
+          }
+
+          {
+            plugin = trouble-nvim;
+            config = ''
+              nnoremap <silent> ${leader}t :TroubleToggle<cr>
             '';
           }
 
