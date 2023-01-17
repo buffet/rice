@@ -19,6 +19,11 @@
       flake = false;
     };
 
+    gh-nvim = {
+      url = "github:ldelossa/gh.nvim";
+      flake = false;
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager/release-22.11";
       inputs.nixpkgs.follows = "nixpkgs";

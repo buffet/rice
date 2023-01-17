@@ -23,6 +23,7 @@
         plugins = buildPlugins [
           "cmp-conventionalcommits"
           "cmp-git"
+          "gh-nvim"
           "rust-tools-nvim"
         ];
       in
@@ -39,6 +40,7 @@
           {plugin = editorconfig-nvim;}
           {plugin = friendly-snippets;}
           {plugin = fugitive;}
+          {plugin = litee-nvim;} # required by gh-nvim
           {plugin = lualine-lsp-progress;}
           {plugin = playground;}
           {plugin = rust-vim;}
@@ -75,6 +77,44 @@
               nnoremap <silent> ${leader}cR :lua require('crates').open_repository()<cr>
               nnoremap <silent> ${leader}cD :lua require('crates').open_documentation()<cr>
               nnoremap <silent> ${leader}cC :lua require('crates').open_crates_io()<cr>
+            '';
+          }
+
+          {
+            plugin = gh-nvim;
+            config = ''
+              lua <<EOF
+                require 'litee.lib'.setup {}
+                require 'litee.gh'.setup {}
+              EOF
+
+              nnoremap <silent> ${leader}qcc :GHCloseCommit<cr>
+              nnoremap <silent> ${leader}qce :GHExpandCommit<cr>
+              nnoremap <silent> ${leader}qct :GHOpenToCommit<cr>
+              nnoremap <silent> ${leader}qcp :GHPopOutCommit<cr>
+              nnoremap <silent> ${leader}qcz :GHCollapseCommit<cr>
+
+              nnoremap <silent> ${leader}qip :GHPreviewIssue<cr>
+
+              nnoremap <silent> ${leader}qrb :GHStartReview<cr>
+              nnoremap <silent> ${leader}qrc :GHCloseReview<cr>
+              nnoremap <silent> ${leader}qrd :GHDeleteReview<cr>
+              nnoremap <silent> ${leader}qre :GHExpandReview<cr>
+              nnoremap <silent> ${leader}qrs :GHSubmitReview<cr>
+              nnoremap <silent> ${leader}qrz :GHCollapseReview<cr>
+
+              nnoremap <silent> ${leader}qpc :GHClosePR<cr>
+              nnoremap <silent> ${leader}qpd :GHPRDetails<cr>
+              nnoremap <silent> ${leader}qpe :GHExpandPR<cr>
+              nnoremap <silent> ${leader}qpo :GHOpenPR<cr>
+              nnoremap <silent> ${leader}qpp :GHPopOutPR<cr>
+              nnoremap <silent> ${leader}qpr :GHRefreshPR<cr>
+              nnoremap <silent> ${leader}qpt :GHOpenToPR<cr>
+              nnoremap <silent> ${leader}qpz :GHCollapsePR<cr>
+
+              nnoremap <silent> ${leader}qtc :GHCreateThread<cr>
+              nnoremap <silent> ${leader}qtn :GHNextThread<cr>
+              nnoremap <silent> ${leader}qt :GHToggleThread<cr>
             '';
           }
 
