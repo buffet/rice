@@ -118,6 +118,20 @@
           }
 
           {
+            plugin = gitsigns-nvim;
+            config = ''
+              lua <<EOF
+                require 'gitsigns'.setup {
+                  signs = {
+                    add    = { text = '┆' },
+                    change = { text = '┆' },
+                  },
+                }
+              EOF
+            '';
+          }
+
+          {
             plugin = lualine-nvim;
             config = ''
               lua <<EOF
@@ -250,6 +264,13 @@
           }
 
           {
+            plugin = nvim-hlslens;
+            config = ''
+              lua require 'hlslens'.setup {}
+            '';
+          }
+
+          {
             plugin = nvim-lspconfig;
             config = let
               configure = srv: ''
@@ -270,6 +291,20 @@
                   vim.lsp.protocol.make_client_capabilities()
                 )
                 ${serverConfigs}
+              EOF
+            '';
+          }
+
+          {
+            plugin = nvim-scrollbar;
+            config = ''
+              lua <<EOF
+                require 'scrollbar'.setup {
+                  show_in_active_only = true,
+                  handlers = {
+                    search = true,
+                  },
+                }
               EOF
             '';
           }
