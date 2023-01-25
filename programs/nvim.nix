@@ -546,6 +546,12 @@
 
         highlight! ExtraWhitespace guibg=${theme.normal.red}
         match ExtraWhitespace /\s\+$/
+
+        lua <<EOF
+          vim.diagnostic.config {
+            severity_sort = true,
+          }
+        EOF
       '';
     };
   };
