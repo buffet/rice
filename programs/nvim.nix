@@ -8,6 +8,12 @@
       EDITOR = "nvim";
     };
 
+    home.packages = with pkgs; [
+      libclang
+      nil
+      rust-analyzer
+    ];
+
     programs.neovim = let
       leader = ",";
     in {
@@ -365,6 +371,7 @@
               servers = [
                 "clangd"
                 "gopls"
+                "nil_ls"
                 "rust_analyzer"
               ];
               serverConfigs = lib.strings.concatStringsSep "\n" (builtins.map configure servers);
