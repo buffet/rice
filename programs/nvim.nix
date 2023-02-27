@@ -31,6 +31,7 @@
           "cmp-git"
           "gh-nvim"
           "rust-tools-nvim"
+          "vlime"
         ];
       in
         with pkgs.vimPlugins;
@@ -51,7 +52,9 @@
           {plugin = rust-vim;}
           {plugin = tabular;}
           {plugin = vim-nix;}
+          {plugin = vim-parinfer;}
           {plugin = vim-repeat;}
+          {plugin = vlime;}
 
           {
             plugin = cmp-git;
@@ -249,11 +252,6 @@
           }
 
           {
-            plugin = nvim-autopairs;
-            config = "lua require 'nvim-autopairs'.setup {}";
-          }
-
-          {
             plugin = nvim-cmp;
             config = ''
               set completeopt=menu,menuone,noselect
@@ -410,6 +408,7 @@
                 tree-sitter-clojure
                 tree-sitter-cmake
                 tree-sitter-comment
+                tree-sitter-commonlisp
                 tree-sitter-cpp
                 tree-sitter-css
                 tree-sitter-devicetree
@@ -434,6 +433,7 @@
                 tree-sitter-rst
                 tree-sitter-rust
                 tree-sitter-sql
+                tree-sitter-scheme
                 tree-sitter-svelte
                 tree-sitter-toml
                 tree-sitter-typescript
