@@ -40,7 +40,11 @@
     nixosConfigurations.fanya = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = args;
-      modules = [./fanya.nix];
+      modules = [
+        ./fanya.nix
+
+        (_: {nixpkgs.overlays = [(import ./overlay)];})
+      ];
     };
   };
 }

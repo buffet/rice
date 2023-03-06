@@ -23,6 +23,7 @@ in {
 
   fonts.fonts = with pkgs; [
     (nerdfonts.override {fonts = ["Go-Mono"];})
+    apl386
     dejavu_fonts
     noto-fonts
   ];
