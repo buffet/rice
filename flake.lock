@@ -52,6 +52,22 @@
         "type": "github"
       }
     },
+    "gh-nvim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1670723316,
+        "narHash": "sha256-BjzQe8wCNAx31vN9/RzF75U8ec5bytnaRrM0OHm1fpI=",
+        "owner": "ldelossa",
+        "repo": "gh.nvim",
+        "rev": "bc731bb53909481995ac2edb4bf6418c051fec1a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "ldelossa",
+        "repo": "gh.nvim",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -125,11 +141,13 @@
         "agenix": "agenix",
         "cmp-conventionalcommits": "cmp-conventionalcommits",
         "cmp-git": "cmp-git",
+        "gh-nvim": "gh-nvim",
         "home-manager": "home-manager",
         "impermanence": "impermanence",
         "nixpkgs": "nixpkgs",
         "nur": "nur",
-        "rust-tools-nvim": "rust-tools-nvim"
+        "rust-tools-nvim": "rust-tools-nvim",
+        "vlime": "vlime"
       }
     },
     "rust-tools-nvim": {
@@ -160,6 +178,22 @@
       "original": {
         "owner": "numtide",
         "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "vlime": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1636437398,
+        "narHash": "sha256-NTP9mwrFrYsZC++fpSTa2IKk/9HHFToOWzc75+7HJkg=",
+        "owner": "vlime",
+        "repo": "vlime",
+        "rev": "3205f02306314ab8cfc9034cf72097891c923e9d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "vlime",
+        "repo": "vlime",
         "type": "github"
       }
     }

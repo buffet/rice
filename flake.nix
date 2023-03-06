@@ -34,6 +34,11 @@
       url = "github:simrat39/rust-tools.nvim";
       flake = false;
     };
+
+    vlime = {
+      url = "github:vlime/vlime";
+      flake = false;
+    };
   };
 
   outputs = {nixpkgs, ...} @ args: {
