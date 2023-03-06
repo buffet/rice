@@ -6,7 +6,7 @@
       ];
 
       file.".config/common-lisp/source-registry.conf.d/lisp.conf".text = ''
-        (:tree "/home/buffet/proj")
+        (:tree "/home/buffet/proj/bechamel")
       '';
     };
   };

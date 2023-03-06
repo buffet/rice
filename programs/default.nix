@@ -12,6 +12,7 @@ _: {
     ./newsboat.nix
     ./nvim.nix
     ./pipewire.nix
+    ./sbcl.nix
     ./sioyek.nix
     ./sway.nix
   ];
