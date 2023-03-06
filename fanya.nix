@@ -77,6 +77,7 @@ in {
     isNormalUser = true;
     uid = 1000;
     extraGroups = [
+      "docker"
       "networkmanager"
       "sway"
       "wheel"
@@ -87,8 +88,12 @@ in {
   users.users.root.hashedPassword = password;
 
   hardware.bluetooth.enable = true;
-  virtualisation.libvirtd.enable = true;
   systemd.coredump.enable = true;
+
+  virtualisation = {
+    docker.enable = true;
+    libvirtd.enable = true;
+  };
 
   powerManagement = {
     enable = true;
