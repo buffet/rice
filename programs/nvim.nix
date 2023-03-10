@@ -547,6 +547,8 @@
         highlight! ExtraWhitespace guibg=${theme.normal.red}
         match ExtraWhitespace /\s\+$/
 
+        autocmd FileType lisp setlocal shiftwidth=2 tabstop=2
+
         lua <<EOF
           vim.diagnostic.config {
             severity_sort = true,
