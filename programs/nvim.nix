@@ -50,11 +50,11 @@
           {plugin = fugitive;}
           {plugin = lualine-lsp-progress;}
           {plugin = nvim-cmp-vlime;}
+          {plugin = parinfer-rust;}
           {plugin = playground;}
           {plugin = rust-vim;}
           {plugin = tabular;}
           {plugin = vim-nix;}
-          {plugin = vim-parinfer;}
           {plugin = vim-repeat;}
           {plugin = vlime;}
 
