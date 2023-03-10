@@ -29,6 +29,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nvim-cmp-vlime = {
+      url = "gitlab:HiPhish/nvim-cmp-vlime";
+      flake = false;
+    };
+
     # work around for nixpkgs version being too old
     rust-tools-nvim = {
       url = "github:simrat39/rust-tools.nvim";

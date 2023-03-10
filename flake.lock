@@ -136,6 +136,22 @@
         "type": "github"
       }
     },
+    "nvim-cmp-vlime": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1672313103,
+        "narHash": "sha256-ejjJWNGjx28viKz8tsaifCkJ9HHYAOkbOZAdlR8gQJo=",
+        "owner": "HiPhish",
+        "repo": "nvim-cmp-vlime",
+        "rev": "5bc7fa02f255f6faed0ba5fda5f4883b46a66676",
+        "type": "gitlab"
+      },
+      "original": {
+        "owner": "HiPhish",
+        "repo": "nvim-cmp-vlime",
+        "type": "gitlab"
+      }
+    },
     "root": {
       "inputs": {
         "agenix": "agenix",
@@ -146,6 +162,7 @@
         "impermanence": "impermanence",
         "nixpkgs": "nixpkgs",
         "nur": "nur",
+        "nvim-cmp-vlime": "nvim-cmp-vlime",
         "rust-tools-nvim": "rust-tools-nvim",
         "vlime": "vlime"
       }

@@ -30,6 +30,7 @@
           "cmp-conventionalcommits"
           "cmp-git"
           "gh-nvim"
+          "nvim-cmp-vlime"
           "rust-tools-nvim"
           "vlime"
         ];
@@ -48,6 +49,7 @@
           {plugin = friendly-snippets;}
           {plugin = fugitive;}
           {plugin = lualine-lsp-progress;}
+          {plugin = nvim-cmp-vlime;}
           {plugin = playground;}
           {plugin = rust-vim;}
           {plugin = tabular;}
@@ -287,6 +289,7 @@
                     { name = 'nvim_lsp' },
                     { name = 'path' },
                     { name = 'treesitter' },
+                    { name = 'vlime' },
                     { name = 'vsnip' },
                   },
                 }
