@@ -2,11 +2,12 @@
   home-manager.users.buffet = {
     home = {
       packages = with pkgs; [
+        roswell
         sbcl
       ];
 
       file.".config/common-lisp/source-registry.conf.d/lisp.conf".text = ''
-        (:tree "/home/buffet/proj/bechamel")
+        (:include (:home "proj" "cl-proj.lisp"))
       '';
     };
   };
