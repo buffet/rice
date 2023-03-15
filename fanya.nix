@@ -86,6 +86,7 @@ in {
       "docker"
       "networkmanager"
       "sway"
+      "uinput"
       "wheel"
     ];
     hashedPassword = password;
@@ -93,8 +94,12 @@ in {
 
   users.users.root.hashedPassword = password;
 
-  hardware.bluetooth.enable = true;
   systemd.coredump.enable = true;
+
+  hardware = {
+    bluetooth.enable = true;
+    uinput.enable = true;
+  };
 
   virtualisation = {
     docker.enable = true;
