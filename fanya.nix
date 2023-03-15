@@ -57,6 +57,12 @@ in {
         valgrind
         wget
         wl-clipboard
+
+        (retroarch.override {
+          cores = with libretro; [
+            genesis-plus-gx
+          ];
+        })
       ];
 
       pointerCursor = {
