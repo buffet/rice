@@ -4,7 +4,7 @@
   font = {
     #family = "GoMono Nerd Font";
     family = "APL386 Unicode";
-    size = 8;
+    size = 7;
   };
 
   primary = {
