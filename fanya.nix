@@ -8,7 +8,7 @@
   password = "$6$FHwMlUwmRdAsPqS4$4XND0L0EEVf2Mhc/tvo6y3ZLIrMTOlsIZrG3w69EeXvtVZhdeNyoDOkPNIe.GBB8.PrchuUKDacqbvcvyuPkt0";
 in {
   imports = [
-    agenix.nixosModule
+    agenix.nixosModules.default
     home-manager.nixosModule
     nur.nixosModules.nur
     ./impermanence.nix
