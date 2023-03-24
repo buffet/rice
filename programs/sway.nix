@@ -199,9 +199,9 @@
         ];
       };
 
-        extraConfig = ''
-          for_window [title="leftovers"] floating enable
-        '';
+      extraConfig = ''
+        for_window [title="leftovers"] floating enable
+      '';
     };
   };
 
