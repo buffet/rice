@@ -198,6 +198,10 @@
           }
         ];
       };
+
+        extraConfig = ''
+          for_window [title="leftovers"] floating enable
+        '';
     };
   };
 
