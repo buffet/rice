@@ -26,6 +26,7 @@ in {
     apl386
     dejavu_fonts
     noto-fonts
+    noto-fonts-cjk
   ];
 
   home-manager.users.buffet = {
