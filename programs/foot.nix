@@ -23,6 +23,10 @@
           launch = ''firefox ''${url}'';
         };
 
+        key-bindings = {
+          show-urls-launch = "Control+Shift+l";
+        };
+
         colors = {
           foreground = lib.strings.removePrefix "#" theme.primary.foreground;
           background = lib.strings.removePrefix "#" theme.primary.background;
