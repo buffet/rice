@@ -7,6 +7,7 @@ _: {
     ./foot.nix
     ./git.nix
     ./gpg.nix
+    ./ime.nix
     ./lsd.nix
     ./mako.nix
     ./newsboat.nix
