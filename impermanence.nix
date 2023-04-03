@@ -34,6 +34,8 @@
       allowOther = true;
 
       directories = [
+        "anki/.local/share/Anki"
+        "anki/.local/share/Anki2"
         "crev/.local/share/crev"
         "data/books"
         "data/docs"

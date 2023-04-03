@@ -32,6 +32,7 @@ in {
   home-manager.users.buffet = {
     home = {
       packages = with pkgs; [
+        anki
         cargo
         cargo-crev
         cargo-limit
