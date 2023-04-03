@@ -60,13 +60,20 @@
 
           {
             plugin = cmp-git;
-            config = "lua require 'cmp_git'.setup()";
+            config = "lua require 'cmp_git'.setup {}";
+          }
+
+          {
+            plugin = copilot-vim;
+            config = ''
+              let g:copilot_node_command = "${pkgs.nodejs-16_x}/bin/node"
+            '';
           }
 
           {
             plugin = crates-nvim;
             config = ''
-              lua require 'crates'.setup()
+              lua require 'crates'.setup {}
 
               nnoremap <silent> ${leader}ct :lua require('crates').toggle()<cr>
               nnoremap <silent> ${leader}cr :lua require('crates').reload()<cr>
@@ -272,7 +279,7 @@
                     documentation = cmp.config.window.bordered(),
                   },
                   mapping = {
-                    ['<c-space>'] = cmp.mapping.confirm({ select = true }),
+                    ['<tab>']     = cmp.mapping.confirm({ select = true }),
                     ['<c-p>']     = cmp.mapping.select_prev_item(select_opts),
                     ['<c-n>']     = cmp.mapping.select_next_item(select_opts),
                     ['<c-d>']     = cmp.mapping.scroll_docs(4),

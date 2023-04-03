@@ -19,6 +19,16 @@
       flake = false;
     };
 
+    copilot-cmp = {
+      url = "github:zbirenbaum/copilot-cmp";
+      flake = false;
+    };
+
+    copilot-lua = {
+      url = "github:zbirenbaum/copilot.lua";
+      flake = false;
+    };
+
     gh-nvim = {
       url = "github:ldelossa/gh.nvim";
       flake = false;

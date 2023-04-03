@@ -53,6 +53,38 @@
         "type": "github"
       }
     },
+    "copilot-cmp": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1677432266,
+        "narHash": "sha256-Bu9Lx+1H1pG97ibwn8Q7jOHOKOrzg1nyucTTqbdlapI=",
+        "owner": "zbirenbaum",
+        "repo": "copilot-cmp",
+        "rev": "92535dfd9c430b49ca7d9a7da336c5db65826b65",
+        "type": "github"
+      },
+      "original": {
+        "owner": "zbirenbaum",
+        "repo": "copilot-cmp",
+        "type": "github"
+      }
+    },
+    "copilot-lua": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1679135186,
+        "narHash": "sha256-ibp46ZQptwEqgaI03ANSbDV+lCaBe9uO0DkIAog8dgo=",
+        "owner": "zbirenbaum",
+        "repo": "copilot.lua",
+        "rev": "db62371b6eac73954c194f3c8faee36cffee8135",
+        "type": "github"
+      },
+      "original": {
+        "owner": "zbirenbaum",
+        "repo": "copilot.lua",
+        "type": "github"
+      }
+    },
     "darwin": {
       "inputs": {
         "nixpkgs": [
@@ -180,6 +212,8 @@
         "agenix": "agenix",
         "cmp-conventionalcommits": "cmp-conventionalcommits",
         "cmp-git": "cmp-git",
+        "copilot-cmp": "copilot-cmp",
+        "copilot-lua": "copilot-lua",
         "gh-nvim": "gh-nvim",
         "home-manager": "home-manager",
         "impermanence": "impermanence",
