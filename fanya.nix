@@ -116,12 +116,5 @@ in {
   services = {
     tlp.enable = true;
     upower.enable = true;
-    xserver = {
-      enable = true;
-      displayManager.gdm = {
-        enable = true;
-        wayland = true;
-      };
-    };
   };
 }
