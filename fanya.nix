@@ -31,8 +31,12 @@ in {
 
   home-manager.users.buffet = {
     home = {
+      sessionVariables = {
+        ANKI_WAYLAND = 1;
+      };
+
       packages = with pkgs; [
-        anki
+        anki-bin
         cargo
         cargo-crev
         cargo-limit
