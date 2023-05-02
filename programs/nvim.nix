@@ -395,20 +395,6 @@
           }
 
           {
-            plugin = nvim-scrollbar;
-            config = ''
-              lua <<EOF
-                require 'scrollbar'.setup {
-                  show_in_active_only = true,
-                  handlers = {
-                    search = true,
-                  },
-                }
-              EOF
-            '';
-          }
-
-          {
             plugin = nvim-treesitter.withPlugins (plugins:
               with plugins; [
                 tree-sitter-bash
