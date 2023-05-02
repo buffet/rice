@@ -2,6 +2,7 @@
   inputs = {
     impermanence.url = "github:nix-community/impermanence";
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-22.11";
+    nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
     nur.url = "github:nix-community/NUR";
 
     agenix = {
@@ -56,14 +57,21 @@
     };
   };
 
-  outputs = {nixpkgs, ...} @ args: {
-    nixosConfigurations.fanya = nixpkgs.lib.nixosSystem {
+  outputs = {nixpkgs, nixpkgs-unstable, ...} @ args: {
+    nixosConfigurations.fanya =
+    let
       system = "x86_64-linux";
+      overlay-unstable = final: prev: {
+        unstable = nixpkgs-unstable.legacyPackages.${prev.system};
+      };
+    in
+    nixpkgs.lib.nixosSystem {
+      inherit system;
       specialArgs = args;
       modules = [
         ./fanya.nix
 
-        (_: {nixpkgs.overlays = [(import ./overlay)];})
+        (_: {nixpkgs.overlays = [(import ./overlay) overlay-unstable];})
       ];
     };
   };

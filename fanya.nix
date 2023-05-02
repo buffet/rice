@@ -36,7 +36,8 @@ in {
       };
 
       packages = with pkgs; [
-        anki-bin
+        unstable.anki
+
         cargo
         cargo-crev
         cargo-limit

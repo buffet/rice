@@ -1,4 +1,4 @@
-{nixpkgs, ...}: {
+{nixpkgs, nixpkgs-unstable, ...}: {
   imports = [
     ./hardware-configuration.nix
   ];
@@ -34,7 +34,10 @@
   };
 
   nix = {
-    registry.nixpkgs.flake = nixpkgs;
+    registry = {
+      nixpkgs.flake = nixpkgs;
+      nixpkgs-unstable.flake = nixpkgs-unstable;
+    };
     settings = {
       auto-optimise-store = true;
       trusted-users = ["root" "buffet"];
