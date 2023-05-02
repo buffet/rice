@@ -14,9 +14,12 @@
     directories = [
       "/etc/NetworkManager/system-connections"
       "/etc/nixos"
+      "/root/.ssh"
       "/srv"
       "/var/lib/bluetooth"
+      "/var/lib/docker"
       "/var/lib/machines"
+      "/var/lib/portables"
       "/var/log"
     ];
 
@@ -69,9 +72,11 @@
       echo "recreating root subvolume..."
       mkdir -p /mnt
       mount ${config.fileSystems."/".device} /mnt
-      btrfs subvolume delete /mnt/@
+      btrfs subvolume delete /mnt/@old
+      mv /mnt/@ /mnt/@old
       btrfs subvolume create /mnt/@
       umount /mnt
+      echo "done recreating subvolume"
     '';
   };
 

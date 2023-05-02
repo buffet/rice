@@ -23,6 +23,12 @@
     options = ["subvol=@"];
   };
 
+  fileSystems."/old" = {
+    device = "/dev/disk/by-uuid/d2c87f01-cdb7-4871-ae9d-c3a843e1199d";
+    fsType = "btrfs";
+    options = ["subvol=@old"];
+  };
+
   fileSystems."/persist" = {
     device = "/dev/disk/by-uuid/d2c87f01-cdb7-4871-ae9d-c3a843e1199d";
     fsType = "btrfs";
