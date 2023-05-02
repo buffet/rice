@@ -8,8 +8,6 @@
     "${impermanence}/nixos.nix"
   ];
 
-  # TODO: brightness persistent
-
   environment.persistence."/persist/system" = {
     directories = [
       "/etc/NetworkManager/system-connections"
