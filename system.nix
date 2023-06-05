@@ -10,7 +10,7 @@
   time.timeZone = "Europe/Berlin";
   i18n.defaultLocale = "en_US.UTF-8";
 
-  boot.tmpOnTmpfs = true;
+  #boot.tmpOnTmpfs = true;
   boot.loader = {
     systemd-boot.enable = true;
     efi.canTouchEfiVariables = true;
