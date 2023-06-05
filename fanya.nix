@@ -27,6 +27,7 @@ in {
     dejavu_fonts
     noto-fonts
     noto-fonts-cjk
+    source-han-serif
   ];
 
   home-manager.users.buffet = {
@@ -119,7 +120,13 @@ in {
   };
 
   services = {
+    earlyoom = {
+      enable = true;
+      enableNotifications = true;
+    };
+
     tlp.enable = true;
     upower.enable = true;
+    systembus-notify.enable = true;
   };
 }
