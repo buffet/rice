@@ -66,13 +66,6 @@
           }
 
           {
-            plugin = copilot-vim;
-            config = ''
-              let g:copilot_node_command = "${pkgs.nodejs-16_x}/bin/node"
-            '';
-          }
-
-          {
             plugin = crates-nvim;
             config = ''
               lua require 'crates'.setup {}
@@ -237,6 +230,7 @@
           {
             plugin = kanagawa-nvim;
             config = ''
+              colorscheme kanagawa
               lua <<EOF
                 local colors = require 'kanagawa.colors'.setup();
 
@@ -246,7 +240,6 @@
                   },
                 }
               EOF
-              colorscheme kanagawa
             '';
           }
 

@@ -1,6 +1,6 @@
 {pkgs, ...}: {
   home-manager.users.buffet = {
-    programs.mako = let
+    services.mako = let
       theme = import ../theme.nix;
     in {
       enable = true;
