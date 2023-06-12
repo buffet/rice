@@ -51,6 +51,11 @@
       flake = false;
     };
 
+    vim-hy = {
+      url = "github:hylang/vim-hy";
+      flake = false;
+    };
+
     vlime = {
       url = "github:vlime/vlime";
       flake = false;

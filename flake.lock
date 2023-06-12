@@ -260,6 +260,7 @@
         "nur": "nur",
         "nvim-cmp-vlime": "nvim-cmp-vlime",
         "rust-tools-nvim": "rust-tools-nvim",
+        "vim-hy": "vim-hy",
         "vlime": "vlime"
       }
     },
@@ -291,6 +292,22 @@
       "original": {
         "owner": "numtide",
         "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "vim-hy": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1685537549,
+        "narHash": "sha256-25rUKzokaUpPLQUIGR02gfYW+6N365scSn7gprNEJKg=",
+        "owner": "hylang",
+        "repo": "vim-hy",
+        "rev": "bfcb164875652c22e101b9b2eff99408374109b2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "hylang",
+        "repo": "vim-hy",
         "type": "github"
       }
     },

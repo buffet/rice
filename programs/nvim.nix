@@ -32,6 +32,7 @@
           "gh-nvim"
           "nvim-cmp-vlime"
           "rust-tools-nvim"
+          "vim-hy"
           "vlime"
         ];
       in
@@ -56,6 +57,7 @@
           {plugin = tabular;}
           {plugin = vim-nix;}
           {plugin = vim-repeat;}
+          {plugin = vim-hy;}
           {plugin = vlime;}
 
           {
