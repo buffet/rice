@@ -12,6 +12,7 @@
       libclang
       nil
       rust-analyzer
+      sumneko-lua-language-server
     ];
 
     programs.neovim = let
@@ -56,8 +57,8 @@
           {plugin = rust-vim;}
           {plugin = tabular;}
           {plugin = vim-nix;}
-          {plugin = vim-repeat;}
           {plugin = vim-hy;}
+          {plugin = vim-repeat;}
           {plugin = vlime;}
 
           {
@@ -374,6 +375,7 @@
               servers = [
                 "clangd"
                 "gopls"
+                "lua_ls"
                 "nil_ls"
                 "rust_analyzer"
               ];
