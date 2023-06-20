@@ -52,6 +52,7 @@ in {
         jq
         kcachegrind
         linuxPackages.perf
+        luajit
         man-pages
         man-pages-posix
         okular
