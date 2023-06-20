@@ -48,6 +48,7 @@
           {plugin = cmp-treesitter;}
           {plugin = cmp-vsnip;}
           {plugin = editorconfig-nvim;}
+          {plugin = fennel-vim;}
           {plugin = friendly-snippets;}
           {plugin = fugitive;}
           {plugin = lualine-lsp-progress;}
