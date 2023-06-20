@@ -1,18 +1,13 @@
 {
+  inputs,
   lib,
   stdenvNoCC,
-  fetchFromGitHub,
 }:
 stdenvNoCC.mkDerivation {
   pname = "apl386";
-  version = "2022-03-07";
+  version = "unstable";
 
-  src = fetchFromGitHub {
-    owner = "abrudz";
-    repo = "APL386";
-    rev = "6332c9dbb588946a0e8c9d7984dd0c003eeea266";
-    sha256 = "sha256-oHk4e7NRgAjGtZzQmZToYz7wCZETaj7/yRwZMeeYF2M=";
-  };
+  src = inputs.apl386;
 
   installPhase = ''
     runHook preInstall

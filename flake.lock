@@ -22,6 +22,22 @@
         "type": "github"
       }
     },
+    "apl386": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1646646198,
+        "narHash": "sha256-oHk4e7NRgAjGtZzQmZToYz7wCZETaj7/yRwZMeeYF2M=",
+        "owner": "abrudz",
+        "repo": "APL386",
+        "rev": "6332c9dbb588946a0e8c9d7984dd0c003eeea266",
+        "type": "github"
+      },
+      "original": {
+        "owner": "abrudz",
+        "repo": "APL386",
+        "type": "github"
+      }
+    },
     "cmp-conventionalcommits": {
       "flake": false,
       "locked": {
@@ -247,6 +263,7 @@
     "root": {
       "inputs": {
         "agenix": "agenix",
+        "apl386": "apl386",
         "cmp-conventionalcommits": "cmp-conventionalcommits",
         "cmp-git": "cmp-git",
         "copilot-cmp": "copilot-cmp",

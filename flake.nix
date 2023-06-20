@@ -10,6 +10,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    apl386 = {
+      url = "github:abrudz/APL386";
+      flake = false;
+    };
+
     cmp-conventionalcommits = {
       url = "github:davidsierradz/cmp-conventionalcommits";
       flake = false;
@@ -76,7 +81,7 @@
       modules = [
         ./fanya.nix
 
-        (_: {nixpkgs.overlays = [(import ./overlay) overlay-unstable];})
+        (_: {nixpkgs.overlays = [(import ./overlay args) overlay-unstable];})
       ];
     };
   };
