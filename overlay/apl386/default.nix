@@ -4,8 +4,7 @@
   stdenvNoCC,
 }:
 stdenvNoCC.mkDerivation {
-  pname = "apl386";
-  version = "unstable";
+  name = "apl386";
 
   src = inputs.apl386;
 
