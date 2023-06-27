@@ -1,4 +1,8 @@
-{nixpkgs, nixpkgs-unstable, ...}: {
+{
+  nixpkgs,
+  nixpkgs-unstable,
+  ...
+}: {
   imports = [
     ./hardware-configuration.nix
   ];
