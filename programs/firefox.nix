@@ -9,10 +9,8 @@
       enable = true;
       package = pkgs.firefox-wayland;
 
-
       profiles."buffet" = {
-        extensions = with config.nur.repos.rycee.firefox-addons;
-        let
+        extensions = with config.nur.repos.rycee.firefox-addons; let
           # TODO: switch to yomitan
           yomichan = buildFirefoxXpiAddon {
             pname = "yomichan";
@@ -28,7 +26,7 @@
           };
         in [
           bitwarden
-          i-dont-care-about-cookies
+          istilldontcareaboutcookies
           refined-github
           sidebery
           ublock-origin
