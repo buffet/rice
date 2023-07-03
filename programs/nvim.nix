@@ -9,7 +9,7 @@
     };
 
     home.packages = with pkgs; [
-      libclang
+      clang-tools
       nil
       rust-analyzer
       sumneko-lua-language-server
