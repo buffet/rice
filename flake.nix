@@ -67,22 +67,25 @@
     };
   };
 
-  outputs = {nixpkgs, nixpkgs-unstable, ...} @ args: {
-    nixosConfigurations.fanya =
-    let
+  outputs = {
+    nixpkgs,
+    nixpkgs-unstable,
+    ...
+  } @ args: {
+    nixosConfigurations.fanya = let
       system = "x86_64-linux";
       overlay-unstable = final: prev: {
         unstable = nixpkgs-unstable.legacyPackages.${prev.system};
       };
     in
-    nixpkgs.lib.nixosSystem {
-      inherit system;
-      specialArgs = args;
-      modules = [
-        ./fanya.nix
+      nixpkgs.lib.nixosSystem {
+        inherit system;
+        specialArgs = args;
+        modules = [
+          ./fanya.nix
 
-        (_: {nixpkgs.overlays = [(import ./overlay args) overlay-unstable];})
-      ];
-    };
+          (_: {nixpkgs.overlays = [(import ./overlay args) overlay-unstable];})
+        ];
+      };
   };
 }
