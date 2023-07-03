@@ -52,7 +52,6 @@ in {
         jq
         kcachegrind
         linuxPackages.perf
-        luajit
         man-pages
         man-pages-posix
         okular
@@ -66,6 +65,12 @@ in {
         valgrind
         wget
         wl-clipboard
+
+        (luajit.withPackages (ps:
+          with ps; [
+            fennel
+            luv
+          ]))
 
         (retroarch.override {
           cores = with libretro; [
