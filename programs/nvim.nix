@@ -54,6 +54,7 @@
           {plugin = lualine-lsp-progress;}
           {plugin = nvim-cmp-vlime;}
           {plugin = parinfer-rust;}
+          {plugin = pest-vim;}
           {plugin = playground;}
           {plugin = rust-vim;}
           {plugin = tabular;}
