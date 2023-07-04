@@ -58,6 +58,7 @@ in {
         radare2
         ripgrep
         rr
+        rustfmt
         strace
         tokei
         trash-cli
