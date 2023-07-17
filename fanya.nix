@@ -70,6 +70,7 @@ in {
         (luajit.withPackages (ps:
           with ps; [
             fennel
+            inspect
             luv
           ]))
 
