@@ -1,8 +1,9 @@
 {
   inputs = {
     impermanence.url = "github:nix-community/impermanence";
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
+    nixos-hardware.url = "github:NixOS/nixos-hardware";
     nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-23.05";
     nur.url = "github:nix-community/NUR";
 
     agenix = {

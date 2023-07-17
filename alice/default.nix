@@ -1,7 +1,8 @@
-_: let
+{nixos-hardware, ...}: let
   password = "$y$j9T$g/a4KaQ5VitWI9ZtAh9i3/$wjejk5W8LMc0gaVgw69kwrKLqBgZ95ekaOl/GaTOZVC";
 in {
   imports = [
+    nixos-hardware.nixosModules.lenovo-thinkpad-x270
     ./hardware-configuration.nix
   ];
 
