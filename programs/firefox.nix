@@ -13,6 +13,7 @@
         extensions = with config.nur.repos.rycee.firefox-addons; [
           config.nur.repos.rycee.firefox-addons."10ten-ja-reader"
           bitwarden
+          fediact
           istilldontcareaboutcookies
           refined-github
           sidebery
