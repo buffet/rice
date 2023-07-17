@@ -2,7 +2,6 @@
   light = false;
 
   font = {
-    #family = "GoMono Nerd Font";
     family = "APL386 Unicode";
     size = 7;
   };

@@ -1,19 +1,21 @@
-{
-  pkgs,
-  agenix,
-  home-manager,
-  nur,
-  ...
-}: let
-  password = "$6$FHwMlUwmRdAsPqS4$4XND0L0EEVf2Mhc/tvo6y3ZLIrMTOlsIZrG3w69EeXvtVZhdeNyoDOkPNIe.GBB8.PrchuUKDacqbvcvyuPkt0";
-in {
+{pkgs, ...}: {
   imports = [
-    agenix.nixosModules.default
-    home-manager.nixosModule
-    nur.nixosModules.nur
-    ./impermanence.nix
-    ./programs
-    ./system.nix
+    ./programs/bash.nix
+    ./programs/borg.nix
+    ./programs/cargo.nix
+    ./programs/firefox.nix
+    ./programs/foot.nix
+    ./programs/git.nix
+    ./programs/gpg.nix
+    ./programs/ime.nix
+    ./programs/lsd.nix
+    ./programs/mako.nix
+    ./programs/newsboat.nix
+    ./programs/nvim.nix
+    ./programs/pipewire.nix
+    ./programs/sbcl.nix
+    ./programs/sioyek.nix
+    ./programs/sway.nix
   ];
 
   environment.systemPackages = with pkgs; [
@@ -22,12 +24,10 @@ in {
   ];
 
   fonts.fonts = with pkgs; [
-    (nerdfonts.override {fonts = ["Go-Mono"];})
     apl386
     dejavu_fonts
     noto-fonts
     noto-fonts-cjk
-    source-han-serif
   ];
 
   home-manager.users.buffet = {
@@ -105,10 +105,7 @@ in {
       "uinput"
       "wheel"
     ];
-    hashedPassword = password;
   };
-
-  users.users.root.hashedPassword = password;
 
   systemd.coredump.enable = true;
 
@@ -133,7 +130,6 @@ in {
       enableNotifications = true;
     };
 
-    tlp.enable = true;
     upower.enable = true;
     systembus-notify.enable = true;
   };

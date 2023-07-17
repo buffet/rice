@@ -68,24 +68,37 @@
   };
 
   outputs = {
-    nixpkgs,
+    agenix,
+    home-manager,
+    nur,
     nixpkgs-unstable,
+    nixpkgs,
     ...
   } @ args: {
-    nixosConfigurations.fanya = let
-      system = "x86_64-linux";
-      overlay-unstable = final: prev: {
-        unstable = nixpkgs-unstable.legacyPackages.${prev.system};
-      };
-    in
-      nixpkgs.lib.nixosSystem {
-        inherit system;
-        specialArgs = args;
-        modules = [
-          ./fanya.nix
+    nixosConfigurations = let
+      mkSystem = system: module:
+        nixpkgs.lib.nixosSystem {
+          inherit system;
+          specialArgs = args;
+          modules = let
+            overlay-unstable = final: prev: {
+              unstable = nixpkgs-unstable.legacyPackages.${prev.system};
+            };
+          in [
+            module
 
-          (_: {nixpkgs.overlays = [(import ./overlay args) overlay-unstable];})
-        ];
-      };
+            agenix.nixosModules.default
+            home-manager.nixosModule
+            nur.nixosModules.nur
+            ./common.nix
+            ./impermanence.nix
+            ./system.nix
+            (_: {nixpkgs.overlays = [(import ./overlay args) overlay-unstable];})
+          ];
+        };
+    in {
+      alice = mkSystem "x86_64-linux" ./alice;
+      fanya = mkSystem "x86_64-linux" ./fanya;
+    };
   };
 }
