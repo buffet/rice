@@ -74,6 +74,9 @@
 
         output."*" = {bg = "${theme.primary.background} solid_color";};
 
+        floating.titlebar = false;
+        window.titlebar = false;
+
         colors = with theme; rec {
           focused = rec {
             inherit (wm.focused) border text;
