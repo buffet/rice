@@ -11,7 +11,7 @@
         bright = dehash theme.bright;
       in {
         main = {
-          font = "${theme.font.family}:size=${toString (theme.font.size - 1)}";
+          font = "${theme.font.family}:size=${toString (theme.font.size - 2)}";
           #font-italic = "${theme.font.family}:size=${toString (theme.font.size - 2)}";
           #font-bold-italic = "${theme.font.family}:style=Bold:size=${toString (theme.font.size - 2)}";
           pad = "${toString theme.font.size}x${toString theme.font.size}";

@@ -1,4 +1,4 @@
-_: let
+{lib, ...}: let
   password = "$6$FHwMlUwmRdAsPqS4$4XND0L0EEVf2Mhc/tvo6y3ZLIrMTOlsIZrG3w69EeXvtVZhdeNyoDOkPNIe.GBB8.PrchuUKDacqbvcvyuPkt0";
 in {
   imports = [
@@ -15,4 +15,12 @@ in {
   networking.hostName = "fanya";
 
   services.tlp.enable = true;
+
+  home-manager.users.buffet = {
+    programs.foot = let
+      theme = import ../theme.nix;
+    in {
+      settings.main.font = lib.mkForce "${theme.font.family}:size=${toString (theme.font.size - 1)}";
+    };
+  };
 }
