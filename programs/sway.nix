@@ -67,9 +67,8 @@
         };
 
         input."*" = {
-          xkb_layout = "us,apl";
-          xkb_variant = ",dyalog";
-          xkb_options = "grp:switch,compose:prsc";
+          xkb_layout = "us";
+          xkb_options = "compose:prsc";
         };
 
         output."*" = {bg = "${theme.primary.background} solid_color";};
