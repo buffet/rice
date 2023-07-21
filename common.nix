@@ -8,6 +8,7 @@
     ./programs/git.nix
     ./programs/gpg.nix
     ./programs/ime.nix
+    ./programs/keyd.nix
     ./programs/lsd.nix
     ./programs/mako.nix
     ./programs/newsboat.nix
