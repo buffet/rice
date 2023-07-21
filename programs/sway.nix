@@ -62,7 +62,7 @@
         };
 
         gaps = {
-          inner = 5;
+          inner = 8;
           outer = 0;
         };
 
