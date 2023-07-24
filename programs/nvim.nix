@@ -10,6 +10,7 @@
 
     home.packages = with pkgs; [
       clang-tools
+      fennel-ls
       nil
       rust-analyzer
       sumneko-lua-language-server
@@ -376,6 +377,7 @@
               '';
               servers = [
                 "clangd"
+                "fennel_ls"
                 "gopls"
                 "lua_ls"
                 "nil_ls"

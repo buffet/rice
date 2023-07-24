@@ -36,6 +36,11 @@
       flake = false;
     };
 
+    fennel-ls = {
+      url = "sourcehut:~xerool/fennel-ls";
+      flake = false;
+    };
+
     gh-nvim = {
       url = "github:ldelossa/gh.nvim";
       flake = false;

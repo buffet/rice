@@ -124,6 +124,22 @@
         "type": "github"
       }
     },
+    "fennel-ls": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1689863239,
+        "narHash": "sha256-xPTgGmeILJSNsC++r9x+ussS7ttG7a5Cgl/D02auTgE=",
+        "owner": "~xerool",
+        "repo": "fennel-ls",
+        "rev": "e7c642e12a15c6d452559414ee1890b30f4e8406",
+        "type": "sourcehut"
+      },
+      "original": {
+        "owner": "~xerool",
+        "repo": "fennel-ls",
+        "type": "sourcehut"
+      }
+    },
     "gh-nvim": {
       "flake": false,
       "locked": {
@@ -283,6 +299,7 @@
         "cmp-git": "cmp-git",
         "copilot-cmp": "copilot-cmp",
         "copilot-lua": "copilot-lua",
+        "fennel-ls": "fennel-ls",
         "gh-nvim": "gh-nvim",
         "home-manager": "home-manager_2",
         "impermanence": "impermanence",
