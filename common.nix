@@ -56,6 +56,7 @@
         man-pages
         man-pages-posix
         okular
+        pavucontrol
         radare2
         ripgrep
         rr
