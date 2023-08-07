@@ -3,6 +3,7 @@
   lib,
   ...
 }: {
+  # TODO: turn off primary selection
   programs.sway.enable = true;
 
   home-manager.users.buffet = {
@@ -46,7 +47,13 @@
                   charge=+
               fi
 
-              printf '%s %s ' "$charge$((energy_now * 100 / energy_full))%" "$(date +'%H:%M')"
+              if ${pkgs.mullvad}/bin/mullvad status | grep -q 'Connected to'; then
+                  mullvad='&'
+              else
+                  mullvad=
+              fi
+
+              printf '%s %s %s ' "$mullvad" "$charge$((energy_now * 100 / energy_full))%" "$(date +'%H:%M')"
 
               sleep 3
           done
