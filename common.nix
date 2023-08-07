@@ -40,6 +40,16 @@
       packages = with pkgs; [
         unstable.anki
 
+        SDL2
+        SDL2.dev
+        alejandra
+        black
+        c2ffi
+        cage
+        cairo
+        mpv
+        python3
+
         cargo
         cargo-crev
         cargo-limit
@@ -132,7 +142,12 @@
       enableNotifications = true;
     };
 
-    upower.enable = true;
+    mullvad-vpn = {
+      enable = true;
+      package = pkgs.mullvad-vpn; # enable gui
+    };
+
     systembus-notify.enable = true;
+    upower.enable = true;
   };
 }
