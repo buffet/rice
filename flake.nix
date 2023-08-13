@@ -1,6 +1,4 @@
 {
-  nixConfig.commit-lockfile-summary = "chore: update";
-
   inputs = {
     impermanence.url = "github:nix-community/impermanence";
     nixos-hardware.url = "github:NixOS/nixos-hardware";

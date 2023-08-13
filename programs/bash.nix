@@ -18,6 +18,12 @@ in {
         htop = "htop -t";
         mkdir = "mkdir -p";
         rg = "rg -S";
+        update = let
+          change-message = pkgs.writeScript "change-commit-message" ''
+            #!/bin/sh
+            sed -i '1s/.*/chore: update/' "$1"
+          '';
+        in "nix flake update --commit-lock-file && EDITOR=${change-message} git commit --amend";
       };
 
       shellOptions = [
