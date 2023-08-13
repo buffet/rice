@@ -43,16 +43,22 @@
         SDL2
         SDL2.dev
         alejandra
+        bear
         black
         c2ffi
         cage
         cairo
+        chromium
+        ed
+        gcc
+        gnumake
         mpv
         python3
 
         cargo
         cargo-crev
         cargo-limit
+        mosh
         cargo-nextest
         du-dust
         fd
