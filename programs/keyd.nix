@@ -3,9 +3,16 @@ _: {
     enable = true;
     settings = {
       main = {
-        "capslock" = "esc";
+        "capslock" = "overload(control, esc)";
         "esc" = "capslock";
-        "rightalt" = "enter";
+        "rightalt" = "layer(symbols)";
+      };
+
+      symbols = {
+        "h" = "left";
+        "j" = "down";
+        "k" = "up";
+        "l" = "right";
       };
     };
   };
