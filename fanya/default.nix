@@ -23,7 +23,6 @@ in {
       settings.main.font = lib.mkForce "${theme.font.family}:size=${toString (theme.font.size - 1)}";
     };
 
-
     wayland.windowManager.sway = {
       config.gaps.inner = lib.mkForce 5;
     };
