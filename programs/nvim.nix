@@ -545,6 +545,7 @@
         match ExtraWhitespace /\s\+$/
 
         autocmd FileType lisp setlocal shiftwidth=2 tabstop=2
+        autocmd FileType c setlocal noexpandtab shiftwidth=8 tabstop=8
 
         lua <<EOF
           vim.diagnostic.config {
