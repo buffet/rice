@@ -3,6 +3,7 @@
   pkgs,
   ...
 } @ inputs: {
+  # TODO: use some flake
   home-manager.users.buffet = {
     home.sessionVariables = {
       EDITOR = "nvim";
