@@ -1,0 +1,10 @@
+anchor=top-right
+background-color=#1f1f28
+border-color=#54546d
+progress-color=#dcd7ba
+text-color=#dcd7ba
+border-size=1
+
+default-timeout=4000
+
+#font=APL386 Unicode
