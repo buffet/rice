@@ -19,7 +19,6 @@ input * {
 seat * hide_cursor when-typing enable
 
 ### Autostart
-exec wl-paste -t text --watch clipman store --no-persist
 exec mako
 exec fcitx5
 exec foot -s
