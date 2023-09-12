@@ -8,6 +8,8 @@ set $right l
 set $term footclient
 set $browser firefox
 set $lock swaylock
+set $rofi_cmd rofi -terminal '$term'
+set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 
 output * bg #1f1f28 solid_color
 
@@ -30,6 +32,7 @@ exec foot -s
     bindsym $mod+Alt+Return exec foot # fallback terminal
     bindsym $mod+i exec $browser
     bindsym $mod+Shift+y exec $lock
+    bindsym $mod+d exec $menu
 
     bindsym $mod+z exec light -U 0.5
     bindsym $mod+x exec light -A 0.5
