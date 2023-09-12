@@ -6,7 +6,7 @@ set $up k
 set $right l
 
 set $term footclient
-set $browser firefox-wayland
+set $browser firefox
 set $lock swaylock
 
 output * bg #1f1f28 solid_color
