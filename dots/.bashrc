@@ -18,9 +18,9 @@ __prompt() {
         *) PS1+='\[\e[31m\]' ;;
     esac
 
-    if [[ "$PWD" = "$HOME" ]]; then
+    if [[ "$PWD" == "$HOME" ]]; then
         PS1+="~"
-    elif [[ "$PWD" = / ]]; then
+    elif [[ "$PWD" == / ]]; then
         PS1+=/
     else
         PS1+="${PWD##*/}"
