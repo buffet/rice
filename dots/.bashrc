@@ -10,8 +10,15 @@ bind '"\e\C-m": "\C-e | nvim\C-m"'
 
 __prompt() {
     local status="$?"
+    local row
+    local col
 
-    PS1='\[\e[0m\e[1m\]['
+    IFS=';' read -rs -dR -p $'\e[6n' row col >/dev/tty
+    if [[ $col != 1 ]]; then
+        printf '%s' $'\e[7m%\n\e[0m'
+    fi
+
+    PS1='\[\e[0;1m\]['
 
     case $status in
         0) PS1+='\[\e[36m\]' ;;
