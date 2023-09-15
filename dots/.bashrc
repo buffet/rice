@@ -8,7 +8,6 @@ bind '"\C-o": "\C-a\C-k fg; if [[ $? == 1 ]]; then nvim; fi\n"'
 bind '"\e\C-m": "\C-e | nvim\C-m"'
 
 
-PS0='\[\e[0m\]'
 __prompt() {
     local status="$?"
 
