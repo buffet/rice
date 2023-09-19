@@ -35,7 +35,7 @@ __prompt() {
 
     PS1+='\[\e[0;1m\]]\[\e[0m\]'
 
-    [[ $DISTROBOX_ENTER_PATH ]] && PS1+="'"
+    [[ $CONTAINER_ID ]] && PS1+="'"
 
     PS1+=' '
 }
