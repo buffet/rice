@@ -1,12 +1,12 @@
 shopt -s cdspell checkjobs extglob globstar histappend nocaseglob
 HISTCONTROL=erasedups:ignorespace
 
+alias db=distrobox
 alias mkdir='mkdir -p'
 alias rg='rg -S'
 
 bind '"\C-o": "\C-a\C-k fg; if [[ $? == 1 ]]; then nvim; fi\n"'
 bind '"\e\C-m": "\C-e | nvim\C-m"'
-
 
 __prompt() {
     local status="$?"
