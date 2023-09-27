@@ -11,8 +11,6 @@ set $lock swaylock
 set $rofi_cmd rofi -terminal '$term'
 set $menu $rofi_cmd -show combi -combi-modes drun#run -modes combi
 
-output * bg #1f1f28 solid_color
-
 input * {
     xkb_layout us
     xkb_options "compose:prsc"
@@ -112,29 +110,38 @@ exec foot -s
     bindsym $mod+Ctrl+Up grow up 10 px or 10 ppt
     bindsym $mod+Ctrl+Right grow right 10 px or 10 ppt
 
-gaps inner 8
-gaps outer 0
-default_border pixel 1
+set $accent #e96161
+
+output * bg #e6e6e6 solid_color
+
+gaps inner 12
+gaps left 8
+gaps right 8
+gaps bottom 8
+gaps top 0
+default_border normal 0
 font "APL386 Unicode 8"
 
-client.focused #54546d #1f1f28 #dcd7ba #54546d #54546d
-client.unfocused #363646 #1f1f28 #c8c093 #363646 #363646
-client.focused_inactive #363646 #1f1f28 #c8c093 #363646 #363646
+client.focused          $accent $accent $accent $accent $accent
+client.unfocused        #5c5c5c #5c5c5c #5c5c5c #5c5c5c #5c5c5c
+client.focused_inactive #5c5c5c #5c5c5c #5c5c5c #5c5c5c #5c5c5c
+
+for_window [app_id="firefox"] border normal 1
 
 # Status Bar:
 bar {
-    position bottom
-    gaps 8
+    position top
+    gaps 16 20
     font "APL386 Unicode 8"
 
     status_command ~/.config/sway/status_command
 
     colors {
-        background #1f1f28
-        statusline #dcd7ba
-        focused_workspace #54546d #1f1f28 #c8c893
-        active_workspace #1f1f28 #1f1f28 #c8c893
-        inactive_workspace #1f1f28 #1f1f28 #c8c893
+        background #ffffff
+        statusline #000000
+        focused_workspace  $accent $accent #ffffff
+        active_workspace   #ffffff #ffffff #000000
+        inactive_workspace #ffffff #ffffff #000000
     }
 }
 
