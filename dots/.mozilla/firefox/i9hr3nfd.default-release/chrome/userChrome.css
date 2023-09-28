@@ -1,3 +1,16 @@
 #TabsToolbar {
-    visibility: collapse !important;
+    display: none;
+}
+
+#nav-bar {
+    background: #ffffff !important;
+}
+
+#sidebar-splitter {
+    background: #ffffff !important;
+    width: 0 !important;
+}
+
+#sidebar-header {
+    display: none;
 }
