@@ -18,9 +18,6 @@ input * {
 
 seat * hide_cursor when-typing enable
 
-### Autostart
-exec foot -s
-
 ### Key bindings
     floating_modifier $mod normal
 
