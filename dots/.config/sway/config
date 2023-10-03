@@ -19,8 +19,6 @@ input * {
 seat * hide_cursor when-typing enable
 
 ### Autostart
-exec mako
-exec fcitx5
 exec foot -s
 
 ### Key bindings
