@@ -1,0 +1,11 @@
+[Unit]
+Description=Fcitx is an input method framework with extension support.
+Documentation=https://fcitx-im.org/wiki/Fcitx_5
+
+[Service]
+Type=exec
+Restart=always
+ExecStart=/usr/bin/fcitx5
+
+[Install]
+WantedBy=graphical.target
