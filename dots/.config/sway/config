@@ -5,7 +5,7 @@ set $down j
 set $up k
 set $right l
 
-set $term footclient
+set $term foot
 set $browser firefox
 set $lock swaylock
 set $rofi_cmd rofi -terminal '$term'
@@ -22,7 +22,6 @@ seat * hide_cursor when-typing enable
     floating_modifier $mod normal
 
     bindsym $mod+Return exec $term
-    bindsym $mod+Alt+Return exec foot # fallback terminal
     bindsym $mod+i exec $browser
     bindsym $mod+Shift+y exec $lock
     bindsym $mod+d exec $menu
