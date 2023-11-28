@@ -16,34 +16,34 @@ update() {
 }
 
 __prompt() {
-    local status="$?"
-    local row
-    local col
+	local status="$?"
+	local row
+	local col
 
-    IFS=';' read -rs -dR -p $'\e[6n' row col >/dev/tty
-    if [[ $col != 1 ]]; then
-        printf '%s' $'\e[0;7m%\n\e[0m'
-    fi
+	IFS=';' read -rs -dR -p $'\e[6n' row col >/dev/tty
+	if [[ $col != 1 ]]; then
+		printf '%s' $'\e[0;7m%\n\e[0m'
+	fi
 
-    PS1='\[\e[0;1m\]['
+	PS1='\[\e[0;1m\]['
 
-    case $status in
-        0) PS1+='\[\e[32m\]' ;;
-        *) PS1+='\[\e[31m\]' ;;
-    esac
+	case $status in
+	0) PS1+='\[\e[32m\]' ;;
+	*) PS1+='\[\e[31m\]' ;;
+	esac
 
-    if [[ "$PWD" == "$HOME" ]]; then
-        PS1+="~"
-    elif [[ "$PWD" == / ]]; then
-        PS1+=/
-    else
-        PS1+="${PWD##*/}"
-    fi
+	if [[ "$PWD" == "$HOME" ]]; then
+		PS1+="~"
+	elif [[ "$PWD" == / ]]; then
+		PS1+=/
+	else
+		PS1+="${PWD##*/}"
+	fi
 
-    PS1+='\[\e[0;1m\]]\[\e[0m\]'
+	PS1+='\[\e[0;1m\]]\[\e[0m\]'
 
-    [[ $CONTAINER_ID ]] && PS1+="'"
+	[[ $CONTAINER_ID ]] && PS1+="'"
 
-    PS1+=' '
+	PS1+=' '
 }
 PROMPT_COMMAND=__prompt
