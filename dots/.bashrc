@@ -8,6 +8,13 @@ alias rg='rg -S'
 bind '"\C-o": "\C-a\C-k fg; if [[ $? == 1 ]]; then nvim; fi\n"'
 bind '"\e\C-m": "\C-e | nvim\C-m"'
 
+update() {
+	rpm-ostree upgrade
+	distrobox upgrade --all
+	rustup update
+	flatpak update
+}
+
 __prompt() {
     local status="$?"
     local row
