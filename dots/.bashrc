@@ -12,7 +12,7 @@ update() {
 	rpm-ostree upgrade
 	distrobox upgrade --all
 	rustup update
-	flatpak update
+	flatpak update -y
 }
 
 __prompt() {
