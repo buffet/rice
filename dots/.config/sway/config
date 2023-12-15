@@ -116,6 +116,8 @@ gaps top 0
 default_border normal 1
 font "APL386 Unicode 8"
 
+for_window [title="."] title_format ""
+
 client.focused          $accent $accent $accent $accent $accent
 client.unfocused        #5c5c5c #5c5c5c #5c5c5c #5c5c5c #5c5c5c
 client.focused_inactive #5c5c5c #5c5c5c #5c5c5c #5c5c5c #5c5c5c
