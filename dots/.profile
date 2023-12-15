@@ -8,4 +8,4 @@ export XMODIFIERS=@im=fcitx
 export PATH="$HOME/.local/bin:$HOME/.roswell/bin:$HOME/.cargo/bin:$PATH"
 export EDITOR=nvim
 
-export CARGO_MOMMYS_MOODS="chill/thirsty/yikes"
+export CARGO_MOMMYS_MOODS="chill/thirsty/yikes/ominous"
