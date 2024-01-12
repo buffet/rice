@@ -1,0 +1,27 @@
+State: idle
+Deployments:
+● fedora:fedora/39/x86_64/sericea
+                  Version: 39.20231126.0 (2023-11-26T00:52:40Z)
+               BaseCommit: cdcc929dec2eb8c2cd090a967d0397442aafee312441ac521970bc95eb9967d7
+             GPGSignature: Valid signature by E8F23996F23218640CB44CBE75CF5AC418B8E74C
+      RemovedBasePackages: libavfilter-free libavformat-free libpostproc-free libswresample-free libavutil-free libswscale-free libavcodec-free 6.0.1-1.fc39
+                           mesa-va-drivers 23.2.1-2.fc39 toolbox 0.0.99.4-5.fc39
+          LayeredPackages: distrobox earlyoom fcitx5-mozc ffmpeg
+                           gstreamer1-plugins-bad-free-extras
+                           gstreamer1-plugins-bad-freeworld gstreamer1-plugins-ugly
+                           gstreamer1-vaapi intel-media-driver mesa-va-drivers-freeworld
+                           mesa-vdpau-drivers-freeworld mullvad-vpn rpmfusion-free-release
+                           rpmfusion-nonfree-release tlp
+
+  fedora:fedora/39/x86_64/sericea
+                  Version: 39.20231125.0 (2023-11-25T02:13:42Z)
+               BaseCommit: f89fe4d4416061daa02750bc05f0c2bdc6a28ad17543509eaf4308b430b85347
+             GPGSignature: Valid signature by E8F23996F23218640CB44CBE75CF5AC418B8E74C
+      RemovedBasePackages: libavfilter-free libavformat-free libpostproc-free libswresample-free libavutil-free libswscale-free libavcodec-free 6.0.1-1.fc39
+                           mesa-va-drivers 23.2.1-2.fc39 toolbox 0.0.99.4-5.fc39
+          LayeredPackages: distrobox earlyoom fcitx5-mozc ffmpeg
+                           gstreamer1-plugins-bad-free-extras
+                           gstreamer1-plugins-bad-freeworld gstreamer1-plugins-ugly
+                           gstreamer1-vaapi intel-media-driver mesa-va-drivers-freeworld
+                           mesa-vdpau-drivers-freeworld mullvad-vpn rpmfusion-free-release
+                           rpmfusion-nonfree-release tlp
